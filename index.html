@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>TKO Intel Feed | Mission Control</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #050508;
+            --bg-secondary: #0a0a0f;
+            --bg-card: rgba(255, 255, 255, 0.03);
+            --bg-hover: rgba(255, 255, 255, 0.06);
+            --border: rgba(255, 255, 255, 0.08);
+            --border-hover: rgba(255, 255, 255, 0.15);
+            --text-primary: #ffffff;
+            --text-secondary: rgba(255, 255, 255, 0.6);
+            --text-muted: rgba(255, 255, 255, 0.35);
+            --accent: #00d4ff;
+            --accent-dim: rgba(0, 212, 255, 0.15);
+            --accent-glow: rgba(0, 212, 255, 0.3);
+            --success: #00ff88;
+            --success-dim: rgba(0, 255, 136, 0.15);
+            --warning: #ffaa00;
+            --warning-dim: rgba(255, 170, 0, 0.15);
+            --danger: #ff4444;
+            --danger-dim: rgba(255, 68, 68, 0.15);
+            --gradient-start: #00d4ff;
+            --gradient-end: #7b2ff7;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+
+        body {
+            font-family: var(--font-body);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.5;
+            -webkit-font-smoothing: antialiased;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: -50%; left: -50%;
+            width: 200%; height: 200%;
+            background: radial-gradient(ellipse at 20% 20%, rgba(0, 212, 255, 0.03) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 80%, rgba(123, 47, 247, 0.03) 0%, transparent 50%);
+            animation: bgPulse 20s ease-in-out infinite;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        @keyframes bgPulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.1); opacity: 0.8; }
+        }
+
+        .header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(5, 5, 8, 0.85);
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
+            border-bottom: 1px solid var(--border);
+            padding: 20px 24px;
+        }
+
+        .header-content { max-width: 900px; margin: 0 auto; }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            margin-bottom: 16px;
+        }
+
+        .logo-icon {
+            width: 40px;
+            height: 40px;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 18px;
+            color: white;
+            box-shadow: 0 0 30px var(--accent-glow);
+            animation: iconPulse 3s ease-in-out infinite;
+        }
+
+        @keyframes iconPulse {
+            0%, 100% { box-shadow: 0 0 20px var(--accent-glow); }
+            50% { box-shadow: 0 0 40px var(--accent-glow), 0 0 60px rgba(0, 212, 255, 0.1); }
+        }
+
+        .logo-text {
+            font-size: 22px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            background: linear-gradient(135deg, var(--text-primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .subtitle {
+            font-size: 11px;
+            color: var(--text-muted);
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .stats-bar {
+            display: flex;
+            gap: 20px;
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid var(--border);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+        }
+
+        .stats-bar::-webkit-scrollbar { display: none; }
+
+        .stat {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            min-width: 80px;
+            position: relative;
+        }
+
+        .stat::after {
+            content: '';
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 1px;
+            height: 60%;
+            background: var(--border);
+        }
+
+        .stat:last-child::after { display: none; }
+
+        .stat-value {
+            font-family: var(--font-mono);
+            font-size: 24px;
+            font-weight: 600;
+            color: var(--accent);
+            text-shadow: 0 0 20px var(--accent-glow);
+        }
+
+        .stat-label {
+            font-size: 10px;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .filters {
+            padding: 20px 24px;
+            border-bottom: 1px solid var(--border);
+            overflow-x: auto;
+            -webkit-overflow-scrolling: touch;
+            scrollbar-width: none;
+            position: relative;
+            z-index: 1;
+        }
+
+        .filters::-webkit-scrollbar { display: none; }
+
+        .filter-group {
+            display: flex;
+            gap: 10px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            font-size: 13px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            white-space: nowrap;
+            font-family: var(--font-body);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, var(--accent-dim), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        .filter-btn:hover {
+            border-color: var(--accent);
+            color: var(--text-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 20px rgba(0, 212, 255, 0.15);
+        }
+
+        .filter-btn:hover::before { opacity: 1; }
+
+        .filter-btn.active {
+            background: var(--accent-dim);
+            border-color: var(--accent);
+            color: var(--accent);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .main {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 24px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-title {
+            font-size: 12px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: linear-gradient(90deg, var(--border), transparent);
+        }
+
+        .episode-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            position: relative;
+        }
+
+        .episode-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--accent), transparent);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+        }
+
+        .episode-card:hover {
+            border-color: var(--border-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(0, 212, 255, 0.1);
+        }
+
+        .episode-card:hover::before { opacity: 0.5; }
+
+        .episode-header {
+            padding: 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .episode-header-left { flex: 1; min-width: 0; }
+
+        .episode-number {
+            font-family: var(--font-mono);
+            font-size: 12px;
+            color: var(--accent);
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .episode-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 10px;
+            line-height: 1.3;
+            letter-spacing: -0.3px;
+        }
+
+        .episode-meta {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: center;
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 5px 12px;
+            border-radius: 8px;
+            font-size: 11px;
+            font-weight: 600;
+            font-family: var(--font-mono);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: all 0.3s ease;
+        }
+
+        .badge-category {
+            background: var(--accent-dim);
+            color: var(--accent);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .badge-barrier-low {
+            background: var(--success-dim);
+            color: var(--success);
+            border: 1px solid rgba(0, 255, 136, 0.2);
+        }
+
+        .badge-barrier-med {
+            background: var(--warning-dim);
+            color: var(--warning);
+            border: 1px solid rgba(255, 170, 0, 0.2);
+        }
+
+        .badge-barrier-high {
+            background: var(--danger-dim);
+            color: var(--danger);
+            border: 1px solid rgba(255, 68, 68, 0.2);
+        }
+
+        .badge-timeline {
+            background: rgba(255, 255, 255, 0.05);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+
+        .score-ring {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: var(--font-mono);
+            font-size: 18px;
+            font-weight: 700;
+            flex-shrink: 0;
+            position: relative;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        .score-ring::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(135deg, var(--gradient-start), var(--gradient-end));
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            animation: rotate 4s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .score-value {
+            background: var(--bg-primary);
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .score-high { animation: glowPulse 2s ease-in-out infinite; }
+
+        @keyframes glowPulse {
+            0%, 100% { text-shadow: 0 0 20px var(--accent-glow); }
+            50% { text-shadow: 0 0 40px var(--accent-glow), 0 0 60px rgba(0, 212, 255, 0.2); }
+        }
+
+        .episode-body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), padding 0.5s ease;
+        }
+
+        .episode-body.expanded {
+            max-height: 2000px;
+            padding: 0 24px 24px;
+        }
+
+        .opportunity-section {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+
+        .opportunity-title {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 12px;
+        }
+
+        .opportunity-meta {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+
+        .card-section { margin-bottom: 20px; }
+
+        .card-section-title {
+            font-size: 11px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 10px;
+        }
+
+        .card-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .card-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .card-list li {
+            padding: 10px 0;
+            border-bottom: 1px solid var(--border);
+            font-size: 14px;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .card-list li:last-child { border-bottom: none; }
+
+        .card-list li::before {
+            content: '›';
+            color: var(--accent);
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .card-list li:hover {
+            color: var(--text-primary);
+            padding-left: 4px;
+        }
+
+        .action-items {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .action-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 14px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .action-item:hover {
+            border-color: var(--border-hover);
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .action-checkbox {
+            width: 22px;
+            height: 22px;
+            border-radius: 6px;
+            border: 2px solid var(--border-hover);
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .action-checkbox:hover {
+            border-color: var(--accent);
+            box-shadow: 0 0 10px var(--accent-glow);
+        }
+
+        .action-checkbox.checked {
+            background: var(--accent);
+            border-color: var(--accent);
+        }
+
+        .action-checkbox.checked::after {
+            content: '✓';
+            color: var(--bg-primary);
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .action-text {
+            font-size: 14px;
+            color: var(--text-secondary);
+            transition: all 0.3s ease;
+        }
+
+        .action-item:hover .action-text { color: var(--text-primary); }
+
+        .source-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 10px;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
+            border-radius: 8px;
+            background: var(--accent-dim);
+            border: 1px solid rgba(0, 212, 255, 0.2);
+        }
+
+        .source-link:hover {
+            background: rgba(0, 212, 255, 0.25);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+            transform: translateY(-1px);
+        }
+
+        .expand-icon {
+            width: 28px;
+            height: 28px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            color: var(--text-muted);
+            flex-shrink: 0;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .expand-icon.rotated { transform: rotate(180deg); }
+
+        .footer {
+            text-align: center;
+            padding: 48px 24px;
+            color: var(--text-muted);
+            font-size: 12px;
+            border-top: 1px solid var(--border);
+            margin-top: 48px;
+            position: relative;
+            z-index: 1;
+        }
+
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: var(--bg-primary); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 3px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--border-hover); }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-20px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .episode-card {
+            animation: fadeIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+
+        .episode-card:nth-child(1) { animation-delay: 0.1s; }
+        .episode-card:nth-child(2) { animation-delay: 0.2s; }
+
+        .stat {
+            animation: slideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            opacity: 0;
+        }
+
+        .stat:nth-child(1) { animation-delay: 0.1s; }
+        .stat:nth-child(2) { animation-delay: 0.2s; }
+        .stat:nth-child(3) { animation-delay: 0.3s; }
+        .stat:nth-child(4) { animation-delay: 0.4s; }
+
+        @media (max-width: 640px) {
+            .header { padding: 16px 20px; }
+            .main { padding: 20px; }
+            .episode-header { padding: 20px; }
+            .episode-title { font-size: 16px; }
+            .score-ring { width: 44px; height: 44px; font-size: 15px; }
+            .stat-value { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">T</div>
+                <div>
+                    <div class="logo-text">TKO Intel Feed</div>
+                    <div class="subtitle">Weekly Podcast Analysis // v1.0</div>
+                </div>
+            </div>
+            <div class="stats-bar">
+                <div class="stat">
+                    <div class="stat-value" id="total-episodes">1</div>
+                    <div class="stat-label">Episodes</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="total-opportunities">3</div>
+                    <div class="stat-label">Opportunities</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="high-match-count">2</div>
+                    <div class="stat-label">High Match</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-value" id="avg-score">7.3</div>
+                    <div class="stat-label">Avg Score</div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="filters">
+        <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="ai-service">AI Service</button>
+            <button class="filter-btn" data-filter="real-estate">Real Estate</button>
+            <button class="filter-btn" data-filter="saas">SaaS</button>
+            <button class="filter-btn" data-filter="marketplace">Marketplace</button>
+            <button class="filter-btn" data-filter="low-barrier">Low Barrier</button>
+        </div>
+    </div>
+
+    <main class="main">
+        <div class="section-title">Latest Episodes</div>
+        
+        <div id="episodes-container">
+            <!-- Episode 1 -->
+            <div class="episode-card" data-category="ai-service" data-barrier="low" data-timeline="weeks" data-score="8">
+                <div class="episode-header" onclick="toggleEpisode(this)">
+                    <div class="episode-header-left">
+                        <div class="episode-number">Episode #284</div>
+                        <div class="episode-title">He Gave an AI $200. It Built Him a $100K Business in 13 Days</div>
+                        <div class="episode-meta">
+                            <span class="badge badge-timeline">June 2026</span>
+                            <span class="badge badge-category">3 Opportunities</span>
+                        </div>
+                    </div>
+                    <div class="score-ring score-high">
+                        <div class="score-value">8.2</div>
+                    </div>
+                    <div class="expand-icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 6l4 4 4-4"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="episode-body">
+                    <!-- Opportunity 1 -->
+                    <div class="opportunity-section">
+                        <div class="opportunity-title">AI Voice Agent Agency</div>
+                        <div class="opportunity-meta">
+                            <span class="badge badge-category">AI Service</span>
+                            <span class="badge badge-barrier-low">$0-500</span>
+                            <span class="badge badge-timeline">2-4 Weeks</span>
+                        </div>
+                        <div class="card-section">
+                            <div class="card-section-title">The Play</div>
+                            <div class="card-text">
+                                Build a white-label AI voice agent service for small businesses. Use Marvelus.cc stack to deploy voice agents that handle inbound calls, qualify leads, and book appointments. Target local service businesses who miss 30%+ of calls.
+                            </div>
+                        </div>
+                        <div class="card-section">
+                            <div class="card-section-title">Why It Works</div>
+                            <ul class="card-list">
+                                <li>High demand: 67% of SMBs want AI phone answering</li>
+                                <li>Proven model: Similar services charge $200-500/mo</li>
+                                <li>Sticky revenue: Once deployed, hard to switch</li>
+                            </ul>
+                        </div>
+                        <div class="card-section">
+                            <div class="card-section-title">Action Items</div>
+                            <div class="action-items">
+                                <div class="action-item">
+                                    <div class="action-checkbox"></div>
+                                    <div class="action-text">Research competitor pricing in Melbourne</div>
+                                </div>
+                                <div class="action-item">
+                                    <div class="action-checkbox"></div>
+                                    <div class="action-text">Build 3 demo voice agents for different verticals</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Opportunity 2 -->
+                    <div class="opportunity-section">
+                        <div class="opportunity-title">Niche Marketplace Unbundling</div>
+                        <div class="opportunity-meta">
+                            <span class="badge badge-category">Marketplace</span>
+                            <span class="badge badge-barrier-low">$0-500</span>
+                            <span class="badge badge-timeline">3-6 Weeks</span>
+                        </div>
+                        <div class="card-section">
+                            <div class="card-section-title">The Play</div>
+                            <div class="card-text">
+                                Take a category from a big platform (Craigslist, Facebook Marketplace) and build a specialized vertical marketplace. Better UX, verified sellers, industry-specific features.
+                            </div>
+                        </div>
+                        <div class="card-section">
+                            <div class="card-section-title">Why It Works</div>
+                            <ul class="card-list">
+                                <li>Proven demand: Category exists on big platforms</li>
+                                <li>Friction reduction: Better UX = higher conversion</li>
+                                <li>Exit potential: Vertical marketplaces get acquired</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Opportunity 3 -->
+                    <div class="opportunity-section">
+                        <div class="opportunity-title">AI-Powered Content Agency</div>
+                        <div class="opportunity-meta">
+                            <span class="badge badge-category">AI Service</span>
+                            <span class="badge badge-barrier-med">$500-5K</span>
+                            <span class="badge badge-timeline">1-2 Months</span>
+                        </div>
+                        <div class="card-section">
+                            <div class="card-section-title">The Play</div>
+                            <div class="card-text">
+                                Build an agency that uses AI to create massive amounts of SEO content for local businesses. Target businesses that need visibility but can't afford traditional agencies.
+                            </div>
+                        </div>
+                        <div class="card-section">
+                            <div class="card-section-title">Why It Works</div>
+                            <ul class="card-list">
+                                <li>Content at scale: AI can produce 100x human output</li>
+                                <li>Local SEO is underserved and high-value</li>
+                                <li>Recurring revenue: Monthly content packages</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <a href="#" class="source-link">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                        </svg>
+                        Listen to Episode #284
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div>TKO Intel Feed Dashboard</div>
+            <div style="margin-top: 4px; opacity: 0.6;">Updated weekly when new episodes drop</div>
+        </div>
+    </main>
+
+    <script>
+        function toggleEpisode(header) {
+            const card = header.parentElement;
+            const body = card.querySelector('.episode-body');
+            const icon = header.querySelector('.expand-icon');
+            
+            body.classList.toggle('expanded');
+            icon.classList.toggle('rotated');
+        }
+
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const cards = document.querySelectorAll('.episode-card');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const filter = btn.dataset.filter;
+
+                cards.forEach(card => {
+                    if (filter === 'all') {
+                        card.style.display = 'block';
+                    } else if (filter === 'low-barrier') {
+                        card.style.display = card.dataset.barrier === 'low' ? 'block' : 'none';
+                    } else {
+                        card.style.display = card.dataset.category === filter ? 'block' : 'none';
+                    }
+                });
+
+                updateStats();
+            });
+        });
+
+        function updateStats() {
+            const visibleCards = Array.from(cards).filter(c => c.style.display !== 'none');
+            const total = visibleCards.length;
+            const highMatch = visibleCards.filter(c => parseInt(c.dataset.score) >= 7).length;
+            const lowBarrier = visibleCards.filter(c => c.dataset.barrier === 'low').length;
+            const avgScore = total > 0 
+                ? (visibleCards.reduce((sum, c) => sum + parseInt(c.dataset.score), 0) / total).toFixed(1)
+                : '0.0';
+
+            document.getElementById('total-episodes').textContent = total;
+            document.getElementById('high-match-count').textContent = highMatch;
+            document.getElementById('low-barrier-count').textContent = lowBarrier;
+            document.getElementById('avg-score').textContent = avgScore;
+        }
+
+        document.querySelectorAll('.action-checkbox').forEach(checkbox => {
+            checkbox.addEventListener('click', function(e) {
+                e.stopPropagation();
+                this.classList.toggle('checked');
+            });
+        });
+
+        updateStats();
+    </script>
+</body>
+</html>
