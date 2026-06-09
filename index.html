@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>TKO Intel Feed | Mission Control</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
             --bg-primary: #050508;
@@ -28,7 +28,8 @@
             --danger-dim: rgba(255, 68, 68, 0.15);
             --gradient-start: #00d4ff;
             --gradient-end: #7b2ff7;
-            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-display: 'Playfair Display', Georgia, serif;
+            --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
             --font-mono: 'JetBrains Mono', 'SF Mono', monospace;
         }
 
@@ -102,6 +103,7 @@
         }
 
         .logo-text {
+            font-family: var(--font-display);
             font-size: 22px;
             font-weight: 700;
             letter-spacing: -0.5px;
@@ -285,7 +287,7 @@
 
         .episode-card:hover::before { opacity: 0.5; }
 
-        .episode-header {
+        .card-header {
             padding: 24px;
             cursor: pointer;
             display: flex;
@@ -294,19 +296,19 @@
             gap: 16px;
         }
 
-        .episode-header-left { flex: 1; min-width: 0; }
+        .card-header-left { flex: 1; min-width: 0; }
 
         .episode-number {
             font-family: var(--font-mono);
             font-size: 12px;
             color: var(--accent);
             margin-bottom: 8px;
-            text-transform: uppercase;
             letter-spacing: 1px;
         }
 
-        .episode-title {
-            font-size: 18px;
+        .card-title {
+            font-family: var(--font-display);
+            font-size: 20px;
             font-weight: 600;
             color: var(--text-primary);
             margin-bottom: 10px;
@@ -314,7 +316,7 @@
             letter-spacing: -0.3px;
         }
 
-        .episode-meta {
+        .card-meta {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
@@ -341,25 +343,13 @@
             border: 1px solid rgba(0, 212, 255, 0.2);
         }
 
-        .badge-barrier-low {
-            background: var(--success-dim);
-            color: var(--success);
-            border: 1px solid rgba(0, 255, 136, 0.2);
-        }
-
-        .badge-barrier-med {
+        .badge-opportunities {
             background: var(--warning-dim);
             color: var(--warning);
             border: 1px solid rgba(255, 170, 0, 0.2);
         }
 
-        .badge-barrier-high {
-            background: var(--danger-dim);
-            color: var(--danger);
-            border: 1px solid rgba(255, 68, 68, 0.2);
-        }
-
-        .badge-timeline {
+        .badge-date {
             background: rgba(255, 255, 255, 0.05);
             color: var(--text-secondary);
             border: 1px solid var(--border);
@@ -411,47 +401,18 @@
             z-index: 1;
         }
 
-        .score-high { animation: glowPulse 2s ease-in-out infinite; }
-
-        @keyframes glowPulse {
-            0%, 100% { text-shadow: 0 0 20px var(--accent-glow); }
-            50% { text-shadow: 0 0 40px var(--accent-glow), 0 0 60px rgba(0, 212, 255, 0.2); }
-        }
-
-        .episode-body {
+        .card-body {
             max-height: 0;
             overflow: hidden;
             transition: max-height 0.5s cubic-bezier(0.16, 1, 0.3, 1), padding 0.5s ease;
         }
 
-        .episode-body.expanded {
+        .card-body.expanded {
             max-height: 2000px;
             padding: 0 24px 24px;
         }
 
-        .opportunity-section {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border);
-            border-radius: 16px;
-            padding: 20px;
-            margin-bottom: 16px;
-        }
-
-        .opportunity-title {
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 12px;
-        }
-
-        .opportunity-meta {
-            display: flex;
-            gap: 8px;
-            margin-bottom: 16px;
-            flex-wrap: wrap;
-        }
-
-        .card-section { margin-bottom: 20px; }
+        .card-section { margin-bottom: 24px; }
 
         .card-section-title {
             font-size: 11px;
@@ -628,6 +589,7 @@
 
         .episode-card:nth-child(1) { animation-delay: 0.1s; }
         .episode-card:nth-child(2) { animation-delay: 0.2s; }
+        .episode-card:nth-child(3) { animation-delay: 0.3s; }
 
         .stat {
             animation: slideIn 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
@@ -642,10 +604,17 @@
         @media (max-width: 640px) {
             .header { padding: 16px 20px; }
             .main { padding: 20px; }
-            .episode-header { padding: 20px; }
-            .episode-title { font-size: 16px; }
+            .card-header { padding: 20px; }
+            .card-title { font-size: 18px; }
             .score-ring { width: 44px; height: 44px; font-size: 15px; }
             .stat-value { font-size: 20px; }
+        }
+
+        .score-high { animation: glowPulse 2s ease-in-out infinite; }
+
+        @keyframes glowPulse {
+            0%, 100% { text-shadow: 0 0 20px var(--accent-glow); }
+            50% { text-shadow: 0 0 40px var(--accent-glow), 0 0 60px rgba(0, 212, 255, 0.2); }
         }
     </style>
 </head>
@@ -656,24 +625,24 @@
                 <div class="logo-icon">T</div>
                 <div>
                     <div class="logo-text">TKO Intel Feed</div>
-                    <div class="subtitle">Weekly Podcast Analysis // v1.0</div>
+                    <div class="subtitle">Podcast Intelligence // v1.0</div>
                 </div>
             </div>
             <div class="stats-bar">
                 <div class="stat">
-                    <div class="stat-value" id="total-episodes">1</div>
+                    <div class="stat-value" id="total-count">3</div>
                     <div class="stat-label">Episodes</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-value" id="total-opportunities">3</div>
+                    <div class="stat-value" id="opportunities-count">7</div>
                     <div class="stat-label">Opportunities</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-value" id="high-match-count">2</div>
+                    <div class="stat-value" id="high-match-count">4</div>
                     <div class="stat-label">High Match</div>
                 </div>
                 <div class="stat">
-                    <div class="stat-value" id="avg-score">7.3</div>
+                    <div class="stat-value" id="avg-score">7.2</div>
                     <div class="stat-label">Avg Score</div>
                 </div>
             </div>
@@ -683,11 +652,11 @@
     <div class="filters">
         <div class="filter-group">
             <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="ai-service">AI Service</button>
+            <button class="filter-btn" data-filter="ai">AI</button>
             <button class="filter-btn" data-filter="real-estate">Real Estate</button>
-            <button class="filter-btn" data-filter="saas">SaaS</button>
             <button class="filter-btn" data-filter="marketplace">Marketplace</button>
-            <button class="filter-btn" data-filter="low-barrier">Low Barrier</button>
+            <button class="filter-btn" data-filter="saas">SaaS</button>
+            <button class="filter-btn" data-filter="high-match">High Match</button>
         </div>
     </div>
 
@@ -695,19 +664,19 @@
         <div class="section-title">Latest Episodes</div>
         
         <div id="episodes-container">
-            <!-- Episode 1 -->
-            <div class="episode-card" data-category="ai-service" data-barrier="low" data-timeline="weeks" data-score="8">
-                <div class="episode-header" onclick="toggleEpisode(this)">
-                    <div class="episode-header-left">
-                        <div class="episode-number">Episode #284</div>
-                        <div class="episode-title">He Gave an AI $200. It Built Him a $100K Business in 13 Days</div>
-                        <div class="episode-meta">
-                            <span class="badge badge-timeline">June 2026</span>
-                            <span class="badge badge-category">3 Opportunities</span>
+            <div class="episode-card" data-category="ai" data-score="8">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <div class="card-header-left">
+                        <div class="episode-number">EP #284</div>
+                        <div class="card-title">AI Business Models That Actually Work</div>
+                        <div class="card-meta">
+                            <span class="badge badge-category">AI</span>
+                            <span class="badge badge-opportunities">3 Opportunities</span>
+                            <span class="badge badge-date">Dec 15, 2024</span>
                         </div>
                     </div>
                     <div class="score-ring score-high">
-                        <div class="score-value">8.2</div>
+                        <div class="score-value">8</div>
                     </div>
                     <div class="expand-icon">
                         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
@@ -715,112 +684,179 @@
                         </svg>
                     </div>
                 </div>
-                <div class="episode-body">
-                    <!-- Opportunity 1 -->
-                    <div class="opportunity-section">
-                        <div class="opportunity-title">AI Voice Agent Agency</div>
-                        <div class="opportunity-meta">
-                            <span class="badge badge-category">AI Service</span>
-                            <span class="badge badge-barrier-low">$0-500</span>
-                            <span class="badge badge-timeline">2-4 Weeks</span>
+                <div class="card-body">
+                    <div class="card-section">
+                        <div class="card-section-title">Episode Summary</div>
+                        <div class="card-text">
+                            Sam Parr and Shaan Puri break down AI business models that are generating real revenue right now. They discuss voice agents, content generation, and AI consulting — separating hype from actual profitable implementations.
                         </div>
-                        <div class="card-section">
-                            <div class="card-section-title">The Play</div>
-                            <div class="card-text">
-                                Build a white-label AI voice agent service for small businesses. Use Marvelus.cc stack to deploy voice agents that handle inbound calls, qualify leads, and book appointments. Target local service businesses who miss 30%+ of calls.
+                    </div>
+                    <div class="card-section">
+                        <div class="card-section-title">Key Opportunities</div>
+                        <ul class="card-list">
+                            <li>AI Voice Agent Agency — $200-500/mo per client</li>
+                            <li>AI Content Studio — $1-5K per project</li>
+                            <li>AI Consulting for SMBs — $150-300/hr</li>
+                        </ul>
+                    </div>
+                    <div class="card-section">
+                        <div class="card-section-title">Action Items</div>
+                        <div class="action-items">
+                            <div class="action-item">
+                                <div class="action-checkbox"></div>
+                                <div class="action-text">Research AI voice agent competitors</div>
                             </div>
-                        </div>
-                        <div class="card-section">
-                            <div class="card-section-title">Why It Works</div>
-                            <ul class="card-list">
-                                <li>High demand: 67% of SMBs want AI phone answering</li>
-                                <li>Proven model: Similar services charge $200-500/mo</li>
-                                <li>Sticky revenue: Once deployed, hard to switch</li>
-                            </ul>
-                        </div>
-                        <div class="card-section">
-                            <div class="card-section-title">Action Items</div>
-                            <div class="action-items">
-                                <div class="action-item">
-                                    <div class="action-checkbox"></div>
-                                    <div class="action-text">Research competitor pricing in Melbourne</div>
-                                </div>
-                                <div class="action-item">
-                                    <div class="action-checkbox"></div>
-                                    <div class="action-text">Build 3 demo voice agents for different verticals</div>
-                                </div>
+                            <div class="action-item">
+                                <div class="action-checkbox"></div>
+                                <div class="action-text">Build demo voice agent for testing</div>
+                            </div>
+                            <div class="action-item">
+                                <div class="action-checkbox"></div>
+                                <div class="action-text">Create pricing calculator for AI services</div>
                             </div>
                         </div>
                     </div>
+                    <div class="card-section">
+                        <div class="card-section-title">Resources</div>
+                        <a href="#" class="source-link">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                            Listen on Spotify
+                        </a>
+                    </div>
+                </div>
+            </div>
 
-                    <!-- Opportunity 2 -->
-                    <div class="opportunity-section">
-                        <div class="opportunity-title">Niche Marketplace Unbundling</div>
-                        <div class="opportunity-meta">
-                            <span class="badge badge-category">Marketplace</span>
-                            <span class="badge badge-barrier-low">$0-500</span>
-                            <span class="badge badge-timeline">3-6 Weeks</span>
-                        </div>
-                        <div class="card-section">
-                            <div class="card-section-title">The Play</div>
-                            <div class="card-text">
-                                Take a category from a big platform (Craigslist, Facebook Marketplace) and build a specialized vertical marketplace. Better UX, verified sellers, industry-specific features.
-                            </div>
-                        </div>
-                        <div class="card-section">
-                            <div class="card-section-title">Why It Works</div>
-                            <ul class="card-list">
-                                <li>Proven demand: Category exists on big platforms</li>
-                                <li>Friction reduction: Better UX = higher conversion</li>
-                                <li>Exit potential: Vertical marketplaces get acquired</li>
-                            </ul>
+            <div class="episode-card" data-category="real-estate" data-score="7">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <div class="card-header-left">
+                        <div class="episode-number">EP #276</div>
+                        <div class="card-title">RV Park Investing: The Hidden Cash Flow</div>
+                        <div class="card-meta">
+                            <span class="badge badge-category">Real Estate</span>
+                            <span class="badge badge-opportunities">2 Opportunities</span>
+                            <span class="badge badge-date">Nov 28, 2024</span>
                         </div>
                     </div>
-
-                    <!-- Opportunity 3 -->
-                    <div class="opportunity-section">
-                        <div class="opportunity-title">AI-Powered Content Agency</div>
-                        <div class="opportunity-meta">
-                            <span class="badge badge-category">AI Service</span>
-                            <span class="badge badge-barrier-med">$500-5K</span>
-                            <span class="badge badge-timeline">1-2 Months</span>
-                        </div>
-                        <div class="card-section">
-                            <div class="card-section-title">The Play</div>
-                            <div class="card-text">
-                                Build an agency that uses AI to create massive amounts of SEO content for local businesses. Target businesses that need visibility but can't afford traditional agencies.
-                            </div>
-                        </div>
-                        <div class="card-section">
-                            <div class="card-section-title">Why It Works</div>
-                            <ul class="card-list">
-                                <li>Content at scale: AI can produce 100x human output</li>
-                                <li>Local SEO is underserved and high-value</li>
-                                <li>Recurring revenue: Monthly content packages</li>
-                            </ul>
-                        </div>
+                    <div class="score-ring">
+                        <div class="score-value">7</div>
                     </div>
-
-                    <a href="#" class="source-link">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                            <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                    <div class="expand-icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 6l4 4 4-4"/>
                         </svg>
-                        Listen to Episode #284
-                    </a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-section">
+                        <div class="card-section-title">Episode Summary</div>
+                        <div class="card-text">
+                            Deep dive into RV park investing with a guest who owns 12 parks. Discusses acquisition strategies, operational efficiencies, and why RV parks are recession-resistant. Also covers the rank & rent model for lead generation.
+                        </div>
+                    </div>
+                    <div class="card-section">
+                        <div class="card-section-title">Key Opportunities</div>
+                        <ul class="card-list">
+                            <li>RV Park Rank & Rent — $500-2000/mo per site</li>
+                            <li>RV Park Acquisition — 8-12% cap rates</li>
+                        </ul>
+                    </div>
+                    <div class="card-section">
+                        <div class="card-section-title">Action Items</div>
+                        <div class="action-items">
+                            <div class="action-item">
+                                <div class="action-checkbox"></div>
+                                <div class="action-text">Research caravan park keywords in Australia</div>
+                            </div>
+                            <div class="action-item">
+                                <div class="action-checkbox"></div>
+                                <div class="action-text">Build MVP comparison site</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-section">
+                        <div class="card-section-title">Resources</div>
+                        <a href="#" class="source-link">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                            Listen on Spotify
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="episode-card" data-category="marketplace" data-score="6">
+                <div class="card-header" onclick="toggleCard(this)">
+                    <div class="card-header-left">
+                        <div class="episode-number">EP #280</div>
+                        <div class="card-title">The Great Unbundling of Marketplaces</div>
+                        <div class="card-meta">
+                            <span class="badge badge-category">Marketplace</span>
+                            <span class="badge badge-opportunities">2 Opportunities</span>
+                            <span class="badge badge-date">Dec 5, 2024</span>
+                        </div>
+                    </div>
+                    <div class="score-ring">
+                        <div class="score-value">6</div>
+                    </div>
+                    <div class="expand-icon">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 6l4 4 4-4"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="card-section">
+                        <div class="card-section-title">Episode Summary</div>
+                        <div class="card-text">
+                            How vertical marketplaces are unbundling Craigslist, Facebook Marketplace, and Amazon. The pattern: identify a category with friction, build a better experience, capture the high-value transactions.
+                        </div>
+                    </div>
+                    <div class="card-section">
+                        <div class="card-section-title">Key Opportunities</div>
+                        <ul class="card-list">
+                            <li>Niche Marketplace — $0-500 to start</li>
+                            <li>B2B Equipment Marketplace — $1-10K/mo potential</li>
+                        </ul>
+                    </div>
+                    <div class="card-section">
+                        <div class="card-section-title">Action Items</div>
+                        <div class="action-items">
+                            <div class="action-item">
+                                <div class="action-checkbox"></div>
+                                <div class="action-text">Identify 3 underserved categories</div>
+                            </div>
+                            <div class="action-item">
+                                <div class="action-checkbox"></div>
+                                <div class="action-text">Validate demand via Reddit research</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-section">
+                        <div class="card-section-title">Resources</div>
+                        <a href="#" class="source-link">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6M15 3h6v6M10 14L21 3"/>
+                            </svg>
+                            Listen on Spotify
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
 
         <div class="footer">
             <div>TKO Intel Feed Dashboard</div>
-            <div style="margin-top: 4px; opacity: 0.6;">Updated weekly when new episodes drop</div>
+            <div style="margin-top: 4px; opacity: 0.6;">Updated automatically when new episodes are processed</div>
         </div>
     </main>
 
     <script>
-        function toggleEpisode(header) {
+        function toggleCard(header) {
             const card = header.parentElement;
-            const body = card.querySelector('.episode-body');
+            const body = card.querySelector('.card-body');
             const icon = header.querySelector('.expand-icon');
             
             body.classList.toggle('expanded');
@@ -840,8 +876,8 @@
                 cards.forEach(card => {
                     if (filter === 'all') {
                         card.style.display = 'block';
-                    } else if (filter === 'low-barrier') {
-                        card.style.display = card.dataset.barrier === 'low' ? 'block' : 'none';
+                    } else if (filter === 'high-match') {
+                        card.style.display = parseInt(card.dataset.score) >= 7 ? 'block' : 'none';
                     } else {
                         card.style.display = card.dataset.category === filter ? 'block' : 'none';
                     }
@@ -855,14 +891,14 @@
             const visibleCards = Array.from(cards).filter(c => c.style.display !== 'none');
             const total = visibleCards.length;
             const highMatch = visibleCards.filter(c => parseInt(c.dataset.score) >= 7).length;
-            const lowBarrier = visibleCards.filter(c => c.dataset.barrier === 'low').length;
+            const opportunities = visibleCards.reduce((sum, c) => sum + parseInt(c.querySelector('.badge-opportunities')?.textContent || 0), 0);
             const avgScore = total > 0 
                 ? (visibleCards.reduce((sum, c) => sum + parseInt(c.dataset.score), 0) / total).toFixed(1)
                 : '0.0';
 
-            document.getElementById('total-episodes').textContent = total;
+            document.getElementById('total-count').textContent = total;
             document.getElementById('high-match-count').textContent = highMatch;
-            document.getElementById('low-barrier-count').textContent = lowBarrier;
+            document.getElementById('opportunities-count').textContent = opportunities;
             document.getElementById('avg-score').textContent = avgScore;
         }
 
