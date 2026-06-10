@@ -4,555 +4,562 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TKO Intel Feed</title>
-  <meta name="description" content="Editorial podcast dashboard for The Koerner Office with searchable episodes and premium playback." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
+  <meta name="description" content="Business intelligence dashboard from The Koerner Office podcast." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #faf8f5;
-      --bg-2: #f5f2ed;
-      --card: #ffffff;
-      --line: #e8e4de;
-      --text: #1a1a2e;
-      --muted: #6b6b7b;
-      --accent: #1e3a5f;
-      --accent-soft: rgba(30,58,95,0.08);
-      --radius: 14px;
-      --shadow: 0 8px 24px rgba(26, 26, 46, 0.06);
+      --paper: #faf7f1;
+      --card: #fffdf8;
+      --ink: #22201b;
+      --muted: #6f6758;
+      --line: #ddd2c2;
+      --line-soft: #ece3d7;
+      --accent: #3f6ea8;
+      --gold: #b8891d;
+      --radius: 16px;
+      --shadow: 0 8px 24px rgba(33, 29, 21, .08);
     }
 
     * { box-sizing: border-box; }
 
-    html, body { margin: 0; min-height: 100%; }
-
     body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-      color: var(--text);
-      background: var(--bg);
-      line-height: 1.55;
-      -webkit-font-smoothing: antialiased;
-      text-rendering: optimizeLegibility;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      opacity: 0.18;
-      background-image:
-        radial-gradient(rgba(26, 26, 46, 0.025) 0.5px, transparent 0.5px),
-        radial-gradient(rgba(26, 26, 46, 0.02) 0.5px, transparent 0.5px);
-      background-size: 4px 4px, 6px 6px;
-      background-position: 0 0, 2px 2px;
+      margin: 0;
+      font-family: "Inter", sans-serif;
+      color: var(--ink);
+      background: radial-gradient(circle at 100% 0%, #f4efe7 0%, var(--paper) 42%, #f7f2ea 100%);
     }
 
     .app {
-      width: min(100%, 1020px);
+      width: min(1080px, 100%);
       margin: 0 auto;
-      padding: 34px 18px 72px;
-      position: relative;
-      z-index: 1;
-    }
-
-    .masthead {
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      padding: 22px 0 28px;
-      margin-bottom: 28px;
-      animation: rise .45s ease both;
-    }
-
-    .kicker {
-      margin: 0;
-      color: var(--muted);
-      letter-spacing: .15em;
-      text-transform: uppercase;
-      font-size: 11px;
-      font-weight: 600;
-    }
-
-    h1,
-    .title {
-      font-family: 'Playfair Display', Georgia, serif;
+      padding: 18px 12px 72px;
     }
 
     h1 {
-      margin: 10px 0 8px;
-      font-size: clamp(2.2rem, 8.6vw, 4.4rem);
-      line-height: 0.98;
-      letter-spacing: -0.02em;
-      color: var(--accent);
-      font-weight: 600;
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: clamp(2rem, 8vw, 3rem);
+      letter-spacing: -.02em;
     }
 
     .sub {
-      margin: 0;
+      margin: 8px 0 0;
       color: var(--muted);
-      max-width: 68ch;
-      font-size: 1rem;
+      font-size: .95rem;
+    }
+
+    .stats {
+      margin-top: 18px;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 8px;
+    }
+
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--line-soft);
+      border-radius: 14px;
+      padding: 12px;
+      box-shadow: var(--shadow);
+    }
+
+    .stat-label {
+      color: var(--muted);
+      font-size: .74rem;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+    }
+
+    .stat-value {
+      margin-top: 5px;
+      font-family: "Playfair Display", serif;
+      font-size: 1.26rem;
+      line-height: 1.05;
     }
 
     .controls {
-      border-top: 1px solid var(--line);
-      border-bottom: 1px solid var(--line);
-      padding: 18px 0 22px;
-      margin-bottom: 18px;
+      margin-top: 14px;
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 12px;
       display: grid;
-      gap: 12px;
-      animation: rise .5s ease both;
+      gap: 8px;
     }
 
-    .search {
+    .row { display: grid; gap: 8px; }
+
+    input, select {
       width: 100%;
       border: 1px solid var(--line);
-      border-radius: 999px;
-      background: var(--card);
-      color: var(--text);
-      padding: 13px 18px;
-      font-size: 0.95rem;
-      transition: border-color .2s ease, box-shadow .2s ease;
+      background: #fffcf7;
+      color: var(--ink);
+      border-radius: 12px;
+      font-size: .92rem;
+      padding: 10px 12px;
+      min-height: 44px;
     }
 
-    .search::placeholder { color: #888897; }
-
-    .search:focus {
-      outline: none;
-      border-color: var(--accent);
-      box-shadow: 0 0 0 3px var(--accent-soft);
+    input:focus, select:focus {
+      border-color: #bba272;
+      outline: 2px solid #f2e1bc;
+      outline-offset: 1px;
     }
 
-    .meta-row {
+    .meta {
       display: flex;
       justify-content: space-between;
-      align-items: baseline;
-      gap: 10px;
-      flex-wrap: wrap;
-      font-size: .77rem;
-      letter-spacing: .08em;
-      text-transform: uppercase;
       color: var(--muted);
-    }
-
-    .tag-filters {
-      display: flex;
+      font-size: .82rem;
       gap: 8px;
-      overflow-x: auto;
-      padding-bottom: 3px;
-      scrollbar-width: thin;
-    }
-
-    .tag-filters::-webkit-scrollbar { height: 6px; }
-
-    .chip {
-      border: 1px solid var(--line);
-      background: var(--card);
-      border-radius: 999px;
-      padding: 7px 12px;
-      font-size: .72rem;
-      color: var(--muted);
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      white-space: nowrap;
-      cursor: pointer;
-      transition: all .2s ease;
-    }
-
-    .chip.active {
-      border-color: var(--accent);
-      color: var(--accent);
-      background: var(--accent-soft);
+      flex-wrap: wrap;
     }
 
     .episodes {
+      margin-top: 14px;
       display: grid;
-      gap: 16px;
+      gap: 10px;
     }
 
     .episode {
+      background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius);
-      padding: 22px;
-      background: var(--card);
       box-shadow: var(--shadow);
-      display: grid;
-      gap: 13px;
-      animation: fade .35s ease both;
-    }
-
-    .episode-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 8px;
-      color: var(--muted);
-      font-size: .74rem;
-      letter-spacing: .075em;
-      text-transform: uppercase;
-    }
-
-    .episode-mark {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      color: var(--accent);
-      font-weight: 600;
-    }
-
-    .episode-mark::before {
-      content: "";
-      width: 18px;
-      height: 1px;
-      background: var(--accent);
-      opacity: .35;
-    }
-
-    .title {
-      margin: 0;
-      font-size: clamp(1.45rem, 5.8vw, 2.05rem);
-      line-height: 1.1;
-      color: var(--text);
-      font-weight: 600;
-      letter-spacing: -0.01em;
-    }
-
-    .desc {
-      margin: 0;
-      color: #434352;
-      font-size: .96rem;
-      display: -webkit-box;
-      -webkit-line-clamp: 3;
-      line-clamp: 3;
-      -webkit-box-orient: vertical;
       overflow: hidden;
-      max-width: 74ch;
     }
 
-    .topic-row {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .topic {
-      font-size: .68rem;
-      letter-spacing: .07em;
-      text-transform: uppercase;
-      border: 1px solid var(--line);
-      color: var(--muted);
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: var(--bg-2);
-    }
-
-    .player {
-      border: 1px solid var(--line);
-      border-radius: 12px;
-      padding: 10px;
-      display: grid;
-      grid-template-columns: auto 1fr;
-      gap: 10px;
-      align-items: center;
-      background: var(--bg-2);
-    }
-
-    .play {
-      border: 1px solid var(--line);
-      background: var(--card);
-      color: var(--accent);
-      border-radius: 999px;
-      min-width: 74px;
-      height: 36px;
-      font-size: .77rem;
-      font-weight: 600;
-      letter-spacing: .05em;
-      text-transform: uppercase;
-      cursor: pointer;
-    }
-
-    .play.is-playing {
-      background: var(--accent);
-      color: var(--card);
-      border-color: var(--accent);
-    }
-
-    .timeline-wrap { display: grid; gap: 6px; }
-
-    .timeline {
+    .ep-head {
       width: 100%;
-      accent-color: var(--accent);
-      margin: 0;
+      border: 0;
+      background: transparent;
+      text-align: left;
+      padding: 14px;
+      cursor: pointer;
+      display: grid;
+      gap: 8px;
+      color: inherit;
     }
 
-    .time {
+    .ep-top {
       display: flex;
       justify-content: space-between;
+      font-size: .74rem;
       color: var(--muted);
-      font-size: .73rem;
-      letter-spacing: .06em;
       text-transform: uppercase;
+      letter-spacing: .06em;
+      gap: 10px;
+    }
+
+    .ep-title {
+      margin: 0;
+      font-family: "Playfair Display", serif;
+      font-size: 1.3rem;
+      line-height: 1.18;
+    }
+
+    .ep-desc {
+      margin: 0;
+      color: var(--muted);
+      font-size: .9rem;
+      line-height: 1.45;
+    }
+
+    .chev {
+      justify-self: end;
+      color: var(--muted);
+      font-size: .85rem;
+      transition: transform .25s ease;
+    }
+
+    .ep-content {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .28s ease;
+      border-top: 1px solid transparent;
+    }
+
+    .ep-inner {
+      min-height: 0;
+      overflow: hidden;
+      padding: 0 14px;
+      display: grid;
+      gap: 10px;
+    }
+
+    .episode.open .ep-content {
+      grid-template-rows: 1fr;
+      border-top-color: var(--line-soft);
+    }
+
+    .episode.open .ep-inner { padding: 12px 14px 14px; }
+    .episode.open .chev { transform: rotate(180deg); }
+
+    audio { width: 100%; }
+
+    .intel-grid { display: grid; gap: 10px; }
+
+    .intel-card {
+      border: 1px solid var(--line-soft);
+      border-radius: 14px;
+      background: linear-gradient(180deg, #fffdf9 0%, #fdf8ef 100%);
+      padding: 12px;
+      display: grid;
+      gap: 9px;
+    }
+
+    .intel-head {
+      display: flex;
+      gap: 8px;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .idea {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+
+    .badge {
+      font-size: .7rem;
+      border-radius: 999px;
+      border: 1px solid #d7cab6;
+      background: #f7efe2;
+      color: #5d503f;
+      padding: 4px 8px;
+      white-space: nowrap;
+    }
+
+    .meta-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 7px;
+    }
+
+    .kv {
+      background: #fffefb;
+      border: 1px solid var(--line-soft);
+      border-radius: 10px;
+      padding: 8px;
+      font-size: .77rem;
+      color: var(--muted);
+    }
+
+    .kv b {
+      display: block;
+      margin-top: 3px;
+      color: var(--ink);
+      font-size: .88rem;
+    }
+
+    .score {
+      font-size: .74rem;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 5px 8px;
+      white-space: nowrap;
+      border: 1px solid transparent;
+    }
+
+    .score.gold { background: #f8ebc9; border-color: #e4cb83; color: #7e5f14; }
+    .score.blue { background: #e9f2ff; border-color: #b9d3fa; color: #245492; }
+    .score.gray { background: #efefef; border-color: #d8d8d8; color: #5f5f5f; }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 4px 8px;
+      font-size: .73rem;
+      color: #5d564a;
+      background: #fffcf6;
+    }
+
+    .insight {
+      margin: 0;
+      font-size: .88rem;
+      line-height: 1.5;
+      color: #3f392f;
     }
 
     .empty {
-      padding: 34px 0;
+      border: 1px dashed var(--line);
+      border-radius: 12px;
+      color: var(--muted);
+      padding: 18px 12px;
       text-align: center;
-      color: var(--muted);
-      border-bottom: 1px solid var(--line);
-      letter-spacing: .04em;
+      font-size: .9rem;
+      background: #fffefb;
     }
 
-    .footer {
-      margin-top: 18px;
-      color: var(--muted);
-      font-size: .7rem;
-      text-transform: uppercase;
-      letter-spacing: .08em;
-      display: flex;
-      justify-content: space-between;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    audio { display: none; }
-
-    @keyframes fade {
-      from { opacity: 0; transform: translateY(8px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @keyframes rise {
-      from { opacity: 0; transform: translateY(10px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (min-width: 880px) {
-      .app { padding-top: 40px; }
-      .title { max-width: 30ch; }
-      .episode { padding: 24px 24px 22px; }
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
+    @media (min-width: 820px) {
+      .app { padding: 28px 16px 84px; }
+      .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .row { grid-template-columns: 2fr 1fr 1fr 1fr; }
+      .intel-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     }
   </style>
 </head>
 <body>
   <main class="app">
-    <header class="masthead" aria-label="Dashboard title">
-      <p class="kicker">The Koerner Office</p>
-      <h1>TKO Intel Feed</h1>
-      <p class="sub">An editorial stream of episodes, ideas, and operator insight — designed for clarity-first listening.</p>
-    </header>
+    <h1>TKO Intel Feed</h1>
+    <p class="sub">Episodes with extracted business intelligence ideas.</p>
 
-    <section class="controls" aria-label="Filters and metadata">
-      <input id="search" class="search" type="search" autocomplete="off" placeholder="Search episodes, guests, topics…" />
-      <div class="meta-row">
-        <div id="meta">Loading feed…</div>
-        <div id="count">—</div>
+    <section class="stats" aria-label="Dashboard stats">
+      <article class="stat"><div class="stat-label">Episodes processed</div><div id="statEpisodes" class="stat-value">—</div></article>
+      <article class="stat"><div class="stat-label">Ideas extracted</div><div id="statIdeas" class="stat-value">—</div></article>
+      <article class="stat"><div class="stat-label">Average match score</div><div id="statAvg" class="stat-value">—</div></article>
+      <article class="stat"><div class="stat-label">Top category</div><div id="statTopCategory" class="stat-value">—</div></article>
+    </section>
+
+    <section class="controls">
+      <div class="row">
+        <input id="search" type="search" placeholder="Search idea name or category" autocomplete="off" />
+        <select id="barrier">
+          <option value="all">All barriers</option>
+          <option value="Low">Low</option>
+          <option value="Medium">Medium</option>
+          <option value="High">High</option>
+        </select>
+        <select id="timeline">
+          <option value="all">All timelines</option>
+          <option value="Days">Days</option>
+          <option value="Weeks">Weeks</option>
+          <option value="Months">Months</option>
+        </select>
+        <select id="score">
+          <option value="all">All scores</option>
+          <option value="7">7+</option>
+          <option value="5">5+</option>
+        </select>
       </div>
-      <div class="tag-filters" id="tagFilters" aria-label="Tag filters"></div>
+      <div class="meta">
+        <span id="meta">Loading dashboard…</span>
+        <span id="count">—</span>
+      </div>
     </section>
 
     <section id="episodes" class="episodes" aria-live="polite"></section>
-
-    <footer class="footer">
-      <div id="updated">Updated —</div>
-      <div>TKO Intel</div>
-    </footer>
   </main>
 
   <script>
-    const $episodes = document.getElementById('episodes');
-    const $search = document.getElementById('search');
-    const $meta = document.getElementById('meta');
-    const $count = document.getElementById('count');
-    const $updated = document.getElementById('updated');
-    const $tagFilters = document.getElementById('tagFilters');
-
-    const state = { episodes: [], query: '', activeTag: 'all' };
-    let activeAudio = null;
-
-    const esc = (v = '') => String(v)
-      .replace(/&/g, '&amp;')
-      .replace(/</g, '&lt;')
-      .replace(/>/g, '&gt;')
-      .replace(/"/g, '&quot;')
-      .replace(/'/g, '&#39;');
-
-    const fmtDate = (value) => {
-      if (!value) return 'Unknown date';
-      const d = new Date(value);
-      if (Number.isNaN(d.getTime())) return value;
-      return d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+    const els = {
+      episodes: document.getElementById('episodes'),
+      search: document.getElementById('search'),
+      barrier: document.getElementById('barrier'),
+      timeline: document.getElementById('timeline'),
+      score: document.getElementById('score'),
+      meta: document.getElementById('meta'),
+      count: document.getElementById('count'),
+      statEpisodes: document.getElementById('statEpisodes'),
+      statIdeas: document.getElementById('statIdeas'),
+      statAvg: document.getElementById('statAvg'),
+      statTopCategory: document.getElementById('statTopCategory')
     };
 
-    const fmtClock = (seconds) => {
-      const s = Number.isFinite(seconds) ? Math.floor(seconds) : 0;
-      const h = Math.floor(s / 3600);
-      const m = Math.floor((s % 3600) / 60);
-      const r = s % 60;
-      if (h) return `${h}:${String(m).padStart(2, '0')}:${String(r).padStart(2, '0')}`;
-      return `${m}:${String(r).padStart(2, '0')}`;
+    const state = {
+      episodes: [],
+      q: '',
+      barrier: 'all',
+      timeline: 'all',
+      score: 'all',
+      openEpisodeIds: new Set()
     };
 
-    const collectTags = (episodes) => {
-      const counts = new Map();
-      episodes.forEach((ep) => {
-        (ep.tags || []).forEach((tag) => counts.set(tag, (counts.get(tag) || 0) + 1));
-      });
-      return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
+    const esc = (v = '') => String(v).replace(/[&<>"']/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
+
+    const toDate = (v) => {
+      const d = new Date(v || '');
+      return Number.isNaN(d.getTime()) ? 'Unknown date' : d.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
     };
 
-    const getVisible = () => {
-      const q = state.query.trim().toLowerCase();
-      return state.episodes.filter((ep) => {
-        const inTag = state.activeTag === 'all' || (ep.tags || []).includes(state.activeTag);
-        if (!inTag) return false;
-        if (!q) return true;
-        const hay = `${ep.title || ''} ${ep.description || ''} ${(ep.tags || []).join(' ')}`.toLowerCase();
-        return hay.includes(q);
-      });
+    const normalizeBarrier = (v = '') => {
+      const t = String(v).toLowerCase();
+      if (t.includes('low')) return 'Low';
+      if (t.includes('high')) return 'High';
+      return 'Medium';
     };
 
-    const renderTags = () => {
-      const tags = collectTags(state.episodes);
-      const chips = [`<button class="chip ${state.activeTag === 'all' ? 'active' : ''}" data-tag="all">All</button>`]
-        .concat(tags.map(([name, count]) => `<button class="chip ${state.activeTag === name ? 'active' : ''}" data-tag="${esc(name)}">${esc(name)} (${count})</button>`));
-      $tagFilters.innerHTML = chips.join('');
-      $tagFilters.querySelectorAll('.chip').forEach((chip) => {
-        chip.addEventListener('click', () => {
-          state.activeTag = chip.dataset.tag || 'all';
-          render();
-        });
-      });
+    const normalizeTimeline = (v = '') => {
+      const t = String(v).toLowerCase();
+      if (t.includes('day')) return 'Days';
+      if (t.includes('week')) return 'Weeks';
+      if (t.includes('month')) return 'Months';
+      return 'Weeks';
     };
 
-    const bindPlayers = () => {
-      $episodes.querySelectorAll('.player').forEach((player) => {
-        const audio = player.querySelector('audio');
-        const button = player.querySelector('.play');
-        const range = player.querySelector('.timeline');
-        const elapsed = player.querySelector('[data-elapsed]');
-        const total = player.querySelector('[data-total]');
-
-        if (!audio || !button || !range || !elapsed || !total) return;
-
-        const sync = () => {
-          range.max = audio.duration || Number(range.dataset.duration || 0) || 0;
-          range.value = audio.currentTime || 0;
-          elapsed.textContent = fmtClock(audio.currentTime || 0);
-          total.textContent = fmtClock(audio.duration || Number(range.dataset.duration || 0) || 0);
-        };
-
-        button.addEventListener('click', async () => {
-          try {
-            if (audio.paused) {
-              if (activeAudio && activeAudio !== audio) {
-                activeAudio.pause();
-                activeAudio.closest('.player')?.querySelector('.play')?.classList.remove('is-playing');
-                activeAudio.closest('.player')?.querySelector('.play') && (activeAudio.closest('.player').querySelector('.play').textContent = 'Play');
-              }
-              await audio.play();
-              activeAudio = audio;
-              button.classList.add('is-playing');
-              button.textContent = 'Pause';
-            } else {
-              audio.pause();
-            }
-          } catch {
-            button.textContent = 'Error';
-          }
-        });
-
-        audio.addEventListener('pause', () => {
-          button.classList.remove('is-playing');
-          button.textContent = 'Play';
-          if (activeAudio === audio) activeAudio = null;
-        });
-
-        audio.addEventListener('play', () => {
-          button.classList.add('is-playing');
-          button.textContent = 'Pause';
-        });
-
-        audio.addEventListener('timeupdate', sync);
-        audio.addEventListener('loadedmetadata', sync);
-        audio.addEventListener('ended', () => {
-          audio.currentTime = 0;
-          sync();
-        });
-
-        range.addEventListener('input', () => {
-          audio.currentTime = Number(range.value || 0);
-          sync();
-        });
-
-        sync();
-      });
+    const scoreClass = (score) => {
+      const n = Number(score) || 0;
+      if (n >= 8) return 'gold';
+      if (n >= 5) return 'blue';
+      return 'gray';
     };
 
-    const render = () => {
-      const visible = getVisible();
-      $count.textContent = `${visible.length} of ${state.episodes.length} episodes`;
+    function rawIdeas(ep) {
+      const out = [];
+      if (Array.isArray(ep?.intelligence)) out.push(...ep.intelligence);
+      if (Array.isArray(ep?.intelligence?.cards)) out.push(...ep.intelligence.cards);
+      if (Array.isArray(ep?.businessIntelligence)) out.push(...ep.businessIntelligence);
+      return out;
+    }
 
-      if (!visible.length) {
-        $episodes.innerHTML = '<article class="empty">No episodes matched this query.</article>';
+    function normalizeIdeas(ep) {
+      return rawIdeas(ep).map((idea, i) => ({
+        id: idea.id || `${ep.id || ep.guid || 'ep'}-${i}`,
+        ideaName: idea.ideaName || idea.name || idea.idea || `Business idea ${i + 1}`,
+        category: idea.category || 'General',
+        barrier: normalizeBarrier(idea.barrierLevel || idea.barrier || 'Medium'),
+        timeline: normalizeTimeline(idea.timeline || ''),
+        tools: Array.isArray(idea.toolsNeeded) ? idea.toolsNeeded : (Array.isArray(idea.tools) ? idea.tools : []),
+        revenue: Array.isArray(idea.revenueFigures) ? idea.revenueFigures : (idea.revenue ? [idea.revenue] : []),
+        insight: idea.insight || idea.notes || idea.summary || '',
+        matchScore: Math.max(0, Math.min(10, Number(idea.matchScore) || 0))
+      }));
+    }
+
+    function hydrateEpisodes(data) {
+      return (data.episodes || [])
+        .map((ep) => ({ ...ep, ideas: normalizeIdeas(ep) }))
+        .sort((a, b) => new Date(b.publishedAt || b.publishDate || 0) - new Date(a.publishedAt || a.publishDate || 0));
+    }
+
+    function renderStats() {
+      const totalEpisodes = state.episodes.length;
+      const allIdeas = state.episodes.flatMap((ep) => ep.ideas);
+      const totalIdeas = allIdeas.length;
+      const avg = totalIdeas ? (allIdeas.reduce((sum, i) => sum + (Number(i.matchScore) || 0), 0) / totalIdeas) : 0;
+      const categoryCount = allIdeas.reduce((acc, i) => {
+        acc[i.category] = (acc[i.category] || 0) + 1;
+        return acc;
+      }, {});
+      const topCategory = Object.entries(categoryCount).sort((a, b) => b[1] - a[1])[0]?.[0] || '—';
+
+      els.statEpisodes.textContent = String(totalEpisodes);
+      els.statIdeas.textContent = String(totalIdeas);
+      els.statAvg.textContent = totalIdeas ? `${avg.toFixed(1)}/10` : '—';
+      els.statTopCategory.textContent = topCategory;
+    }
+
+    function ideaPasses(idea) {
+      if (state.barrier !== 'all' && idea.barrier !== state.barrier) return false;
+      if (state.timeline !== 'all' && idea.timeline !== state.timeline) return false;
+      if (state.score === '7' && idea.matchScore < 7) return false;
+      if (state.score === '5' && idea.matchScore < 5) return false;
+
+      const q = state.q.trim().toLowerCase();
+      if (!q) return true;
+      return `${idea.ideaName} ${idea.category}`.toLowerCase().includes(q);
+    }
+
+    function filteredEpisodes() {
+      const constrained = state.q.trim() || state.barrier !== 'all' || state.timeline !== 'all' || state.score !== 'all';
+      return state.episodes
+        .map((ep) => ({ ...ep, visibleIdeas: ep.ideas.filter(ideaPasses) }))
+        .filter((ep) => (constrained ? ep.visibleIdeas.length > 0 : true));
+    }
+
+    function ideaCard(idea) {
+      return `
+        <article class="intel-card">
+          <div class="intel-head">
+            <h3 class="idea">${esc(idea.ideaName)}</h3>
+            <span class="score ${scoreClass(idea.matchScore)}">Match ${esc(idea.matchScore.toFixed(1))}</span>
+          </div>
+          <div class="chips">
+            <span class="badge">${esc(idea.category)}</span>
+            <span class="chip">Barrier: ${esc(idea.barrier)}</span>
+            <span class="chip">Timeline: ${esc(idea.timeline)}</span>
+          </div>
+          <div class="meta-grid">
+            <div class="kv">Tools<b>${esc((idea.tools || []).join(', ') || '—')}</b></div>
+            <div class="kv">Revenue<b>${esc((idea.revenue || []).join(', ') || '—')}</b></div>
+          </div>
+          <p class="insight">${esc(idea.insight || 'No insight captured yet.')}</p>
+        </article>
+      `;
+    }
+
+    function episodeCard(ep, isOpen) {
+      const ideas = ep.visibleIdeas || [];
+      return `
+        <article class="episode ${isOpen ? 'open' : ''}" data-episode="${esc(ep.id || ep.guid || '')}">
+          <button class="ep-head" type="button" aria-expanded="${isOpen ? 'true' : 'false'}" data-toggle="${esc(ep.id || ep.guid || '')}">
+            <div class="ep-top"><span>Episode ${esc(ep.episodeNumber || '—')}</span><span>${esc(toDate(ep.publishedAt || ep.publishDate))}</span></div>
+            <h2 class="ep-title">${esc(ep.title || 'Untitled episode')}</h2>
+            <p class="ep-desc">${esc(ep.descriptionExcerpt || ep.description || '')}</p>
+            <span class="chev">▼</span>
+          </button>
+          <div class="ep-content">
+            <div class="ep-inner">
+              ${ep.audioUrl ? `<audio controls preload="none" src="${esc(ep.audioUrl)}"></audio>` : ''}
+              <div class="intel-grid">
+                ${ideas.length ? ideas.map(ideaCard).join('') : '<div class="empty">No business intelligence matched these filters.</div>'}
+              </div>
+            </div>
+          </div>
+        </article>
+      `;
+    }
+
+    function render() {
+      const rows = filteredEpisodes();
+      const firstOpenId = rows[0]?.id || rows[0]?.guid;
+      els.count.textContent = `${rows.length} / ${state.episodes.length} episodes visible`;
+
+      if (!rows.length) {
+        els.episodes.innerHTML = '<article class="empty">No intelligence ideas match this search/filter combo.</article>';
         return;
       }
 
-      $episodes.innerHTML = visible.map((ep, index) => {
-        const number = ep.episodeNumber ? `Episode ${ep.episodeNumber}` : `Archive ${index + 1}`;
-        const duration = ep.durationLabel || ep.duration || 'Duration unavailable';
-        const tags = (ep.tags || []).slice(0, 5).map((tag) => `<span class="topic">${esc(tag)}</span>`).join('');
-        return `
-          <article class="episode">
-            <div class="episode-head">
-              <span class="episode-mark">${esc(number)}</span>
-              <span>${esc(fmtDate(ep.publishedAt || ep.publishDate))} · ${esc(duration)}</span>
-            </div>
-            <h2 class="title">${esc(ep.title || 'Untitled Episode')}</h2>
-            <p class="desc">${esc(ep.descriptionExcerpt || ep.description || 'No description available.')}</p>
-            ${tags ? `<div class="topic-row">${tags}</div>` : ''}
-            <div class="player">
-              <button class="play" type="button" aria-label="Play episode">Play</button>
-              <div class="timeline-wrap">
-                <input class="timeline" type="range" min="0" value="0" step="1" data-duration="${Number(ep.durationSeconds) || 0}" />
-                <div class="time"><span data-elapsed>0:00</span><span data-total>${esc(duration)}</span></div>
-              </div>
-              <audio preload="none" src="${esc(ep.audioUrl || '')}"></audio>
-            </div>
-          </article>
-        `;
+      if (!state.openEpisodeIds.size && firstOpenId) state.openEpisodeIds.add(String(firstOpenId));
+
+      els.episodes.innerHTML = rows.map((ep) => {
+        const id = String(ep.id || ep.guid || '');
+        return episodeCard(ep, state.openEpisodeIds.has(id));
       }).join('');
 
-      bindPlayers();
-    };
+      els.episodes.querySelectorAll('[data-toggle]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          const id = String(btn.dataset.toggle || '');
+          if (!id) return;
+          if (state.openEpisodeIds.has(id)) state.openEpisodeIds.delete(id);
+          else state.openEpisodeIds.add(id);
+          render();
+        });
+      });
+    }
 
     async function init() {
       const res = await fetch('./data/tko-intel.json', { cache: 'no-store' });
-      if (!res.ok) throw new Error(`Unable to load feed JSON (${res.status})`);
+      if (!res.ok) throw new Error(`Feed JSON unavailable (${res.status})`);
       const data = await res.json();
-      state.episodes = (data.episodes || []).slice().sort((a, b) => new Date(b.publishedAt || 0) - new Date(a.publishedAt || 0));
 
-      $meta.textContent = data.feed?.title || 'The Koerner Office';
-      $updated.textContent = `Updated ${new Date(data.generatedAt).toLocaleString()}`;
+      state.episodes = hydrateEpisodes(data);
+      els.meta.textContent = `${data.feed?.title || 'TKO'} · ${data.intelligenceMeta?.processedEpisodes || state.episodes.length} analyzed`;
 
-      $search.addEventListener('input', (event) => {
-        state.query = event.target.value || '';
-        render();
-      });
-
-      renderTags();
+      renderStats();
       render();
+
+      els.search.addEventListener('input', (e) => { state.q = e.target.value || ''; render(); });
+      els.barrier.addEventListener('change', (e) => { state.barrier = e.target.value || 'all'; render(); });
+      els.timeline.addEventListener('change', (e) => { state.timeline = e.target.value || 'all'; render(); });
+      els.score.addEventListener('change', (e) => { state.score = e.target.value || 'all'; render(); });
     }
 
-    init().catch((error) => {
-      console.error(error);
-      $meta.textContent = 'Feed unavailable';
-      $episodes.innerHTML = '<article class="empty">Could not load episode data. Re-run the generator and refresh.</article>';
-      $updated.textContent = 'Updated unavailable';
+    init().catch((err) => {
+      console.error(err);
+      els.meta.textContent = 'Failed to load dashboard data';
+      els.episodes.innerHTML = '<article class="empty">Could not load ./data/tko-intel.json.</article>';
     });
   </script>
 </body>
