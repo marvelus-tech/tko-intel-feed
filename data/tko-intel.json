@@ -1,0 +1,343 @@
+{
+  "generatedAt": "2026-06-10T07:27:44.406Z",
+  "lastUpdated": "2026-06-04",
+  "quickStats": {
+    "totalTokensTracked": 70,
+    "newFindsToday": 3,
+    "hotOpportunities": [
+      {
+        "token": "Grass",
+        "ticker": "GRASS",
+        "confidence": 75
+      },
+      {
+        "token": "Hivemapper",
+        "ticker": "HONEY",
+        "confidence": 70
+      },
+      {
+        "token": "Zama",
+        "ticker": "ZAMA",
+        "confidence": 85
+      },
+      {
+        "token": "Moonwalk Fitness",
+        "ticker": "MF",
+        "confidence": 85
+      },
+      {
+        "token": "RedStone",
+        "ticker": "RED",
+        "confidence": 80
+      }
+    ]
+  },
+  "marketOverview": {
+    "source": "DexScreener",
+    "symbolsQueried": [
+      "GRASS",
+      "HONEY",
+      "UPT",
+      "FLOCK",
+      "CGPT",
+      "REI",
+      "DOOD",
+      "SNS"
+    ],
+    "topGainers": [
+      {
+        "ticker": "HONEY",
+        "pair": "ENYEHSyduTbFN1xoSEGaLu7c1F8AqKucdscMuV5Yypy2",
+        "dexId": "orca",
+        "url": "https://dexscreener.com/solana/enyehsydutbfn1xosegalu7c1f8aqkucdscmuv5yypy2",
+        "priceUsd": 0.001779,
+        "change24h": 14.8,
+        "volume24h": 30845.28,
+        "fdv": 11418316,
+        "liquidityUsd": 22448.65,
+        "baseSymbol": "HONEY",
+        "quoteSymbol": "SOL"
+      },
+      {
+        "ticker": "SNS",
+        "pair": "FQ8VgCiwQE86JNtuboY5HtVahYu9ALm8XF41hDNe15Uk",
+        "dexId": "orca",
+        "url": "https://dexscreener.com/solana/fq8vgciwqe86jntuboy5htvahyu9alm8xf41hdne15uk",
+        "priceUsd": 0.00005655,
+        "change24h": 14.44,
+        "volume24h": 10.6,
+        "fdv": 56538,
+        "liquidityUsd": 14460.92,
+        "baseSymbol": "SNS",
+        "quoteSymbol": "SOL"
+      },
+      {
+        "ticker": "GRASS",
+        "pair": "GTJ2S27UL7yZ3TdTwpKjfNcxeEZRkRPHjpj5Fubwb8Mk",
+        "dexId": "raydium",
+        "url": "https://dexscreener.com/solana/gtj2s27ul7yz3tdtwpkjfncxeezrkrphjpj5fubwb8mk",
+        "priceUsd": 0.3504,
+        "change24h": 1.58,
+        "volume24h": 8573.41,
+        "fdv": 350434282,
+        "liquidityUsd": 270877.05,
+        "baseSymbol": "GRASS",
+        "quoteSymbol": "SOL"
+      },
+      {
+        "ticker": "CGPT",
+        "pair": "GYT9cqiwgG8hWqrs6Jg9z6QjnNh1mbDr9TR1We2YWy42",
+        "dexId": "raydium",
+        "url": "https://dexscreener.com/solana/gyt9cqiwgg8hwqrs6jg9z6qjnnh1mbdr9tr1we2ywy42",
+        "priceUsd": 0.02122,
+        "change24h": 1.41,
+        "volume24h": 5400.76,
+        "fdv": 75488,
+        "liquidityUsd": 47190.88,
+        "baseSymbol": "CGPT",
+        "quoteSymbol": "USDC"
+      },
+      {
+        "ticker": "FLOCK",
+        "pair": "EjX65h7TqgEL9fB6i7qYqgSFmrmZD1Rir1QgwERX33BA",
+        "dexId": "raydium",
+        "url": "https://dexscreener.com/solana/ejx65h7tqgel9fb6i7qyqgsfmrmzd1rir1qgwerx33ba",
+        "priceUsd": 0.03813,
+        "change24h": 0.14,
+        "volume24h": 4774.89,
+        "fdv": 3814,
+        "liquidityUsd": 12723.52,
+        "baseSymbol": "FLOCK",
+        "quoteSymbol": "USDC"
+      },
+      {
+        "ticker": "DOOD",
+        "pair": "8MFyMB5KQ6kFcrdXC8VHzkb4L1hQ5pzqW7fU8aMGWytd",
+        "dexId": "raydium",
+        "url": "https://dexscreener.com/solana/8mfymb5kq6kfcrdxc8vhzkb4l1hq5pzqw7fu8amgwytd",
+        "priceUsd": 0.008699,
+        "change24h": 0,
+        "volume24h": 2.25,
+        "fdv": 43498673,
+        "liquidityUsd": 1151324.75,
+        "baseSymbol": "DOOD",
+        "quoteSymbol": "USDC"
+      },
+      {
+        "ticker": "REI",
+        "pair": "C8GRoLEGAxgdp5XpzZqwQzzLPpPwAh6AV6R45dFn3AoL",
+        "dexId": "raydium",
+        "url": "https://dexscreener.com/solana/c8grolegaxgdp5xpzzqwqzzlpppwah6av6r45dfn3aol",
+        "priceUsd": 0.000003139,
+        "change24h": -5.54,
+        "volume24h": 35.04,
+        "fdv": 3139,
+        "liquidityUsd": 945.79,
+        "baseSymbol": "REI",
+        "quoteSymbol": "Fartcoin "
+      },
+      {
+        "ticker": "UPT",
+        "pair": "4pP7bhpwraAXYwfdTuCn16VgghS7UBYR1zxiLqW8k4TF",
+        "dexId": "meteora",
+        "url": "https://dexscreener.com/solana/4pp7bhpwraaxywfdtucn16vgghs7ubyr1zxilqw8k4tf",
+        "priceUsd": 0.004853,
+        "change24h": -7.25,
+        "volume24h": 5272.55,
+        "fdv": 4740898,
+        "liquidityUsd": 67436.62,
+        "baseSymbol": "UPT",
+        "quoteSymbol": "USDC"
+      }
+    ],
+    "trends": {
+      "avgChange24h": 2.4475000000000002,
+      "totalVolume24h": 54914.780000000006,
+      "advancers": 5,
+      "decliners": 2
+    }
+  },
+  "whaleAlerts": {
+    "available": false,
+    "source": null,
+    "alerts": []
+  },
+  "scoutFindings": [
+    {
+      "token": "Grass",
+      "ticker": "GRASS",
+      "marketCap": "~$45M (estimated, DePIN sector)",
+      "description": "Sovereign data rollup on Solana that pays users in GRASS tokens for sharing unused bandwidth. AI labs use this bandwidth to scrape the open web at scale. 2.5M nodes across 190 countries with ZK Processor for data integrity proof.",
+      "rewardMechanic": "Hold & share bandwidth → earn GRASS tokens. Node operators earn rewards for contributing infrastructure. Token also used for governance and staking.",
+      "confidence": 75,
+      "links": [],
+      "sourceFile": "memory/scout-findings/2026-06-04.md",
+      "discoveredOn": "2026-06-04"
+    },
+    {
+      "token": "Hivemapper",
+      "ticker": "HONEY",
+      "marketCap": "~$35M (estimated, DePIN sector)",
+      "description": "Decentralized mapping network on Solana. Users earn HONEY tokens by contributing street-level imagery through dashcams. Recently reported 800% revenue surge alongside Helium in Solana's DePIN sector.",
+      "rewardMechanic": "Hold HONEY + contribute mapping data → earn rewards. Token holders can stake to earn a share of network revenue. Revenue projections up to $100M annually by 2027-2032.",
+      "confidence": 70,
+      "links": [],
+      "sourceFile": "memory/scout-findings/2026-06-04.md",
+      "discoveredOn": "2026-06-04"
+    },
+    {
+      "token": "UpRock",
+      "ticker": "UPT",
+      "marketCap": "~$15M (estimated, very small cap)",
+      "description": "Decentralized compute network on Solana. Part of the growing DePIN ecosystem focusing on distributed computing resources. Listed among top 10 DePIN projects on Solana.",
+      "rewardMechanic": "Hold UPT + provide compute resources → earn rewards. Token incentivizes users to contribute computing power to the network.",
+      "confidence": 60,
+      "links": [],
+      "sourceFile": "memory/scout-findings/2026-06-04.md",
+      "discoveredOn": "2026-06-04"
+    },
+    {
+      "token": "Zama",
+      "ticker": "ZAMA",
+      "marketCap": "~$61–76M (CMC ~$69M, OKX ~$75.8M, Phemex ~$61.5M)",
+      "description": "Cross-chain confidentiality protocol using Fully Homomorphic Encryption (FHE). Sits as a privacy layer on top of existing chains, not a new L1/L2. Backed by $130M in funding and a 90-person research team.",
+      "rewardMechanic": "Burn-and-mint tokenomics — 100% of protocol fees are burned, while ~5% annual inflation mints rewards for stakers. Operators must stake ZAMA to run protocol nodes (sequencers, coprocessors, KMS). Over 34% of circulating supply was staked as of late February 2026. Rewards split by role, then distributed pro-rata.",
+      "confidence": 85,
+      "links": [],
+      "sourceFile": "memory/scout-findings/2026-05-28-daily-scout.md",
+      "discoveredOn": "2026-05-28"
+    },
+    {
+      "token": "Moonwalk Fitness",
+      "ticker": "MF",
+      "marketCap": "~$23K–$1.2M (varies by source, micro-cap)",
+      "description": "Move-to-earn fitness app on Solana. Users stake crypto in fitness challenges and earn rewards by completing daily step goals. Backed by Hack VC, Binance Labs, YZi Labs, and Reciprocal Ventures. Live on iOS and Android.",
+      "rewardMechanic": "Stake crypto → complete daily fitness challenges → earn MF tokens + staked crypto back. Anti-cheating via Apple Health / Google Fit integration. Team mode for pooled stakes.",
+      "confidence": 85,
+      "links": [],
+      "sourceFile": "memory/scout-findings/report-2026-05-28.md",
+      "discoveredOn": "2026-05-28"
+    },
+    {
+      "token": "RedStone",
+      "ticker": "RED",
+      "marketCap": "~$52–56M (CMC $51.97M, Bybit $52.64M, CryptoSlate $55.57M)",
+      "description": "Modular blockchain oracle delivering price feeds, NAV data, Proof of Reserve, and risk ratings to DeFi and institutional finance. Recently expanded into RWA infrastructure with RedStone Settle ($30B+ tokenized asset target). RED is an ERC-20 also available on Solana.",
+      "rewardMechanic": "RED can be staked by data providers and by token holders. Token holders enhance network security through direct staking in RedStone’s EigenLayer AVS. Note: staking rewards are currently inflationary (new RED minted), not fee/revenue share.",
+      "confidence": 80,
+      "links": [],
+      "sourceFile": "memory/scout-findings/2026-05-28-daily-scout.md",
+      "discoveredOn": "2026-05-28"
+    },
+    {
+      "token": "Doodles",
+      "ticker": "DOOD",
+      "marketCap": "~$23.6M–$29.2M",
+      "description": "Native token of the iconic Doodles NFT collection on Solana. Powers governance, creator grants, avatar customization, and ecosystem rewards. ~160,000 holders. Launched May 9, 2025.",
+      "rewardMechanic": "Staking available at up to 90% APR on some platforms. Holders earn ecosystem rewards, governance rights, and creator grant access. 30% of supply airdropped to NFT holders.",
+      "confidence": 78,
+      "links": [],
+      "sourceFile": "memory/scout-findings/report-2026-05-28.md",
+      "discoveredOn": "2026-05-28"
+    },
+    {
+      "token": "AI Rig Complex",
+      "ticker": "ARC",
+      "marketCap": "~$63–67M (TokenRadar $63.9M, CryptoSlate $66.83M)",
+      "description": "Open-source, modular AI-agent framework built on Solana (Rust-based). Provides high-performance compute for AI training via DePIN. ARC Forge is a curated token launchpad for AI projects.",
+      "rewardMechanic": "ARC can be staked to earn ecosystem rewards. Token serves as the base fee for projects launched within the ecosystem. Prize pool & treasury allocation (5.5%) incentivizes active participation and contributor rewards.",
+      "confidence": 75,
+      "links": [],
+      "sourceFile": "memory/scout-findings/2026-05-28-daily-scout.md",
+      "discoveredOn": "2026-05-28"
+    },
+    {
+      "token": "Solana Name Service",
+      "ticker": "SNS",
+      "marketCap": "~$2.6M–$3.1M",
+      "description": "Decentralized naming system for .sol domains on Solana. Replaces the legacy FIDA token (market cap $71M). 227,000+ .sol holders, 451,000+ registered domains. Launched May 6, 2025.",
+      "rewardMechanic": "40% of total supply allocated to community airdrop (20% to .sol domain holders, builders, and bear market supporters). Domain holders receive proportional airdrop rewards based on domain ownership and ecosystem participation.",
+      "confidence": 72,
+      "links": [],
+      "sourceFile": "memory/scout-findings/report-2026-05-28.md",
+      "discoveredOn": "2026-05-28"
+    },
+    {
+      "token": "Jelly-My-Jelly",
+      "ticker": "JELLYJELLY",
+      "marketCap": "~$51–57M",
+      "description": "Video-chat clipping platform and viral meme token on Solana. Built around “Jelly” meme culture with social/viral mechanics.",
+      "rewardMechanic": "Staking available on Biconomy, Gate.io, and others at ~25% APR. Higher APYs (up to 624%) appear on Jupiter liquidity-mining pools, but standard locked staking sits around 25%.",
+      "confidence": 70,
+      "links": [],
+      "sourceFile": "memory/scout-findings/2026-05-28-daily-scout.md",
+      "discoveredOn": "2026-05-28"
+    },
+    {
+      "token": "Reflection",
+      "ticker": "REFLECTION",
+      "marketCap": "~$2.6K (extremely micro-cap)",
+      "description": "Experimental DeFi protocol on Solana that captures market volatility through a network of micro liquidity pools and turns it into automated SOL rewards for holders. No staking or farming required — simply hold to earn.",
+      "rewardMechanic": "Automated SOL rewards distributed to holders from arbitrage activity in micro liquidity pools. No manual staking needed — rewards accrue passively just by holding the token.",
+      "confidence": 55,
+      "links": [],
+      "sourceFile": "memory/scout-findings/report-2026-05-28.md",
+      "discoveredOn": "2026-05-28"
+    },
+    {
+      "token": "Kyros",
+      "ticker": "KYROS",
+      "marketCap": "~$717K (FDV: ~$717K)",
+      "description": "A new yield layer on Solana — liquid (re)staking protocol with multiple restaked assets (SOL, JTO, KYROS)",
+      "rewardMechanic": "KYROS re-staking at 12.54% APY. Users hold/stake KYROS to participate in governance and earn rewards. Also offers kySOL and kyJTO restaking.",
+      "confidence": 85,
+      "links": [],
+      "sourceFile": "memory/scout-findings/2026-05-11.md",
+      "discoveredOn": "2026-05-11"
+    },
+    {
+      "token": "Fragmetric",
+      "ticker": "FRAG",
+      "marketCap": "~$385K (FDV: ~$1.91M)",
+      "description": "Liquid Restaking protocol on Solana",
+      "rewardMechanic": "Restaking rewards — users stake/restake FRAG to earn yield from the restaking infrastructure",
+      "confidence": 75,
+      "links": [],
+      "sourceFile": "memory/scout-findings/2026-05-11.md",
+      "discoveredOn": "2026-05-11"
+    },
+    {
+      "token": "Flash.Trade",
+      "ticker": "FAF",
+      "marketCap": "~$3.8M (FDV: ~$3.8M)",
+      "description": "Spot, Perpetuals, and Earn platform on Solana",
+      "rewardMechanic": "FAF token staking — website explicitly asks \"How does staking FAF work?\" indicating native staking mechanic. Also offers FLP (Flash Liquidity Provider) tokens for LPs.",
+      "confidence": 70,
+      "links": [],
+      "sourceFile": "memory/scout-findings/2026-05-11.md",
+      "discoveredOn": "2026-05-11"
+    },
+    {
+      "token": "Adrena",
+      "ticker": "ADX",
+      "marketCap": "~$1.08M (FDV: ~$196K)",
+      "description": "Multi-Asset Perpetuals DEX on Solana with Peer-to-Pool model. 0% slippage, up to 100x leverage. Community-owned.",
+      "rewardMechanic": "ADX can be \"claimed and staked on the platform\" (confirmed via official X/Twitter). Staking rewards for ADX holders.",
+      "confidence": 70,
+      "links": [],
+      "sourceFile": "memory/scout-findings/2026-05-11.md",
+      "discoveredOn": "2026-05-11"
+    },
+    {
+      "token": "Whales Market",
+      "ticker": "WHALES",
+      "marketCap": "~$349K (FDV: ~$1.31M)",
+      "description": "Leading OTC cryptocurrency pre-market trading platform",
+      "rewardMechanic": "xWHALES staking token exists (3wCoTb3TArUdzmeTBPzPFyPBUP6EJXaW5LAzGsWCpySu) — users can stake WHALES to receive xWHALES, indicating a hold-to-earn mechanic",
+      "confidence": 65,
+      "links": [],
+      "sourceFile": "memory/scout-findings/2026-05-11.md",
+      "discoveredOn": "2026-05-11"
+    }
+  ]
+}

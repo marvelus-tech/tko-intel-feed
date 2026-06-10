@@ -2,307 +2,243 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TKO Intel Feed</title>
+  <meta name="description" content="Premium Solana scout intelligence dashboard with live market momentum." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Playfair+Display:wght@500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
   <style>
     :root {
-      --bg: #f5f5f0;
-      --surface: #f9f9f5;
-      --text: #1a1a2e;
-      --muted: #616173;
-      --line: #dfdfd5;
-      --accent: #ffaa00;
-      --font-display: "Playfair Display", serif;
-      --font-body: "Plus Jakarta Sans", sans-serif;
-      --font-mono: "JetBrains Mono", monospace;
-      --radius: 18px;
+      --bg: #06070c;
+      --bg-2: #0d1020;
+      --text: #f5f7ff;
+      --muted: #a8b1cc;
+      --line: rgba(255,255,255,0.1);
+      --card: rgba(255,255,255,0.05);
+      --blue: #5ca0ff;
+      --teal: #3de6cf;
+      --violet: #8f6bff;
+      --ok: #3ef0a5;
+      --bad: #ff6589;
+      --mono: "JetBrains Mono", monospace;
+      --display: "Manrope", sans-serif;
+      --body: "DM Sans", sans-serif;
+      --radius: 20px;
     }
 
     * { box-sizing: border-box; }
+    html, body { margin: 0; background: radial-gradient(circle at 15% -10%, #1f2d54 0%, transparent 35%), radial-gradient(circle at 90% -10%, #20263f 0%, transparent 35%), var(--bg); color: var(--text); font-family: var(--body); }
+    body::before { content: ""; position: fixed; inset: 0; pointer-events: none; background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 3px 3px; opacity: 0.1; }
 
-    body {
-      margin: 0;
-      font-family: var(--font-body);
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
+    .shell { max-width: 1200px; margin: 0 auto; padding: 18px 14px 48px; position: relative; z-index: 2; }
+    .glass { background: linear-gradient(140deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); border: 1px solid var(--line); backdrop-filter: blur(14px); border-radius: var(--radius); box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 20px 60px rgba(0,0,0,0.45); }
+
+    .hero { padding: 22px; margin-bottom: 14px; animation: rise .55s ease both; }
+    .kicker { font: 600 11px/1 var(--mono); color: var(--teal); letter-spacing: .16em; text-transform: uppercase; margin-bottom: 14px; }
+    h1 { margin: 0; font: 800 clamp(28px, 8vw, 54px)/1.02 var(--display); letter-spacing: -0.04em; }
+    .sub { margin: 10px 0 0; color: var(--muted); font-size: 14px; }
+
+    .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin-bottom: 14px; }
+    .stat { padding: 14px; }
+    .stat .label { color: var(--muted); font: 600 11px/1 var(--mono); text-transform: uppercase; letter-spacing: .09em; }
+    .stat .value { margin-top: 8px; font: 700 26px/1 var(--display); letter-spacing: -0.03em; }
+
+    .panel { padding: 16px; margin-bottom: 14px; }
+    .panel h2 { margin: 0 0 12px; font: 700 15px/1.2 var(--display); letter-spacing: -0.01em; }
+
+    .chart-wrap { height: 230px; }
+
+    .gainer-list, .findings, .whales { display: grid; gap: 10px; }
+    .row { display: grid; gap: 8px; padding: 12px; border-radius: 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); }
+
+    .symbol { font: 700 14px/1 var(--display); }
+    .meta { color: var(--muted); font-size: 12px; }
+    .gain { font: 700 13px/1 var(--mono); }
+    .gain.pos { color: var(--ok); }
+    .gain.neg { color: var(--bad); }
+
+    .finding-top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
+    .badge { font: 600 11px/1 var(--mono); padding: 5px 8px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.2); color: var(--muted); }
+    .desc { color: var(--muted); font-size: 13px; margin: 0; }
+
+    .timestamp { margin-top: 16px; text-align: center; color: var(--muted); font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
+
+    @media (min-width: 900px) {
+      .shell { padding-top: 24px; }
+      .grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 14px; }
+      .stats { grid-template-columns: repeat(4, minmax(0,1fr)); }
+      .split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+      .row { grid-template-columns: 1fr auto; align-items: center; }
     }
 
-    .shell {
-      max-width: 980px;
-      margin: 0 auto;
-      padding: 44px 26px 56px;
-    }
-
-    .header {
-      margin-bottom: 30px;
-      padding-bottom: 22px;
-      border-bottom: 1px solid var(--line);
-    }
-
-    h1 {
-      margin: 0 0 10px;
-      font-family: var(--font-display);
-      font-size: clamp(2rem, 4vw, 3rem);
-      font-weight: 600;
-      letter-spacing: -0.02em;
-    }
-
-    .intro {
-      margin: 0;
-      color: var(--muted);
-      max-width: 62ch;
-      font-size: 0.97rem;
-    }
-
-    .feed-list {
-      max-height: calc(100vh - 220px);
-      overflow-y: auto;
-      padding-right: 6px;
-      display: grid;
-      gap: 18px;
-    }
-
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      padding: 28px;
-      animation: fadeUp 380ms ease both;
-    }
-
-    .card:nth-child(2) { animation-delay: 70ms; }
-    .card:nth-child(3) { animation-delay: 130ms; }
-
-    .card-head {
-      display: flex;
-      align-items: flex-start;
-      justify-content: space-between;
-      gap: 18px;
-      margin-bottom: 18px;
-    }
-
-    .episode-number,
-    .date {
-      font-family: var(--font-mono);
-      font-size: 0.76rem;
-      letter-spacing: 0.04em;
-      color: var(--muted);
-      text-transform: uppercase;
-    }
-
-    .title {
-      margin: 7px 0 0;
-      font-family: var(--font-display);
-      font-size: clamp(1.35rem, 2.7vw, 1.8rem);
-      line-height: 1.28;
-      letter-spacing: -0.01em;
-    }
-
-    .section {
-      margin-top: 22px;
-    }
-
-    .label {
-      margin: 0 0 8px;
-      font-family: var(--font-mono);
-      font-size: 0.73rem;
-      letter-spacing: 0.06em;
-      text-transform: uppercase;
-      color: var(--muted);
-    }
-
-    .text {
-      margin: 0;
-      color: #2a2a3d;
-      font-size: 0.96rem;
-    }
-
-    ul {
-      margin: 0;
-      padding-left: 20px;
-      color: #2a2a3d;
-    }
-
-    li { margin-bottom: 8px; }
-    li:last-child { margin-bottom: 0; }
-
-    .actions {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 10px;
-    }
-
-    .action {
-      display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      color: #2e2e40;
-      font-size: 0.94rem;
-    }
-
-    .check {
-      appearance: none;
-      width: 16px;
-      height: 16px;
-      margin-top: 3px;
-      border-radius: 4px;
-      border: 1px solid #c7c7bb;
-      background: transparent;
-      cursor: pointer;
-      transition: background-color 160ms ease, border-color 160ms ease;
-      flex-shrink: 0;
-    }
-
-    .check:checked {
-      background: var(--accent);
-      border-color: var(--accent);
-    }
-
-    .listen {
-      display: inline-flex;
-      margin-top: 16px;
-      font-size: 0.9rem;
-      color: var(--text);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(255, 170, 0, 0.75);
-      padding-bottom: 2px;
-      transition: color 160ms ease, border-color 160ms ease;
-    }
-
-    .listen:hover {
-      color: #000;
-      border-color: var(--accent);
-    }
-
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(10px); }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(16px); }
       to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 720px) {
-      .shell { padding: 28px 16px 36px; }
-      .card { padding: 20px; }
-      .card-head { flex-direction: column; gap: 8px; }
-      .feed-list { max-height: none; overflow: visible; }
     }
   </style>
 </head>
 <body>
   <main class="shell">
-    <header class="header">
-      <h1>TKO Intel Feed</h1>
-      <p class="intro">A clean, always-open brief of recent episodes and concrete next steps. Everything visible, nothing decorative.</p>
-    </header>
-
-    <section class="feed-list" aria-label="Episode feed">
-      <article class="card">
-        <div class="card-head">
-          <div>
-            <div class="episode-number">EP #284</div>
-            <h2 class="title">AI Business Models That Actually Work</h2>
-          </div>
-          <div class="date">Dec 15, 2024</div>
-        </div>
-
-        <div class="section">
-          <h3 class="label">Episode Summary</h3>
-          <p class="text">Sam Parr and Shaan Puri break down AI business models generating real revenue today. They focus on voice agents, content systems, and AI advisory services, separating practical operators from hype.</p>
-        </div>
-
-        <div class="section">
-          <h3 class="label">Key Opportunities</h3>
-          <ul>
-            <li>AI voice agent agency — $200-500/month per client</li>
-            <li>AI content studio — $1K-5K per project</li>
-            <li>AI consulting for SMBs — $150-300/hour</li>
-          </ul>
-        </div>
-
-        <div class="section">
-          <h3 class="label">Action Items</h3>
-          <ul class="actions">
-            <li class="action"><input class="check" type="checkbox" aria-label="Research AI voice agent competitors" /> Research AI voice agent competitors</li>
-            <li class="action"><input class="check" type="checkbox" aria-label="Build demo voice agent for testing" /> Build demo voice agent for testing</li>
-            <li class="action"><input class="check" type="checkbox" aria-label="Create pricing calculator for AI services" /> Create pricing calculator for AI services</li>
-          </ul>
-        </div>
-
-        <a class="listen" href="#">Listen on Spotify</a>
-      </article>
-
-      <article class="card">
-        <div class="card-head">
-          <div>
-            <div class="episode-number">EP #276</div>
-            <h2 class="title">RV Park Investing: The Hidden Cash Flow</h2>
-          </div>
-          <div class="date">Nov 28, 2024</div>
-        </div>
-
-        <div class="section">
-          <h3 class="label">Episode Summary</h3>
-          <p class="text">A deep dive into RV park investing with an operator who owns 12 parks. It covers acquisition playbooks, operating leverage, recession resilience, and adjacent rank-and-rent lead generation opportunities.</p>
-        </div>
-
-        <div class="section">
-          <h3 class="label">Key Opportunities</h3>
-          <ul>
-            <li>RV park rank &amp; rent — $500-2000/month per site</li>
-            <li>RV park acquisition — 8-12% cap rates</li>
-          </ul>
-        </div>
-
-        <div class="section">
-          <h3 class="label">Action Items</h3>
-          <ul class="actions">
-            <li class="action"><input class="check" type="checkbox" aria-label="Research caravan park keywords in Australia" /> Research caravan park keywords in Australia</li>
-            <li class="action"><input class="check" type="checkbox" aria-label="Build MVP comparison site" /> Build MVP comparison site</li>
-          </ul>
-        </div>
-
-        <a class="listen" href="#">Listen on Spotify</a>
-      </article>
-
-      <article class="card">
-        <div class="card-head">
-          <div>
-            <div class="episode-number">EP #280</div>
-            <h2 class="title">The Great Unbundling of Marketplaces</h2>
-          </div>
-          <div class="date">Dec 5, 2024</div>
-        </div>
-
-        <div class="section">
-          <h3 class="label">Episode Summary</h3>
-          <p class="text">A framework for how vertical marketplaces unbundle broad platforms. The pattern: find a category with friction, improve trust and UX, then focus on high-value transaction flow.</p>
-        </div>
-
-        <div class="section">
-          <h3 class="label">Key Opportunities</h3>
-          <ul>
-            <li>Niche marketplace — $0-500 to start</li>
-            <li>B2B equipment marketplace — $1K-10K/month potential</li>
-          </ul>
-        </div>
-
-        <div class="section">
-          <h3 class="label">Action Items</h3>
-          <ul class="actions">
-            <li class="action"><input class="check" type="checkbox" aria-label="Identify 3 underserved categories" /> Identify 3 underserved categories</li>
-            <li class="action"><input class="check" type="checkbox" aria-label="Validate demand via Reddit research" /> Validate demand via Reddit research</li>
-          </ul>
-        </div>
-
-        <a class="listen" href="#">Listen on Spotify</a>
-      </article>
+    <section class="hero glass">
+      <div class="kicker">TKO Intel Feed</div>
+      <h1>Solana Scout Dashboard</h1>
+      <p class="sub">High-signal opportunities, market momentum, and whale flow in one addictive glance.</p>
     </section>
+
+    <section class="stats" id="stats"></section>
+
+    <section class="grid">
+      <div>
+        <article class="panel glass">
+          <h2>Market Momentum</h2>
+          <div class="chart-wrap"><canvas id="marketChart" aria-label="Top gainers chart"></canvas></div>
+        </article>
+
+        <article class="panel glass">
+          <h2>Top Gainers (24h)</h2>
+          <div class="gainer-list" id="gainers"></div>
+        </article>
+      </div>
+
+      <div class="split" style="display:block">
+        <article class="panel glass" style="margin-bottom:14px">
+          <h2>Scout Findings</h2>
+          <div class="findings" id="findings"></div>
+        </article>
+
+        <article class="panel glass">
+          <h2>Whale Alerts</h2>
+          <div class="whales" id="whales"></div>
+        </article>
+      </div>
+    </section>
+
+    <div class="timestamp" id="updated">Last updated —</div>
   </main>
+
+  <script>
+    const fmtNum = (n) => new Intl.NumberFormat('en-US').format(Math.round(n || 0));
+    const fmtMoney = (n) => {
+      if (!n && n !== 0) return '—';
+      const abs = Math.abs(n);
+      if (abs >= 1e9) return `$${(n / 1e9).toFixed(2)}B`;
+      if (abs >= 1e6) return `$${(n / 1e6).toFixed(2)}M`;
+      if (abs >= 1e3) return `$${(n / 1e3).toFixed(1)}K`;
+      return `$${Number(n).toFixed(2)}`;
+    };
+
+    const setStats = (data) => {
+      const trend = data.marketOverview?.trends || {};
+      const quick = data.quickStats || {};
+      const cards = [
+        ['Tokens Tracked', fmtNum(quick.totalTokensTracked)],
+        ['New Finds Today', fmtNum(quick.newFindsToday)],
+        ['Hot Opportunities', fmtNum((quick.hotOpportunities || []).length)],
+        ['24h Volume', fmtMoney(trend.totalVolume24h || 0)],
+      ];
+      document.getElementById('stats').innerHTML = cards.map(([label, value]) => `
+        <article class="stat glass">
+          <div class="label">${label}</div>
+          <div class="value">${value}</div>
+        </article>
+      `).join('');
+    };
+
+    const setGainers = (rows = []) => {
+      document.getElementById('gainers').innerHTML = rows.slice(0, 8).map(r => {
+        const c = Number(r.change24h || 0);
+        const cls = c >= 0 ? 'pos' : 'neg';
+        const signed = `${c >= 0 ? '+' : ''}${c.toFixed(2)}%`;
+        return `
+          <div class="row">
+            <div>
+              <div class="symbol">${r.baseSymbol || r.ticker}</div>
+              <div class="meta">Vol ${fmtMoney(r.volume24h)} • FDV ${fmtMoney(r.fdv)}</div>
+            </div>
+            <div class="gain ${cls}">${signed}</div>
+          </div>
+        `;
+      }).join('') || '<div class="meta">No market rows available.</div>';
+    };
+
+    const setFindings = (rows = []) => {
+      document.getElementById('findings').innerHTML = rows.slice(0, 8).map(f => `
+        <article class="row" style="grid-template-columns:1fr">
+          <div class="finding-top">
+            <div class="symbol">${f.token} (${f.ticker})</div>
+            <div class="badge">${f.confidence ? `Confidence ${f.confidence}/100` : 'Confidence —'}</div>
+          </div>
+          <p class="desc">${f.rewardMechanic || f.description || 'No notes'}</p>
+          <div class="meta">${f.marketCap || 'Unknown cap'} • ${f.discoveredOn || ''}</div>
+        </article>
+      `).join('') || '<div class="meta">No scout findings loaded.</div>';
+    };
+
+    const setWhales = (whaleBlock) => {
+      const alerts = whaleBlock?.alerts || [];
+      if (!alerts.length) {
+        document.getElementById('whales').innerHTML = '<div class="meta">No whale alert dataset found. Drop JSON files into memory/whale-alerts/ and regenerate.</div>';
+        return;
+      }
+      document.getElementById('whales').innerHTML = alerts.slice(0, 8).map((a) => `
+        <article class="row" style="grid-template-columns:1fr">
+          <div class="symbol">${a.symbol || a.token || 'Whale Move'}</div>
+          <div class="meta">${a.side || ''} ${a.amount || ''} ${a.usd ? `(${fmtMoney(a.usd)})` : ''}</div>
+          <div class="meta">${a.time || a.timestamp || ''}</div>
+        </article>
+      `).join('');
+    };
+
+    const setChart = (rows = []) => {
+      const labels = rows.slice(0, 8).map(r => r.baseSymbol || r.ticker || '—');
+      const values = rows.slice(0, 8).map(r => Number(r.change24h || 0));
+      const colors = values.map(v => v >= 0 ? 'rgba(62,240,165,.8)' : 'rgba(255,101,137,.8)');
+
+      const ctx = document.getElementById('marketChart');
+      if (!ctx || !window.Chart) return;
+
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels,
+          datasets: [{
+            label: '24h %',
+            data: values,
+            backgroundColor: colors,
+            borderRadius: 10,
+            borderSkipped: false,
+          }]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: false,
+          animation: { duration: 900, easing: 'easeOutQuart' },
+          plugins: { legend: { display: false } },
+          scales: {
+            x: { ticks: { color: '#b8c0d8', font: { family: 'JetBrains Mono', size: 10 } }, grid: { display: false } },
+            y: { ticks: { color: '#b8c0d8', callback: (v) => `${v}%` }, grid: { color: 'rgba(255,255,255,0.08)' } }
+          }
+        }
+      });
+    };
+
+    async function init() {
+      const res = await fetch('./data/tko-intel.json', { cache: 'no-store' });
+      const data = await res.json();
+      setStats(data);
+      setGainers(data.marketOverview?.topGainers || []);
+      setFindings(data.scoutFindings || []);
+      setWhales(data.whaleAlerts);
+      setChart(data.marketOverview?.topGainers || []);
+      document.getElementById('updated').textContent = `Last updated ${new Date(data.generatedAt).toLocaleString()}`;
+    }
+
+    init().catch((err) => {
+      console.error(err);
+      document.getElementById('updated').textContent = 'Failed to load dashboard data';
+    });
+  </script>
 </body>
 </html>
