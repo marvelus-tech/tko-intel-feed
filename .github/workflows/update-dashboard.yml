@@ -14,27 +14,13 @@ jobs:
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Checkout workspace-data repo for source files
-        uses: actions/checkout@v4
-        with:
-          repository: marvelus-tech/workspace-data
-          path: workspace-data
 
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Sync scout/report data into temp paths
-        run: |
-          mkdir -p ../memory/scout-findings ../reports/solana-scout
-          cp -R workspace-data/memory/scout-findings/. ../memory/scout-findings/ || true
-          cp -R workspace-data/reports/solana-scout/. ../reports/solana-scout/ || true
-
-      - name: Generate dashboard JSON
+      - name: Generate dashboard JSON from TKO RSS
         run: node scripts/generate-tko-data.mjs
 
       - name: Commit & push if changed
@@ -46,5 +32,5 @@ jobs:
             echo "No changes"
             exit 0
           fi
-          git commit -m "chore: refresh tko intel data"
+          git commit -m "chore: refresh TKO podcast feed data"
           git push

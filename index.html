@@ -4,240 +4,189 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TKO Intel Feed</title>
-  <meta name="description" content="Premium Solana scout intelligence dashboard with live market momentum." />
+  <meta name="description" content="The Koerner Office episode feed with searchable playback." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Manrope:wght@500;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #06070c;
-      --bg-2: #0d1020;
-      --text: #f5f7ff;
-      --muted: #a8b1cc;
-      --line: rgba(255,255,255,0.1);
-      --card: rgba(255,255,255,0.05);
-      --blue: #5ca0ff;
-      --teal: #3de6cf;
-      --violet: #8f6bff;
-      --ok: #3ef0a5;
-      --bad: #ff6589;
-      --mono: "JetBrains Mono", monospace;
-      --display: "Manrope", sans-serif;
-      --body: "DM Sans", sans-serif;
-      --radius: 20px;
+      --bg: #06070b;
+      --bg-2: #0b0f18;
+      --card: rgba(255,255,255,0.06);
+      --line: rgba(255,255,255,0.12);
+      --text: #f7f8fc;
+      --muted: #a6aec3;
+      --accent: #77a9ff;
+      --accent-soft: rgba(119,169,255,0.18);
+      --radius: 18px;
     }
 
     * { box-sizing: border-box; }
-    html, body { margin: 0; background: radial-gradient(circle at 15% -10%, #1f2d54 0%, transparent 35%), radial-gradient(circle at 90% -10%, #20263f 0%, transparent 35%), var(--bg); color: var(--text); font-family: var(--body); }
-    body::before { content: ""; position: fixed; inset: 0; pointer-events: none; background-image: radial-gradient(rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 3px 3px; opacity: 0.1; }
-
-    .shell { max-width: 1200px; margin: 0 auto; padding: 18px 14px 48px; position: relative; z-index: 2; }
-    .glass { background: linear-gradient(140deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02)); border: 1px solid var(--line); backdrop-filter: blur(14px); border-radius: var(--radius); box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 20px 60px rgba(0,0,0,0.45); }
-
-    .hero { padding: 22px; margin-bottom: 14px; animation: rise .55s ease both; }
-    .kicker { font: 600 11px/1 var(--mono); color: var(--teal); letter-spacing: .16em; text-transform: uppercase; margin-bottom: 14px; }
-    h1 { margin: 0; font: 800 clamp(28px, 8vw, 54px)/1.02 var(--display); letter-spacing: -0.04em; }
-    .sub { margin: 10px 0 0; color: var(--muted); font-size: 14px; }
-
-    .stats { display: grid; grid-template-columns: repeat(2, minmax(0,1fr)); gap: 10px; margin-bottom: 14px; }
-    .stat { padding: 14px; }
-    .stat .label { color: var(--muted); font: 600 11px/1 var(--mono); text-transform: uppercase; letter-spacing: .09em; }
-    .stat .value { margin-top: 8px; font: 700 26px/1 var(--display); letter-spacing: -0.03em; }
-
-    .panel { padding: 16px; margin-bottom: 14px; }
-    .panel h2 { margin: 0 0 12px; font: 700 15px/1.2 var(--display); letter-spacing: -0.01em; }
-
-    .chart-wrap { height: 230px; }
-
-    .gainer-list, .findings, .whales { display: grid; gap: 10px; }
-    .row { display: grid; gap: 8px; padding: 12px; border-radius: 14px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); }
-
-    .symbol { font: 700 14px/1 var(--display); }
-    .meta { color: var(--muted); font-size: 12px; }
-    .gain { font: 700 13px/1 var(--mono); }
-    .gain.pos { color: var(--ok); }
-    .gain.neg { color: var(--bad); }
-
-    .finding-top { display: flex; align-items: baseline; justify-content: space-between; gap: 8px; }
-    .badge { font: 600 11px/1 var(--mono); padding: 5px 8px; border-radius: 999px; border: 1px solid rgba(255,255,255,0.2); color: var(--muted); }
-    .desc { color: var(--muted); font-size: 13px; margin: 0; }
-
-    .timestamp { margin-top: 16px; text-align: center; color: var(--muted); font: 500 11px/1 var(--mono); letter-spacing: .08em; text-transform: uppercase; }
-
-    @media (min-width: 900px) {
-      .shell { padding-top: 24px; }
-      .grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 14px; }
-      .stats { grid-template-columns: repeat(4, minmax(0,1fr)); }
-      .split { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-      .row { grid-template-columns: 1fr auto; align-items: center; }
+    html, body {
+      margin: 0;
+      color: var(--text);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 10% -10%, #1f2d4f 0%, transparent 34%),
+        radial-gradient(circle at 90% -20%, #1c2136 0%, transparent 40%),
+        var(--bg);
     }
 
-    @keyframes rise {
-      from { opacity: 0; transform: translateY(16px); }
-      to { opacity: 1; transform: translateY(0); }
+    .app { max-width: 1050px; margin: 0 auto; padding: 22px 14px 44px; }
+    .glass {
+      background: linear-gradient(140deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      backdrop-filter: blur(12px);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 20px 55px rgba(0,0,0,0.35);
+    }
+
+    .hero { padding: 20px; margin-bottom: 14px; }
+    .kicker { color: #9dd3ff; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; }
+    h1 { margin: 10px 0 6px; font-size: clamp(30px, 5.5vw, 48px); line-height: 1.02; letter-spacing: -.03em; }
+    .sub { margin: 0; color: var(--muted); font-size: 14px; }
+
+    .controls { display: grid; gap: 10px; padding: 14px; margin-bottom: 14px; }
+    .search {
+      width: 100%;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      padding: 13px 14px;
+      font-size: 14px;
+      color: var(--text);
+      background: rgba(9, 13, 22, 0.9);
+      outline: none;
+    }
+    .search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
+    .meta { color: var(--muted); font-size: 12px; }
+
+    .list { display: grid; gap: 12px; }
+    .episode { padding: 14px; }
+    .top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
+    .badge {
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.05);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 11px;
+      color: #c5d3ff;
+      font-weight: 600;
+      letter-spacing: .02em;
+      white-space: nowrap;
+    }
+    .date { color: var(--muted); font-size: 12px; }
+    .title { margin: 0 0 8px; font-size: 19px; line-height: 1.25; letter-spacing: -.01em; }
+    .desc { margin: 0 0 10px; color: var(--muted); font-size: 14px; line-height: 1.45; }
+    audio { width: 100%; height: 36px; border-radius: 10px; }
+
+    .empty { padding: 20px; text-align: center; color: var(--muted); }
+    .footer { margin-top: 16px; text-align: center; color: var(--muted); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+
+    @media (min-width: 900px) {
+      .app { padding-top: 30px; }
+      .hero { padding: 24px; }
+      .controls { padding: 16px; }
+      .episode { padding: 16px; }
     }
   </style>
 </head>
 <body>
-  <main class="shell">
+  <main class="app">
     <section class="hero glass">
-      <div class="kicker">TKO Intel Feed</div>
-      <h1>Solana Scout Dashboard</h1>
-      <p class="sub">High-signal opportunities, market momentum, and whale flow in one addictive glance.</p>
+      <div class="kicker">The Koerner Office</div>
+      <h1>TKO Intel Feed</h1>
+      <p class="sub">Weekly business opportunities, AI plays, and service business ideas — in one premium episode stream.</p>
     </section>
 
-    <section class="stats" id="stats"></section>
-
-    <section class="grid">
-      <div>
-        <article class="panel glass">
-          <h2>Market Momentum</h2>
-          <div class="chart-wrap"><canvas id="marketChart" aria-label="Top gainers chart"></canvas></div>
-        </article>
-
-        <article class="panel glass">
-          <h2>Top Gainers (24h)</h2>
-          <div class="gainer-list" id="gainers"></div>
-        </article>
-      </div>
-
-      <div class="split" style="display:block">
-        <article class="panel glass" style="margin-bottom:14px">
-          <h2>Scout Findings</h2>
-          <div class="findings" id="findings"></div>
-        </article>
-
-        <article class="panel glass">
-          <h2>Whale Alerts</h2>
-          <div class="whales" id="whales"></div>
-        </article>
+    <section class="controls glass">
+      <input id="search" class="search" type="search" placeholder="Search episodes, topics, opportunities..." autocomplete="off" />
+      <div class="meta-row">
+        <div class="meta" id="feedMeta">Loading feed…</div>
+        <div class="meta" id="countMeta"></div>
       </div>
     </section>
 
-    <div class="timestamp" id="updated">Last updated —</div>
+    <section class="list" id="episodes"></section>
+    <div class="footer" id="updated">Last updated —</div>
   </main>
 
   <script>
-    const fmtNum = (n) => new Intl.NumberFormat('en-US').format(Math.round(n || 0));
-    const fmtMoney = (n) => {
-      if (!n && n !== 0) return '—';
-      const abs = Math.abs(n);
-      if (abs >= 1e9) return `$${(n / 1e9).toFixed(2)}B`;
-      if (abs >= 1e6) return `$${(n / 1e6).toFixed(2)}M`;
-      if (abs >= 1e3) return `$${(n / 1e3).toFixed(1)}K`;
-      return `$${Number(n).toFixed(2)}`;
+    const elEpisodes = document.getElementById('episodes');
+    const elSearch = document.getElementById('search');
+    const elFeedMeta = document.getElementById('feedMeta');
+    const elCountMeta = document.getElementById('countMeta');
+    const elUpdated = document.getElementById('updated');
+
+    let allEpisodes = [];
+
+    const fmtDate = (value) => {
+      if (!value) return 'Date unavailable';
+      const date = new Date(value);
+      if (Number.isNaN(date.getTime())) return value;
+      return date.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
     };
 
-    const setStats = (data) => {
-      const trend = data.marketOverview?.trends || {};
-      const quick = data.quickStats || {};
-      const cards = [
-        ['Tokens Tracked', fmtNum(quick.totalTokensTracked)],
-        ['New Finds Today', fmtNum(quick.newFindsToday)],
-        ['Hot Opportunities', fmtNum((quick.hotOpportunities || []).length)],
-        ['24h Volume', fmtMoney(trend.totalVolume24h || 0)],
-      ];
-      document.getElementById('stats').innerHTML = cards.map(([label, value]) => `
-        <article class="stat glass">
-          <div class="label">${label}</div>
-          <div class="value">${value}</div>
-        </article>
-      `).join('');
-    };
+    const render = (episodes) => {
+      elCountMeta.textContent = `${episodes.length} episode${episodes.length === 1 ? '' : 's'}`;
 
-    const setGainers = (rows = []) => {
-      document.getElementById('gainers').innerHTML = rows.slice(0, 8).map(r => {
-        const c = Number(r.change24h || 0);
-        const cls = c >= 0 ? 'pos' : 'neg';
-        const signed = `${c >= 0 ? '+' : ''}${c.toFixed(2)}%`;
-        return `
-          <div class="row">
-            <div>
-              <div class="symbol">${r.baseSymbol || r.ticker}</div>
-              <div class="meta">Vol ${fmtMoney(r.volume24h)} • FDV ${fmtMoney(r.fdv)}</div>
-            </div>
-            <div class="gain ${cls}">${signed}</div>
-          </div>
-        `;
-      }).join('') || '<div class="meta">No market rows available.</div>';
-    };
-
-    const setFindings = (rows = []) => {
-      document.getElementById('findings').innerHTML = rows.slice(0, 8).map(f => `
-        <article class="row" style="grid-template-columns:1fr">
-          <div class="finding-top">
-            <div class="symbol">${f.token} (${f.ticker})</div>
-            <div class="badge">${f.confidence ? `Confidence ${f.confidence}/100` : 'Confidence —'}</div>
-          </div>
-          <p class="desc">${f.rewardMechanic || f.description || 'No notes'}</p>
-          <div class="meta">${f.marketCap || 'Unknown cap'} • ${f.discoveredOn || ''}</div>
-        </article>
-      `).join('') || '<div class="meta">No scout findings loaded.</div>';
-    };
-
-    const setWhales = (whaleBlock) => {
-      const alerts = whaleBlock?.alerts || [];
-      if (!alerts.length) {
-        document.getElementById('whales').innerHTML = '<div class="meta">No whale alert dataset found. Drop JSON files into memory/whale-alerts/ and regenerate.</div>';
+      if (!episodes.length) {
+        elEpisodes.innerHTML = '<article class="glass empty">No episodes matched your search.</article>';
         return;
       }
-      document.getElementById('whales').innerHTML = alerts.slice(0, 8).map((a) => `
-        <article class="row" style="grid-template-columns:1fr">
-          <div class="symbol">${a.symbol || a.token || 'Whale Move'}</div>
-          <div class="meta">${a.side || ''} ${a.amount || ''} ${a.usd ? `(${fmtMoney(a.usd)})` : ''}</div>
-          <div class="meta">${a.time || a.timestamp || ''}</div>
-        </article>
-      `).join('');
+
+      elEpisodes.innerHTML = episodes.map((ep) => {
+        const badge = ep.episodeNumber ? `Episode ${ep.episodeNumber}` : 'TKO Episode';
+        const desc = ep.descriptionExcerpt || ep.description || 'No description available.';
+        return `
+          <article class="episode glass">
+            <div class="top">
+              <div class="badge">${badge}</div>
+              <div class="date">${fmtDate(ep.publishedAt || ep.publishDate)}</div>
+            </div>
+            <h2 class="title">${ep.title || 'Untitled Episode'}</h2>
+            <p class="desc">${desc}</p>
+            <audio controls preload="none" src="${ep.audioUrl}"></audio>
+          </article>
+        `;
+      }).join('');
     };
 
-    const setChart = (rows = []) => {
-      const labels = rows.slice(0, 8).map(r => r.baseSymbol || r.ticker || '—');
-      const values = rows.slice(0, 8).map(r => Number(r.change24h || 0));
-      const colors = values.map(v => v >= 0 ? 'rgba(62,240,165,.8)' : 'rgba(255,101,137,.8)');
+    const applyFilter = () => {
+      const q = elSearch.value.trim().toLowerCase();
+      if (!q) {
+        render(allEpisodes);
+        return;
+      }
 
-      const ctx = document.getElementById('marketChart');
-      if (!ctx || !window.Chart) return;
-
-      new Chart(ctx, {
-        type: 'bar',
-        data: {
-          labels,
-          datasets: [{
-            label: '24h %',
-            data: values,
-            backgroundColor: colors,
-            borderRadius: 10,
-            borderSkipped: false,
-          }]
-        },
-        options: {
-          responsive: true,
-          maintainAspectRatio: false,
-          animation: { duration: 900, easing: 'easeOutQuart' },
-          plugins: { legend: { display: false } },
-          scales: {
-            x: { ticks: { color: '#b8c0d8', font: { family: 'JetBrains Mono', size: 10 } }, grid: { display: false } },
-            y: { ticks: { color: '#b8c0d8', callback: (v) => `${v}%` }, grid: { color: 'rgba(255,255,255,0.08)' } }
-          }
-        }
+      const filtered = allEpisodes.filter((ep) => {
+        const hay = `${ep.title || ''} ${ep.description || ''} ${ep.descriptionExcerpt || ''}`.toLowerCase();
+        return hay.includes(q);
       });
+
+      render(filtered);
     };
 
     async function init() {
       const res = await fetch('./data/tko-intel.json', { cache: 'no-store' });
       const data = await res.json();
-      setStats(data);
-      setGainers(data.marketOverview?.topGainers || []);
-      setFindings(data.scoutFindings || []);
-      setWhales(data.whaleAlerts);
-      setChart(data.marketOverview?.topGainers || []);
-      document.getElementById('updated').textContent = `Last updated ${new Date(data.generatedAt).toLocaleString()}`;
+
+      allEpisodes = (data.episodes || [])
+        .slice()
+        .sort((a, b) => new Date(b.publishedAt || b.publishDate || 0) - new Date(a.publishedAt || a.publishDate || 0));
+
+      elFeedMeta.textContent = data.feed?.title || 'The Koerner Office';
+      elUpdated.textContent = `Last updated ${new Date(data.generatedAt).toLocaleString()}`;
+
+      render(allEpisodes);
+      elSearch.addEventListener('input', applyFilter);
     }
 
-    init().catch((err) => {
-      console.error(err);
-      document.getElementById('updated').textContent = 'Failed to load dashboard data';
+    init().catch((error) => {
+      console.error(error);
+      elFeedMeta.textContent = 'Failed to load TKO feed data';
+      elEpisodes.innerHTML = '<article class="glass empty">Could not load podcast data. Re-run generator and refresh.</article>';
+      elUpdated.textContent = 'Last updated unavailable';
     });
   </script>
 </body>
