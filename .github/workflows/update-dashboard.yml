@@ -20,7 +20,24 @@ jobs:
         with:
           node-version: 20
 
-      - name: Generate dashboard JSON from TKO RSS
+      - name: Setup Python for Whisper
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install whisper + ffmpeg
+        run: |
+          python -m pip install --upgrade pip
+          pip install openai-whisper
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Generate dashboard JSON from TKO RSS + intelligence
+        env:
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_MODEL: gpt-4o-mini
+          WHISPER_MODEL: tiny.en
+          TKO_INTEL_MAX_EPISODES: 2
         run: node scripts/generate-tko-data.mjs
 
       - name: Commit & push if changed
@@ -32,5 +49,5 @@ jobs:
             echo "No changes"
             exit 0
           fi
-          git commit -m "chore: refresh TKO podcast feed data"
+          git commit -m "chore: refresh TKO feed with business intelligence"
           git push
