@@ -4,189 +4,555 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TKO Intel Feed</title>
-  <meta name="description" content="The Koerner Office episode feed with searchable playback." />
+  <meta name="description" content="Editorial podcast dashboard for The Koerner Office with searchable episodes and premium playback." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --bg: #06070b;
-      --bg-2: #0b0f18;
-      --card: rgba(255,255,255,0.06);
-      --line: rgba(255,255,255,0.12);
-      --text: #f7f8fc;
-      --muted: #a6aec3;
-      --accent: #77a9ff;
-      --accent-soft: rgba(119,169,255,0.18);
-      --radius: 18px;
+      --bg: #faf8f5;
+      --bg-2: #f5f2ed;
+      --card: #ffffff;
+      --line: #e8e4de;
+      --text: #1a1a2e;
+      --muted: #6b6b7b;
+      --accent: #1e3a5f;
+      --accent-soft: rgba(30,58,95,0.08);
+      --radius: 14px;
+      --shadow: 0 8px 24px rgba(26, 26, 46, 0.06);
     }
 
     * { box-sizing: border-box; }
-    html, body {
-      margin: 0;
+
+    html, body { margin: 0; min-height: 100%; }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
       color: var(--text);
-      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background:
-        radial-gradient(circle at 10% -10%, #1f2d4f 0%, transparent 34%),
-        radial-gradient(circle at 90% -20%, #1c2136 0%, transparent 40%),
-        var(--bg);
+      background: var(--bg);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
     }
 
-    .app { max-width: 1050px; margin: 0 auto; padding: 22px 14px 44px; }
-    .glass {
-      background: linear-gradient(140deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      backdrop-filter: blur(12px);
-      box-shadow: inset 0 1px 0 rgba(255,255,255,0.06), 0 20px 55px rgba(0,0,0,0.35);
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: 0.18;
+      background-image:
+        radial-gradient(rgba(26, 26, 46, 0.025) 0.5px, transparent 0.5px),
+        radial-gradient(rgba(26, 26, 46, 0.02) 0.5px, transparent 0.5px);
+      background-size: 4px 4px, 6px 6px;
+      background-position: 0 0, 2px 2px;
     }
 
-    .hero { padding: 20px; margin-bottom: 14px; }
-    .kicker { color: #9dd3ff; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; font-weight: 700; }
-    h1 { margin: 10px 0 6px; font-size: clamp(30px, 5.5vw, 48px); line-height: 1.02; letter-spacing: -.03em; }
-    .sub { margin: 0; color: var(--muted); font-size: 14px; }
+    .app {
+      width: min(100%, 1020px);
+      margin: 0 auto;
+      padding: 34px 18px 72px;
+      position: relative;
+      z-index: 1;
+    }
 
-    .controls { display: grid; gap: 10px; padding: 14px; margin-bottom: 14px; }
+    .masthead {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 22px 0 28px;
+      margin-bottom: 28px;
+      animation: rise .45s ease both;
+    }
+
+    .kicker {
+      margin: 0;
+      color: var(--muted);
+      letter-spacing: .15em;
+      text-transform: uppercase;
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    h1,
+    .title {
+      font-family: 'Playfair Display', Georgia, serif;
+    }
+
+    h1 {
+      margin: 10px 0 8px;
+      font-size: clamp(2.2rem, 8.6vw, 4.4rem);
+      line-height: 0.98;
+      letter-spacing: -0.02em;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .sub {
+      margin: 0;
+      color: var(--muted);
+      max-width: 68ch;
+      font-size: 1rem;
+    }
+
+    .controls {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      padding: 18px 0 22px;
+      margin-bottom: 18px;
+      display: grid;
+      gap: 12px;
+      animation: rise .5s ease both;
+    }
+
     .search {
       width: 100%;
-      border-radius: 12px;
       border: 1px solid var(--line);
-      padding: 13px 14px;
-      font-size: 14px;
-      color: var(--text);
-      background: rgba(9, 13, 22, 0.9);
-      outline: none;
-    }
-    .search:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-soft); }
-    .meta-row { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; justify-content: space-between; }
-    .meta { color: var(--muted); font-size: 12px; }
-
-    .list { display: grid; gap: 12px; }
-    .episode { padding: 14px; }
-    .top { display: flex; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 8px; }
-    .badge {
-      border: 1px solid rgba(255,255,255,0.2);
-      background: rgba(255,255,255,0.05);
       border-radius: 999px;
-      padding: 5px 10px;
-      font-size: 11px;
-      color: #c5d3ff;
-      font-weight: 600;
-      letter-spacing: .02em;
-      white-space: nowrap;
+      background: var(--card);
+      color: var(--text);
+      padding: 13px 18px;
+      font-size: 0.95rem;
+      transition: border-color .2s ease, box-shadow .2s ease;
     }
-    .date { color: var(--muted); font-size: 12px; }
-    .title { margin: 0 0 8px; font-size: 19px; line-height: 1.25; letter-spacing: -.01em; }
-    .desc { margin: 0 0 10px; color: var(--muted); font-size: 14px; line-height: 1.45; }
-    audio { width: 100%; height: 36px; border-radius: 10px; }
 
-    .empty { padding: 20px; text-align: center; color: var(--muted); }
-    .footer { margin-top: 16px; text-align: center; color: var(--muted); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; }
+    .search::placeholder { color: #888897; }
 
-    @media (min-width: 900px) {
-      .app { padding-top: 30px; }
-      .hero { padding: 24px; }
-      .controls { padding: 16px; }
-      .episode { padding: 16px; }
+    .search:focus {
+      outline: none;
+      border-color: var(--accent);
+      box-shadow: 0 0 0 3px var(--accent-soft);
+    }
+
+    .meta-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+      font-size: .77rem;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
+
+    .tag-filters {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding-bottom: 3px;
+      scrollbar-width: thin;
+    }
+
+    .tag-filters::-webkit-scrollbar { height: 6px; }
+
+    .chip {
+      border: 1px solid var(--line);
+      background: var(--card);
+      border-radius: 999px;
+      padding: 7px 12px;
+      font-size: .72rem;
+      color: var(--muted);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      cursor: pointer;
+      transition: all .2s ease;
+    }
+
+    .chip.active {
+      border-color: var(--accent);
+      color: var(--accent);
+      background: var(--accent-soft);
+    }
+
+    .episodes {
+      display: grid;
+      gap: 16px;
+    }
+
+    .episode {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 22px;
+      background: var(--card);
+      box-shadow: var(--shadow);
+      display: grid;
+      gap: 13px;
+      animation: fade .35s ease both;
+    }
+
+    .episode-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+      color: var(--muted);
+      font-size: .74rem;
+      letter-spacing: .075em;
+      text-transform: uppercase;
+    }
+
+    .episode-mark {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .episode-mark::before {
+      content: "";
+      width: 18px;
+      height: 1px;
+      background: var(--accent);
+      opacity: .35;
+    }
+
+    .title {
+      margin: 0;
+      font-size: clamp(1.45rem, 5.8vw, 2.05rem);
+      line-height: 1.1;
+      color: var(--text);
+      font-weight: 600;
+      letter-spacing: -0.01em;
+    }
+
+    .desc {
+      margin: 0;
+      color: #434352;
+      font-size: .96rem;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      max-width: 74ch;
+    }
+
+    .topic-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .topic {
+      font-size: .68rem;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      border: 1px solid var(--line);
+      color: var(--muted);
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: var(--bg-2);
+    }
+
+    .player {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 10px;
+      align-items: center;
+      background: var(--bg-2);
+    }
+
+    .play {
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--accent);
+      border-radius: 999px;
+      min-width: 74px;
+      height: 36px;
+      font-size: .77rem;
+      font-weight: 600;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      cursor: pointer;
+    }
+
+    .play.is-playing {
+      background: var(--accent);
+      color: var(--card);
+      border-color: var(--accent);
+    }
+
+    .timeline-wrap { display: grid; gap: 6px; }
+
+    .timeline {
+      width: 100%;
+      accent-color: var(--accent);
+      margin: 0;
+    }
+
+    .time {
+      display: flex;
+      justify-content: space-between;
+      color: var(--muted);
+      font-size: .73rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+    }
+
+    .empty {
+      padding: 34px 0;
+      text-align: center;
+      color: var(--muted);
+      border-bottom: 1px solid var(--line);
+      letter-spacing: .04em;
+    }
+
+    .footer {
+      margin-top: 18px;
+      color: var(--muted);
+      font-size: .7rem;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      display: flex;
+      justify-content: space-between;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    audio { display: none; }
+
+    @keyframes fade {
+      from { opacity: 0; transform: translateY(8px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (min-width: 880px) {
+      .app { padding-top: 40px; }
+      .title { max-width: 30ch; }
+      .episode { padding: 24px 24px 22px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
     }
   </style>
 </head>
 <body>
   <main class="app">
-    <section class="hero glass">
-      <div class="kicker">The Koerner Office</div>
+    <header class="masthead" aria-label="Dashboard title">
+      <p class="kicker">The Koerner Office</p>
       <h1>TKO Intel Feed</h1>
-      <p class="sub">Weekly business opportunities, AI plays, and service business ideas — in one premium episode stream.</p>
-    </section>
+      <p class="sub">An editorial stream of episodes, ideas, and operator insight — designed for clarity-first listening.</p>
+    </header>
 
-    <section class="controls glass">
-      <input id="search" class="search" type="search" placeholder="Search episodes, topics, opportunities..." autocomplete="off" />
+    <section class="controls" aria-label="Filters and metadata">
+      <input id="search" class="search" type="search" autocomplete="off" placeholder="Search episodes, guests, topics…" />
       <div class="meta-row">
-        <div class="meta" id="feedMeta">Loading feed…</div>
-        <div class="meta" id="countMeta"></div>
+        <div id="meta">Loading feed…</div>
+        <div id="count">—</div>
       </div>
+      <div class="tag-filters" id="tagFilters" aria-label="Tag filters"></div>
     </section>
 
-    <section class="list" id="episodes"></section>
-    <div class="footer" id="updated">Last updated —</div>
+    <section id="episodes" class="episodes" aria-live="polite"></section>
+
+    <footer class="footer">
+      <div id="updated">Updated —</div>
+      <div>TKO Intel</div>
+    </footer>
   </main>
 
   <script>
-    const elEpisodes = document.getElementById('episodes');
-    const elSearch = document.getElementById('search');
-    const elFeedMeta = document.getElementById('feedMeta');
-    const elCountMeta = document.getElementById('countMeta');
-    const elUpdated = document.getElementById('updated');
+    const $episodes = document.getElementById('episodes');
+    const $search = document.getElementById('search');
+    const $meta = document.getElementById('meta');
+    const $count = document.getElementById('count');
+    const $updated = document.getElementById('updated');
+    const $tagFilters = document.getElementById('tagFilters');
 
-    let allEpisodes = [];
+    const state = { episodes: [], query: '', activeTag: 'all' };
+    let activeAudio = null;
+
+    const esc = (v = '') => String(v)
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&#39;');
 
     const fmtDate = (value) => {
-      if (!value) return 'Date unavailable';
-      const date = new Date(value);
-      if (Number.isNaN(date.getTime())) return value;
-      return date.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
+      if (!value) return 'Unknown date';
+      const d = new Date(value);
+      if (Number.isNaN(d.getTime())) return value;
+      return d.toLocaleDateString(undefined, { year: 'numeric', month: 'short', day: 'numeric' });
     };
 
-    const render = (episodes) => {
-      elCountMeta.textContent = `${episodes.length} episode${episodes.length === 1 ? '' : 's'}`;
+    const fmtClock = (seconds) => {
+      const s = Number.isFinite(seconds) ? Math.floor(seconds) : 0;
+      const h = Math.floor(s / 3600);
+      const m = Math.floor((s % 3600) / 60);
+      const r = s % 60;
+      if (h) return `${h}:${String(m).padStart(2, '0')}:${String(r).padStart(2, '0')}`;
+      return `${m}:${String(r).padStart(2, '0')}`;
+    };
 
-      if (!episodes.length) {
-        elEpisodes.innerHTML = '<article class="glass empty">No episodes matched your search.</article>';
+    const collectTags = (episodes) => {
+      const counts = new Map();
+      episodes.forEach((ep) => {
+        (ep.tags || []).forEach((tag) => counts.set(tag, (counts.get(tag) || 0) + 1));
+      });
+      return [...counts.entries()].sort((a, b) => b[1] - a[1]).slice(0, 12);
+    };
+
+    const getVisible = () => {
+      const q = state.query.trim().toLowerCase();
+      return state.episodes.filter((ep) => {
+        const inTag = state.activeTag === 'all' || (ep.tags || []).includes(state.activeTag);
+        if (!inTag) return false;
+        if (!q) return true;
+        const hay = `${ep.title || ''} ${ep.description || ''} ${(ep.tags || []).join(' ')}`.toLowerCase();
+        return hay.includes(q);
+      });
+    };
+
+    const renderTags = () => {
+      const tags = collectTags(state.episodes);
+      const chips = [`<button class="chip ${state.activeTag === 'all' ? 'active' : ''}" data-tag="all">All</button>`]
+        .concat(tags.map(([name, count]) => `<button class="chip ${state.activeTag === name ? 'active' : ''}" data-tag="${esc(name)}">${esc(name)} (${count})</button>`));
+      $tagFilters.innerHTML = chips.join('');
+      $tagFilters.querySelectorAll('.chip').forEach((chip) => {
+        chip.addEventListener('click', () => {
+          state.activeTag = chip.dataset.tag || 'all';
+          render();
+        });
+      });
+    };
+
+    const bindPlayers = () => {
+      $episodes.querySelectorAll('.player').forEach((player) => {
+        const audio = player.querySelector('audio');
+        const button = player.querySelector('.play');
+        const range = player.querySelector('.timeline');
+        const elapsed = player.querySelector('[data-elapsed]');
+        const total = player.querySelector('[data-total]');
+
+        if (!audio || !button || !range || !elapsed || !total) return;
+
+        const sync = () => {
+          range.max = audio.duration || Number(range.dataset.duration || 0) || 0;
+          range.value = audio.currentTime || 0;
+          elapsed.textContent = fmtClock(audio.currentTime || 0);
+          total.textContent = fmtClock(audio.duration || Number(range.dataset.duration || 0) || 0);
+        };
+
+        button.addEventListener('click', async () => {
+          try {
+            if (audio.paused) {
+              if (activeAudio && activeAudio !== audio) {
+                activeAudio.pause();
+                activeAudio.closest('.player')?.querySelector('.play')?.classList.remove('is-playing');
+                activeAudio.closest('.player')?.querySelector('.play') && (activeAudio.closest('.player').querySelector('.play').textContent = 'Play');
+              }
+              await audio.play();
+              activeAudio = audio;
+              button.classList.add('is-playing');
+              button.textContent = 'Pause';
+            } else {
+              audio.pause();
+            }
+          } catch {
+            button.textContent = 'Error';
+          }
+        });
+
+        audio.addEventListener('pause', () => {
+          button.classList.remove('is-playing');
+          button.textContent = 'Play';
+          if (activeAudio === audio) activeAudio = null;
+        });
+
+        audio.addEventListener('play', () => {
+          button.classList.add('is-playing');
+          button.textContent = 'Pause';
+        });
+
+        audio.addEventListener('timeupdate', sync);
+        audio.addEventListener('loadedmetadata', sync);
+        audio.addEventListener('ended', () => {
+          audio.currentTime = 0;
+          sync();
+        });
+
+        range.addEventListener('input', () => {
+          audio.currentTime = Number(range.value || 0);
+          sync();
+        });
+
+        sync();
+      });
+    };
+
+    const render = () => {
+      const visible = getVisible();
+      $count.textContent = `${visible.length} of ${state.episodes.length} episodes`;
+
+      if (!visible.length) {
+        $episodes.innerHTML = '<article class="empty">No episodes matched this query.</article>';
         return;
       }
 
-      elEpisodes.innerHTML = episodes.map((ep) => {
-        const badge = ep.episodeNumber ? `Episode ${ep.episodeNumber}` : 'TKO Episode';
-        const desc = ep.descriptionExcerpt || ep.description || 'No description available.';
+      $episodes.innerHTML = visible.map((ep, index) => {
+        const number = ep.episodeNumber ? `Episode ${ep.episodeNumber}` : `Archive ${index + 1}`;
+        const duration = ep.durationLabel || ep.duration || 'Duration unavailable';
+        const tags = (ep.tags || []).slice(0, 5).map((tag) => `<span class="topic">${esc(tag)}</span>`).join('');
         return `
-          <article class="episode glass">
-            <div class="top">
-              <div class="badge">${badge}</div>
-              <div class="date">${fmtDate(ep.publishedAt || ep.publishDate)}</div>
+          <article class="episode">
+            <div class="episode-head">
+              <span class="episode-mark">${esc(number)}</span>
+              <span>${esc(fmtDate(ep.publishedAt || ep.publishDate))} · ${esc(duration)}</span>
             </div>
-            <h2 class="title">${ep.title || 'Untitled Episode'}</h2>
-            <p class="desc">${desc}</p>
-            <audio controls preload="none" src="${ep.audioUrl}"></audio>
+            <h2 class="title">${esc(ep.title || 'Untitled Episode')}</h2>
+            <p class="desc">${esc(ep.descriptionExcerpt || ep.description || 'No description available.')}</p>
+            ${tags ? `<div class="topic-row">${tags}</div>` : ''}
+            <div class="player">
+              <button class="play" type="button" aria-label="Play episode">Play</button>
+              <div class="timeline-wrap">
+                <input class="timeline" type="range" min="0" value="0" step="1" data-duration="${Number(ep.durationSeconds) || 0}" />
+                <div class="time"><span data-elapsed>0:00</span><span data-total>${esc(duration)}</span></div>
+              </div>
+              <audio preload="none" src="${esc(ep.audioUrl || '')}"></audio>
+            </div>
           </article>
         `;
       }).join('');
-    };
 
-    const applyFilter = () => {
-      const q = elSearch.value.trim().toLowerCase();
-      if (!q) {
-        render(allEpisodes);
-        return;
-      }
-
-      const filtered = allEpisodes.filter((ep) => {
-        const hay = `${ep.title || ''} ${ep.description || ''} ${ep.descriptionExcerpt || ''}`.toLowerCase();
-        return hay.includes(q);
-      });
-
-      render(filtered);
+      bindPlayers();
     };
 
     async function init() {
       const res = await fetch('./data/tko-intel.json', { cache: 'no-store' });
+      if (!res.ok) throw new Error(`Unable to load feed JSON (${res.status})`);
       const data = await res.json();
+      state.episodes = (data.episodes || []).slice().sort((a, b) => new Date(b.publishedAt || 0) - new Date(a.publishedAt || 0));
 
-      allEpisodes = (data.episodes || [])
-        .slice()
-        .sort((a, b) => new Date(b.publishedAt || b.publishDate || 0) - new Date(a.publishedAt || a.publishDate || 0));
+      $meta.textContent = data.feed?.title || 'The Koerner Office';
+      $updated.textContent = `Updated ${new Date(data.generatedAt).toLocaleString()}`;
 
-      elFeedMeta.textContent = data.feed?.title || 'The Koerner Office';
-      elUpdated.textContent = `Last updated ${new Date(data.generatedAt).toLocaleString()}`;
+      $search.addEventListener('input', (event) => {
+        state.query = event.target.value || '';
+        render();
+      });
 
-      render(allEpisodes);
-      elSearch.addEventListener('input', applyFilter);
+      renderTags();
+      render();
     }
 
     init().catch((error) => {
       console.error(error);
-      elFeedMeta.textContent = 'Failed to load TKO feed data';
-      elEpisodes.innerHTML = '<article class="glass empty">Could not load podcast data. Re-run generator and refresh.</article>';
-      elUpdated.textContent = 'Last updated unavailable';
+      $meta.textContent = 'Feed unavailable';
+      $episodes.innerHTML = '<article class="empty">Could not load episode data. Re-run the generator and refresh.</article>';
+      $updated.textContent = 'Updated unavailable';
     });
   </script>
 </body>
