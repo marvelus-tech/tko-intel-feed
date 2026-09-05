@@ -1,6 +1,412 @@
 {
   "episodes": [
     {
+      "id": "e3498db1-c21f-41fa-90d6-1d6ca31ae0cb",
+      "title": "From DoorDash to $81K/M With This Overlooked Business - Ep. #332",
+      "date": "2026-09-04",
+      "publishDate": "2026-09-04",
+      "publishedAt": "2026-09-04T10:00:00.000Z",
+      "episodeNumber": 332,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/125195026/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-8-4%2F431211710-44100-2-1ec2a4f3ca6cc.mp3",
+      "description": "I sat down with Parker J. Smith , a 25-year-old entrepreneur who went from driving DoorDash to generating $81,000 in monthly revenue from a water filtration business he launched just 85 days earlier. We break down how he started with around $500 , uses licensed plumbers to handle the installations, and finds customers through simple Facebook ads that show the price upfront. Parker also shares his costs, margins, tech stack, follow-up strategy, and why overlooked home service businesses may offer more opportunity than crowded online businesses.",
+      "descriptionExcerpt": "I sat down with Parker J. Smith , a 25-year-old entrepreneur who went from driving DoorDash to generating $81,000 in monthly revenue from a water filtration business he launched just 85 days earlier. We break down how he started with around $500 , uses licensed...",
+      "source": "rss",
+      "transcript": "RSS-based extraction; full transcript pending",
+      "duration": "01:13:46",
+      "durationSeconds": 4426,
+      "durationLabel": "1:13:46",
+      "tags": [
+        "Home Services",
+        "Side Hustle",
+        "Local Business"
+      ],
+      "intelligence": [
+        {
+          "idea": "Residential Water Filtration Install Agency",
+          "ideaName": "Residential Water Filtration Install Agency",
+          "category": "Home Services",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Months",
+          "tools": [
+            "Facebook Ads",
+            "Licensed plumber network",
+            "CRM follow-up",
+            "Price-forward creatives"
+          ],
+          "toolsNeeded": [
+            "Facebook Ads",
+            "Licensed plumber network",
+            "CRM follow-up",
+            "Price-forward creatives"
+          ],
+          "revenue": "$81K/mo",
+          "revenueFigures": [
+            "$81K/mo"
+          ],
+          "insight": "Parker hit $81K/mo in ~85 days by selling whole-home filtration with ~$500 start capital, licensed plumbers for installs, and Facebook ads that show price upfront. Okeito angle: in AU treat licensing carefully; Marvelus voice/chat + Nolostsales can run plumber ops, booking, and lead follow-up so you own demand without swinging wrenches.",
+          "notes": "Strong home-services play if you can partner licensed plumbers. Melbourne-first: validate water hardness/complaint niches, run price-forward Meta ads, then layer Marvelus AI voice for missed-call recovery and quote follow-up. Barrier is compliance and installer capacity, not creative.",
+          "matchScore": 7
+        },
+        {
+          "idea": "Price-Forward Facebook Ads for Home Service Quotes",
+          "ideaName": "Price-Forward Facebook Ads for Home Service Quotes",
+          "category": "Local Ads",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Weeks",
+          "tools": [
+            "Meta Ads",
+            "Landing page",
+            "Call tracking",
+            "Marvelus voice follow-up"
+          ],
+          "toolsNeeded": [
+            "Meta Ads",
+            "Landing page",
+            "Call tracking",
+            "Marvelus voice follow-up"
+          ],
+          "revenue": "$81K/mo",
+          "revenueFigures": [
+            "$81K/mo"
+          ],
+          "insight": "Episode stress-tests ads that disclose price early instead of vague lead magnets. Pair with Marvelus/Nolostsales so every click becomes a booked plumber visit. Useful for filtration, HVAC, and other Melbourne home services where opaque quotes kill trust.",
+          "notes": "Episode stress-tests ads that disclose price early instead of vague lead magnets. Pair with Marvelus/Nolostsales so every click becomes a booked plumber visit. Useful for filtration, HVAC, and other Melbourne home services where opaque quotes kill trust.",
+          "matchScore": 6
+        }
+      ]
+    },
+    {
+      "id": "d42b9698-4983-4ede-b3b5-f617e1dafe5e",
+      "title": "Make Money With This New AI Agent That Works 24/7 - Ep. #331",
+      "date": "2026-09-01",
+      "publishDate": "2026-09-01",
+      "publishedAt": "2026-09-01T10:00:01.000Z",
+      "episodeNumber": 331,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/125031008/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-8-4%2F431189379-44100-2-a02713ced2922.mp3",
+      "description": "I sat down with Billy Howell again to see how he’s using Grok Bot to run his newsletter, manage outreach, research products, and automate repetitive work. We break down how to build a focused team of AI agents , turn a simple offer into revenue, and avoid using AI as another form of procrastination. After our conversation, I test Grok Bot myself and use it to build a working productivity app in under an hour. Billy’s previous episode: https://www.youtube.com/watch?v=tFP7wnWkX4w https://open.spotify.com/episode/3KBpKAa5BmhDuM1zdHLtlA?si=6B3hY8WcQbmh2F-rM_XcwQ Billy on YouTube: https://www.youtube.com/channel/UCa6nzp_BwAIuuJN89cwkQNQ Billy on X: https://x.com/billyjhowell",
+      "descriptionExcerpt": "I sat down with Billy Howell again to see how he’s using Grok Bot to run his newsletter, manage outreach, research products, and automate repetitive work. We break down how to build a focused team of AI agents , turn a simple offer into revenue, and avoid using AI as...",
+      "source": "rss",
+      "transcript": "RSS-based extraction; full transcript pending",
+      "duration": "00:40:43",
+      "durationSeconds": 2443,
+      "durationLabel": "40:43",
+      "tags": [
+        "AI",
+        "Automation",
+        "Business Ideas"
+      ],
+      "intelligence": [
+        {
+          "idea": "Grok Bot Agent Team for Outreach and Ops",
+          "ideaName": "Grok Bot Agent Team for Outreach and Ops",
+          "category": "AI Service",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Days",
+          "tools": [
+            "Grok Bot",
+            "Newsletter stack",
+            "CRM",
+            "Research agents"
+          ],
+          "toolsNeeded": [
+            "Grok Bot",
+            "Newsletter stack",
+            "CRM",
+            "Research agents"
+          ],
+          "revenue": "Revenue not stated in RSS",
+          "revenueFigures": [
+            "Revenue not stated in RSS"
+          ],
+          "insight": "Billy runs newsletter, outreach, product research, and repetitive work with a focused Grok Bot agent team, then ships a working productivity app in under an hour. Exact Okeito stack: productize agent squads for Melbourne SMBs and Marvelus clients instead of one-off ChatGPT tinkering.",
+          "notes": "Highest stack fit. Package: intake agent, research agent, outreach agent, QA agent. Sell as done-for-you Grok Bot ops or embed inside Marvelus.cc voice/chat. Guardrail from the episode: agents must ship revenue work, not become procrastination theater.",
+          "matchScore": 9
+        },
+        {
+          "idea": "Micro-SaaS Built by AI Agents in a Day",
+          "ideaName": "Micro-SaaS Built by AI Agents in a Day",
+          "category": "AI Service",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Weeks",
+          "tools": [
+            "Grok Bot",
+            "Cursor/cloud agents",
+            "Stripe",
+            "Simple landing page"
+          ],
+          "toolsNeeded": [
+            "Grok Bot",
+            "Cursor/cloud agents",
+            "Stripe",
+            "Simple landing page"
+          ],
+          "revenue": "Revenue not stated in RSS",
+          "revenueFigures": [
+            "Revenue not stated in RSS"
+          ],
+          "insight": "Host builds a productivity app with Grok Bot in under an hour after the interview. Okeito can turn repeatable SMB pain (missed calls, specials boards, rank-and-rent reporting) into thin micro-SaaS with agent-assisted build loops.",
+          "notes": "Host builds a productivity app with Grok Bot in under an hour after the interview. Okeito can turn repeatable SMB pain (missed calls, specials boards, rank-and-rent reporting) into thin micro-SaaS with agent-assisted build loops.",
+          "matchScore": 8
+        }
+      ]
+    },
+    {
+      "id": "1c8aea6c-4511-4d2a-999c-79ab187bc8ae",
+      "title": "The Most Hands-Off $6K/Month Side Hustle to Start - Ep. #330",
+      "date": "2026-08-28",
+      "publishDate": "2026-08-28",
+      "publishedAt": "2026-08-28T10:00:00.000Z",
+      "episodeNumber": 330,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/124856773/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-7-28%2F430714543-44100-2-a9b233971254c.mp3",
+      "description": "I sat down with Nathan to break down his surprisingly simple trailer rental business . He runs it alongside a full-time job, spends only a few hours a week on it, and is now making around $4,000 a month in profit . We talked about how he bought his first trailers, automated almost the entire rental process, finds customers through Google and Facebook Marketplace , and which trailers he would buy first if he were starting over. We also get into how you can test demand in your own area before going all in.",
+      "descriptionExcerpt": "I sat down with Nathan to break down his surprisingly simple trailer rental business . He runs it alongside a full-time job, spends only a few hours a week on it, and is now making around $4,000 a month in profit . We talked about how he bought his first trailers...",
+      "source": "rss",
+      "transcript": "RSS-based extraction; full transcript pending",
+      "duration": "00:43:11",
+      "durationSeconds": 2591,
+      "durationLabel": "43:11",
+      "tags": [
+        "Side Hustle",
+        "Local Business",
+        "Service Business"
+      ],
+      "intelligence": [
+        {
+          "idea": "Local Trailer Rental with Marketplace Demand",
+          "ideaName": "Local Trailer Rental with Marketplace Demand",
+          "category": "Local Ads",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Months",
+          "tools": [
+            "Google Business Profile",
+            "Facebook Marketplace",
+            "Booking automation",
+            "Trailer inventory"
+          ],
+          "toolsNeeded": [
+            "Google Business Profile",
+            "Facebook Marketplace",
+            "Booking automation",
+            "Trailer inventory"
+          ],
+          "revenue": "$4K/mo profit",
+          "revenueFigures": [
+            "$4K/mo profit"
+          ],
+          "insight": "Nathan runs trailer rental beside a full-time job, a few hours a week, ~$4K/mo profit, demand from Google and Facebook Marketplace, heavy process automation. Solid cashflow but weaker Okeito fit than boards, land, or Grok Bot; useful if testing asset-light rentals near Melbourne suburbs.",
+          "notes": "Test demand with Marketplace listings before buying fleet. Automation matters more than hustle hours. Lower strategic fit vs Land-cerlot and Marvelus stack, so score mid.",
+          "matchScore": 5
+        }
+      ]
+    },
+    {
+      "id": "92cf08ae-28ed-4076-8f58-14e8ba2c3485",
+      "title": "How to Make Money From Land You Don’t Own - Ep. #329",
+      "date": "2026-08-25",
+      "publishDate": "2026-08-25",
+      "publishedAt": "2026-08-25T10:00:00.000Z",
+      "episodeNumber": 329,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/124703171/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-7-25%2F430497680-44100-2-ea89bb7e7ff19.mp3",
+      "description": "In this solo episode I'm breaking down why I spent millions on a 231-acre ranch outside Dallas, how I negotiated nearly $400K off the asking price , and all the business ideas I discovered along the way. I talk about using AI to analyze the deal , making money with grass-fed beef , renting land, flipping heavy equipment , building temporary storage facilities, creating a pond database, Airbnbs, and even starting a new 888 Ranch YouTube channel . Most importantly, I break down how you can use a lot of these ideas without ever owning a ranch yourself.",
+      "descriptionExcerpt": "In this solo episode I'm breaking down why I spent millions on a 231-acre ranch outside Dallas, how I negotiated nearly $400K off the asking price , and all the business ideas I discovered along the way. I talk about using AI to analyze the deal , making money with...",
+      "source": "rss",
+      "transcript": "RSS-based extraction; full transcript pending",
+      "duration": "00:29:25",
+      "durationSeconds": 1765,
+      "durationLabel": "29:25",
+      "tags": [
+        "Investing",
+        "Land",
+        "Business Ideas"
+      ],
+      "intelligence": [
+        {
+          "idea": "Land Income Without Owning the Ranch",
+          "ideaName": "Land Income Without Owning the Ranch",
+          "category": "Land",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Months",
+          "tools": [
+            "AI deal analysis",
+            "Lease/option contracts",
+            "Land-cerlot research",
+            "Local ag partners"
+          ],
+          "toolsNeeded": [
+            "AI deal analysis",
+            "Lease/option contracts",
+            "Land-cerlot research",
+            "Local ag partners"
+          ],
+          "revenue": "Revenue not stated in RSS",
+          "revenueFigures": [
+            "Revenue not stated in RSS"
+          ],
+          "insight": "Solo episode maps ranch deal math (millions spent, ~$400K negotiated off ask) then shows monetization paths you can run without owning: land rentals, grass-fed beef partnerships, temp storage, equipment flips, pond database, Airbnbs. Direct Land-cerlot adjacency for Okeito.",
+          "notes": "Prioritize options/leases and JV structures over capital-heavy purchase. Use AI for parcel analysis like the episode, then layer Melbourne/AU zoning checks. Pond database and storage-on-leased-land are the most copyable without owning acreage.",
+          "matchScore": 8
+        },
+        {
+          "idea": "Temporary Storage and Equipment Flips on Leased Land",
+          "ideaName": "Temporary Storage and Equipment Flips on Leased Land",
+          "category": "Land",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Months",
+          "tools": [
+            "Land lease",
+            "Heavy equipment sourcing",
+            "Local Facebook/Gumtree demand"
+          ],
+          "toolsNeeded": [
+            "Land lease",
+            "Heavy equipment sourcing",
+            "Local Facebook/Gumtree demand"
+          ],
+          "revenue": "Revenue not stated in RSS",
+          "revenueFigures": [
+            "Revenue not stated in RSS"
+          ],
+          "insight": "Episode calls out temp storage facilities and heavy equipment flipping as ranch-adjacent cash businesses. Pair with Land-cerlot sourcing and Grok Bot research agents to find underused parcels and buyers.",
+          "notes": "Episode calls out temp storage facilities and heavy equipment flipping as ranch-adjacent cash businesses. Pair with Land-cerlot sourcing and Grok Bot research agents to find underused parcels and buyers.",
+          "matchScore": 7
+        }
+      ]
+    },
+    {
+      "id": "072a074c-c4ef-4b06-9b08-f40b7546175c",
+      "title": "The Most Overlooked AI Side Hustle Of 2026 - Ep. #328",
+      "date": "2026-08-21",
+      "publishDate": "2026-08-21",
+      "publishedAt": "2026-08-21T10:00:00.000Z",
+      "episodeNumber": 328,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/124531318/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-7-21%2F430291542-44100-2-ae98e9f5aa66f.mp3",
+      "description": "Mike Stewart is a 30 year music and radio guy who figured out something nobody else in local marketing is doing. He writes jingles for plumbers, roofers and pest control guys, then runs them as skippable YouTube ads in their zip code. Everybody skips. That is the whole point. They already heard the name. He sold the same pest control jingle over a hundred times at two grand a pop. One of his clients got eight million skips in Abilene, Texas for almost nothing. Another went from zero to 80 grand in a summer off a one page website and $250 a month in ads. The part that matters for you: he used to need a recording studio and a session singer in Nashville to pull this off. Now it is Suno and ElevenLabs and about fifteen minutes. Which means anybody can do it, and there are 31 million small businesses in this country who have no idea it exists.",
+      "descriptionExcerpt": "Mike Stewart is a 30 year music and radio guy who figured out something nobody else in local marketing is doing. He writes jingles for plumbers, roofers and pest control guys, then runs them as skippable YouTube ads in their zip code. Everybody skips. That is the whole...",
+      "source": "rss",
+      "transcript": "RSS-based extraction; full transcript pending",
+      "duration": "00:49:01",
+      "durationSeconds": 2941,
+      "durationLabel": "49:01",
+      "tags": [
+        "Marketing",
+        "Local Business",
+        "AI"
+      ],
+      "intelligence": [
+        {
+          "idea": "Local Trade Jingles as Skippable YouTube Ads",
+          "ideaName": "Local Trade Jingles as Skippable YouTube Ads",
+          "category": "Local Ads",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Weeks",
+          "tools": [
+            "Suno",
+            "ElevenLabs",
+            "YouTube Ads",
+            "One-page site"
+          ],
+          "toolsNeeded": [
+            "Suno",
+            "ElevenLabs",
+            "YouTube Ads",
+            "One-page site"
+          ],
+          "revenue": "$2K per jingle",
+          "revenueFigures": [
+            "$2K per jingle"
+          ],
+          "insight": "Mike writes jingles for plumbers/roofers/pest control, runs them as skippable YouTube ads in-zip; skips still imprint the name. Same pest jingle sold 100+ times at $2K each; one client hit ~$80K in a summer off a one-pager and ~$250/mo ads. Now Suno + ElevenLabs collapse studio cost. Okeito: sell to Melbourne trades and attach Marvelus voice booking.",
+          "notes": "Package jingle + geo YouTube + call tracking. Upsell Marvelus AI voice so brand recall converts. Rank-and-rent sites already need local awareness; jingles are a creative layer on that funnel.",
+          "matchScore": 6
+        }
+      ]
+    },
+    {
+      "id": "b29e83a1-fde3-408e-8a10-58492f1ed489",
+      "title": "The Simplest $10K/Month Business Most People Miss ($0 to Start) - Ep. #327",
+      "date": "2026-08-18",
+      "publishDate": "2026-08-18",
+      "publishedAt": "2026-08-18T10:00:01.000Z",
+      "episodeNumber": 327,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/124382212/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-7-19%2F430168995-44100-2-615551c9eabf3.mp3",
+      "description": "I sat down with Rachel Smith to break down the simple community board business she and her husband built after spotting an opportunity inside a local restaurant. Rachel explains how they give restaurants a free specials board, sell advertising spots to local businesses, and make around $3,200 in profit per board . We also get into how they use the boards as a foot in the door to sell higher-ticket services like websites, reputation management, and AI automation , helping them grow the business to around $10K-$15K per month . Rachel walks through exactly how they find host locations, get referrals, sell the ad spots, and why this can work as a low-cost side hustle.",
+      "descriptionExcerpt": "I sat down with Rachel Smith to break down the simple community board business she and her husband built after spotting an opportunity inside a local restaurant. Rachel explains how they give restaurants a free specials board, sell advertising spots to local...",
+      "source": "rss",
+      "transcript": "RSS-based extraction; full transcript pending",
+      "duration": "00:57:15",
+      "durationSeconds": 3435,
+      "durationLabel": "57:15",
+      "tags": [
+        "Local Business",
+        "Side Hustle",
+        "Marketing"
+      ],
+      "intelligence": [
+        {
+          "idea": "Community Specials Board Ad Network",
+          "ideaName": "Community Specials Board Ad Network",
+          "category": "Local Ads",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Weeks",
+          "tools": [
+            "Sandwich/specials boards",
+            "Restaurant host partnerships",
+            "Local advertiser outreach",
+            "Canva"
+          ],
+          "toolsNeeded": [
+            "Sandwich/specials boards",
+            "Restaurant host partnerships",
+            "Local advertiser outreach",
+            "Canva"
+          ],
+          "revenue": "$3,200 profit per board",
+          "revenueFigures": [
+            "$3,200 profit per board"
+          ],
+          "insight": "Rachel gives restaurants a free specials board, sells ad spots to local businesses, ~$3,200 profit per board, then upsells websites, reputation, and AI automation toward ~$10K-$15K/mo. Okeito is already executing community specials-board; treat this as playbook confirmation and expansion SOP.",
+          "notes": "Highest execution match. Systematize host acquisition, referral loops, and ad-spot sales. Use boards as the wedge into Marvelus voice, Nolostsales, and AI automation retainers for the same local merchants.",
+          "matchScore": 9
+        },
+        {
+          "idea": "Board-to-Retainer Upsell (Web, Reputation, AI)",
+          "ideaName": "Board-to-Retainer Upsell (Web, Reputation, AI)",
+          "category": "AI Service",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Weeks",
+          "tools": [
+            "Marvelus.cc",
+            "Nolostsales",
+            "Reputation tools",
+            "Simple websites"
+          ],
+          "toolsNeeded": [
+            "Marvelus.cc",
+            "Nolostsales",
+            "Reputation tools",
+            "Simple websites"
+          ],
+          "revenue": "$10K-$15K/mo",
+          "revenueFigures": [
+            "$10K-$15K/mo"
+          ],
+          "insight": "Boards open the door; higher ticket lives in websites, reputation management, and AI automation. Exact Marvelus wedge for Melbourne cafes and suburbs already hosting boards.",
+          "notes": "Boards open the door; higher ticket lives in websites, reputation management, and AI automation. Exact Marvelus wedge for Melbourne cafes and suburbs already hosting boards.",
+          "matchScore": 9
+        }
+      ]
+    },
+    {
       "id": "trdHxY1UMF0",
       "title": "AI Voice Cloning for Realtors",
       "date": "2026-06-08",
@@ -7077,5 +7483,13 @@
         "Startup"
       ]
     }
-  ]
+  ],
+  "feed": {
+    "title": "The Koerner Office",
+    "updatedAt": "2026-09-05T02:30:00.000Z"
+  },
+  "intelligenceMeta": {
+    "processedEpisodes": 8,
+    "note": "Manual RSS deep-dive for eps 327-332; Whisper backlog pending"
+  }
 }
