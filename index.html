@@ -460,10 +460,10 @@
     <p class="sub">Episodes with extracted business intelligence ideas. Sharp operator decision tool.</p>
 
     <section class="stats" aria-label="Dashboard stats">
-      <article class="stat"><div class="stat-label">Episodes processed</div><div id="statEpisodes" class="stat-value">—</div></article>
-      <article class="stat"><div class="stat-label">Ideas extracted</div><div id="statIdeas" class="stat-value">—</div></article>
-      <article class="stat"><div class="stat-label">Average match score</div><div id="statAvg" class="stat-value">—</div></article>
-      <article class="stat"><div class="stat-label">Top category</div><div id="statTopCategory" class="stat-value">—</div></article>
+      <article class="stat"><div class="stat-label">Episodes processed</div><div id="statEpisodes" class="stat-value">…</div></article>
+      <article class="stat"><div class="stat-label">Ideas extracted</div><div id="statIdeas" class="stat-value">…</div></article>
+      <article class="stat"><div class="stat-label">Average match score</div><div id="statAvg" class="stat-value">…</div></article>
+      <article class="stat"><div class="stat-label">Top category</div><div id="statTopCategory" class="stat-value">…</div></article>
     </section>
 
     <section class="controls">
@@ -489,7 +489,7 @@
       </div>
       <div class="meta">
         <span id="meta">Loading dashboard…</span>
-        <span id="count">—</span>
+        <span id="count">…</span>
       </div>
     </section>
 
@@ -586,11 +586,11 @@
         acc[i.category] = (acc[i.category] || 0) + 1;
         return acc;
       }, {});
-      const topCategory = Object.entries(categoryCount).sort((a, b) => b[1] - a[1])[0]?.[0] || '—';
+      const topCategory = Object.entries(categoryCount).sort((a, b) => b[1] - a[1])[0]?.[0] || 'n/a';
 
       els.statEpisodes.textContent = String(totalEpisodes);
       els.statIdeas.textContent = String(totalIdeas);
-      els.statAvg.textContent = totalIdeas ? `${avg.toFixed(1)}/10` : '—';
+      els.statAvg.textContent = totalIdeas ? `${avg.toFixed(1)}/10` : 'n/a';
       els.statTopCategory.textContent = topCategory;
     }
 
@@ -625,8 +625,8 @@
             <span class="chip">Timeline: ${esc(idea.timeline)}</span>
           </div>
           <div class="meta-grid">
-            <div class="kv">Tools<b>${esc((idea.tools || []).join(', ') || '—')}</b></div>
-            <div class="kv">Revenue<b>${esc((idea.revenue || []).join(', ') || '—')}</b></div>
+            <div class="kv">Tools<b>${esc((idea.tools || []).join(', ') || 'n/a')}</b></div>
+            <div class="kv">Revenue<b>${esc((idea.revenue || []).join(', ') || 'n/a')}</b></div>
           </div>
           <p class="insight">${esc(idea.insight || 'No insight captured yet.')}</p>
         </article>
@@ -638,7 +638,7 @@
       return `
         <article class="episode ${isOpen ? 'open' : ''}" data-episode="${esc(ep.id || ep.guid || '')}">
           <button class="ep-head" type="button" aria-expanded="${isOpen ? 'true' : 'false'}" data-toggle="${esc(ep.id || ep.guid || '')}">
-            <div class="ep-top"><span>Episode ${esc(ep.episodeNumber || '—')}</span><span>${esc(toDate(ep.publishedAt || ep.publishDate))}</span></div>
+            <div class="ep-top"><span>Episode ${esc(ep.episodeNumber || 'n/a')}</span><span>${esc(toDate(ep.publishedAt || ep.publishDate))}</span></div>
             <h2 class="ep-title">${esc(ep.title || 'Untitled episode')}</h2>
             <p class="ep-desc">${esc(ep.descriptionExcerpt || ep.description || '')}</p>
             <span class="chev" aria-hidden="true"></span>
