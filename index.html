@@ -4,10 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>TKO Intel Feed</title>
-  <meta name="description" content="Business intelligence dashboard from The Koerner Office podcast." />
+  <meta name="description" content="Scan high-match business plays from The Koerner Office in under 10 seconds." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --paper: #faf7f1;
@@ -18,110 +18,380 @@
       --line-soft: #ece3d7;
       --accent: #3f6ea8;
       --gold: #b8891d;
-      --radius: 16px;
-      --shadow: 0 8px 24px rgba(33, 29, 21, .08);
+      --radius: 12px;
+      --shadow: 0 4px 16px rgba(33, 29, 21, .06);
+      --shadow-lifted: 0 8px 24px rgba(33, 29, 21, .09);
     }
 
-    * { box-sizing: border-box; }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
-      margin: 0;
       font-family: "Inter", sans-serif;
       color: var(--ink);
-      background: radial-gradient(circle at 100% 0%, #f4efe7 0%, var(--paper) 42%, #f7f2ea 100%);
+      background: linear-gradient(180deg, #f7f2ea 0%, var(--paper) 100%);
+      min-height: 100vh;
     }
 
     .app {
-      width: min(1080px, 100%);
+      width: min(1200px, 100%);
       margin: 0 auto;
-      padding: 18px 12px 72px;
+      padding: 0 0 60px;
+    }
+
+    header {
+      padding: 24px 16px 16px;
     }
 
     h1 {
-      margin: 0;
       font-family: "Playfair Display", serif;
-      font-size: clamp(2rem, 8vw, 3rem);
+      font-size: clamp(1.8rem, 6vw, 2.4rem);
+      font-weight: 700;
       letter-spacing: -.02em;
+      line-height: 1.1;
     }
 
     .sub {
-      margin: 8px 0 0;
+      margin-top: 6px;
       color: var(--muted);
-      font-size: .95rem;
+      font-size: .92rem;
+      line-height: 1.4;
     }
 
-    .stats {
-      margin-top: 18px;
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
-    }
-
-    .stat {
-      background: var(--card);
-      border: 1px solid var(--line-soft);
-      border-radius: 14px;
-      padding: 12px;
+    .top-strip {
+      background: linear-gradient(135deg, #fff9e6 0%, #fef4d9 100%);
+      border: 1px solid #e8d89f;
+      border-radius: var(--radius);
+      padding: 12px 14px;
+      margin: 12px 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
       box-shadow: var(--shadow);
     }
 
-    .stat-label {
-      color: var(--muted);
-      font-size: .74rem;
-      text-transform: uppercase;
-      letter-spacing: .06em;
+    .top-strip-icon {
+      font-size: 1.3rem;
+      flex-shrink: 0;
     }
 
-    .stat-value {
-      margin-top: 5px;
-      font-family: "Playfair Display", serif;
-      font-size: 1.26rem;
-      line-height: 1.05;
+    .top-strip-text {
+      font-size: .88rem;
+      font-weight: 600;
+      color: #6d5a1f;
+      line-height: 1.35;
+    }
+
+    .top-strip-text strong {
+      font-weight: 700;
+      color: #5a4816;
     }
 
     .controls {
-      margin-top: 14px;
-      background: var(--card);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 12px;
-      display: grid;
-      gap: 8px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 247, 241, .96);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--line);
+      padding: 12px 16px;
+      box-shadow: 0 2px 12px rgba(33, 29, 21, .04);
     }
 
-    .row { display: grid; gap: 8px; }
+    .controls-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      gap: 10px;
+    }
+
+    .row {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: 1fr;
+    }
+
+    .filter-row {
+      display: grid;
+      gap: 8px;
+      grid-template-columns: repeat(auto-fit, minmax(110px, 1fr));
+    }
+
+    input, select, button {
+      font-family: inherit;
+      font-size: .88rem;
+    }
 
     input, select {
       width: 100%;
       border: 1px solid var(--line);
-      background: #fffcf7;
+      background: #fffdf8;
       color: var(--ink);
-      border-radius: 12px;
-      font-size: .92rem;
-      padding: 10px 12px;
-      min-height: 44px;
+      border-radius: 10px;
+      padding: 9px 11px;
+      min-height: 40px;
     }
 
     input:focus, select:focus {
       border-color: #bba272;
       outline: 2px solid #f2e1bc;
-      outline-offset: 1px;
+      outline-offset: 0;
+    }
+
+    .view-toggle {
+      display: flex;
+      gap: 6px;
+      background: #fffdf8;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 4px;
+    }
+
+    .view-btn {
+      flex: 1;
+      border: 0;
+      background: transparent;
+      color: var(--muted);
+      border-radius: 7px;
+      padding: 7px 10px;
+      cursor: pointer;
+      font-weight: 500;
+      transition: all .15s ease;
+    }
+
+    .view-btn:hover {
+      background: #f7f2ea;
+    }
+
+    .view-btn.active {
+      background: var(--ink);
+      color: #fff;
+      font-weight: 600;
     }
 
     .meta {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       color: var(--muted);
       font-size: .82rem;
       gap: 8px;
       flex-wrap: wrap;
     }
 
-    .episodes {
-      margin-top: 14px;
+    .sort-label {
+      font-weight: 500;
+      color: var(--ink);
+      margin-right: 6px;
+    }
+
+    .feed {
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+      grid-template-columns: 1fr;
+    }
+
+    .opp-card {
+      background: var(--card);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      display: grid;
+      gap: 12px;
+      transition: box-shadow .2s ease;
+    }
+
+    .opp-card:hover {
+      box-shadow: var(--shadow-lifted);
+    }
+
+    .opp-header {
       display: grid;
       gap: 10px;
+    }
+
+    .opp-title-row {
+      display: flex;
+      gap: 10px;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    .idea-name {
+      font-family: "Playfair Display", serif;
+      font-size: 1.18rem;
+      font-weight: 700;
+      line-height: 1.25;
+      color: var(--ink);
+      flex: 1;
+    }
+
+    .score {
+      font-size: .74rem;
+      font-weight: 700;
+      border-radius: 999px;
+      padding: 6px 10px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .score.gold { background: #fef3d7; border: 1px solid #e8d089; color: #7a5f16; }
+    .score.blue { background: #e8f1ff; border: 1px solid #b3d0fa; color: #1e4a8a; }
+    .score.gray { background: #f2f2f2; border: 1px solid #d4d4d4; color: #5a5a5a; }
+
+    .opp-angle {
+      font-size: .92rem;
+      line-height: 1.5;
+      color: #3f392f;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+    }
+
+    .chip {
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: .76rem;
+      font-weight: 500;
+      color: #5d564a;
+      background: #fffcf7;
+    }
+
+    .chip.category {
+      background: #f7efe2;
+      border-color: #d9cab5;
+      color: #5d503f;
+      font-weight: 600;
+    }
+
+    .opp-details {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows .25s ease;
+      border-top: 1px solid transparent;
+    }
+
+    .opp-details-inner {
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    .opp-card.expanded .opp-details {
+      grid-template-rows: 1fr;
+      border-top-color: var(--line-soft);
+      margin-top: 4px;
+      padding-top: 12px;
+    }
+
+    .detail-section {
+      margin-bottom: 12px;
+    }
+
+    .detail-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .detail-label {
+      font-size: .78rem;
+      font-weight: 600;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-bottom: 6px;
+    }
+
+    .detail-content {
+      font-size: .88rem;
+      line-height: 1.5;
+      color: #3f392f;
+    }
+
+    .detail-list {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .detail-list li {
+      background: #fffdf8;
+      border: 1px solid var(--line-soft);
+      border-radius: 8px;
+      padding: 5px 9px;
+      font-size: .82rem;
+      color: var(--ink);
+    }
+
+    .opp-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: var(--ink);
+      border-radius: 10px;
+      padding: 9px 14px;
+      font-size: .85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all .15s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      text-decoration: none;
+    }
+
+    .btn:hover {
+      background: #f7f2ea;
+      border-color: #c9bca8;
+    }
+
+    .btn-primary {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    .btn-primary:hover {
+      background: #2e2b26;
+    }
+
+    .btn-expand {
+      width: 100%;
+      justify-content: center;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    .btn-expand:hover {
+      color: var(--ink);
+    }
+
+    .ep-meta {
+      font-size: .79rem;
+      color: var(--muted);
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .ep-meta-sep {
+      color: var(--line);
+    }
+
+    .episodes {
+      padding: 16px;
+      display: grid;
+      gap: 12px;
     }
 
     .episode {
@@ -137,7 +407,7 @@
       border: 0;
       background: transparent;
       text-align: left;
-      padding: 14px;
+      padding: 14px 16px;
       cursor: pointer;
       display: grid;
       gap: 8px;
@@ -147,47 +417,45 @@
     .ep-top {
       display: flex;
       justify-content: space-between;
-      font-size: .74rem;
+      font-size: .76rem;
       color: var(--muted);
-      text-transform: uppercase;
-      letter-spacing: .06em;
       gap: 10px;
+      font-weight: 500;
     }
 
     .ep-title {
-      margin: 0;
       font-family: "Playfair Display", serif;
-      font-size: 1.3rem;
-      line-height: 1.18;
+      font-size: 1.2rem;
+      font-weight: 600;
+      line-height: 1.25;
     }
 
     .ep-desc {
-      margin: 0;
       color: var(--muted);
-      font-size: .9rem;
+      font-size: .88rem;
       line-height: 1.45;
     }
 
     .chev {
       justify-self: end;
       color: var(--muted);
-      font-size: .85rem;
-      transition: transform .25s ease;
+      font-size: .82rem;
+      transition: transform .22s ease;
     }
 
     .ep-content {
       display: grid;
       grid-template-rows: 0fr;
-      transition: grid-template-rows .28s ease;
+      transition: grid-template-rows .25s ease;
       border-top: 1px solid transparent;
     }
 
     .ep-inner {
       min-height: 0;
       overflow: hidden;
-      padding: 0 14px;
+      padding: 0 16px;
       display: grid;
-      gap: 10px;
+      gap: 12px;
     }
 
     .episode.open .ep-content {
@@ -195,170 +463,185 @@
       border-top-color: var(--line-soft);
     }
 
-    .episode.open .ep-inner { padding: 12px 14px 14px; }
-    .episode.open .chev { transform: rotate(180deg); }
-
-    audio { width: 100%; }
-
-    .intel-grid { display: grid; gap: 10px; }
-
-    .intel-card {
-      border: 1px solid var(--line-soft);
-      border-radius: 14px;
-      background: linear-gradient(180deg, #fffdf9 0%, #fdf8ef 100%);
-      padding: 12px;
-      display: grid;
-      gap: 9px;
+    .episode.open .ep-inner {
+      padding: 14px 16px 16px;
     }
 
-    .intel-head {
-      display: flex;
-      gap: 8px;
-      justify-content: space-between;
-      align-items: flex-start;
+    .episode.open .chev {
+      transform: rotate(180deg);
     }
 
-    .idea {
-      margin: 0;
-      font-size: 1rem;
-      font-weight: 700;
-      line-height: 1.3;
-    }
-
-    .badge {
-      font-size: .7rem;
-      border-radius: 999px;
-      border: 1px solid #d7cab6;
-      background: #f7efe2;
-      color: #5d503f;
-      padding: 4px 8px;
-      white-space: nowrap;
-    }
-
-    .meta-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 7px;
-    }
-
-    .kv {
-      background: #fffefb;
-      border: 1px solid var(--line-soft);
-      border-radius: 10px;
-      padding: 8px;
-      font-size: .77rem;
-      color: var(--muted);
-    }
-
-    .kv b {
-      display: block;
-      margin-top: 3px;
-      color: var(--ink);
-      font-size: .88rem;
-    }
-
-    .score {
-      font-size: .74rem;
-      font-weight: 700;
-      border-radius: 999px;
-      padding: 5px 8px;
-      white-space: nowrap;
-      border: 1px solid transparent;
-    }
-
-    .score.gold { background: #f8ebc9; border-color: #e4cb83; color: #7e5f14; }
-    .score.blue { background: #e9f2ff; border-color: #b9d3fa; color: #245492; }
-    .score.gray { background: #efefef; border-color: #d8d8d8; color: #5f5f5f; }
-
-    .chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 6px;
-    }
-
-    .chip {
-      border: 1px solid var(--line);
-      border-radius: 999px;
-      padding: 4px 8px;
-      font-size: .73rem;
-      color: #5d564a;
-      background: #fffcf6;
-    }
-
-    .insight {
-      margin: 0;
-      font-size: .88rem;
-      line-height: 1.5;
-      color: #3f392f;
+    audio {
+      width: 100%;
+      margin-bottom: 4px;
     }
 
     .empty {
       border: 1px dashed var(--line);
-      border-radius: 12px;
+      border-radius: var(--radius);
       color: var(--muted);
-      padding: 18px 12px;
+      padding: 32px 20px;
       text-align: center;
-      font-size: .9rem;
       background: #fffefb;
+      margin: 0 16px;
     }
 
-    @media (min-width: 820px) {
-      .app { padding: 28px 16px 84px; }
-      .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-      .row { grid-template-columns: 2fr 1fr 1fr 1fr; }
-      .intel-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .empty-icon {
+      font-size: 2.4rem;
+      opacity: .5;
+      margin-bottom: 8px;
+    }
+
+    .empty-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+
+    .empty-text {
+      font-size: .88rem;
+      line-height: 1.5;
+    }
+
+    footer {
+      padding: 24px 16px;
+      text-align: center;
+      color: var(--muted);
+      font-size: .82rem;
+      border-top: 1px solid var(--line-soft);
+      margin-top: 24px;
+    }
+
+    .footer-stats {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .footer-stat {
+      font-size: .78rem;
+    }
+
+    .footer-stat strong {
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    @media (min-width: 640px) {
+      .row {
+        grid-template-columns: 2fr 1fr;
+      }
+
+      .filter-row {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .opp-actions {
+        flex-wrap: nowrap;
+      }
+
+      .btn-expand {
+        width: auto;
+      }
+    }
+
+    @media (min-width: 840px) {
+      header {
+        padding: 32px 24px 20px;
+      }
+
+      .feed {
+        padding: 20px 24px;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+      }
+
+      .episodes {
+        padding: 20px 24px;
+      }
+
+      .empty {
+        margin: 0 24px;
+      }
+
+      .top-strip {
+        margin: 16px 24px;
+      }
     }
   </style>
 </head>
 <body>
-  <main class="app">
-    <h1>TKO Intel Feed</h1>
-    <p class="sub">Episodes with extracted business intelligence ideas.</p>
+  <div class="app">
+    <header>
+      <h1>TKO Intel Feed</h1>
+      <p class="sub">Scan high-match business plays in under 10 seconds</p>
+    </header>
 
-    <section class="stats" aria-label="Dashboard stats">
-      <article class="stat"><div class="stat-label">Episodes processed</div><div id="statEpisodes" class="stat-value">—</div></article>
-      <article class="stat"><div class="stat-label">Ideas extracted</div><div id="statIdeas" class="stat-value">—</div></article>
-      <article class="stat"><div class="stat-label">Average match score</div><div id="statAvg" class="stat-value">—</div></article>
-      <article class="stat"><div class="stat-label">Top category</div><div id="statTopCategory" class="stat-value">—</div></article>
-    </section>
-
-    <section class="controls">
-      <div class="row">
-        <input id="search" type="search" placeholder="Search idea name or category" autocomplete="off" />
-        <select id="barrier">
-          <option value="all">All barriers</option>
-          <option value="Low">Low</option>
-          <option value="Medium">Medium</option>
-          <option value="High">High</option>
-        </select>
-        <select id="timeline">
-          <option value="all">All timelines</option>
-          <option value="Days">Days</option>
-          <option value="Weeks">Weeks</option>
-          <option value="Months">Months</option>
-        </select>
-        <select id="score">
-          <option value="all">All scores</option>
-          <option value="7">7+</option>
-          <option value="5">5+</option>
-        </select>
+    <nav class="controls">
+      <div class="controls-inner">
+        <div class="row">
+          <input id="search" type="search" placeholder="Search idea, category, or insight..." autocomplete="off" />
+          <div class="view-toggle">
+            <button class="view-btn active" data-view="cards">Opportunities</button>
+            <button class="view-btn" data-view="episodes">Episodes</button>
+          </div>
+        </div>
+        <div class="filter-row">
+          <select id="score">
+            <option value="7">Score 7+</option>
+            <option value="5">Score 5+</option>
+            <option value="all">All scores</option>
+          </select>
+          <select id="barrier">
+            <option value="all">All barriers</option>
+            <option value="Low">Low</option>
+            <option value="Medium">Medium</option>
+            <option value="High">High</option>
+          </select>
+          <select id="timeline">
+            <option value="all">All timelines</option>
+            <option value="Days">Days</option>
+            <option value="Weeks">Weeks</option>
+            <option value="Months">Months</option>
+          </select>
+          <select id="sortBy">
+            <option value="score">Sort: Match</option>
+            <option value="newest">Sort: Newest</option>
+          </select>
+        </div>
+        <div class="meta">
+          <span id="meta">Loading...</span>
+          <span id="count">—</span>
+        </div>
       </div>
-      <div class="meta">
-        <span id="meta">Loading dashboard…</span>
-        <span id="count">—</span>
-      </div>
-    </section>
+    </nav>
 
-    <section id="episodes" class="episodes" aria-live="polite"></section>
-  </main>
+    <div id="topStrip"></div>
+    <main id="content" aria-live="polite"></main>
+
+    <footer>
+      <div>TKO Intel Feed · Static GitHub Pages</div>
+      <div class="footer-stats">
+        <span class="footer-stat"><strong id="statEpisodes">—</strong> episodes</span>
+        <span class="footer-stat"><strong id="statIdeas">—</strong> ideas</span>
+        <span class="footer-stat"><strong id="statAvg">—</strong> avg match</span>
+        <span class="footer-stat"><strong id="statTopCategory">—</strong> top category</span>
+      </div>
+    </footer>
+  </div>
 
   <script>
     const els = {
-      episodes: document.getElementById('episodes'),
+      content: document.getElementById('content'),
+      topStrip: document.getElementById('topStrip'),
       search: document.getElementById('search'),
       barrier: document.getElementById('barrier'),
       timeline: document.getElementById('timeline'),
       score: document.getElementById('score'),
+      sortBy: document.getElementById('sortBy'),
       meta: document.getElementById('meta'),
       count: document.getElementById('count'),
       statEpisodes: document.getElementById('statEpisodes'),
@@ -372,15 +655,18 @@
       q: '',
       barrier: 'all',
       timeline: 'all',
-      score: 'all',
-      openEpisodeIds: new Set()
+      score: '7',
+      sortBy: 'score',
+      view: 'cards',
+      openEpisodeIds: new Set(),
+      expandedCardIds: new Set()
     };
 
     const esc = (v = '') => String(v).replace(/[&<>"']/g, (m) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[m]));
 
     const toDate = (v) => {
       const d = new Date(v || '');
-      return Number.isNaN(d.getTime()) ? 'Unknown date' : d.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
+      return Number.isNaN(d.getTime()) ? 'Unknown' : d.toLocaleDateString(undefined, { day: 'numeric', month: 'short', year: 'numeric' });
     };
 
     const normalizeBarrier = (v = '') => {
@@ -405,6 +691,24 @@
       return 'gray';
     };
 
+    const isFluffRevenue = (rev) => {
+      const str = String(rev || '').toLowerCase();
+      return !str || str.includes('not stated') || str.includes('unclear') || str === '—' || str.length < 3;
+    };
+
+    const truncate = (str, maxLen) => {
+      const s = String(str || '').trim();
+      if (s.length <= maxLen) return s;
+      const cutoff = s.lastIndexOf(' ', maxLen);
+      return (cutoff > maxLen * 0.6 ? s.slice(0, cutoff) : s.slice(0, maxLen)) + '…';
+    };
+
+    const getFirstSentence = (str) => {
+      const s = String(str || '').trim();
+      const match = s.match(/^[^.!?]+[.!?]/);
+      return match ? match[0].trim() : truncate(s, 120);
+    };
+
     function rawIdeas(ep) {
       const out = [];
       if (Array.isArray(ep?.intelligence)) out.push(...ep.intelligence);
@@ -414,17 +718,29 @@
     }
 
     function normalizeIdeas(ep) {
-      return rawIdeas(ep).map((idea, i) => ({
-        id: idea.id || `${ep.id || ep.guid || 'ep'}-${i}`,
-        ideaName: idea.ideaName || idea.name || idea.idea || `Business idea ${i + 1}`,
-        category: idea.category || 'General',
-        barrier: normalizeBarrier(idea.barrierLevel || idea.barrier || 'Medium'),
-        timeline: normalizeTimeline(idea.timeline || ''),
-        tools: Array.isArray(idea.toolsNeeded) ? idea.toolsNeeded : (Array.isArray(idea.tools) ? idea.tools : []),
-        revenue: Array.isArray(idea.revenueFigures) ? idea.revenueFigures : (idea.revenue ? [idea.revenue] : []),
-        insight: idea.insight || idea.notes || idea.summary || '',
-        matchScore: Math.max(0, Math.min(10, Number(idea.matchScore) || 0))
-      }));
+      return rawIdeas(ep).map((idea, i) => {
+        const ideaName = idea.ideaName || idea.name || idea.idea || '';
+        const insight = idea.insight || idea.notes || idea.summary || '';
+        const tools = Array.isArray(idea.toolsNeeded) ? idea.toolsNeeded : (Array.isArray(idea.tools) ? idea.tools : []);
+        const revenue = Array.isArray(idea.revenueFigures) ? idea.revenueFigures : (idea.revenue ? [idea.revenue] : []);
+        
+        return {
+          id: idea.id || `${ep.id || ep.guid || 'ep'}-${i}`,
+          ideaName: ideaName || `Business idea ${i + 1}`,
+          category: idea.category || 'General',
+          barrier: normalizeBarrier(idea.barrierLevel || idea.barrier || 'Medium'),
+          timeline: normalizeTimeline(idea.timeline || ''),
+          tools,
+          revenue,
+          insight,
+          notes: idea.notes || '',
+          matchScore: Math.max(0, Math.min(10, Number(idea.matchScore) || 0)),
+          episodeTitle: ep.title || 'Untitled',
+          episodeNumber: ep.episodeNumber || '—',
+          audioUrl: ep.audioUrl || '',
+          publishedAt: ep.publishedAt || ep.publishDate || ep.date || ''
+        };
+      });
     }
 
     function hydrateEpisodes(data) {
@@ -458,33 +774,70 @@
 
       const q = state.q.trim().toLowerCase();
       if (!q) return true;
-      return `${idea.ideaName} ${idea.category}`.toLowerCase().includes(q);
+      return `${idea.ideaName} ${idea.category} ${idea.insight}`.toLowerCase().includes(q);
+    }
+
+    function allOpportunities() {
+      return state.episodes
+        .flatMap((ep) => ep.ideas)
+        .filter(ideaPasses);
+    }
+
+    function sortOpportunities(opps) {
+      if (state.sortBy === 'newest') {
+        return opps.sort((a, b) => new Date(b.publishedAt) - new Date(a.publishedAt));
+      }
+      return opps.sort((a, b) => {
+        const scoreDiff = b.matchScore - a.matchScore;
+        if (Math.abs(scoreDiff) > 0.01) return scoreDiff;
+        return new Date(b.publishedAt) - new Date(a.publishedAt);
+      });
     }
 
     function filteredEpisodes() {
-      const constrained = state.q.trim() || state.barrier !== 'all' || state.timeline !== 'all' || state.score !== 'all';
       return state.episodes
         .map((ep) => ({ ...ep, visibleIdeas: ep.ideas.filter(ideaPasses) }))
-        .filter((ep) => (constrained ? ep.visibleIdeas.length > 0 : true));
+        .filter((ep) => ep.visibleIdeas.length > 0);
     }
 
-    function ideaCard(idea) {
+    function opportunityCard(idea) {
+      const isExpanded = state.expandedCardIds.has(idea.id);
+      const angle = getFirstSentence(idea.insight || idea.notes);
+      const realRevenue = (idea.revenue || []).filter((r) => !isFluffRevenue(r));
+      
       return `
-        <article class="intel-card">
-          <div class="intel-head">
-            <h3 class="idea">${esc(idea.ideaName)}</h3>
-            <span class="score ${scoreClass(idea.matchScore)}">Match ${esc(idea.matchScore.toFixed(1))}</span>
+        <article class="opp-card ${isExpanded ? 'expanded' : ''}" data-opp="${esc(idea.id)}">
+          <div class="opp-header">
+            <div class="opp-title-row">
+              <h2 class="idea-name">${esc(idea.ideaName)}</h2>
+              <span class="score ${scoreClass(idea.matchScore)}">${esc(idea.matchScore.toFixed(1))}</span>
+            </div>
+            <p class="opp-angle">${esc(angle)}</p>
+            <div class="chips">
+              <span class="chip category">${esc(idea.category)}</span>
+              <span class="chip">${esc(idea.barrier)} barrier</span>
+              <span class="chip">${esc(idea.timeline)} timeline</span>
+              ${realRevenue.length ? `<span class="chip">${esc(realRevenue[0])}</span>` : ''}
+            </div>
           </div>
-          <div class="chips">
-            <span class="badge">${esc(idea.category)}</span>
-            <span class="chip">Barrier: ${esc(idea.barrier)}</span>
-            <span class="chip">Timeline: ${esc(idea.timeline)}</span>
+          <div class="opp-details">
+            <div class="opp-details-inner">
+              ${idea.insight ? `<div class="detail-section"><div class="detail-label">Full Play</div><div class="detail-content">${esc(idea.insight)}</div></div>` : ''}
+              ${idea.notes && idea.notes !== idea.insight ? `<div class="detail-section"><div class="detail-label">Why / Action</div><div class="detail-content">${esc(idea.notes)}</div></div>` : ''}
+              ${idea.tools.length ? `<div class="detail-section"><div class="detail-label">Tools Needed</div><ul class="detail-list">${idea.tools.map((t) => `<li>${esc(t)}</li>`).join('')}</ul></div>` : ''}
+              ${realRevenue.length > 1 ? `<div class="detail-section"><div class="detail-label">Revenue</div><ul class="detail-list">${realRevenue.map((r) => `<li>${esc(r)}</li>`).join('')}</ul></div>` : ''}
+            </div>
           </div>
-          <div class="meta-grid">
-            <div class="kv">Tools<b>${esc((idea.tools || []).join(', ') || '—')}</b></div>
-            <div class="kv">Revenue<b>${esc((idea.revenue || []).join(', ') || '—')}</b></div>
+          <div class="opp-actions">
+            <button class="btn btn-primary" data-copy="${esc(idea.id)}">📋 Copy angle</button>
+            ${idea.audioUrl ? `<a class="btn" href="${esc(idea.audioUrl)}" target="_blank" rel="noopener">🎧 Open episode</a>` : ''}
+            <button class="btn btn-expand" data-expand="${esc(idea.id)}">${isExpanded ? '▲ Show less' : '▼ Show details'}</button>
           </div>
-          <p class="insight">${esc(idea.insight || 'No insight captured yet.')}</p>
+          <div class="ep-meta">
+            <span>Ep ${esc(idea.episodeNumber)}</span>
+            <span class="ep-meta-sep">·</span>
+            <span>${esc(toDate(idea.publishedAt))}</span>
+          </div>
         </article>
       `;
     }
@@ -502,41 +855,141 @@
           <div class="ep-content">
             <div class="ep-inner">
               ${ep.audioUrl ? `<audio controls preload="none" src="${esc(ep.audioUrl)}"></audio>` : ''}
-              <div class="intel-grid">
-                ${ideas.length ? ideas.map(ideaCard).join('') : '<div class="empty">No business intelligence matched these filters.</div>'}
-              </div>
+              ${ideas.map((idea) => opportunityCard(idea)).join('')}
             </div>
           </div>
         </article>
       `;
     }
 
-    function render() {
-      const rows = filteredEpisodes();
-      const firstOpenId = rows[0]?.id || rows[0]?.guid;
-      els.count.textContent = `${rows.length} / ${state.episodes.length} episodes visible`;
-
-      if (!rows.length) {
-        els.episodes.innerHTML = '<article class="empty">No intelligence ideas match this search/filter combo.</article>';
+    function renderTopStrip(opportunities) {
+      const highMatches = opportunities.filter((o) => o.matchScore >= 7);
+      if (!highMatches.length) {
+        els.topStrip.innerHTML = '';
         return;
       }
+      els.topStrip.innerHTML = `
+        <div class="top-strip">
+          <span class="top-strip-icon">⭐</span>
+          <div class="top-strip-text">
+            <strong>${highMatches.length}</strong> high-match ${highMatches.length === 1 ? 'play' : 'plays'} (7+) ready to review
+          </div>
+        </div>
+      `;
+    }
 
-      if (!state.openEpisodeIds.size && firstOpenId) state.openEpisodeIds.add(String(firstOpenId));
-
-      els.episodes.innerHTML = rows.map((ep) => {
-        const id = String(ep.id || ep.guid || '');
-        return episodeCard(ep, state.openEpisodeIds.has(id));
-      }).join('');
-
-      els.episodes.querySelectorAll('[data-toggle]').forEach((btn) => {
-        btn.addEventListener('click', () => {
-          const id = String(btn.dataset.toggle || '');
-          if (!id) return;
-          if (state.openEpisodeIds.has(id)) state.openEpisodeIds.delete(id);
-          else state.openEpisodeIds.add(id);
-          render();
-        });
+    function render() {
+      document.querySelectorAll('.view-btn').forEach((btn) => {
+        btn.classList.toggle('active', btn.dataset.view === state.view);
       });
+
+      if (state.view === 'cards') {
+        const opportunities = sortOpportunities(allOpportunities());
+        els.count.textContent = `${opportunities.length} ${opportunities.length === 1 ? 'opportunity' : 'opportunities'}`;
+        
+        renderTopStrip(opportunities);
+
+        if (!opportunities.length) {
+          els.content.innerHTML = `
+            <div class="empty">
+              <div class="empty-icon">🔍</div>
+              <div class="empty-title">No matches found</div>
+              <div class="empty-text">Try adjusting your filters or search terms</div>
+            </div>
+          `;
+          return;
+        }
+
+        els.content.className = 'feed';
+        els.content.innerHTML = opportunities.map(opportunityCard).join('');
+
+        els.content.querySelectorAll('[data-expand]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const id = btn.dataset.expand;
+            if (state.expandedCardIds.has(id)) state.expandedCardIds.delete(id);
+            else state.expandedCardIds.add(id);
+            render();
+          });
+        });
+
+        els.content.querySelectorAll('[data-copy]').forEach((btn) => {
+          btn.addEventListener('click', async () => {
+            const id = btn.dataset.copy;
+            const opp = opportunities.find((o) => o.id === id);
+            if (!opp) return;
+            const text = getFirstSentence(opp.insight || opp.notes);
+            try {
+              await navigator.clipboard.writeText(text);
+              const orig = btn.textContent;
+              btn.textContent = '✓ Copied!';
+              setTimeout(() => { btn.textContent = orig; }, 1500);
+            } catch (err) {
+              console.error('Copy failed:', err);
+            }
+          });
+        });
+      } else {
+        const episodes = filteredEpisodes();
+        els.count.textContent = `${episodes.length} / ${state.episodes.length} episodes`;
+        els.topStrip.innerHTML = '';
+
+        if (!episodes.length) {
+          els.content.innerHTML = `
+            <div class="empty">
+              <div class="empty-icon">🔍</div>
+              <div class="empty-title">No episodes found</div>
+              <div class="empty-text">Try adjusting your filters or search terms</div>
+            </div>
+          `;
+          return;
+        }
+
+        const firstOpenId = episodes[0]?.id || episodes[0]?.guid;
+        if (!state.openEpisodeIds.size && firstOpenId) state.openEpisodeIds.add(String(firstOpenId));
+
+        els.content.className = 'episodes';
+        els.content.innerHTML = episodes.map((ep) => {
+          const id = String(ep.id || ep.guid || '');
+          return episodeCard(ep, state.openEpisodeIds.has(id));
+        }).join('');
+
+        els.content.querySelectorAll('[data-toggle]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const id = String(btn.dataset.toggle || '');
+            if (!id) return;
+            if (state.openEpisodeIds.has(id)) state.openEpisodeIds.delete(id);
+            else state.openEpisodeIds.add(id);
+            render();
+          });
+        });
+
+        els.content.querySelectorAll('[data-expand]').forEach((btn) => {
+          btn.addEventListener('click', () => {
+            const id = btn.dataset.expand;
+            if (state.expandedCardIds.has(id)) state.expandedCardIds.delete(id);
+            else state.expandedCardIds.add(id);
+            render();
+          });
+        });
+
+        els.content.querySelectorAll('[data-copy]').forEach((btn) => {
+          btn.addEventListener('click', async () => {
+            const id = btn.dataset.copy;
+            const allOpps = state.episodes.flatMap((ep) => ep.ideas);
+            const opp = allOpps.find((o) => o.id === id);
+            if (!opp) return;
+            const text = getFirstSentence(opp.insight || opp.notes);
+            try {
+              await navigator.clipboard.writeText(text);
+              const orig = btn.textContent;
+              btn.textContent = '✓ Copied!';
+              setTimeout(() => { btn.textContent = orig; }, 1500);
+            } catch (err) {
+              console.error('Copy failed:', err);
+            }
+          });
+        });
+      }
     }
 
     async function init() {
@@ -545,7 +998,7 @@
       const data = await res.json();
 
       state.episodes = hydrateEpisodes(data);
-      els.meta.textContent = `${data.feed?.title || 'TKO'} · ${data.intelligenceMeta?.processedEpisodes || state.episodes.length} analyzed`;
+      els.meta.textContent = `${data.feed?.title || 'TKO'} · ${data.intelligenceMeta?.processedEpisodes || state.episodes.length} episodes`;
 
       renderStats();
       render();
@@ -554,12 +1007,26 @@
       els.barrier.addEventListener('change', (e) => { state.barrier = e.target.value || 'all'; render(); });
       els.timeline.addEventListener('change', (e) => { state.timeline = e.target.value || 'all'; render(); });
       els.score.addEventListener('change', (e) => { state.score = e.target.value || 'all'; render(); });
+      els.sortBy.addEventListener('change', (e) => { state.sortBy = e.target.value || 'score'; render(); });
+
+      document.querySelectorAll('.view-btn').forEach((btn) => {
+        btn.addEventListener('click', () => {
+          state.view = btn.dataset.view || 'cards';
+          render();
+        });
+      });
     }
 
     init().catch((err) => {
       console.error(err);
-      els.meta.textContent = 'Failed to load dashboard data';
-      els.episodes.innerHTML = '<article class="empty">Could not load ./data/tko-intel.json.</article>';
+      els.meta.textContent = 'Failed to load data';
+      els.content.innerHTML = `
+        <div class="empty">
+          <div class="empty-icon">⚠️</div>
+          <div class="empty-title">Failed to load data</div>
+          <div class="empty-text">Could not fetch ./data/tko-intel.json</div>
+        </div>
+      `;
     });
   </script>
 </body>
