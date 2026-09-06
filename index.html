@@ -7,7 +7,7 @@
   <meta name="description" content="Business intelligence dashboard from The Koerner Office podcast." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
   <style>
     :root {
       --paper: #faf7f1;
@@ -17,24 +17,32 @@
       --line: #ddd2c2;
       --line-soft: #ece3d7;
       --accent: #3f6ea8;
+      --accent-light: #e9f2ff;
+      --accent-border: #b9d3fa;
       --gold: #b8891d;
+      --gold-bg: #f8ebc9;
+      --gold-border: #e4cb83;
       --radius: 16px;
       --shadow: 0 8px 24px rgba(33, 29, 21, .08);
+      --shadow-hover: 0 12px 32px rgba(33, 29, 21, .12);
+      --transition-fast: 140ms ease-out;
+      --transition-smooth: 220ms ease-out;
     }
 
     * { box-sizing: border-box; }
 
     body {
       margin: 0;
-      font-family: "Inter", sans-serif;
+      font-family: "IBM Plex Sans", -apple-system, system-ui, sans-serif;
       color: var(--ink);
       background: radial-gradient(circle at 100% 0%, #f4efe7 0%, var(--paper) 42%, #f7f2ea 100%);
+      min-height: 100vh;
     }
 
     .app {
       width: min(1080px, 100%);
       margin: 0 auto;
-      padding: 18px 12px 72px;
+      padding: 24px 16px 72px;
     }
 
     h1 {
@@ -42,27 +50,35 @@
       font-family: "Playfair Display", serif;
       font-size: clamp(2rem, 8vw, 3rem);
       letter-spacing: -.02em;
+      line-height: 1.1;
     }
 
     .sub {
       margin: 8px 0 0;
       color: var(--muted);
       font-size: .95rem;
+      line-height: 1.4;
     }
 
     .stats {
-      margin-top: 18px;
+      margin-top: 24px;
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 8px;
+      gap: 12px;
     }
 
     .stat {
       background: var(--card);
       border: 1px solid var(--line-soft);
       border-radius: 14px;
-      padding: 12px;
+      padding: 16px;
       box-shadow: var(--shadow);
+      transition: box-shadow var(--transition-fast), transform var(--transition-fast);
+    }
+
+    .stat:hover {
+      box-shadow: var(--shadow-hover);
+      transform: translateY(-2px);
     }
 
     .stat-label {
@@ -70,27 +86,35 @@
       font-size: .74rem;
       text-transform: uppercase;
       letter-spacing: .06em;
+      font-weight: 500;
     }
 
     .stat-value {
-      margin-top: 5px;
+      margin-top: 8px;
       font-family: "Playfair Display", serif;
-      font-size: 1.26rem;
-      line-height: 1.05;
+      font-size: 1.4rem;
+      line-height: 1.1;
+      font-weight: 600;
     }
 
     .controls {
-      margin-top: 14px;
+      margin-top: 24px;
       background: var(--card);
       border: 1px solid var(--line);
       border-radius: var(--radius);
       box-shadow: var(--shadow);
-      padding: 12px;
+      padding: 16px;
       display: grid;
-      gap: 8px;
+      gap: 12px;
+      position: sticky;
+      top: 12px;
+      z-index: 10;
     }
 
-    .row { display: grid; gap: 8px; }
+    .row { 
+      display: grid; 
+      gap: 12px; 
+    }
 
     input, select {
       width: 100%;
@@ -99,29 +123,39 @@
       color: var(--ink);
       border-radius: 12px;
       font-size: .92rem;
-      padding: 10px 12px;
-      min-height: 44px;
+      font-family: inherit;
+      padding: 12px 16px;
+      min-height: 48px;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    input:hover, select:hover {
+      border-color: #c8b895;
     }
 
     input:focus, select:focus {
-      border-color: #bba272;
-      outline: 2px solid #f2e1bc;
-      outline-offset: 1px;
+      border-color: var(--accent);
+      outline: none;
+      box-shadow: 0 0 0 3px var(--accent-light);
+    }
+
+    input:active, select:active {
+      transform: translateY(1px);
     }
 
     .meta {
       display: flex;
       justify-content: space-between;
       color: var(--muted);
-      font-size: .82rem;
-      gap: 8px;
+      font-size: .84rem;
+      gap: 12px;
       flex-wrap: wrap;
     }
 
     .episodes {
-      margin-top: 14px;
+      margin-top: 24px;
       display: grid;
-      gap: 10px;
+      gap: 16px;
     }
 
     .episode {
@@ -130,6 +164,12 @@
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       overflow: hidden;
+      transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .episode:hover {
+      box-shadow: var(--shadow-hover);
+      border-color: #c8b895;
     }
 
     .ep-head {
@@ -137,57 +177,80 @@
       border: 0;
       background: transparent;
       text-align: left;
-      padding: 14px;
+      padding: 16px;
       cursor: pointer;
       display: grid;
-      gap: 8px;
+      gap: 12px;
       color: inherit;
+      font-family: inherit;
+      transition: background-color var(--transition-fast);
+    }
+
+    .ep-head:hover {
+      background: rgba(250, 247, 241, 0.4);
+    }
+
+    .ep-head:active {
+      background: rgba(250, 247, 241, 0.6);
+    }
+
+    .ep-head:focus-visible {
+      outline: 3px solid var(--accent);
+      outline-offset: -3px;
     }
 
     .ep-top {
       display: flex;
       justify-content: space-between;
+      align-items: center;
       font-size: .74rem;
       color: var(--muted);
       text-transform: uppercase;
       letter-spacing: .06em;
-      gap: 10px;
+      gap: 12px;
+      font-weight: 500;
     }
 
     .ep-title {
       margin: 0;
       font-family: "Playfair Display", serif;
-      font-size: 1.3rem;
-      line-height: 1.18;
+      font-size: 1.35rem;
+      line-height: 1.25;
+      font-weight: 600;
+      color: var(--ink);
     }
 
     .ep-desc {
       margin: 0;
       color: var(--muted);
-      font-size: .9rem;
-      line-height: 1.45;
+      font-size: .92rem;
+      line-height: 1.5;
     }
 
     .chev {
       justify-self: end;
-      color: var(--muted);
-      font-size: .85rem;
-      transition: transform .25s ease;
+      width: 0;
+      height: 0;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      border-top: 6px solid var(--muted);
+      transition: transform var(--transition-smooth);
+      margin-top: 2px;
     }
 
     .ep-content {
       display: grid;
       grid-template-rows: 0fr;
-      transition: grid-template-rows .28s ease;
+      transition: grid-template-rows var(--transition-smooth);
       border-top: 1px solid transparent;
     }
 
     .ep-inner {
       min-height: 0;
       overflow: hidden;
-      padding: 0 14px;
+      padding: 0 16px;
       display: grid;
-      gap: 10px;
+      gap: 16px;
     }
 
     .episode.open .ep-content {
@@ -195,100 +258,152 @@
       border-top-color: var(--line-soft);
     }
 
-    .episode.open .ep-inner { padding: 12px 14px 14px; }
-    .episode.open .chev { transform: rotate(180deg); }
+    .episode.open .ep-inner { 
+      padding: 16px 16px 16px; 
+    }
+    
+    .episode.open .chev { 
+      transform: rotate(180deg); 
+    }
 
-    audio { width: 100%; }
+    audio { 
+      width: 100%; 
+      border-radius: 8px;
+      outline: 1px solid var(--line-soft);
+    }
+    
+    audio:focus-visible {
+      outline: 2px solid var(--accent);
+    }
 
-    .intel-grid { display: grid; gap: 10px; }
+    .intel-grid { 
+      display: grid; 
+      gap: 16px; 
+    }
 
     .intel-card {
       border: 1px solid var(--line-soft);
       border-radius: 14px;
       background: linear-gradient(180deg, #fffdf9 0%, #fdf8ef 100%);
-      padding: 12px;
+      padding: 16px;
       display: grid;
-      gap: 9px;
+      gap: 12px;
+      transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    }
+
+    .intel-card:hover {
+      border-color: #c8b895;
+      box-shadow: 0 4px 12px rgba(33, 29, 21, .06);
     }
 
     .intel-head {
       display: flex;
-      gap: 8px;
+      gap: 12px;
       justify-content: space-between;
       align-items: flex-start;
     }
 
     .idea {
       margin: 0;
-      font-size: 1rem;
-      font-weight: 700;
-      line-height: 1.3;
+      font-size: 1.05rem;
+      font-weight: 600;
+      line-height: 1.35;
+      color: var(--ink);
     }
 
     .badge {
-      font-size: .7rem;
+      font-size: .72rem;
       border-radius: 999px;
       border: 1px solid #d7cab6;
       background: #f7efe2;
       color: #5d503f;
-      padding: 4px 8px;
+      padding: 6px 10px;
       white-space: nowrap;
+      font-weight: 500;
     }
 
     .meta-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 7px;
+      gap: 8px;
     }
 
     .kv {
       background: #fffefb;
       border: 1px solid var(--line-soft);
       border-radius: 10px;
-      padding: 8px;
-      font-size: .77rem;
+      padding: 10px 12px;
+      font-size: .78rem;
       color: var(--muted);
+      font-weight: 500;
     }
 
     .kv b {
       display: block;
-      margin-top: 3px;
+      margin-top: 4px;
       color: var(--ink);
-      font-size: .88rem;
+      font-size: .9rem;
+      font-weight: 600;
     }
 
     .score {
-      font-size: .74rem;
-      font-weight: 700;
+      font-size: .76rem;
+      font-weight: 600;
       border-radius: 999px;
-      padding: 5px 8px;
+      padding: 6px 10px;
       white-space: nowrap;
       border: 1px solid transparent;
+      transition: transform var(--transition-fast);
     }
 
-    .score.gold { background: #f8ebc9; border-color: #e4cb83; color: #7e5f14; }
-    .score.blue { background: #e9f2ff; border-color: #b9d3fa; color: #245492; }
-    .score.gray { background: #efefef; border-color: #d8d8d8; color: #5f5f5f; }
+    .score:hover {
+      transform: scale(1.05);
+    }
+
+    .score.gold { 
+      background: var(--gold-bg); 
+      border-color: var(--gold-border); 
+      color: #7e5f14; 
+    }
+    
+    .score.blue { 
+      background: var(--accent-light); 
+      border-color: var(--accent-border); 
+      color: #245492; 
+    }
+    
+    .score.gray { 
+      background: #efefef; 
+      border-color: #d8d8d8; 
+      color: #5f5f5f; 
+    }
 
     .chips {
       display: flex;
       flex-wrap: wrap;
-      gap: 6px;
+      gap: 8px;
     }
 
     .chip {
       border: 1px solid var(--line);
       border-radius: 999px;
-      padding: 4px 8px;
-      font-size: .73rem;
+      padding: 6px 10px;
+      font-size: .75rem;
       color: #5d564a;
       background: #fffcf6;
+      font-weight: 500;
+      transition: background-color var(--transition-fast), border-color var(--transition-fast);
+    }
+
+    .chip:hover {
+      background: #fff;
+      border-color: #c8b895;
     }
 
     .insight {
       margin: 0;
-      font-size: .88rem;
-      line-height: 1.5;
+      font-size: .9rem;
+      line-height: 1.6;
       color: #3f392f;
     }
 
@@ -296,24 +411,53 @@
       border: 1px dashed var(--line);
       border-radius: 12px;
       color: var(--muted);
-      padding: 18px 12px;
+      padding: 24px 16px;
       text-align: center;
-      font-size: .9rem;
+      font-size: .92rem;
       background: #fffefb;
+      line-height: 1.5;
     }
 
-    @media (min-width: 820px) {
-      .app { padding: 28px 16px 84px; }
-      .stats { grid-template-columns: repeat(4, minmax(0, 1fr)); }
-      .row { grid-template-columns: 2fr 1fr 1fr 1fr; }
-      .intel-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    @media (min-width: 768px) {
+      .app { padding: 32px 24px 96px; }
+      .stats { 
+        grid-template-columns: repeat(4, minmax(0, 1fr)); 
+        gap: 16px;
+      }
+      .row { 
+        grid-template-columns: 2fr 1fr 1fr 1fr; 
+      }
+      .intel-grid { 
+        grid-template-columns: repeat(2, minmax(0, 1fr)); 
+      }
+      .controls {
+        top: 16px;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .app { padding: 32px 32px 96px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+      
+      .stat:hover,
+      .episode:hover,
+      .intel-card:hover {
+        transform: none;
+      }
     }
   </style>
 </head>
 <body>
   <main class="app">
     <h1>TKO Intel Feed</h1>
-    <p class="sub">Episodes with extracted business intelligence ideas.</p>
+    <p class="sub">Episodes with extracted business intelligence ideas. Sharp operator decision tool.</p>
 
     <section class="stats" aria-label="Dashboard stats">
       <article class="stat"><div class="stat-label">Episodes processed</div><div id="statEpisodes" class="stat-value">—</div></article>
@@ -497,7 +641,7 @@
             <div class="ep-top"><span>Episode ${esc(ep.episodeNumber || '—')}</span><span>${esc(toDate(ep.publishedAt || ep.publishDate))}</span></div>
             <h2 class="ep-title">${esc(ep.title || 'Untitled episode')}</h2>
             <p class="ep-desc">${esc(ep.descriptionExcerpt || ep.description || '')}</p>
-            <span class="chev">▼</span>
+            <span class="chev" aria-hidden="true"></span>
           </button>
           <div class="ep-content">
             <div class="ep-inner">
@@ -514,10 +658,10 @@
     function render() {
       const rows = filteredEpisodes();
       const firstOpenId = rows[0]?.id || rows[0]?.guid;
-      els.count.textContent = `${rows.length} / ${state.episodes.length} episodes visible`;
+      els.count.textContent = `${rows.length} of ${state.episodes.length} episodes visible`;
 
       if (!rows.length) {
-        els.episodes.innerHTML = '<article class="empty">No intelligence ideas match this search/filter combo.</article>';
+        els.episodes.innerHTML = '<article class="empty">No intelligence ideas match this search or filter combination.</article>';
         return;
       }
 
@@ -545,7 +689,7 @@
       const data = await res.json();
 
       state.episodes = hydrateEpisodes(data);
-      els.meta.textContent = `${data.feed?.title || 'TKO'} · ${data.intelligenceMeta?.processedEpisodes || state.episodes.length} analyzed`;
+      els.meta.textContent = `${data.feed?.title || 'TKO'} — ${data.intelligenceMeta?.processedEpisodes || state.episodes.length} episodes analyzed`;
 
       renderStats();
       render();
