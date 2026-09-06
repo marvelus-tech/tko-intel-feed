@@ -689,7 +689,7 @@
       const data = await res.json();
 
       state.episodes = hydrateEpisodes(data);
-      els.meta.textContent = `${data.feed?.title || 'TKO'} — ${data.intelligenceMeta?.processedEpisodes || state.episodes.length} episodes analyzed`;
+      els.meta.textContent = `${data.feed?.title || 'TKO'}. ${data.intelligenceMeta?.processedEpisodes || state.episodes.length} episodes analyzed`;
 
       renderStats();
       render();
