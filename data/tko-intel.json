@@ -5747,6 +5747,112 @@
       ]
     },
     {
+      "id": "d005c499-c949-46ac-af7c-51b433fb906f",
+      "guid": "Buzzsprout-16056698",
+      "title": "Oops! I Started 15 More Businesses. Episode 4/4 of \"Every Business I've Every Started\" Ep. #88",
+      "date": "2024-11-06",
+      "publishDate": "2024-11-06",
+      "publishedAt": "2024-11-06T11:00:00.000Z",
+      "episodeNumber": 88,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/105907768/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-9-12%2F409131639-44100-2-8a864d70a5b6e.mp3",
+      "description": "This is part four - THE FINAL PART of ' Every Business I've Ever Started ' If you want even more business ideas , check out the previous episodes to hear about every business in episode #14, 21 and 79. Timestamps below. Enjoy! --- Watch this on YouTube instead here: tkopod.co/p-yt Ask me a question on or off the show here: http://tkopod.co/p-ask Learn more about me: http://tkopod.co/p-cjk Learn about my company: http://tkopod.co/p-cof Follow me on Twitter here: http://tkopod.co/p-x Free weekly business ideas newsletter: http://tkopod.co/p-nl Share this podcast: http://tkopod.co/p-all Scrape small business data: http://tkopod.co/p-os --- 00:00 Introduction to Business Ventures 00:48 The Co-Founders Model 02:20 Copy Paste Site: A Unique Web Design Idea 03:55 Fulfillment Score: E-commerce Shipping Solutions 05:58 Scams and Lessons Learned 09:29 Innovative Products: Nomo Snore and Off Marketers 12:01 AI Guy: A Successful Newsletter 14:08 Startup Gems: AI Voice Cloning Experiment 16:55 The No BS Crypto Podcast 17:51 Twice Used: A Recycling Venture 20:40 Lawyers in China: A Lead Generation Service 23:13 My Modern Self: Delivering Ikea Furniture 25:12 Animal Aftercare: Programmatic SEO Business",
+      "descriptionExcerpt": "This is part four - THE FINAL PART of ' Every Business I've Ever Started ' If you want even more business ideas , check out the previous episodes to hear about every business in episode #14, 21 and 79. Timestamps belo...",
+      "source": "rss",
+      "transcript": "",
+      "duration": "00:27:40",
+      "durationSeconds": 1660,
+      "durationLabel": "27:40",
+      "tags": [
+        "Idea Dump",
+        "AI Voice",
+        "Programmatic SEO",
+        "Lead Gen"
+      ],
+      "intelligence": [
+        {
+          "idea": "Marvelus AI Voice Cloning Studio",
+          "ideaName": "Marvelus AI Voice Cloning Studio",
+          "category": "AI Voice / Product",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Weeks",
+          "tools": [
+            "ElevenLabs or similar",
+            "Marvelus.cc",
+            "Demo reel site",
+            "Cold outbound to agencies"
+          ],
+          "toolsNeeded": [
+            "ElevenLabs or similar",
+            "Marvelus.cc",
+            "Demo reel site",
+            "Cold outbound to agencies"
+          ],
+          "revenue": "Experiment to paid pilots",
+          "revenueFigures": [
+            "CJK AI voice clone experiment (episode)",
+            "Agency pilot retainers"
+          ],
+          "insight": "Episode flags Startup Gems as an AI voice cloning experiment. Okeito angle: ship Marvelus as the polished AU agency voice product (ads, IVR, local SEO videos) instead of another hobby demo.",
+          "notes": "Melbourne first: real estate, hospitality, and sandwich board advertisers need on brand voiceovers fast. Pair Grok Bot agents for script drafts and batch generation. Compliance: disclose synthetic voice.",
+          "matchScore": 9
+        },
+        {
+          "idea": "Programmatic SEO Niche Site Factory",
+          "ideaName": "Programmatic SEO Niche Site Factory",
+          "category": "SEO / Rank and Rent",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Months",
+          "tools": [
+            "Programmatic page templates",
+            "Public datasets",
+            "Cloudflare Pages",
+            "Marvelus SEO"
+          ],
+          "toolsNeeded": [
+            "Programmatic page templates",
+            "Public datasets",
+            "Cloudflare Pages",
+            "Marvelus SEO"
+          ],
+          "revenue": "AdSense + lead sell + rent",
+          "revenueFigures": [
+            "Animal Aftercare style pSEO (episode)",
+            "Rank and rent local pages"
+          ],
+          "insight": "Animal Aftercare is called out as a programmatic SEO business. Same pattern as rank and rent: templated pages over structured data, then monetize leads.",
+          "notes": "AU localizable niches: council permits, vacant land rules, hospitality licensing. Reuse Marvelus SEO playbooks. Do not chase thin spam; quality filters matter for Google.",
+          "matchScore": 8
+        },
+        {
+          "idea": "Copy Paste Site Design Product",
+          "ideaName": "Copy Paste Site Design Product",
+          "category": "UX / Micro-SaaS",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Weeks",
+          "tools": [
+            "Component library",
+            "Webflow or Next.js",
+            "Template marketplace"
+          ],
+          "toolsNeeded": [
+            "Component library",
+            "Webflow or Next.js",
+            "Template marketplace"
+          ],
+          "revenue": "One time template sales",
+          "revenueFigures": [
+            "Copy Paste Site idea (episode)"
+          ],
+          "insight": "CJK lists a copy paste web design idea. Okeito angle: sell tasteful light mode site kits for Melbourne SMBs, not generic dark AI slop themes.",
+          "notes": "Secondary to Marvelus and boards. Useful if it feeds host/advertiser onboarding for the sandwich board ops.",
+          "matchScore": 6
+        }
+      ]
+    },
+    {
       "id": "Buzzsprout-16042803",
       "title": "The Most Profitable Industry You've Never Looked at Twice... Ep. #87",
       "description": "I sat down with Shannon Houchin , the founder of Roadside Republic . In this episode, we discuss the incredible business model of roadside produce stands , which Shannon scaled to over 100 locations in her first summer , generating impressive revenue with minimal overhead. We highlight why this business works so well, including its low startup costs (around $200 ), high margins (up to 70% ), and lack of lease requirements or heavy regulation. Shannon shares the tactics she used, from finding the perfect locations to negotiating with wholesalers over the phone, making this a step-by-step guide for anyone looking to enter this profitable venture. Learn more about Shannon&apos;s business here: https://roadsiderepublic.com/ https://www.tiktok.com/@roadside_republic https://www.facebook.com/RoadsideRepublic Timestamps below. Enjoy! --- Watch this on YouTube instead here: http://tkopod.co/p-yt Ask me a question on or off the show here: http://tkopod.co/p-ask Learn more about me: http://tkopod.co/p-cjk Learn about my company: http://tkopod.co/p-cof Follow me on Twitter here: http://tkopod.co/p-x Free weekly business ideas newsletter: http://tkopod.co/p-nl Share this podcast: http://tkopod.co/p-all Scrape small business data: http://tkopod.co/p-os --- 00:00 The Roadside Stand Revolution 02:52 From Reporter to Peach Entrepreneur 05:47 Scaling the Peach Business 09:09 The Art of Location and Visibility 12:05 Understanding Peach Quality and Sourcing 14:59 Transitioning to Online Sales and Delivery 17:46 Consumer Behavior and Pricing Strategies 24:58 Transforming Pricing Models in Produce Sales 29:12 Innovative Locations for Roadside Stands 32:32 Expanding Business Segments and Mobile Markets 34:59 Profitability and Sales Strategies for Roadside Stands 39:12 The Power of Storytelling in Sales 46:47 Comparing Business Models: Roadside Republic vs. Peach Truck",
@@ -6376,6 +6482,364 @@
         "Investing",
         "Sales",
         "Growth"
+      ]
+    },
+    {
+      "id": "2aa2450d-1810-4dbb-9868-bec37069c638",
+      "guid": "Buzzsprout-13854662",
+      "title": "053: A Programming That Made $550k in Revenue",
+      "date": "2023-10-27",
+      "publishDate": "2023-10-27",
+      "publishedAt": "2023-10-27T09:00:00.000Z",
+      "episodeNumber": 53,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/105907705/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-6-23%2F404433417-44100-1-04e57d89e5aeb070.mp3",
+      "description": "Today, we're delving into the captivating journey of Josh Comeau, a software developer turned educator, whose online course not only generated jaw-dropping revenue but also revolutionized the way we think about building a business in the digital age. In this episode, we're uncovering the secrets behind Josh's success. We'll be dissecting three key principles that transformed his venture from an idea to a thriving online empire. Get ready to learn about building a robust online presence, engaging in user testing and iterative development, and the art of transparent communication – principles that are not just abstract concepts but actionable strategies that can transform any business. Introduction: In this episode, we explore the remarkable journey of Josh Comeau, a software developer and educator, who transformed his passion into a thriving online business. Join us as we unravel the core principles that drove his success, principles applicable to every entrepreneur aiming for greatness. Segment 1: Building a Strong Online Presence Discuss the significance of building an online presence. Highlight Josh's strategies: consistent blogging, social media engagement, and growing an email list. Emphasize the importance of credibility and trust in the digital landscape. Provide actionable tips for listeners to enhance their online presence. Segment 2: Engaging User Testing and Iterative Development Explain the concept of user testing and iterative development. Narrate Josh's approach: involving real users, gathering feedback, and refining the course. Discuss the impact of user-centered design on product development. Encourage listeners to conduct beta tests and iterate based on user feedback. Segment 3: Transparent Communication and Building Trust Explore the role of transparent communication in business relationships. Share how Josh balanced transparency and privacy in his communication. Discuss the significance of trust in customer relationships and brand loyalty. Provide insights on maintaining open communication while respecting sensitive information. Conclusion: Summarize the key takeaways from Josh Comeau's success story: Building a robust online presence establishes credibility and trust. Engaging in user testing and iterative development leads to customer-centric products. Transparent communication fosters authentic relationships and brand loyalty. Encourage listeners to implement these principles in their ventures and stay tuned for more inspiring entrepreneurial journeys on future episodes.",
+      "descriptionExcerpt": "Today, we're delving into the captivating journey of Josh Comeau, a software developer turned educator, whose online course not only generated jaw-dropping revenue but also revolutionized the way we think about buildi...",
+      "source": "rss",
+      "transcript": "",
+      "duration": "00:06:55",
+      "durationSeconds": 415,
+      "durationLabel": "6:55",
+      "tags": [
+        "Online Course",
+        "CSS",
+        "Education",
+        "Content Marketing"
+      ],
+      "intelligence": [
+        {
+          "idea": "Premium UX Course from Free Content Trust",
+          "ideaName": "Premium UX Course from Free Content Trust",
+          "category": "Education / Product",
+          "barrier": "High",
+          "barrierLevel": "High",
+          "timeline": "Months",
+          "tools": [
+            "Interactive course platform",
+            "Blog / YouTube funnel",
+            "Email list",
+            "Early access preorder"
+          ],
+          "toolsNeeded": [
+            "Interactive course platform",
+            "Blog / YouTube funnel",
+            "Email list",
+            "Early access preorder"
+          ],
+          "revenue": "~$550k early access launch (episode claim)",
+          "revenueFigures": [
+            "~$550k in one week preorder",
+            "$129 early access",
+            "Later $200 to $600 tiers"
+          ],
+          "insight": "Josh Comeau turned free interactive teaching into a course that did about $550k in a one week early access launch. Okeito angle: same funnel for agent product design or generative AI UX, not another commodity CSS clone.",
+          "notes": "Requires serious content runway first. Principles to steal: custom interactive demos, user testing, transparent build in public, early access to validate before finishing. Melbourne and global remote audience both work.",
+          "matchScore": 8
+        },
+        {
+          "idea": "Interactive Demo Led Marvelus Marketing",
+          "ideaName": "Interactive Demo Led Marvelus Marketing",
+          "category": "Content / SEO",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Weeks",
+          "tools": [
+            "Interactive widgets on marvelus.cc",
+            "Case studies",
+            "Newsletter"
+          ],
+          "toolsNeeded": [
+            "Interactive widgets on marvelus.cc",
+            "Case studies",
+            "Newsletter"
+          ],
+          "revenue": "Inbound for SEO and voice retainers",
+          "revenueFigures": [
+            "Trust then convert (Comeau model)"
+          ],
+          "insight": "Comeau's free interactive posts created purchase intent before the ask. Ship small interactive demos of Marvelus AI voice and SEO workflows to warm AU clients.",
+          "notes": "Lower risk than a full course. Aligns with light mode paper technical aesthetic Okeito likes.",
+          "matchScore": 7
+        }
+      ]
+    },
+    {
+      "id": "e571fe31-0a18-4d7e-a42a-051750a39f49",
+      "guid": "Buzzsprout-13848180",
+      "title": "052: A Travel Visa Site Making $21k/Month",
+      "date": "2023-10-26",
+      "publishDate": "2023-10-26",
+      "publishedAt": "2023-10-26T09:00:00.000Z",
+      "episodeNumber": 52,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/105907729/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-6-23%2F404433474-44100-1-689fabd65eee2d92.mp3",
+      "description": "Today, we're about to embark on a journey through the fascinating story of Visa List, a groundbreaking website that simplified visa information for travelers around the globe. In this episode, we'll uncover three essential principles that were key to Visa List's triumph, principles that any business owner can harness to navigate the often challenging terrain of entrepreneurship. From identifying pain points and providing solutions to building strategic partnerships and practicing continuous optimization, we'll dissect these principles and illustrate how they can be applied in any business setting. Introduction: In this episode, we unravel the success story of Visa List, a pioneering website simplifying visa information for travelers. Join us as we explore the principles that fueled Visa List's triumph and discover how these principles can transform your own business journey. Segment 1: Identifying a Pain Point and Providing Solutions Visa List’s Genesis: Hari Krishna’s realization of the confusion surrounding visa requirements during his travels. Principle Explained: Identifying common pain points in your audience and creating effective solutions. Practical Application: Tips for observing customer challenges, conducting market research, and developing products/services that directly address these issues. Segment 2: Building Strategic Partnerships Strategic Collaborations: Visa List's partnerships with companies like Skyscanner and iVisa. Principle Explained: Building partnerships to enhance offerings and expand reach. Practical Application: Strategies for identifying potential partners, negotiating mutually beneficial collaborations, and implementing joint marketing efforts. Segment 3: Continuous Optimization and Adaptation AdOps Success: Hari Krishna's journey into advertising operations and platform optimization. Principle Explained: Embracing adaptability and constant improvement. Practical Application: Techniques for analyzing business processes, customer feedback, and market trends. Tips for staying current with technology and evolving business strategies. Conclusion: As we conclude our journey through Visa List's success, remember that these principles are not just about business strategies; they're about a mindset. By identifying problems, forging partnerships, and embracing change, any entrepreneur can navigate challenges and steer their business toward sustainable success.",
+      "descriptionExcerpt": "Today, we're about to embark on a journey through the fascinating story of Visa List, a groundbreaking website that simplified visa information for travelers around the globe. In this episode, we'll uncover three esse...",
+      "source": "rss",
+      "transcript": "",
+      "duration": "00:07:14",
+      "durationSeconds": 434,
+      "durationLabel": "7:14",
+      "tags": [
+        "SEO",
+        "Travel",
+        "Micro-SaaS",
+        "Australia"
+      ],
+      "intelligence": [
+        {
+          "idea": "Niche Data Site with SEO and Subscriptions",
+          "ideaName": "Niche Data Site with SEO and Subscriptions",
+          "category": "SEO / Micro-SaaS",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Months",
+          "tools": [
+            "Structured dataset",
+            "Programmatic pages",
+            "Pro subscription",
+            "Affiliate partners"
+          ],
+          "toolsNeeded": [
+            "Structured dataset",
+            "Programmatic pages",
+            "Pro subscription",
+            "Affiliate partners"
+          ],
+          "revenue": "~$21k to $22k/mo (episode / public claims)",
+          "revenueFigures": [
+            "~$21k/mo",
+            "Pro ~$10/mo",
+            "Ads + affiliates"
+          ],
+          "insight": "Visa List (Hari Krishna, Sydney) aggregated messy public visa rules into one SEO magnet then layered pro subs and affiliates. Okeito angle: pick an AU regulated niche (land, permits, local hospitality) and run the same play with Marvelus SEO.",
+          "notes": "Strong Australia signal (Sydney founded). Pair with rank and rent or Land-cerlot research pages. Pain point first, launch fast, keep expanding data coverage.",
+          "matchScore": 8
+        },
+        {
+          "idea": "AU Permit and Zoning Explainer Hub",
+          "ideaName": "AU Permit and Zoning Explainer Hub",
+          "category": "Rank and Rent",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Months",
+          "tools": [
+            "Council open data",
+            "Templates",
+            "Lead forms to local operators"
+          ],
+          "toolsNeeded": [
+            "Council open data",
+            "Templates",
+            "Lead forms to local operators"
+          ],
+          "revenue": "Lead fees + pro filters",
+          "revenueFigures": [
+            "Lead sell",
+            "Optional pro tier"
+          ],
+          "insight": "Same Visa List pattern localized: confuse people with .gov sprawl, you become the clear map. Rent or sell leads to conveyancers, planners, and land investors.",
+          "notes": "Melbourne councils first. Watch data freshness and liability disclaimers.",
+          "matchScore": 7
+        }
+      ]
+    },
+    {
+      "id": "bd9d2219-37d4-4b31-81b0-50fe110d5389",
+      "guid": "Buzzsprout-13840501",
+      "title": "051: An Amazon Sellers Newsletter Making $150k/Year",
+      "date": "2023-10-25",
+      "publishDate": "2023-10-25",
+      "publishedAt": "2023-10-25T09:00:00.000Z",
+      "episodeNumber": 51,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/105907692/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-6-23%2F404433369-44100-1-e7ce6abd1b05787a.mp3",
+      "description": "In this episode, we'll dissect the core principles that transformed his business from an idea into a thriving platform. We'll delve into the power of authenticity, strategic networking, and pursuing passion within the business world. These principles aren't just lessons from Jon's journey; they're actionable strategies that any entrepreneur can use to elevate their business. So, buckle up and get ready to learn how authenticity, strategic collaborations, and specialized focus can pave the way for your business success. Introduction: Welcome listeners to an episode diving deep into the remarkable story of Jon Elder and his successful venture, Amazon Insiders. Introduce the core principles discussed in the episode: Authenticity, Strategic Networking, and Pursuing Passion. Segment 1: The Power of Authenticity Discuss how Jon's authenticity built trust with his audience, making his business relatable and trustworthy. Explain the importance of sharing personal stories, challenges, and successes in building customer loyalty. Provide actionable tips for businesses: Be open about your journey, share behind-the-scenes insights, and connect with customers on a human level. Segment 2: Strategic Networking and Collaboration Explore Jon's strategic use of social media, newsletter swaps, and referral programs to expand his network. Discuss the impact of collaborations on audience growth and business visibility. Offer practical advice for entrepreneurs: Network strategically, explore collaboration opportunities, and leverage online platforms to connect with industry peers. Segment 3: Pursuing Passion and Specialization Highlight how Jon's passion for his niche and specialization in serving private label Amazon sellers led to his success. Discuss the benefits of focusing on a specific niche, becoming an expert, and catering to a targeted audience. Provide actionable insights for businesses: Identify your passion, find a niche aligned with your expertise, and create tailored solutions for a specific audience. Conclusion: Recap the key takeaways: Authenticity builds trust, strategic networking amplifies reach, and pursuing passion fosters expertise. Encourage listeners to implement these principles in their businesses, fostering growth and connection with their customers. Thank listeners for tuning in and invite them to stay tuned for more inspiring stories and actionable insights in future episodes.",
+      "descriptionExcerpt": "In this episode, we'll dissect the core principles that transformed his business from an idea into a thriving platform. We'll delve into the power of authenticity, strategic networking, and pursuing passion within the...",
+      "source": "rss",
+      "transcript": "",
+      "duration": "00:07:29",
+      "durationSeconds": 449,
+      "durationLabel": "7:29",
+      "tags": [
+        "Newsletter",
+        "Amazon",
+        "Niche Media"
+      ],
+      "intelligence": [
+        {
+          "idea": "Niche Operator Newsletter",
+          "ideaName": "Niche Operator Newsletter",
+          "category": "Media / Newsletter",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Weeks",
+          "tools": [
+            "Beehiiv or Buttondown",
+            "Interview pipeline",
+            "Sponsorships"
+          ],
+          "toolsNeeded": [
+            "Beehiiv or Buttondown",
+            "Interview pipeline",
+            "Sponsorships"
+          ],
+          "revenue": "~$150k/year (episode claim)",
+          "revenueFigures": [
+            "~$150k/year Amazon Insiders style"
+          ],
+          "insight": "Jon Elder's Amazon sellers newsletter shows authenticity plus niche focus can fund a media business. Okeito angle: weaker than shipping Marvelus, but a Melbourne AI agents or local SEO operators letter could warm inbound.",
+          "notes": "Only pursue if it doubles as distribution for Marvelus and board advertisers. Do not build a generic hustle letter.",
+          "matchScore": 5
+        }
+      ]
+    },
+    {
+      "id": "0402a25a-2205-48be-b4a6-cca16a63bc59",
+      "guid": "Buzzsprout-13833073",
+      "title": "050: A Solo Founder Making $120k/Year with a Stock Photography Site",
+      "date": "2023-10-24",
+      "publishDate": "2023-10-24",
+      "publishedAt": "2023-10-24T09:00:00.000Z",
+      "episodeNumber": 50,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/105907774/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-6-23%2F404433526-44100-1-307f0ba090b18463.mp3",
+      "description": "Today, we're diving into the captivating story of Picjumbo and its founder, Viktor Hanacek. It's not just another success story, but an inspiring tale of grit and innovation that's applicable to businesses of all shapes and sizes. We'll be uncovering the three key principles that set Picjumbo on the path to prosperity and exploring how you can apply these principles to your own ventures. So, if you're an aspiring entrepreneur or a seasoned business owner, stick around because this episode is your guide to understanding your audience, being innovative and generous, and diversifying your income sources through strategic partnerships. Introduction Welcome listeners to today's episode. Brief overview of the episode's content. Teaser of the three key principles we'll explore from Picjumbo's success story. Principle 1: Understanding Your Audience Viktor Hanacek's deep understanding of Picjumbo's target audience. Concrete ways to apply this principle in your business through market research. The importance of addressing your audience's needs. Principle 2: Innovative and Generous Offerings How Viktor's decision to offer daily free high-quality photos shaped Picjumbo's success. Practical suggestions for offering value for free in your business. The role of trust and credibility in building relationships with your audience. Principle 3: Strategic Partnerships and Diversified Revenue Streams Viktor's approach to diversifying revenue streams through partnerships and premium memberships. Strategies to apply this principle in your own business, such as seeking strategic partnerships and exploring alternative income sources. The resilience and growth potential of a diversified business model. Conclusion A recap of the three key principles from Picjumbo's success story. Encouragement for listeners to apply these principles in their own businesses. A call to action for feedback, questions, and suggestions for future episodes.",
+      "descriptionExcerpt": "Today, we're diving into the captivating story of Picjumbo and its founder, Viktor Hanacek. It's not just another success story, but an inspiring tale of grit and innovation that's applicable to businesses of all shap...",
+      "source": "rss",
+      "transcript": "",
+      "duration": "00:06:55",
+      "durationSeconds": 415,
+      "durationLabel": "6:55",
+      "tags": [
+        "Stock Assets",
+        "Freemium",
+        "Solo Founder"
+      ],
+      "intelligence": [
+        {
+          "idea": "Freemium Asset Library",
+          "ideaName": "Freemium Asset Library",
+          "category": "Digital Products",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Months",
+          "tools": [
+            "Asset pipeline",
+            "Free tier SEO",
+            "Premium packs",
+            "Partner distribution"
+          ],
+          "toolsNeeded": [
+            "Asset pipeline",
+            "Free tier SEO",
+            "Premium packs",
+            "Partner distribution"
+          ],
+          "revenue": "~$120k/year (episode claim)",
+          "revenueFigures": [
+            "~$120k/year Picjumbo style"
+          ],
+          "insight": "Picjumbo grew on free stock photos plus premium and partnerships. Weak primary fit for Okeito versus voice, SEO, and land.",
+          "notes": "Skip unless packaging UI kits or sandwich board mockup packs as a tiny adjunct. Generosity plus audience understanding is the transferable lesson.",
+          "matchScore": 3
+        }
+      ]
+    },
+    {
+      "id": "b3a77fb3-6b74-4cb3-a898-158cccb73a0d",
+      "guid": "Buzzsprout-13825692",
+      "title": "049: Making $1.6 Million/Year Working Only 5 Hours/Week",
+      "date": "2023-10-23",
+      "publishDate": "2023-10-23",
+      "publishedAt": "2023-10-23T09:00:00.000Z",
+      "episodeNumber": 49,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/105907787/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-6-23%2F404433433-44100-1-53421e7a66e41d67.mp3",
+      "description": "Today, we're diving deep into the inspiring journey of Graham Cochran, a musician turned business coach who transformed his passion into a thriving online empire. In this episode, we'll dissect the principles that powered Graham's success—principles that every entrepreneur can implement in their own ventures. We'll explore how Graham's keen focus on what truly matters, his embrace of smart automation and delegation, and his commitment to creating a balanced life, especially valuing family time, were the cornerstones of his achievement. These principles are not just theories but actionable strategies that can fuel your business growth and personal fulfillment. Introduction Welcome to Startup Gems, where we uncover the secrets to online business success. In this episode, we explore the inspiring journey of Graham Cochran, a musician turned business coach. We'll delve into the principles that propelled his success and discuss how they can be applied to any business venture. Principle 1: Focus on What Truly Matters Graham's ability to focus on the 20% of activities generating 80% of revenue. Applying the Pareto Principle to maximize efficiency. How business owners can identify high-impact areas and streamline their operations. Principle 2: Embrace Smart Automation and Delegation Graham's success with smart automation and delegation. Outsourcing tasks and reducing his workload. Tips for entrepreneurs on using automation tools and delegating tasks effectively. Principle 3: Create a Balanced Life and Value Family Time Graham's commitment to maintaining a balanced life, including dedicated family time. The importance of setting boundaries and prioritizing personal time. How a balanced life can nurture personal relationships and drive business success. Conclusion These principles are actionable steps toward entrepreneurial triumph. Graham's journey serves as a blueprint for anyone looking to succeed in the online business world. Stay tuned for more valuable insights and success stories in future episodes.",
+      "descriptionExcerpt": "Today, we're diving deep into the inspiring journey of Graham Cochran, a musician turned business coach who transformed his passion into a thriving online empire. In this episode, we'll dissect the principles that pow...",
+      "source": "rss",
+      "transcript": "",
+      "duration": "00:07:32",
+      "durationSeconds": 452,
+      "durationLabel": "7:32",
+      "tags": [
+        "Coaching",
+        "Automation",
+        "Lifestyle Business"
+      ],
+      "intelligence": [
+        {
+          "idea": "Productized Coaching with Heavy Automation",
+          "ideaName": "Productized Coaching with Heavy Automation",
+          "category": "Coaching",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Months",
+          "tools": [
+            "Course + community",
+            "Delegation",
+            "Automation stack"
+          ],
+          "toolsNeeded": [
+            "Course + community",
+            "Delegation",
+            "Automation stack"
+          ],
+          "revenue": "~$1.6M/year at ~5 hrs/week (episode claim)",
+          "revenueFigures": [
+            "~$1.6M/year",
+            "~5 hrs/week claimed"
+          ],
+          "insight": "Graham Cochran story is focus, automation, and delegation turning expertise into leverage. Secondary for Okeito; better to automate Marvelus delivery than become a coach first.",
+          "notes": "Steal the ops pattern (protect focus, automate follow up with Grok Bot) rather than the coaching offer itself.",
+          "matchScore": 4
+        }
+      ]
+    },
+    {
+      "id": "6ab814b0-a58f-4991-9e6b-036fdb642c49",
+      "guid": "Buzzsprout-13821043",
+      "title": "048: Growing Patreon into the $4 Billion Company it is Today",
+      "date": "2023-10-22",
+      "publishDate": "2023-10-22",
+      "publishedAt": "2023-10-22T09:00:00.000Z",
+      "episodeNumber": 48,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/105907688/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2025-6-23%2F404433351-44100-1-3f0e12c1583edfbd.mp3",
+      "description": "In this episode, we're spotlighting Patreon, the brainchild of musician and entrepreneur Jack Conte. We'll be uncovering the principles that propelled Patreon from a mere idea scrawled on paper to a global platform empowering artists, musicians, writers, and creators of all kinds. We'll explore how Patreon identified a crucial pain point in the creative industry, revolutionizing the way artists connect with their audiences. We'll dissect the creator-centric business model that not only fueled Patreon's growth but also set a new standard for customer-focused platforms. And most importantly, we'll dive into the remarkable journey of maintaining a creator-first mindset, even in the face of rapid expansion and financial decisions. Introduction Welcome to Startup Gems, where we unravel the stories of successful companies. Introduction to Patreon and its impact on the creative industry. Principle 1: Identify a Pain Point and Innovate Solutions Explore how Patreon addressed the disparity between creative effort and revenue. Discuss the importance of identifying industry pain points in business innovation. Practical applications: Identifying customer challenges and developing tailored solutions. Principle 2: Create a Creator-Centric Business Model Examine Patreon's creator-centric approach and transparent revenue-sharing model. Discuss the significance of customer-focused business models in building trust. Practical applications: Implementing transparent pricing, exceptional customer service, and value-added benefits. Principle 3: Maintain a Creator-First Mindset Through Growth Dive into Patreon's commitment to a creator-first mindset amidst rapid expansion. Discuss the challenges of preserving core values during business growth. Practical applications: Upholding core values in decision-making processes, hiring, and partnerships. Conclusion Recap of the key principles: identifying pain points, customer-centric models, and unwavering commitment to core values. Inspiring entrepreneurs to apply these principles in their own businesses for sustainable success.",
+      "descriptionExcerpt": "In this episode, we're spotlighting Patreon, the brainchild of musician and entrepreneur Jack Conte. We'll be uncovering the principles that propelled Patreon from a mere idea scrawled on paper to a global platform em...",
+      "source": "rss",
+      "transcript": "",
+      "duration": "00:07:21",
+      "durationSeconds": 441,
+      "durationLabel": "7:21",
+      "tags": [
+        "Creator Economy",
+        "Marketplace",
+        "Memberships"
+      ],
+      "intelligence": [
+        {
+          "idea": "Creator First Membership Layer",
+          "ideaName": "Creator First Membership Layer",
+          "category": "Marketplace / Memberships",
+          "barrier": "High",
+          "barrierLevel": "High",
+          "timeline": "Years",
+          "tools": [
+            "Membership billing",
+            "Creator tools",
+            "Audience graph"
+          ],
+          "toolsNeeded": [
+            "Membership billing",
+            "Creator tools",
+            "Audience graph"
+          ],
+          "revenue": "Patreon scale story (billions valuation context)",
+          "revenueFigures": [
+            "Patreon growth case study"
+          ],
+          "insight": "Patreon won by obsessing over creator pain (reliable fan funding). Lesson for Marvelus: stay customer job obsessed, not feature obsessed.",
+          "notes": "Not a near term build. Use as strategy reminder while shipping SEO and voice offers.",
+          "matchScore": 4
+        }
       ]
     },
     {
@@ -8886,18 +9350,20 @@
   ],
   "feed": {
     "title": "The Koerner Office",
-    "updatedAt": "2026-09-08T23:03:52.000Z"
+    "updatedAt": "2026-09-10T23:06:53.000Z"
   },
   "intelligenceMeta": {
-    "processedEpisodes": 5,
-    "note": "RSS deep-dive batch: new ep 333 + backlog 308-311",
+    "processedEpisodes": 7,
+    "note": "RSS backlog fill: missing eps 88, 53-48 (no newer than 333)",
     "lastBatch": [
-      333,
-      311,
-      310,
-      309,
-      308
+      88,
+      53,
+      52,
+      51,
+      50,
+      49,
+      48
     ],
-    "lastRunAt": "2026-09-08T23:03:52.000Z"
+    "lastRunAt": "2026-09-10T23:06:53.000Z"
   }
 }
