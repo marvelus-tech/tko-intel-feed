@@ -1,6 +1,118 @@
 {
   "episodes": [
     {
+      "id": "cabaf4d1-f2cc-4234-b19f-bf063b42d995",
+      "title": "The Most Overlooked $1M Business Every Town Needs - Ep. #334",
+      "date": "2026-09-11",
+      "publishDate": "2026-09-11",
+      "publishedAt": "2026-09-11T10:00:00.000Z",
+      "episodeNumber": 334,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/125585011/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-8-11%2F3416e233-0e71-760a-9fcb-d3af0becb5d7.mp3",
+      "description": "I sat down with Tyler Purcell, co-founder of Laundry Spot, at their flagship location in Hamilton, Ohio, to see how a laundromat can generate more than $1 million a year. Tyler walked me through their massive 130-pound washing machine, proprietary detergent system, commercial laundry operation, and the technology they use to manage the business remotely. We also broke down startup costs, financing, margins, site selection, and the grand-opening strategy that helped them quickly attract customers. Finally, Tyler explained why buying an old \"passive\" laundromat can become a low-paying job and how Laundry Spot has grown into a franchise with 36 territories sold.",
+      "descriptionExcerpt": "I sat down with Tyler Purcell, co-founder of Laundry Spot, at their flagship location in Hamilton, Ohio, to see how a laundromat can generate more than $1 million a year. Tyler walked me through their...",
+      "source": "rss",
+      "transcript": "RSS-based extraction; full transcript pending",
+      "duration": "00:54:03",
+      "durationSeconds": 3243,
+      "durationLabel": "54:03",
+      "tags": [
+        "Laundromat",
+        "Franchise",
+        "Local Service",
+        "Commercial Laundry"
+      ],
+      "intelligence": [
+        {
+          "idea": "Melbourne laundry local SEO and Maps rank and rent",
+          "ideaName": "Melbourne laundry local SEO and Maps rank and rent",
+          "category": "Local SEO / Rank and Rent",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Weeks",
+          "tools": [
+            "Google Business Profile + Maps",
+            "Marvelus SEO playbooks",
+            "Local citation stack",
+            "Grok Bot research agents"
+          ],
+          "toolsNeeded": [
+            "Google Business Profile + Maps",
+            "Marvelus SEO playbooks",
+            "Local citation stack",
+            "Grok Bot research agents"
+          ],
+          "revenue": "Local laundry sites often $1M+ revenue class; SEO retainers typically $1.5K to $4K/mo per location or rank and rent rents",
+          "revenueFigures": [
+            "$1M+/yr store class (episode)",
+            "$1.5K to $4K/mo SEO retainer",
+            "Rank and rent rentals vary by suburb"
+          ],
+          "insight": "Laundry Spot shows modern attended laundromats plus commercial wash can clear $1M/yr with remote ops tech. Okeito angle: do not buy the US franchise. Own or rent Google Maps demand for Melbourne and suburb laundromats, dry cleaners, and wash and fold shops, then sell leads or rent the ranking. Australia localizable, low capital, stacks with Marvelus SEO.",
+          "notes": "Start with 10 to 20 Melbourne/inner suburb laundry GBPs that are weak online. Pitch Maps + review engine + simple booking page. Pair sandwich board hosts near high foot traffic laundry strips if a host deal fits. Avoid commodity blog content; win on Maps and photos.",
+          "matchScore": 8
+        },
+        {
+          "idea": "Missed call and lead recovery for laundry and franchise local services",
+          "ideaName": "Missed call and lead recovery for laundry and franchise local services",
+          "category": "Sales Recovery / AI Voice",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Weeks",
+          "tools": [
+            "Nolostsales / Marvelus AI voice",
+            "Missed call text back",
+            "Simple CRM",
+            "Grok Bot follow up agents"
+          ],
+          "toolsNeeded": [
+            "Nolostsales / Marvelus AI voice",
+            "Missed call text back",
+            "Simple CRM",
+            "Grok Bot follow up agents"
+          ],
+          "revenue": "Recovered wash and fold and commercial contracts; SaaS or done for you fees on top of store volume",
+          "revenueFigures": [
+            "Episode claims $1M+/yr flagship class",
+            "36 territories sold (franchise demand signal)",
+            "AI voice / recovery fees typically hundreds to low thousands per location per month"
+          ],
+          "insight": "Episode stresses commercial laundry, remote management, and franchise growth (36 territories). Those businesses live on phone and form leads for drop off, commercial accounts, and franchise interest. Okeito angle: plug Nolostsales and Marvelus voice into Melbourne laundry and adjacent local service operators so missed calls become booked pickups.",
+          "notes": "Stronger fit than owning machines. Pilot with 3 attended laundromats or commercial wash operators. Script for wash and fold quotes, commercial linen, and after hours. Keep UX light and light mode booking confirmations.",
+          "matchScore": 7
+        },
+        {
+          "idea": "Laundry Spot style franchise ownership in AU",
+          "ideaName": "Laundry Spot style franchise ownership in AU",
+          "category": "Franchise / Capex Heavy",
+          "barrier": "High",
+          "barrierLevel": "High",
+          "timeline": "Months to years",
+          "tools": [
+            "Franchise fee and buildout capital",
+            "Site selection and fitout",
+            "Financing",
+            "Ops staffing"
+          ],
+          "toolsNeeded": [
+            "Franchise fee and buildout capital",
+            "Site selection and fitout",
+            "Financing",
+            "Ops staffing"
+          ],
+          "revenue": "$1M+/yr store class claimed; US FDD startup roughly $1.27M to $2.24M plus $60K franchise fee",
+          "revenueFigures": [
+            "$1M+/yr revenue class (episode)",
+            "$1.27M to $2.24M initial investment (2026 FDD range)",
+            "$60K franchise fee",
+            "5% royalty + 1% marketing"
+          ],
+          "insight": "Buying Laundry Spot or cloning it in Melbourne is a real business but misaligned with Okeito's current stack (agents, SEO, boards, land lite plays). Capex, landlord risk, and ops staffing dominate. Treat as market education, not a near term bet.",
+          "notes": "Park unless a partner brings capital and ops. If land or commercial lease deal appears, underwrite separately. Prefer selling demand gen to operators over owning washers.",
+          "matchScore": 3
+        }
+      ]
+    },
+    {
       "id": "a09082ff-fb03-4395-a960-ba0c5a9ef9d8",
       "title": "The $7K/Month Side Hustle Most People Think AI Killed - Ep. #333",
       "date": "2026-09-08",
@@ -9350,20 +9462,17 @@
   ],
   "feed": {
     "title": "The Koerner Office",
-    "updatedAt": "2026-09-10T23:06:53.000Z"
+    "updatedAt": "2026-09-10T23:06:53.000Z",
+    "lastBuilt": "2026-09-13T23:28:43Z"
   },
   "intelligenceMeta": {
-    "processedEpisodes": 7,
-    "note": "RSS backlog fill: missing eps 88, 53-48 (no newer than 333)",
+    "processedEpisodes": 1,
+    "note": "RSS new episode 334 Laundry Spot / laundromat; cards for Melbourne SEO, Nolostsales voice, franchise pass",
     "lastBatch": [
-      88,
-      53,
-      52,
-      51,
-      50,
-      49,
-      48
+      334
     ],
-    "lastRunAt": "2026-09-10T23:06:53.000Z"
+    "lastRunAt": "2026-09-13T23:28:51.000Z",
+    "lastUpdated": "2026-09-13T23:28:51.000Z",
+    "latestEpisode": 334
   }
 }
