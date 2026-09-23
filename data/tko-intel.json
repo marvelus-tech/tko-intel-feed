@@ -1,6 +1,147 @@
 {
   "episodes": [
     {
+      "id": "0778df3b-e0d9-4e51-88f1-b6d64e01fb2f",
+      "title": "How Anyone Can Borrow $500K at 0% Interest - Ep. #337",
+      "date": "2026-09-22",
+      "publishDate": "2026-09-22",
+      "publishedAt": "2026-09-22T10:00:00.000Z",
+      "episodeNumber": 337,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/126134869/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-8-22%2F432434018-44100-2-97710c6fe282e.mp3",
+      "description": "I sat down with Brandon Elliott. He was a busboy making $30K a year with an $80,000 credit limit, and now he uses 0% interest credit cards to fund real estate and business deals. He showed me how to get the banks to say yes, the one phone call that turns a credit limit into cash, and why a credit card you already own might be worth money to someone else. This is Brandon's method and it's aggressive. Talk to your CPA before you apply for anything. Brandon's bootcamp: capitalbootcamp.live",
+      "descriptionExcerpt": "I sat down with Brandon Elliott. He was a busboy making $30K a year with an $80,000 credit limit, and now he uses 0% interest credit cards to fund real estate and business deals. He showed me how to get the banks to say yes, the one phone call that turns a credit limit into cash, and why a credit card you already own might be worth money to someone else...",
+      "source": "rss",
+      "duration": "00:41:56",
+      "durationSeconds": 2516,
+      "durationLabel": "41:56",
+      "tags": [
+        "0% Credit",
+        "Business Funding",
+        "Real Estate",
+        "Brandon Elliott"
+      ],
+      "intelligence": [
+        {
+          "idea": "Melbourne business funding broker Maps and SEO rank and rent",
+          "ideaName": "Melbourne business funding broker Maps and SEO rank and rent",
+          "category": "Local SEO / Rank and Rent",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Weeks",
+          "tools": [
+            "Google Business Profile",
+            "Suburb + service landing pages",
+            "Marvelus SEO",
+            "ACL-aware disclaimer review"
+          ],
+          "toolsNeeded": [
+            "Google Business Profile",
+            "Suburb + service landing pages",
+            "Marvelus SEO",
+            "ACL-aware disclaimer review"
+          ],
+          "revenue": "AU working capital and business funding brokers already sell lines of credit, invoice finance, and short term loans; SEO retainers or rank and rent rents sit on top of broker GMV",
+          "revenueFigures": [
+            "Episode framing: up to $500K at 0% every ~6 months (US credit stacking class)",
+            "AU comps: unsecured and specialist business funding from ~$10K to $1M+ via brokers",
+            "SEO retainer class ~$1.5K to $4K/mo per broker location or rank and rent rentals"
+          ],
+          "insight": "Brandon Elliott teaches US 0% promo card stacking and balance transfer liquidation into real estate cash. Australia barely has 0% business cards; personal balance transfers exist (often 12 to 26 months with a fee) and real working capital sits with brokers and lenders like Lumi, Freedom Financing, and Essendon Finance. Okeito angle: do not sell US credit stacking. Own Maps and search for Melbourne business funding, working capital, and invoice finance, then rent rankings or sell qualified enquiries to ACL holding brokers.",
+          "notes": "Shortlist 8 to 12 Melbourne funding brokers with thin GBP photos and weak suburb pages. Pitch review engine, Maps photos, and enquiry forms with clear credit guide disclaimers. Regulated advice stays with the broker; Okeito only owns demand.",
+          "matchScore": 6
+        },
+        {
+          "idea": "Missed call and after hours recovery for business funding brokers",
+          "ideaName": "Missed call and after hours recovery for business funding brokers",
+          "category": "Sales Recovery / AI Voice",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Days to weeks",
+          "tools": [
+            "Nolostsales / Marvelus AI voice",
+            "SMS qualify script",
+            "Grok Bot follow up",
+            "Simple enquiry form"
+          ],
+          "toolsNeeded": [
+            "Nolostsales / Marvelus AI voice",
+            "SMS qualify script",
+            "Grok Bot follow up",
+            "Simple enquiry form"
+          ],
+          "revenue": "Recovered broker applications and consultation bookings; DFY monthly fee per broker when cash flow urgency drives after hours calls",
+          "revenueFigures": [
+            "Episode path: one phone call that turns a limit into usable cash (urgency framing)",
+            "AU brokers advertise 24 to 48 hour approvals and same day funding",
+            "Hundreds per broker per month recovery fee class"
+          ],
+          "insight": "Funding seekers call when cash is tight, often outside bank hours. That is Nolostsales territory: answer, capture ABN trading months and amount needed, book a broker callback, and SMS a secure form so hot leads do not go to the next Google result.",
+          "notes": "Pilot with 2 to 3 Melbourne working capital brokers. Keep the agent script non advisory: amount band, purpose category, trading history band, best callback time. Hand off before product recommendations.",
+          "matchScore": 5
+        },
+        {
+          "idea": "AU vs US cheap capital explainer as Marvelus content lead magnet",
+          "ideaName": "AU vs US cheap capital explainer as Marvelus content lead magnet",
+          "category": "Content / Lead Magnet",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Days",
+          "tools": [
+            "One page PDF or landing page",
+            "Marvelus SEO distribution",
+            "Email capture",
+            "Grok Bot draft polish"
+          ],
+          "toolsNeeded": [
+            "One page PDF or landing page",
+            "Marvelus SEO distribution",
+            "Email capture",
+            "Grok Bot draft polish"
+          ],
+          "revenue": "List growth and soft intros into Marvelus SEO or Maya for accountants and brokers who want the traffic; not a finance product",
+          "revenueFigures": [
+            "Episode hooks $500K at 0% which will pull AU search curiosity",
+            "Lead magnet to SEO or AI receptionist pilots for finance adjacent SMBs"
+          ],
+          "insight": "Founders will Google the episode promise. A short AU reality check (personal BT offers exist, business cards rarely do, ACL brokers and lines of credit are the real path, talk to your accountant) builds trust and captures emails without giving regulated credit advice.",
+          "notes": "Title something like Why the US 0% credit play rarely copies to Australia. End with a CTA to book a Marvelus growth chat for brokers and accountants, not a funding application.",
+          "matchScore": 4
+        },
+        {
+          "idea": "Copy Brandon Elliott US 0% credit stacking for AU real estate yourself",
+          "ideaName": "Copy Brandon Elliott US 0% credit stacking for AU real estate yourself",
+          "category": "Ops Heavy / Capital Strategy",
+          "barrier": "High",
+          "barrierLevel": "High",
+          "timeline": "Months",
+          "tools": [
+            "Strong personal credit",
+            "Bank relationship managers",
+            "CPA and solicitor",
+            "Real estate deal pipeline",
+            "High personal risk tolerance"
+          ],
+          "toolsNeeded": [
+            "Strong personal credit",
+            "Bank relationship managers",
+            "CPA and solicitor",
+            "Real estate deal pipeline",
+            "High personal risk tolerance"
+          ],
+          "revenue": "Episode claims up to ~$500K at 0% for deals; AU product set and responsible lending rules make the same play unreliable and high risk",
+          "revenueFigures": [
+            "~$500K every 6 months framing (episode / CCE marketing)",
+            "US promo windows often 6 to 24 months with 1% to 5% fees",
+            "AU personal BT windows exist; business 0% card stacking does not mirror the US"
+          ],
+          "insight": "This is Brandon's aggressive US method (Credit Counsel Elite / capitalbootcamp.live). For Okeito it fights the agent and SEO leverage model, sits near regulated credit advice, and does not localise cleanly. Pass as operator. Prefer the broker demand and recovery plays above.",
+          "notes": "Do not build a CCE style course clone for Australia without licensed partners. Episode itself says talk to your CPA before applying for anything.",
+          "matchScore": 2
+        }
+      ],
+      "transcript": ""
+    },
+    {
       "id": "770a8c68-fe39-4400-89fe-ee2efd026ad7",
       "title": "The Most Overlooked $10K/month Business You Can Start This Weekend - Ep. #336",
       "date": "2026-09-18",
@@ -10288,17 +10429,17 @@
   ],
   "feed": {
     "title": "The Koerner Office",
-    "updatedAt": "2026-09-21T01:14:40.000Z",
-    "lastBuilt": "2026-09-21T01:14:40Z"
+    "updatedAt": "2026-09-23T01:18:17.000Z",
+    "lastBuilt": "2026-09-23T01:18:17Z"
   },
   "intelligenceMeta": {
     "processedEpisodes": 1,
-    "note": "RSS batch 336 VoSKILL kids shop class Mike Herod",
+    "note": "RSS batch 337 Brandon Elliott 0% credit capital",
     "lastBatch": [
-      336
+      337
     ],
-    "lastRunAt": "2026-09-21T01:14:40.000Z",
-    "lastUpdated": "2026-09-21T01:14:40.000Z",
-    "latestEpisode": 336
+    "lastRunAt": "2026-09-23T01:18:17.000Z",
+    "lastUpdated": "2026-09-23T01:18:17.000Z",
+    "latestEpisode": 337
   }
 }
