@@ -1,6 +1,152 @@
 {
   "episodes": [
     {
+      "id": "71c0de9c-5d50-4b2c-9beb-c99794012b06",
+      "title": "He Made $27K Last Month Connecting Contractors - Ep. #338",
+      "date": "2026-09-25",
+      "publishDate": "2026-09-25",
+      "publishedAt": "2026-09-25T10:00:00.000Z",
+      "episodeNumber": 338,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/126289481/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-8-25%2F432644730-44100-2-a93f80af03cbe.mp3",
+      "description": "I sat down with Aaron Fooks, founder of Hytros, to break down the simple referral business that helped him generate $27K in a month by connecting local businesses with each other. We talked about how he went from charging $150 per introduction to selling $6,000 referral packages, the exact cold calling and texting strategy he uses to find opportunities, and why building relationships can be much more valuable than selling traditional leads. Aaron also walks through real examples of painters, electricians, landscapers, and other home service businesses landing valuable jobs through these connections. Check out Aaron and his referral pipeline blueprint at https://hytros.com/",
+      "descriptionExcerpt": "I sat down with Aaron Fooks, founder of Hytros, to break down the simple referral business that helped him generate $27K in a month by connecting local businesses with each other. We talked about how he went from charging $150 per introduction to selling $6,000 referral packages, the exact cold calling and texting strategy he uses to find opportunities...",
+      "source": "rss",
+      "duration": "00:36:17",
+      "durationSeconds": 2177,
+      "durationLabel": "36:17",
+      "tags": [
+        "Referral Network",
+        "Home Services",
+        "Hytros",
+        "Aaron Fooks"
+      ],
+      "transcript": "",
+      "intelligence": [
+        {
+          "idea": "Melbourne home service Maps SEO and rank and rent that feeds trade partners",
+          "ideaName": "Melbourne home service Maps SEO and rank and rent that feeds trade partners",
+          "category": "Local SEO / Rank and Rent",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Weeks",
+          "tools": [
+            "Google Business Profile",
+            "Suburb + trade landing pages",
+            "Marvelus SEO",
+            "EMD cascade availability check",
+            "Thumbtack / HiPages competitor scan"
+          ],
+          "toolsNeeded": [
+            "Google Business Profile",
+            "Suburb + trade landing pages",
+            "Marvelus SEO",
+            "EMD cascade availability check",
+            "Thumbtack / HiPages competitor scan"
+          ],
+          "revenue": "Rank and rent rents or SEO retainers from Melbourne painters, electricians, landscapers, and roofers who need inbound so they have jobs worth swapping with partner trades",
+          "revenueFigures": [
+            "Episode: Hytros packages up to ~$6K and a claimed $27K month from referral pipeline work",
+            "AU comps: trade Google Ads often $8 to $25 CPC; Local Services style leads tens of dollars each",
+            "Rank and rent / SEO retainer class ~$1.5K to $4K/mo per niche site or location"
+          ],
+          "insight": "Aaron sells exclusive B2B referral partners so trades stop buying shared cold leads. In Melbourne the same trades already fight Hipages and Maps pack. Okeito angle: own Maps and search for thin home service niches (same playbook as water filtration R and R), then rent rankings or sell qualified suburb enquiries. Ranked sites also become the inbound engine that makes a later referral desk valuable.",
+          "notes": "Shortlist 2 to 3 Melbourne trade niches with Thin or Mixed Maps competition. Live check EMDs before recommending. Pitch rent or SEO retainers first; only layer a referral intro desk after sites produce real job flow.",
+          "matchScore": 8
+        },
+        {
+          "idea": "Nolostsales Maya for Melbourne tradies catching partner referral calls on the tools",
+          "ideaName": "Nolostsales Maya for Melbourne tradies catching partner referral calls on the tools",
+          "category": "Sales Recovery / AI Voice",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Days to weeks",
+          "tools": [
+            "Nolostsales / Marvelus AI voice (Maya)",
+            "Missed call SMS text back",
+            "ServiceM8 / Tradify or Google Calendar handoff",
+            "Simple qualify script (trade, suburb, urgency, photo)"
+          ],
+          "toolsNeeded": [
+            "Nolostsales / Marvelus AI voice (Maya)",
+            "Missed call SMS text back",
+            "ServiceM8 / Tradify or Google Calendar handoff",
+            "Simple qualify script (trade, suburb, urgency, photo)"
+          ],
+          "revenue": "Monthly AI receptionist or missed call recovery fee per tradie; bundle with SEO or light referral intro help for the same list",
+          "revenueFigures": [
+            "Episode / Hytros: LeadLock style 24/7 capture so referral calls are not missed on site",
+            "AU comps: Melbourne tradies often miss ~22% to 35% of inbound; AI receptionist plans commonly ~$89 to $399/mo",
+            "Job tickets often $400 to $800+; a few recovered jobs per month cover the fee"
+          ],
+          "insight": "Hytros pairs done for you referral partners with a 24/7 smart system because referral calls die when the painter is on a ladder. That is pure Nolostsales and Maya territory for Melbourne electricians, painters, landscapers, and roofers. Pitch answer, qualify suburb and job type, SMS a photo request, book callback. Soft bundle: when they ask where jobs come from, offer Maps SEO or a warm intro to a complementary trade.",
+          "notes": "Start with 5 to 10 Greater Melbourne trades already buying ads or Hipages. Script stays non advisory: capture details and book. Do not promise exclusive territory like Hytros unless you actually lock one client per suburb niche.",
+          "matchScore": 8
+        },
+        {
+          "idea": "Grok Bot cold text and CRM desk for Melbourne trade to trade intros",
+          "ideaName": "Grok Bot cold text and CRM desk for Melbourne trade to trade intros",
+          "category": "Agent Ops / Automation",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Weeks",
+          "tools": [
+            "Grok Bot agents",
+            "Scraped / purchased ABN trade lists",
+            "SMS and call scripts (Spam Act compliant)",
+            "Lightweight CRM / HighLevel pipeline",
+            "Consent and opt out logging"
+          ],
+          "toolsNeeded": [
+            "Grok Bot agents",
+            "Scraped / purchased ABN trade lists",
+            "SMS and call scripts (Spam Act compliant)",
+            "Lightweight CRM / HighLevel pipeline",
+            "Consent and opt out logging"
+          ],
+          "revenue": "DFY intro fees then monthly pipeline retainers for trades who want partner jobs without running outreach themselves",
+          "revenueFigures": [
+            "Episode path: $150 per intro scaling to ~$6K referral packages; claimed $27K month",
+            "Aaron public note: ~5% positive reply and 34 interested owners from one local blast",
+            "AU price band to test: $150 to $500 per qualified intro or $1.5K to $4K/mo managed pipeline"
+          ],
+          "insight": "The episode moat is not magic software. It is relentless cold call and text to find trades who already sit in the customer journey (builder to painter, roofer to siding, landscaper to electrician). Okeito can productise that with Grok Bot agents: list build, compliant outreach, reply triage, CRM stages, and human close only on warm yes. Fits the agent leverage model better than Okeito personally dialling all day.",
+          "notes": "AU Spam Act and Do Not Call rules matter. Prefer business numbers, clear identify, easy opt out, and keep transcripts. Pilot one cluster (e.g. inner west painters plus builders) before selling packages. This supports cards 1 and 2 rather than replacing them.",
+          "matchScore": 7
+        },
+        {
+          "idea": "Direct Melbourne Hytros style DFY cross trade referral brokerage",
+          "ideaName": "Direct Melbourne Hytros style DFY cross trade referral brokerage",
+          "category": "Ops Heavy / Services Brokerage",
+          "barrier": "High",
+          "barrierLevel": "High",
+          "timeline": "Months",
+          "tools": [
+            "Full time outreach owner",
+            "Trade CRM and relationship notes",
+            "Exclusive territory lock per niche",
+            "On site intro coordination",
+            "Trust and insurance verification"
+          ],
+          "toolsNeeded": [
+            "Full time outreach owner",
+            "Trade CRM and relationship notes",
+            "Exclusive territory lock per niche",
+            "On site intro coordination",
+            "Trust and insurance verification"
+          ],
+          "revenue": "Package fees for exclusive partner pipelines; episode claims show high upside but needs constant human relationship work",
+          "revenueFigures": [
+            "Episode: $150 intros to $6K packages; $27K in a month claimed",
+            "Hytros site examples: $250k bid path, $75k pipeline month 1 stories (US client results, not AU guarantees)",
+            "AU analogues: TradeRefer and TradeHub style B2B matching exist; DFY exclusive desks are rarer and ops heavy"
+          ],
+          "insight": "A pure Hytros clone in Melbourne is real and localisable (painters, sparkies, landscapers, roofers already swap work). Honest fit for Okeito is weaker than SEO and Maya: it needs phone time, exclusivity promises, and on the ground trust. Prefer owning demand (Maps) and capture (Nolostsales) and only run a thin intro desk as a wedge, not as the main company.",
+          "notes": "If testing, cap at one suburb cluster and one paying trade client with clear exclusivity. Do not staff a US style DFY desk until the agent outreach and AI capture stack is proven. Skip sandwich boards here; mobile trades get little from static footpath signs.",
+          "matchScore": 5
+        }
+      ]
+    },
+    {
       "id": "0778df3b-e0d9-4e51-88f1-b6d64e01fb2f",
       "title": "How Anyone Can Borrow $500K at 0% Interest - Ep. #337",
       "date": "2026-09-22",
@@ -10429,17 +10575,17 @@
   ],
   "feed": {
     "title": "The Koerner Office",
-    "updatedAt": "2026-09-23T01:18:17.000Z",
-    "lastBuilt": "2026-09-23T01:18:17Z"
+    "updatedAt": "2026-09-28T00:47:48.000Z",
+    "lastBuilt": "2026-09-28T00:47:48Z"
   },
   "intelligenceMeta": {
     "processedEpisodes": 1,
-    "note": "RSS batch 337 Brandon Elliott 0% credit capital",
+    "note": "RSS batch 338 Aaron Fooks Hytros referral contractors",
     "lastBatch": [
-      337
+      338
     ],
-    "lastRunAt": "2026-09-23T01:18:17.000Z",
-    "lastUpdated": "2026-09-23T01:18:17.000Z",
-    "latestEpisode": 337
+    "lastRunAt": "2026-09-28T00:47:48.000Z",
+    "lastUpdated": "2026-09-28T00:47:48.000Z",
+    "latestEpisode": 338
   }
 }
