@@ -1,6 +1,213 @@
 {
   "episodes": [
     {
+      "id": "7d3b4ca7-5fa9-453c-84fc-f86da1d7d50f",
+      "guid": "7d3b4ca7-5fa9-453c-84fc-f86da1d7d50f",
+      "title": "I Judged 10 Businesses Live. One Makes $68K/Month - Ep. #339",
+      "date": "2026-09-29",
+      "publishDate": "2026-09-29",
+      "publishedAt": "2026-09-29T10:00:01.000Z",
+      "episodeNumber": 339,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/126489470/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-8-29%2F432910306-44100-2-6fa8f38ae673f.mp3",
+      "descriptionExcerpt": "Members cut of TKO Live at iHub Provo: Chris, Nik, and Brandon judged 10 founders blind from 250+ applicants. Standout: Amen Hardin of Utah Veterans Massage at about $68K/month (~750 VA paid sessions, 7 locations, ~$20K profit). Other pitches included Go Seeds packaging, Next to Can't NFC safety tags, Secure Pocket adult briefs, Pick a Path kids choose your adventure snail mail, Dog House AI relationship app, Cast Iron Spot mail in restore idea, and Goodly Grove home services marketing agency (~$1.5M ARR). People's Choice: Go Seeds, then Pick a Path, then Veterans Massage.",
+      "description": "Members cut of TKO Live at iHub Provo: Chris, Nik, and Brandon judged 10 founders blind from 250+ applicants. Standout: Amen Hardin of Utah Veterans Massage at about $68K/month (~750 VA paid sessions, 7 locations, ~$20K profit). Other pitches included Go Seeds packaging, Next to Can't NFC safety tags, Secure Pocket adult briefs, Pick a Path kids choose your adventure snail mail, Dog House AI relationship app, Cast Iron Spot mail in restore idea, and Goodly Grove home services marketing agency (~$1.5M ARR). People's Choice: Go Seeds, then Pick a Path, then Veterans Massage.",
+      "source": "rss+whisper",
+      "duration": "01:11:51",
+      "durationSeconds": 4311,
+      "durationLabel": "71:51",
+      "tags": [
+        "TKO Live",
+        "Utah Veterans Massage",
+        "Goodly Grove",
+        "Go Seeds",
+        "Pick a Path",
+        "Home Services Agency",
+        "Shark Tank Style"
+      ],
+      "transcript": "",
+      "intelligence": [
+        {
+          "idea": "Melbourne home services Marvelus stack that beats Goodly style agencies on Maps SEO plus Maya capture",
+          "ideaName": "Melbourne home services Marvelus stack that beats Goodly style agencies on Maps SEO plus Maya capture",
+          "category": "Local SEO / AI Voice / Agency",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Weeks",
+          "tools": [
+            "Marvelus SEO and Google Business Profile",
+            "Nolostsales / Maya AI receptionist",
+            "Suburb + trade landing pages",
+            "HighLevel or light CRM pipeline",
+            "HiPages / Thumbtack competitor scan"
+          ],
+          "toolsNeeded": [
+            "Marvelus SEO and Google Business Profile",
+            "Nolostsales / Maya AI receptionist",
+            "Suburb + trade landing pages",
+            "HighLevel or light CRM pipeline",
+            "HiPages / Thumbtack competitor scan"
+          ],
+          "revenue": "Retainers around the Goodly band ($300 to $600/mo per trade) plus Maya add on; aim for fewer higher ticket Melbourne clients rather than a giant cold call farm",
+          "revenueFigures": [
+            "Episode Goodly Grove: ~$1.5M ARR, ~$450 average revenue per customer per month, ~45% net margin, ~$120K MRR after founder went full time",
+            "Goodly clients: owner operator home services roughly $300K to $1.5M revenue, mostly cold call acquired",
+            "AU comps: Melb trade SEO retainers often $1.5K to $4K/mo; Maya/AI receptionist commonly ~$89 to $399/mo"
+          ],
+          "insight": "James Lincoln pitched a boring on purpose marketing agency for US home services and already cleared ~$1.5M ARR at $450/mo ARPU with 45% margins. That is the exact buyer set Marvelus already hunts (HVAC, trades, home services). Okeito angle: do not clone another cold call SEO mill. Win Melbourne trades with Maps pack dominance, rank and rent where Thin, and Maya so booked jobs do not die on missed calls. Brandon even hesitated to fund Goodly because he is already invested in the category, which signals the niche pays.",
+          "notes": "Shortlist 5 Greater Melbourne home service niches with Thin or Mixed Maps competition. Pitch SEO retainer plus Maya as one stack. Keep sandwich board only for foot traffic venues, not mobile trades. Mirror Goodly proof numbers in outreach without claiming their results.",
+          "matchScore": 9
+        },
+        {
+          "idea": "Grok Bot sales and SDR desk that removes the Goodly style bottleneck for Marvelus offers",
+          "ideaName": "Grok Bot sales and SDR desk that removes the Goodly style bottleneck for Marvelus offers",
+          "category": "Agent Ops / Sales Automation",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Weeks",
+          "tools": [
+            "Grok Bot agents",
+            "ABN / Google Maps trade lists",
+            "Spam Act compliant call and SMS scripts",
+            "HighLevel pipeline stages",
+            "Human close on warm yes only"
+          ],
+          "toolsNeeded": [
+            "Grok Bot agents",
+            "ABN / Google Maps trade lists",
+            "Spam Act compliant call and SMS scripts",
+            "HighLevel pipeline stages",
+            "Human close on warm yes only"
+          ],
+          "revenue": "More Marvelus SEO and Maya closes per month without hiring a US style in person sales floor first",
+          "revenueFigures": [
+            "Episode: Goodly ask was $450K for 15% mainly to expand sales; growth stuck on one closer plus overseas SDRs",
+            "Goodly path: ~$70K MRR over ~2 years then ~$120K MRR after founder went full time",
+            "AU test: agent assisted outreach to book discovery calls, then Okeito or Mara close"
+          ],
+          "insight": "The episode makes the constraint obvious: the offer works, sales capacity does not. That maps cleanly to Grok Bot list build, compliant dial or text, reply triage, and CRM staging so humans only close. Prefer this over raising for a sales office. Use it to fill Mara and USA Dept pipelines for home services, beauty, and directory adjacent buyers.",
+          "notes": "Pilot one Melb cluster (e.g. plumbers plus HVAC). Log consent and opt outs. Do not promise Goodly ARR. Success metric is booked calls and closed retainers, not dial count vanity.",
+          "matchScore": 8
+        },
+        {
+          "idea": "AU veterans and aged care allied health Maps SEO plus booking recovery",
+          "ideaName": "AU veterans and aged care allied health Maps SEO plus booking recovery",
+          "category": "Local SEO / Healthcare Services",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Weeks to months",
+          "tools": [
+            "Google Business Profile for clinics",
+            "DVA / allied health niche landing pages",
+            "Maya or missed call SMS for rebooking",
+            "Credentialing workflow notes (not medical advice)",
+            "Suburb proximity location strategy"
+          ],
+          "toolsNeeded": [
+            "Google Business Profile for clinics",
+            "DVA / allied health niche landing pages",
+            "Maya or missed call SMS for rebooking",
+            "Credentialing workflow notes (not medical advice)",
+            "Suburb proximity location strategy"
+          ],
+          "revenue": "SEO and AI receptionist retainers for massage, physio, podiatry, and similar clinics that already sit near DVA or aged care referral flows",
+          "revenueFigures": [
+            "Episode Utah Veterans Massage: ~$68K/mo revenue, ~$20K profit, 750 sessions/mo, 7 small locations, $90/session VA paid, therapist paid ~$50",
+            "Growth path cited: 70 sessions/mo a year earlier to 750 now; zero paid marketing because VA routes by proximity",
+            "AU note: DVA and private allied health billing differ by state; treat US VA mechanics as analogy only"
+          ],
+          "insight": "Amen Hardin is the $68K/mo business in the title: multi location medical massage funded by guaranteed veteran sessions, tiny rooms near demand, therapists rebook in software, billing automated. Melbourne play is not copying US VA credentialing. It is finding allied health and wellness clinics that live on referrals and Maps, then selling visibility plus after hours booking capture. People's Choice third place shows the story lands with crowds too.",
+          "notes": "Validate AU clinics that already accept DVA or work aged care before pitching. Stay non clinical: marketing and call capture only. Multi state US expansion advice from Nik is a warning, not a roadmap for Okeito ops.",
+          "matchScore": 7
+        },
+        {
+          "idea": "Before after short form content engine for Melbourne service clients handed to Reel",
+          "ideaName": "Before after short form content engine for Melbourne service clients handed to Reel",
+          "category": "Content / Local Demand",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Days to weeks",
+          "tools": [
+            "Reel (house video owner)",
+            "Phone vertical clips from real jobs",
+            "Client GBP and social posting",
+            "Optional stump grind or clean time lapse style hooks"
+          ],
+          "toolsNeeded": [
+            "Reel (house video owner)",
+            "Phone vertical clips from real jobs",
+            "Client GBP and social posting",
+            "Optional stump grind or clean time lapse style hooks"
+          ],
+          "revenue": "Content retainer or setup fee bundled with SEO for trades and cleaners; demand gen that feeds Maps and Maya",
+          "revenueFigures": [
+            "Episode: judges pushed Cast Iron Spot away from mail in restore toward before after short form (blackstone and clean girl comps)",
+            "Live shoutout: stump grinding time lapse as a proven crush format",
+            "Chris offered to fund Prinster only after two organic videos each clear 1M views"
+          ],
+          "insight": "Even the weak cast iron idea got a clear redirect: visual process content beats awkward logistics. For Marvelus clients (cleaners, stump grinders, detailers, beauty), Reel owned before after clips are the honest lever. Do not build video inside other bots. Package shot list, posting cadence, and GBP upload as an add on to SEO retainers.",
+          "notes": "Hand any production to Reel with source clips and named moments. Keep drafts approval only. Skip mail in cast iron as a business for Okeito.",
+          "matchScore": 6
+        },
+        {
+          "idea": "Direct clone of Goodly Grove as a Melbourne cold call SEO mill",
+          "ideaName": "Direct clone of Goodly Grove as a Melbourne cold call SEO mill",
+          "category": "Ops Heavy / Agency Clone",
+          "barrier": "High",
+          "barrierLevel": "High",
+          "timeline": "Months",
+          "tools": [
+            "In person sales floor",
+            "Overseas SDRs",
+            "Generic home service SEO delivery",
+            "Heavy dialer culture"
+          ],
+          "toolsNeeded": [
+            "In person sales floor",
+            "Overseas SDRs",
+            "Generic home service SEO delivery",
+            "Heavy dialer culture"
+          ],
+          "revenue": "Episode path shows real ARR, but needs constant sales headcount Okeito is not staffing",
+          "revenueFigures": [
+            "Goodly: ~$1.5M ARR ask $450K for 15% to scale sales",
+            "Brandon already invested in the category and treated Goodly as a potential competitor"
+          ],
+          "insight": "The pure clone is validated and boring in a good way, yet it fights Marvelus positioning. Okeito already has agents, Maya, directories, and sandwich boards in flight. Prefer the differentiated Maps plus AI voice stack (card 1) and agent sales desk (card 2) over hiring a call center to sell generic SEO.",
+          "notes": "Skip as primary company. Study their packaging and ARPU only. If competing head on in a suburb niche, win on productized AI receptionist and proof, not dial volume.",
+          "matchScore": 5
+        },
+        {
+          "idea": "Kids choose your adventure snail mail with HighLevel ops as a side product test",
+          "ideaName": "Kids choose your adventure snail mail with HighLevel ops as a side product test",
+          "category": "Subscription / Product Ops",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Months",
+          "tools": [
+            "HighLevel SMS and QR choice capture",
+            "Print and Australia Post fulfilment",
+            "Meta ads creative tests",
+            "Story inventory / illustrator"
+          ],
+          "toolsNeeded": [
+            "HighLevel SMS and QR choice capture",
+            "Print and Australia Post fulfilment",
+            "Meta ads creative tests",
+            "Story inventory / illustrator"
+          ],
+          "revenue": "Subscription ARPU in the teens to low hundreds per story arc; only worth it if ads unit economics clear",
+          "revenueFigures": [
+            "Episode Pick a Path: ~23 subscribers, ~$15.99/mo or ~$100 six month gift bundle, claimed ~75% to 85% margins before scale",
+            "Meta test: ~$1K to $1.5K spend for ~10 customers; judges said keep iterating ads not quit",
+            "People's Choice second place (100 votes) shows consumer love even before scale"
+          ],
+          "insight": "Cameron and Jason built offline joy with HighLevel automating parent choice texts and QR pages. Cute and localizable to Australia Post, but it is a distraction from Marvelus core unless Okeito wants a personal consumer experiment. Prefer stealing the ops pattern (SMS choice, low churn keep sake) over launching the brand.",
+          "notes": "Park unless Okeito explicitly wants a consumer side hustle. If tested, cap ad spend and require payback under 60 days. Do not divert Mara from B2B digs.",
+          "matchScore": 4
+        }
+      ]
+    },
+    {
       "id": "71c0de9c-5d50-4b2c-9beb-c99794012b06",
       "title": "He Made $27K Last Month Connecting Contractors - Ep. #338",
       "date": "2026-09-25",
@@ -10575,17 +10782,17 @@
   ],
   "feed": {
     "title": "The Koerner Office",
-    "updatedAt": "2026-09-28T00:47:48.000Z",
-    "lastBuilt": "2026-09-28T00:47:48Z"
+    "updatedAt": "2026-09-30T00:55:53.000Z",
+    "lastBuilt": "2026-09-30T00:55:53Z"
   },
   "intelligenceMeta": {
     "processedEpisodes": 1,
-    "note": "RSS batch 338 Aaron Fooks Hytros referral contractors",
+    "note": "RSS+Whisper batch 339 TKO Live Provo 10 pitches Veterans Massage $68K and Goodly Grove",
     "lastBatch": [
-      338
+      339
     ],
-    "lastRunAt": "2026-09-28T00:47:48.000Z",
-    "lastUpdated": "2026-09-28T00:47:48.000Z",
-    "latestEpisode": 338
+    "lastRunAt": "2026-09-30T00:55:53.000Z",
+    "lastUpdated": "2026-09-30T00:55:53.000Z",
+    "latestEpisode": 339
   }
 }
