@@ -1,6 +1,153 @@
 {
   "episodes": [
     {
+      "id": "697a05ec-51bc-4094-984d-86d3c48f5d5e",
+      "guid": "697a05ec-51bc-4094-984d-86d3c48f5d5e",
+      "title": "$250K/Month Renting Out Things He Doesn't Own - Ep. #340",
+      "date": "2026-10-02",
+      "publishDate": "2026-10-02",
+      "publishedAt": "2026-10-02T10:00:01.000Z",
+      "episodeNumber": 340,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/126676307/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-2%2F433163049-44100-2-1d7ca12aa844b.mp3",
+      "descriptionExcerpt": "Eli Galarza leased one 53 foot semi trailer for about $350 a month and sublet it to his uncle for $180 a week (about $750 a month). Startup cost was about $4,000, mostly a yearly insurance policy. Facebook Marketplace posts got him to about $7,500 a month recurring within two months, renting mainly to new trucking companies with weak credit that big rental firms turned away. He scaled to about 300 trailers, about $250K a month revenue and $40K to $50K a month profit, run from Colombia with two virtual staff, then sold for seven figures. Covers net term billing, contracts and insurance, 10 to 15 missing trailers at $15K to $25K each, nationwide Facebook ads, and where AI could speed up equipment rental.",
+      "description": "Eli Galarza leased one 53 foot semi trailer for about $350 a month and sublet it to his uncle for $180 a week (about $750 a month). Startup cost was about $4,000, mostly a yearly insurance policy. Facebook Marketplace posts got him to about $7,500 a month recurring within two months, renting mainly to new trucking companies with weak credit that big rental firms turned away. He scaled to about 300 trailers, about $250K a month revenue and $40K to $50K a month profit, run from Colombia with two virtual staff, then sold for seven figures. Covers net term billing, contracts and insurance, 10 to 15 missing trailers at $15K to $25K each, nationwide Facebook ads, and where AI could speed up equipment rental.",
+      "source": "rss+research",
+      "duration": "00:28:05",
+      "durationSeconds": 1685,
+      "durationLabel": "28:05",
+      "tags": [
+        "Rental Arbitrage",
+        "Semi Trailers",
+        "Facebook Marketplace",
+        "Weekly Billing",
+        "Remote Operations",
+        "Exit"
+      ],
+      "transcript": "",
+      "intelligence": [
+        {
+          "idea": "Melb-Car-Hire weekly rentals for drivers the big hire firms turn away",
+          "ideaName": "Melb-Car-Hire weekly rentals for drivers the big hire firms turn away",
+          "category": "Rank and Rent / Rental Arbitrage",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Days to weeks",
+          "tools": [
+            "Melb-Car-Hire site and inbound lead ledger",
+            "Facebook Marketplace listings and Marketplace ad boost",
+            "Small Melbourne car hire operators already shortlisted",
+            "Weekly direct debit or Stripe autopay",
+            "Simple rental agreement plus bond"
+          ],
+          "toolsNeeded": [
+            "Melb-Car-Hire site and inbound lead ledger",
+            "Facebook Marketplace listings and Marketplace ad boost",
+            "Small Melbourne car hire operators already shortlisted",
+            "Weekly direct debit or Stripe autopay",
+            "Simple rental agreement plus bond"
+          ],
+          "revenue": "Sell or rent the inbound driver leads to small operators, or take a cut per weekly booking; Eli's model shows weekly pricing on a monthly cost roughly doubles gross per unit",
+          "revenueFigures": [
+            "Episode: $350/mo trailer lease rented at $180/week (~$750/mo), about 2x per unit",
+            "Episode: ~$7,500/mo recurring within 2 months purely from Facebook Marketplace posts",
+            "Episode: 300 units, ~$250K/mo revenue, $40K to $50K/mo profit at peak",
+            "Okeito ledger (3 Oct brief): 23 inbound rental leads total; A$99,095 earning potential at 100% conversion"
+          ],
+          "insight": "Eli's whole edge was demand, not assets: he posted on Marketplace, priced weekly, and served renters with poor credit that Penske style firms rejected. Melb-Car-Hire already captures that same weekly rental demand in Melbourne (rideshare, delivery, new arrivals without local credit). Okeito angle: the site is the demand engine; pair it with the Marketplace operators already found and sell the leads weekly, which is the cleanest rank and rent proof in the portfolio.",
+          "notes": "Add a Marketplace listing pass that points to Melb-Car-Hire, tag leads by credit or visa situation so operators who accept them get them first, and quote owners in weekly dollars to match how renters pay. Do not sublease cars yourself until insurance and bond terms are clear.",
+          "matchScore": 8
+        },
+        {
+          "idea": "Maya plus listing agent for AU equipment, trailer and container hire yards",
+          "ideaName": "Maya plus listing agent for AU equipment, trailer and container hire yards",
+          "category": "AI Voice / Agency",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Weeks",
+          "tools": [
+            "Nolostsales / Maya AI receptionist",
+            "Grok Bot agent for Marketplace relisting and enquiry replies",
+            "Booking and bond collection (HighLevel or Stripe)",
+            "Google Business Profile and suburb pages via Marvelus SEO"
+          ],
+          "toolsNeeded": [
+            "Nolostsales / Maya AI receptionist",
+            "Grok Bot agent for Marketplace relisting and enquiry replies",
+            "Booking and bond collection (HighLevel or Stripe)",
+            "Google Business Profile and suburb pages via Marvelus SEO"
+          ],
+          "revenue": "Monthly retainer per yard for call capture plus listing upkeep; upsell SEO for suburb and equipment pages",
+          "revenueFigures": [
+            "Episode chapter: AI could accelerate equipment rental (enquiry handling, matching inventory to renters)",
+            "Melbourne 40ft container hire advertised around A$150 to A$190/mo ex GST (Container Traders, Sep 2026), so yards compete on response speed, not price",
+            "AU comps: Maya / AI receptionist commonly ~$89 to $399/mo"
+          ],
+          "insight": "Rental yards live or die on answering the enquiry first and keeping listings fresh, which is exactly where Eli spent his ad money and VA time. Okeito angle: trailer, container, and equipment hire across Greater Melbourne is a home services adjacent niche Marvelus can pitch Maya plus Maps SEO to, with Marketplace relisting as a Grok Bot add on.",
+          "notes": "Pull 15 Melbourne trailer, container and plant hire yards from Maps, mystery call 5 after hours, and lead the pitch with missed call proof. Grade Maya, SEO, and AI readiness equally.",
+          "matchScore": 6
+        },
+        {
+          "idea": "Remote rental ops stack: weekly autopay, bond, GPS check and two VAs",
+          "ideaName": "Remote rental ops stack: weekly autopay, bond, GPS check and two VAs",
+          "category": "Ops / Grok Bot agents",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Weeks",
+          "tools": [
+            "Grok Bot agents for billing reminders and overdue chasers",
+            "Stripe or direct debit weekly billing",
+            "GPS trackers on units",
+            "Insurance with theft cover",
+            "Offshore VA or agent handoff playbook"
+          ],
+          "toolsNeeded": [
+            "Grok Bot agents for billing reminders and overdue chasers",
+            "Stripe or direct debit weekly billing",
+            "GPS trackers on units",
+            "Insurance with theft cover",
+            "Offshore VA or agent handoff playbook"
+          ],
+          "revenue": "Internal leverage rather than a product; template could be sold to small AU hire operators as a setup fee",
+          "revenueFigures": [
+            "Episode: 10 to 15 trailers went missing, $15K to $25K each, only some covered by insurance",
+            "Episode: ran 300 units from Colombia with two virtual employees he never met"
+          ],
+          "insight": "The scary part of rental arbitrage is collections and missing units, not finding renters. Eli survived it with weekly billing, tight contracts, and remote staff. Okeito angle: package the billing, overdue, and check in flow as a Grok Bot agent kit that the Melb-Car-Hire operators can adopt, which deepens the lead relationship.",
+          "notes": "Draft a one page ops kit (weekly autopay, bond, tracker check in, overdue script) and offer it free to the first operator who buys Melb-Car-Hire leads.",
+          "matchScore": 6
+        },
+        {
+          "idea": "Melbourne site container and trailer sublease arbitrage for tradies",
+          "ideaName": "Melbourne site container and trailer sublease arbitrage for tradies",
+          "category": "Rental Arbitrage",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Months",
+          "tools": [
+            "Container or trailer supplier on 12 month lease",
+            "Facebook Marketplace and Gumtree listings",
+            "Public liability and theft insurance",
+            "Delivery partner (tilt tray)"
+          ],
+          "toolsNeeded": [
+            "Container or trailer supplier on 12 month lease",
+            "Facebook Marketplace and Gumtree listings",
+            "Public liability and theft insurance",
+            "Delivery partner (tilt tray)"
+          ],
+          "revenue": "Lease 40ft containers near A$150/mo on 12 month terms and rent weekly to builders or movers who cannot meet 3 month minimums; thin unless delivery is bundled",
+          "revenueFigures": [
+            "Container Traders 40ft hire: A$190/mo on 3 months, A$150/mo on 12 months ex GST and delivery (Sep 2026)",
+            "Carnegie Rental 12m site container: A$132 with 8 week minimum",
+            "Episode: Eli's startup cost about $4,000, mostly insurance"
+          ],
+          "insight": "Direct copy of Eli's play in Melbourne is harder because container yards already rent direct and cheap. The gap is short term weekly hire and credit light renters. Okeito angle: only worth it if Land-cerlot gives a free staging lot; otherwise treat it as a market test, not a build.",
+          "notes": "Run one Marketplace test ad for weekly container hire in the west (Altona, Laverton) and count enquiries before signing any lease.",
+          "matchScore": 4
+        }
+      ]
+    },
+    {
       "id": "7d3b4ca7-5fa9-453c-84fc-f86da1d7d50f",
       "guid": "7d3b4ca7-5fa9-453c-84fc-f86da1d7d50f",
       "title": "I Judged 10 Businesses Live. One Makes $68K/Month - Ep. #339",
@@ -351,6 +498,9 @@
           "notes": "If testing, cap at one suburb cluster and one paying trade client with clear exclusivity. Do not staff a US style DFY desk until the agent outreach and AI capture stack is proven. Skip sandwich boards here; mobile trades get little from static footpath signs.",
           "matchScore": 5
         }
+      ],
+      "altGuids": [
+        "af650508-a1b8-4c52-ab67-f2a671c74c7e"
       ]
     },
     {
@@ -492,7 +642,10 @@
           "matchScore": 2
         }
       ],
-      "transcript": ""
+      "transcript": "",
+      "altGuids": [
+        "a25b1d38-031a-4edc-95b5-0cc1e61e9394"
+      ]
     },
     {
       "id": "770a8c68-fe39-4400-89fe-ee2efd026ad7",
@@ -10782,17 +10935,17 @@
   ],
   "feed": {
     "title": "The Koerner Office",
-    "updatedAt": "2026-09-30T00:55:53.000Z",
-    "lastBuilt": "2026-09-30T00:55:53Z"
+    "updatedAt": "2026-10-04T23:49:30.000Z",
+    "lastBuilt": "2026-10-04T23:49:30Z"
   },
   "intelligenceMeta": {
     "processedEpisodes": 1,
-    "note": "RSS+Whisper batch 339 TKO Live Provo 10 pitches Veterans Massage $68K and Goodly Grove",
+    "note": "RSS+research batch 340 Eli Galarza trailer rental arbitrage; aliased re-issued RSS guids for 337 and 338",
     "lastBatch": [
-      339
+      340
     ],
-    "lastRunAt": "2026-09-30T00:55:53.000Z",
-    "lastUpdated": "2026-09-30T00:55:53.000Z",
-    "latestEpisode": 339
+    "lastRunAt": "2026-10-04T23:49:30.000Z",
+    "lastUpdated": "2026-10-04T23:49:30.000Z",
+    "latestEpisode": 340
   }
 }
