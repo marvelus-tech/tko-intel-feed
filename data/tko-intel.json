@@ -1,6 +1,145 @@
 {
   "episodes": [
     {
+      "id": "bb1a3beb-201f-43fb-9589-3794d16a75db",
+      "guid": "bb1a3beb-201f-43fb-9589-3794d16a75db",
+      "title": "The $1M/Year AI Business Anyone Can Start - Ep. #341",
+      "date": "2026-10-06",
+      "publishDate": "2026-10-06",
+      "publishedAt": "2026-10-06T10:00:00.000Z",
+      "episodeNumber": 341,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/126926378/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-6%2F433470531-44100-2-1f1df7b5dea37.mp3",
+      "descriptionExcerpt": "Aaron Edwards tried eight AI businesses in six months while still employed; the ninth, DocsBot, passed $1M ARR this year with three people. It is mostly customer support agents trained on a business's docs, answering 70 to 80 percent of questions. Most common plan is $150 a month, ARPU about $130, lifetime value a little over $2,000, revenue churn around 3%. Agency partners pilot a bot for a local business, then charge about $2,000 to $3,000 setup and $500 to $1,000 a month for maintenance, with AI writing the monthly report. Best fits are product makers with dense manuals and spec tables. Best lead sources in order: in person (Chamber of Commerce, conferences), then cold calls. No free trial early on: pay first, refund if it does not work.",
+      "description": "Aaron Edwards tried eight AI businesses in six months while still employed; the ninth, DocsBot, passed $1M ARR this year with three people. It is mostly customer support agents trained on a business's docs, answering 70 to 80 percent of questions. Most common plan is $150 a month, ARPU about $130, lifetime value a little over $2,000, revenue churn around 3%. Agency partners pilot a bot for a local business, then charge about $2,000 to $3,000 setup and $500 to $1,000 a month for maintenance, with AI writing the monthly report. Best fits are product makers with dense manuals and spec tables. Best lead sources in order: in person (Chamber of Commerce, conferences), then cold calls. No free trial early on: pay first, refund if it does not work.",
+      "source": "rss+research",
+      "duration": "00:35:46",
+      "durationSeconds": 2146,
+      "durationLabel": "35:46",
+      "tags": [
+        "AI Agents",
+        "Customer Support",
+        "Agency Resale",
+        "Setup Fee plus Retainer",
+        "Local Business",
+        "Partner Program"
+      ],
+      "transcript": "",
+      "intelligence": [
+        {
+          "idea": "Setup fee plus monthly digital support package for AU product sellers with dense manuals",
+          "ideaName": "Setup fee plus monthly digital support package for AU product sellers with dense manuals",
+          "category": "AI Services / Digital Support",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Days to weeks",
+          "tools": [
+            "MarvelUs support agent (chat or voice)",
+            "Client product manuals, spec sheets, FAQs as knowledge sources",
+            "Chatbot trial prospects list (AU product sellers losing online enquiries)",
+            "Stripe for setup invoice plus monthly billing",
+            "Refund guarantee terms"
+          ],
+          "toolsNeeded": [
+            "MarvelUs support agent (chat or voice)",
+            "Client product manuals, spec sheets, FAQs as knowledge sources",
+            "Chatbot trial prospects list (AU product sellers losing online enquiries)",
+            "Stripe for setup invoice plus monthly billing",
+            "Refund guarantee terms"
+          ],
+          "revenue": "Charge a one-off build fee on top of the A$399/mo support agent, so each win pays upfront and recurs",
+          "revenueFigures": [
+            "Episode: resellers charge about $2,000 to $3,000 setup plus $500 to $1,000 a month",
+            "Episode: DocsBot ARPU about $130/mo, LTV a little over $2,000, revenue churn about 3%",
+            "Episode: bots answer roughly 70 to 80% of support questions",
+            "MarvelUs AU list price: support agent A$399/mo cancel anytime"
+          ],
+          "insight": "Aaron's best-fit clients are makers and sellers with manuals full of tables and specs (lighting, construction panels, generators), which is exactly the Skadr style AU product seller the Thursday chatbot trial hunt already targets. Okeito angle: keep the A$399/mo support agent but add a paid setup tier (knowledge prep, spec table loading, website plus phone deployment) so the first invoice covers build time.",
+          "notes": "Test pricing on the next 3 prospects: A$1,500 to A$2,500 setup plus A$399 to A$499/mo. Aaron's early rule was pay first with a refund if it fails, rather than a free trial; consider a paid pilot with a 30 day money back promise instead of the free 30 day trial for higher intent buyers.",
+          "matchScore": 9
+        },
+        {
+          "idea": "AI-written monthly value report that justifies the retainer",
+          "ideaName": "AI-written monthly value report that justifies the retainer",
+          "category": "AI Services / Retention",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Days",
+          "tools": [
+            "Support agent conversation logs and analytics",
+            "Grok Bot agent to draft the monthly summary",
+            "Simple branded PDF or email template",
+            "Revenue Capture Assessment framing"
+          ],
+          "toolsNeeded": [
+            "Support agent conversation logs and analytics",
+            "Grok Bot agent to draft the monthly summary",
+            "Simple branded PDF or email template",
+            "Revenue Capture Assessment framing"
+          ],
+          "revenue": "Protects and lifts the monthly fee by showing questions answered, leads captured, and hours saved every month",
+          "revenueFigures": [
+            "Episode: the $500/mo retainer is largely the AI writing the monthly report",
+            "Episode: a reseller's client said the service would save him over $100K a year"
+          ],
+          "insight": "The retainer survives because the client sees proof every month, not because the agency is busy. Okeito angle: a Grok Bot agent can turn each client's chat and call logs into a one page report (top questions, missed hours covered, leads booked, gaps to fix in the website), which also feeds SEO and Business Assessment upsells.",
+          "notes": "Build one report template now and reuse it across every digital support client; include a line on what the next fix is worth, which tees up SEO or the Revenue Capture Assessment.",
+          "matchScore": 8
+        },
+        {
+          "idea": "Join the DocsBot partner program as a build layer or benchmark",
+          "ideaName": "Join the DocsBot partner program as a build layer or benchmark",
+          "category": "AI Services / Partnerships",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Days",
+          "tools": [
+            "DocsBot partner application (human@docsbot.ai)",
+            "Free partner workspace for pilots",
+            "Client owned team handoff with partner admin access"
+          ],
+          "toolsNeeded": [
+            "DocsBot partner application (human@docsbot.ai)",
+            "Free partner workspace for pilots",
+            "Client owned team handoff with partner admin access"
+          ],
+          "revenue": "30% of each client's DocsBot subscription for year one, plus every setup and management fee you set yourself",
+          "revenueFigures": [
+            "DocsBot partners page: free partner workspace, 30% first year commission, partners set their own service fees",
+            "DocsBot affiliate page: 25% recurring for one year on referrals"
+          ],
+          "insight": "DocsBot lets agencies pilot a bot for free, then hand it to a client owned account while staying admin. Okeito angle: useful as a fallback build layer for docs heavy clients or as a pricing benchmark for MarvelUs digital support; the bigger lesson is the handoff model, where the client owns the workspace and the agency keeps the retainer by improving results.",
+          "notes": "Only worth applying if the current MarvelUs stack struggles with large manuals or spec tables. Either way, copy the client owns it, we manage it framing in outreach to lower trust friction.",
+          "matchScore": 6
+        },
+        {
+          "idea": "Walking demo: talking voice agent at Melbourne Chamber of Commerce and trade events",
+          "ideaName": "Walking demo: talking voice agent at Melbourne Chamber of Commerce and trade events",
+          "category": "Lead Gen / In-Person",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Weeks",
+          "tools": [
+            "Voice agent demo on a phone or small speaker",
+            "Local chamber, BNI, and trade expo calendar",
+            "QR card to a live chat demo on marvelus.cc"
+          ],
+          "toolsNeeded": [
+            "Voice agent demo on a phone or small speaker",
+            "Local chamber, BNI, and trade expo calendar",
+            "QR card to a live chat demo on marvelus.cc"
+          ],
+          "revenue": "Higher close rate leads from face to face meetings without paying for a booth",
+          "revenueFigures": [
+            "Episode: in person is the best lead source, then cold calls",
+            "Episode: shoulder robot demo cost about $50 versus a $25K conference booth"
+          ],
+          "insight": "Aaron skipped a $25K booth and built a $50 talking shoulder robot that runs his voice agent as a live demo. Okeito angle: Melbourne first, bring a talking digital support demo to chamber nights and trade expos so owners hear it answer their own questions on the spot.",
+          "notes": "Pair with the sandwich board idea: a board or prop with a QR code to a live demo trained on that venue's or sector's FAQs.",
+          "matchScore": 6
+        }
+      ]
+    },
+    {
       "id": "697a05ec-51bc-4094-984d-86d3c48f5d5e",
       "guid": "697a05ec-51bc-4094-984d-86d3c48f5d5e",
       "title": "$250K/Month Renting Out Things He Doesn't Own - Ep. #340",
@@ -10935,17 +11074,17 @@
   ],
   "feed": {
     "title": "The Koerner Office",
-    "updatedAt": "2026-10-04T23:49:30.000Z",
-    "lastBuilt": "2026-10-04T23:49:30Z"
+    "updatedAt": "2026-10-06T23:53:43.000Z",
+    "lastBuilt": "2026-10-06T23:53:43Z"
   },
   "intelligenceMeta": {
     "processedEpisodes": 1,
-    "note": "RSS+research batch 340 Eli Galarza trailer rental arbitrage; aliased re-issued RSS guids for 337 and 338",
+    "note": "RSS+research batch 341 Aaron Edwards DocsBot AI support agent resale; 337 and 338 re-issued guids already aliased",
     "lastBatch": [
-      340
+      341
     ],
-    "lastRunAt": "2026-10-04T23:49:30.000Z",
-    "lastUpdated": "2026-10-04T23:49:30.000Z",
-    "latestEpisode": 340
+    "lastRunAt": "2026-10-06T23:53:43.000Z",
+    "lastUpdated": "2026-10-06T23:53:43.000Z",
+    "latestEpisode": 341
   }
 }
