@@ -1,6 +1,353 @@
 {
   "episodes": [
     {
+      "id": "aad0a231-6858-45ba-b2c9-4854d97a1d15",
+      "guid": "aad0a231-6858-45ba-b2c9-4854d97a1d15",
+      "title": "6 Ways to Make Money With AI Agents Starting From Zero - Ep. #343",
+      "date": "2026-10-13",
+      "publishDate": "2026-10-13",
+      "publishedAt": "2026-10-13T10:00:00.000Z",
+      "episodeNumber": 343,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/127387039/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-13%2F434054358-44100-2-1f8716cd4fb72.mp3",
+      "descriptionExcerpt": "Chris Koerner solo: six AI-agent businesses using Muse (Meta), Grokbot (X), and Instinct (iMessage/WhatsApp). Muse contacted 82 DFW pool builders and returned 8 quotes in 24 hours after 2 weeks of manual work got zero; quote range $120k to $240k. Marketplace agent lists, prices, negotiates, and books pickups; spray foam quote fell from $12k to $1.2k. Agentic dropshipping sketched for fragmented catalogs like fruit trees. $11 LaredoCraneRental.com (built with Grokbot) produced 3 crane leads (about $3k, $9k, $23k). Outreach machine: Maps filter, after-hours call test, audit, Loom, then branded AI receptionist demo. Bonus: class-action inbox sweep; agent-to-agent Claude plus Replit builds. Duration about 45 minutes.",
+      "description": "Chris Koerner solo: six AI-agent businesses using Muse (Meta), Grokbot (X), and Instinct (iMessage/WhatsApp). Muse contacted 82 DFW pool builders and returned 8 quotes in 24 hours after 2 weeks of manual work got zero; quote range $120k to $240k. Marketplace agent lists, prices, negotiates, and books pickups; spray foam quote fell from $12k to $1.2k. Agentic dropshipping sketched for fragmented catalogs like fruit trees. $11 LaredoCraneRental.com (built with Grokbot) produced 3 crane leads (about $3k, $9k, $23k). Outreach machine: Maps filter, after-hours call test, audit, Loom, then branded AI receptionist demo. Bonus: class-action inbox sweep; agent-to-agent Claude plus Replit builds. Duration about 45 minutes.",
+      "source": "rss+research",
+      "duration": "00:45:32",
+      "durationSeconds": 2732,
+      "durationLabel": "45:32",
+      "tags": [
+        "AI Agents",
+        "Grok Bot",
+        "Lead Gen",
+        "Rank and Rent",
+        "AI Consulting",
+        "Marketplace",
+        "Outreach"
+      ],
+      "transcript": "",
+      "intelligence": [
+        {
+          "idea": "Grok Bot outreach machine that audits Melbourne SMBs then pitches MarvelUs digital support",
+          "ideaName": "Grok Bot outreach machine that audits Melbourne SMBs then pitches MarvelUs digital support",
+          "category": "AI Services / Client Acquisition",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Days to weeks",
+          "tools": [
+            "Grok Bot agents for Maps scrape, review audit, and outreach drafts",
+            "MarvelUs AU digital support agent (chat or voice) as the demo and offer",
+            "HighLevel or CRM for follow-up sequences",
+            "Loom or short Loom-style audit videos",
+            "Filter: 4+ stars, 50+ reviews, no booking link, owner never replies to reviews"
+          ],
+          "toolsNeeded": [
+            "Grok Bot agents for Maps scrape, review audit, and outreach drafts",
+            "MarvelUs AU digital support agent (chat or voice) as the demo and offer",
+            "HighLevel or CRM for follow-up sequences",
+            "Loom or short Loom-style audit videos",
+            "Filter: 4+ stars, 50+ reviews, no booking link, owner never replies to reviews"
+          ],
+          "revenue": "Close setup plus A$399/mo support retainers by only pitching owners already proven slow on the front end",
+          "revenueFigures": [
+            "Episode: agent filters Maps businesses then builds a one-page audit before you pitch",
+            "Episode: Chris offers $500 to anyone who lands an AI consulting client in a week with this method",
+            "MarvelUs AU: support agent A$399/mo cancel anytime; Revenue Capture Assessment A$1,000 once"
+          ],
+          "insight": "Chris's play is exactly the MarvelUs sales motion: find local owners who look healthy on Maps but ignore reviews and missed calls, send a concrete audit, then demo a working digital support agent. Okeito angle: wire this into existing Grok Bot routines so Melbourne tradies, clinics, and product sellers get a scored audit and a MarvelUs trial or paid pilot without manual research.",
+          "notes": "Start with one Melbourne niche already on the dig list (English-handling complaints, water filtration, Thumbtack R&R). Keep house language: digital support, never Maya. Prefer paid pilot with money-back over free trial for higher intent.",
+          "matchScore": 10
+        },
+        {
+          "idea": "AU niche lead-gen micro-sites (crane/shower-door model) sold as rank-and-rent or exclusive leads",
+          "ideaName": "AU niche lead-gen micro-sites (crane/shower-door model) sold as rank-and-rent or exclusive leads",
+          "category": "SEO / Rank and Rent",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Days to weeks",
+          "tools": [
+            "Demand vs supply city-niche finder (Maps pack thin + search demand)",
+            "Cheap .com.au or .com domains (~A$15)",
+            "Grok Bot or Replit-style agent to build SEO/AEO pages",
+            "Google Search Console plus Analytics",
+            "Local operator handoff script: free first leads, then exclusive monthly"
+          ],
+          "toolsNeeded": [
+            "Demand vs supply city-niche finder (Maps pack thin + search demand)",
+            "Cheap .com.au or .com domains (~A$15)",
+            "Grok Bot or Replit-style agent to build SEO/AEO pages",
+            "Google Search Console plus Analytics",
+            "Local operator handoff script: free first leads, then exclusive monthly"
+          ],
+          "revenue": "Rent the site or sell exclusive leads once ranking; episode cites ~$800/mo then bump to $1,200 when lead volume rises",
+          "revenueFigures": [
+            "Episode: $11 LaredoCraneRental.com produced 3 leads (about $3k, $9k, $23k job sizes) within a month",
+            "Episode: BrownsvilleShowerDoors.com climbing organic ranks on weekly agent reports",
+            "Episode pricing range for exclusive operator: about $800 to $1,200/mo"
+          ],
+          "insight": "Chris skips crowded HVAC/plumber niches and picks weird demand-over-supply pairs. That matches Okeito's Melbourne-first R&R and LLM citation SEO: thin Map packs, cheap clicks, agent-built pages, then warm handoff to a local operator. Okeito angle: run the same filter for AU suburbs (crane, shower doors, filtration, specialty trades) and fold winners into the water filtration and Thumbtack R&R pipelines.",
+          "notes": "Use AU spelling and local proof on every page. Offer first leads free for close-rate data, then exclusive monthly. Avoid invented founder claims on public sites.",
+          "matchScore": 9
+        },
+        {
+          "idea": "Working digital-support demo built per prospect (logo, prices, what-if revenue math)",
+          "ideaName": "Working digital-support demo built per prospect (logo, prices, what-if revenue math)",
+          "category": "AI Services / Sales Enablement",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Hours to days",
+          "tools": [
+            "MarvelUs support agent sandbox with prospect logo and prices",
+            "Grok Bot to draft the what-if lead math",
+            "Missed-call text-back and booking page stubs",
+            "One Loom walkthrough per prospect"
+          ],
+          "toolsNeeded": [
+            "MarvelUs support agent sandbox with prospect logo and prices",
+            "Grok Bot to draft the what-if lead math",
+            "Missed-call text-back and booking page stubs",
+            "One Loom walkthrough per prospect"
+          ],
+          "revenue": "Turns cold outreach into a demo-led close; wrong assumptions still win because owners correct you on the call",
+          "revenueFigures": [
+            "Episode: demo compares current leads/day vs +2 leads/day with assumed ticket value to force a reply",
+            "MarvelUs AU list: support agent A$399/mo; USA Live reception $299 or $599/mo"
+          ],
+          "insight": "Chris's step three is a branded AI receptionist demo plus a what-if comparison. That is literally the MarvelUs wedge. Okeito angle: stop pitching features; ship a prospect-named demo page that shows missed calls recovered and booked jobs, then upsell SEO and the Revenue Capture Assessment.",
+          "notes": "Prebuild 3 niche demo shells (tradie, clinic, product seller) so each new lead only needs logo, prices, and one number tweak.",
+          "matchScore": 9
+        },
+        {
+          "idea": "Productized contractor quote-shopping for Melbourne home projects as a lead magnet into MarvelUs",
+          "ideaName": "Productized contractor quote-shopping for Melbourne home projects as a lead magnet into MarvelUs",
+          "category": "AI Services / Lead Magnet",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Days",
+          "tools": [
+            "Agent that mass-contacts contractors via forms and Marketplace (Meta Muse pattern; AU equivalent tools)",
+            "Shared spreadsheet of quotes logged automatically",
+            "Landing page: save thousands on pool, roof, kitchen, bathroom",
+            "Follow-up path into digital support for the winning contractor"
+          ],
+          "toolsNeeded": [
+            "Agent that mass-contacts contractors via forms and Marketplace (Meta Muse pattern; AU equivalent tools)",
+            "Shared spreadsheet of quotes logged automatically",
+            "Landing page: save thousands on pool, roof, kitchen, bathroom",
+            "Follow-up path into digital support for the winning contractor"
+          ],
+          "revenue": "Charge homeowners a flat fee or 3 to 6% of job value; episode cites pool consultants at about 3 to 6% ($6k to $12k on a big pool)",
+          "revenueFigures": [
+            "Episode: 2 weeks manual = 0 pool quotes; Muse overnight = 8 quotes from 82 builders, $120k to $240k range",
+            "Episode: spray foam first human quote $12k vs Marketplace agent quote $1.2k",
+            "Episode: consultants charge thousands or 3 to 6% of the job"
+          ],
+          "insight": "The money is productizing quote hunting that used to take weeks. Okeito angle for Melbourne: offer quote packs for pools, roofs, kitchens, then sell the winning tradie a MarvelUs digital support agent so they never drop the inbound again. Also works as a trust opener before SEO or Business Assessment.",
+          "notes": "AU compliance: clear disclosure that an agent is contacting businesses. Start with one category (e.g. bathroom reno) in one Melb LGA.",
+          "matchScore": 7
+        },
+        {
+          "idea": "Neighborhood Marketplace consignment desk run by agents (list, price, negotiate, calendar)",
+          "ideaName": "Neighborhood Marketplace consignment desk run by agents (list, price, negotiate, calendar)",
+          "category": "Local Services / Marketplace",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Days",
+          "tools": [
+            "Meta-friendly agent for Facebook Marketplace",
+            "Photo intake (or video frame extract)",
+            "10% daily price drop rule when under 3 inquiries",
+            "Calendar plus cash/Venmo style handoff"
+          ],
+          "toolsNeeded": [
+            "Meta-friendly agent for Facebook Marketplace",
+            "Photo intake (or video frame extract)",
+            "10% daily price drop rule when under 3 inquiries",
+            "Calendar plus cash/Venmo style handoff"
+          ],
+          "revenue": "Take a cut of estate-cleanout and downsizing sales without a physical shop; replaces 30 to 50% consignment fees with agent labor",
+          "revenueFigures": [
+            "Episode: agent lists garage items, negotiates, books pickup; buy-side also used for skid steer and tires",
+            "Episode: consignment shops often take 30 to 50%"
+          ],
+          "insight": "Useful as a Melbourne micro-service or a Grok Bot skill demo, but weaker than digital support and R&R for MarvelUs core. Okeito angle: optional side play or content proof that agents do real local work.",
+          "notes": "Deprioritize unless a Footscray/Melb partner wants ops help. Liability and payment fraud need a human checkpoint.",
+          "matchScore": 4
+        },
+        {
+          "idea": "Agentic dropshipping for fragmented AU categories (trees, odd-shaped goods)",
+          "ideaName": "Agentic dropshipping for fragmented AU categories (trees, odd-shaped goods)",
+          "category": "Ecom / Dropship",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Weeks",
+          "tools": [
+            "Clean storefront domain",
+            "Agent price scrape across nurseries/suppliers",
+            "Inbox monitor for OOS and auto-refund",
+            "30 to 60% markup over lowest scrape"
+          ],
+          "toolsNeeded": [
+            "Clean storefront domain",
+            "Agent price scrape across nurseries/suppliers",
+            "Inbox monitor for OOS and auto-refund",
+            "30 to 60% markup over lowest scrape"
+          ],
+          "revenue": "Markup on fragmented catalog with no warehouse; episode example fruit trees with wild $30 vs $180 pricing for same tree",
+          "revenueFigures": [
+            "Episode: agent finds best price per tree/size and places supplier order under customer ship-to",
+            "Episode: target markup roughly 30 to 60% over lowest found price"
+          ],
+          "insight": "Clever but not Melbourne-first MarvelUs. Park unless a clear AU niche (native plants, specialty parts) appears with thin competition.",
+          "notes": "Low priority. Watch shipping damage and consumer law on refunds.",
+          "matchScore": 3
+        }
+      ]
+    },
+    {
+      "id": "cf787684-749d-4f40-8473-62aeb3132719",
+      "guid": "cf787684-749d-4f40-8473-62aeb3132719",
+      "title": "The $16K/Month Business He Runs Without Quitting His Job - Ep. #342",
+      "date": "2026-10-09",
+      "publishDate": "2026-10-09",
+      "publishedAt": "2026-10-09T10:00:00.000Z",
+      "episodeNumber": 342,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/127163565/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-9%2F433780438-44100-2-9f7b4344bb843.mp3",
+      "descriptionExcerpt": "Justin Hall and wife run The Hall ATL (Stone Mountain, GA): former strip-mall church, about 3,000 sq ft plus a second ~1,300 sq ft unit. Average revenue about $16k/mo (peak $22.5k), roughly 50% profit, no employees, Justin still full-time employed. Three Sunday churches at about $1,000/mo each cover rent. Under $100 Meta ads booked $10k in one day. QR Instant Spotlight photo wall feeds CRM; about 8% of uploaders later book. Packages $1,000 to $2,800, average party about $1,800, weddings $7,000. Build-out about $20 to $30k; budget start possible under $3k to $6k with free rent. Tech: HighLevel, Meta, photo-wall funnel. Duration about 62 minutes.",
+      "description": "Justin Hall and wife run The Hall ATL (Stone Mountain, GA): former strip-mall church, about 3,000 sq ft plus a second ~1,300 sq ft unit. Average revenue about $16k/mo (peak $22.5k), roughly 50% profit, no employees, Justin still full-time employed. Three Sunday churches at about $1,000/mo each cover rent. Under $100 Meta ads booked $10k in one day. QR Instant Spotlight photo wall feeds CRM; about 8% of uploaders later book. Packages $1,000 to $2,800, average party about $1,800, weddings $7,000. Build-out about $20 to $30k; budget start possible under $3k to $6k with free rent. Tech: HighLevel, Meta, photo-wall funnel. Duration about 62 minutes.",
+      "source": "rss+research",
+      "duration": "01:01:42",
+      "durationSeconds": 3702,
+      "durationLabel": "1:01:42",
+      "tags": [
+        "Event Venue",
+        "Local Business",
+        "Meta Ads",
+        "Referrals",
+        "HighLevel",
+        "Side Hustle",
+        "Parking"
+      ],
+      "transcript": "",
+      "intelligence": [
+        {
+          "idea": "MarvelUs stack for Melbourne event venues: digital support, booking, and review recovery",
+          "ideaName": "MarvelUs stack for Melbourne event venues: digital support, booking, and review recovery",
+          "category": "AI Services / Local Venues",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Days to weeks",
+          "tools": [
+            "MarvelUs digital support (chat or voice) for tour and booking questions",
+            "Missed-call text-back plus calendar booking",
+            "Automated Google review ask after events",
+            "Maps SEO / citation cleanup for venue GBP"
+          ],
+          "toolsNeeded": [
+            "MarvelUs digital support (chat or voice) for tour and booking questions",
+            "Missed-call text-back plus calendar booking",
+            "Automated Google review ask after events",
+            "Maps SEO / citation cleanup for venue GBP"
+          ],
+          "revenue": "A$399/mo support plus SEO quote; venues already paying for ads and losing weekday capacity",
+          "revenueFigures": [
+            "Episode: The Hall ATL averages about $16k/mo revenue (peak $22.5k), ~50% profit, no employees",
+            "Episode: $100 Facebook ads produced $10k in bookings in one day",
+            "Episode: tour show rate ~50%, close rate on tours ~70%"
+          ],
+          "insight": "Justin wins because competitors still use paper calendars and skip paid social. Okeito angle: Melbourne and regional AU halls, church halls, and party venues are the same shape of client. Sell digital support so tours and after-hours enquiries never go cold, then Maps SEO so they dominate the 5 to 7 km radius Justin found is the ad sweet spot.",
+          "notes": "Lead with 'never miss a tour booking' not generic AI. Offer Revenue Capture Assessment for venues stuck Mon to Thu.",
+          "matchScore": 8
+        },
+        {
+          "idea": "Guest QR photo wall that feeds CRM and turns attendees into the next booking",
+          "ideaName": "Guest QR photo wall that feeds CRM and turns attendees into the next booking",
+          "category": "Growth / Referral Systems",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Weeks",
+          "tools": [
+            "QR photo/upload wall (Instant Spotlight style or lighter AU build)",
+            "HighLevel or CRM sync of guest emails/phones",
+            "Auto gallery send plus Google review gate",
+            "Package upsell that includes the photo wall"
+          ],
+          "toolsNeeded": [
+            "QR photo/upload wall (Instant Spotlight style or lighter AU build)",
+            "HighLevel or CRM sync of guest emails/phones",
+            "Auto gallery send plus Google review gate",
+            "Package upsell that includes the photo wall"
+          ],
+          "revenue": "Episode: ~8% of photo uploaders later book their own event; one party can spawn multiple paid bookings",
+          "revenueFigures": [
+            "Episode: ~8% of guests who upload photos later book",
+            "Episode: average party intake about $1,800; packages $1,000 blank to $2,800 gold; weddings $7,000",
+            "Episode: photo wall is an upcharge on blank canvas, included in packages"
+          ],
+          "insight": "The QR wall is a productized referral engine, not a gimmick. Okeito angle: package this as a MarvelUs-adjacent growth add-on for venues and hospitality, or build a lighter Grok Bot version that syncs guests into HighLevel and triggers review plus rebooking sequences.",
+          "notes": "Privacy and consent matter in AU. Start as a case-study build with one venue partner before productizing.",
+          "matchScore": 7
+        },
+        {
+          "idea": "Anchor rent with recurring community tenants (churches, clubs) then sell weekday overflow",
+          "ideaName": "Anchor rent with recurring community tenants (churches, clubs) then sell weekday overflow",
+          "category": "Local Business / Real Estate Ops",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Months",
+          "tools": [
+            "Strip-mall or surplus church/hall lease with parking",
+            "Sunday block pricing (~$1,000/mo per congregation in episode)",
+            "Weekday corporate/networking offers",
+            "Optional live-stream gear upsell for congregations"
+          ],
+          "toolsNeeded": [
+            "Strip-mall or surplus church/hall lease with parking",
+            "Sunday block pricing (~$1,000/mo per congregation in episode)",
+            "Weekday corporate/networking offers",
+            "Optional live-stream gear upsell for congregations"
+          ],
+          "revenue": "Three Sunday tenants can cover rent; parties and ads become pure upside",
+          "revenueFigures": [
+            "Episode: three churches at about $1,000/mo each cover rent; upgraded live-stream package ~$1,800/mo",
+            "Episode: rent started ~$3,000/mo then $4,500 with second unit",
+            "Episode: startup possible under $3,000 to $6,000 with free-rent negotiation; their build ~$20 to $30k"
+          ],
+          "insight": "Strong ops lesson for AU: secure base occupancy before chasing parties. Weaker direct MarvelUs fit than selling tools to venue owners, unless Okeito wants a Footscray/west Melb venue experiment alongside sandwich-board and land plays.",
+          "notes": "Treat as research for Land-cerlot / local real-estate ops, not a near-term MarvelUs SKU. Parking and council rules are the make-or-break.",
+          "matchScore": 5
+        },
+        {
+          "idea": "Hyperlocal Meta ads in a 5 to 7 km radius plus milestone direct mail for venue fills",
+          "ideaName": "Hyperlocal Meta ads in a 5 to 7 km radius plus milestone direct mail for venue fills",
+          "category": "Ads / Local Demand",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Days",
+          "tools": [
+            "Meta ads geofenced 5 to 7 km",
+            "Direct mail to milestone birthdays 3 months out (3 touches)",
+            "Instagram build-in-public reno content",
+            "Chamber and school booth flyering"
+          ],
+          "toolsNeeded": [
+            "Meta ads geofenced 5 to 7 km",
+            "Direct mail to milestone birthdays 3 months out (3 touches)",
+            "Instagram build-in-public reno content",
+            "Chamber and school booth flyering"
+          ],
+          "revenue": "Cheap local demand that funds the venue or, for MarvelUs, a case study playbook sold with SEO",
+          "revenueFigures": [
+            "Episode: under $100 ad spend to $10k bookings when Gold package was $1,000 promo",
+            "Episode: 7,000 single-family homes within 3 miles as the target market",
+            "Episode: postcards ~$0.30 to $0.50 each; three touches needed"
+          ],
+          "insight": "Justin learned city-wide ads wasted money; neighborhood density wins. Okeito angle: bake 5 to 7 km geofencing and milestone mail into MarvelUs local playbooks for venues and home services, and use build-in-public reno clips as content SEO fuel.",
+          "notes": "Good complementary offer with Maps SEO. Document as a one-pager for venue outreach.",
+          "matchScore": 6
+        }
+      ]
+    },
+    {
       "id": "bb1a3beb-201f-43fb-9589-3794d16a75db",
       "guid": "bb1a3beb-201f-43fb-9589-3794d16a75db",
       "title": "The $1M/Year AI Business Anyone Can Start - Ep. #341",
@@ -11074,17 +11421,18 @@
   ],
   "feed": {
     "title": "The Koerner Office",
-    "updatedAt": "2026-10-06T23:53:43.000Z",
-    "lastBuilt": "2026-10-06T23:53:43Z"
+    "updatedAt": "2026-10-13T23:58:55.000Z",
+    "lastBuilt": "2026-10-13T23:58:55Z"
   },
   "intelligenceMeta": {
-    "processedEpisodes": 1,
-    "note": "RSS+research batch 341 Aaron Edwards DocsBot AI support agent resale; 337 and 338 re-issued guids already aliased",
+    "processedEpisodes": 2,
+    "note": "RSS+research batch 343 AI agents six plays (Muse/Grokbot/Instinct) and 342 Justin Hall The Hall ATL event venue",
     "lastBatch": [
-      341
+      343,
+      342
     ],
-    "lastRunAt": "2026-10-06T23:53:43.000Z",
-    "lastUpdated": "2026-10-06T23:53:43.000Z",
-    "latestEpisode": 341
+    "lastRunAt": "2026-10-13T23:58:55.000Z",
+    "lastUpdated": "2026-10-13T23:58:55.000Z",
+    "latestEpisode": 343
   }
 }
