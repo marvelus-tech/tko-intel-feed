@@ -1,6 +1,147 @@
 {
   "episodes": [
     {
+      "id": "8c1e20d4-4148-486e-9974-b07467509316",
+      "guid": "8c1e20d4-4148-486e-9974-b07467509316",
+      "title": "3 College Kids Help Companies Use AI for $15K/Month - Ep. #344",
+      "date": "2026-10-16",
+      "publishDate": "2026-10-16",
+      "publishedAt": "2026-10-16T10:00:00.000Z",
+      "episodeNumber": 344,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/127567226/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-16%2F434295710-44100-2-ad14bd7e896f1.mp3",
+      "descriptionExcerpt": "Chris Koerner with James Larson, Brenden Parker and Carter Wirig (ages 21 to 23) of Certified AI Partners, an outsourced AI department for mid-market companies. Spark came from TKO's Corey Gannon AI-assessment episode. They first walked into local Provo businesses offering AI assessments, then texted every phone contact asking for advice, not money. A CEO of a $30M construction company (Utah, Arizona, California) replied, bought a roughly $1,000 paid assessment (staff survey on bottlenecks and software, then booked 30-minute interviews with an AI note taker, then a clean leadership presentation), and signed at $15,000/month. Pricing tiers $10k, $15k, $25k per month with the top tier as an anchor; assessment is free if they cannot find 10+ hours a week to save; fee credits toward the retainer. Built a Claude plus MCP demo that cut a one-hour construction proposal to about five minutes; stack includes Railway and Composio. Two more similar clients in the pipeline and an invite to present to a $12B company. Duration about 31 minutes.",
+      "description": "Chris Koerner with James Larson, Brenden Parker and Carter Wirig (ages 21 to 23) of Certified AI Partners, an outsourced AI department for mid-market companies. Spark came from TKO's Corey Gannon AI-assessment episode. They first walked into local Provo businesses offering AI assessments, then texted every phone contact asking for advice, not money. A CEO of a $30M construction company (Utah, Arizona, California) replied, bought a roughly $1,000 paid assessment (staff survey on bottlenecks and software, then booked 30-minute interviews with an AI note taker, then a clean leadership presentation), and signed at $15,000/month. Pricing tiers $10k, $15k, $25k per month with the top tier as an anchor; assessment is free if they cannot find 10+ hours a week to save; fee credits toward the retainer. Built a Claude plus MCP demo that cut a one-hour construction proposal to about five minutes; stack includes Railway and Composio. Two more similar clients in the pipeline and an invite to present to a $12B company. Duration about 31 minutes.",
+      "source": "rss+research",
+      "duration": "00:30:37",
+      "durationSeconds": 1837,
+      "durationLabel": "30:37",
+      "tags": [
+        "AI Consulting",
+        "AI Readiness Assessment",
+        "Business Assessment",
+        "Warm Outreach",
+        "Pricing",
+        "Claude",
+        "MCP",
+        "Construction"
+      ],
+      "transcript": "",
+      "intelligence": [
+        {
+          "idea": "Paid AI Readiness Assessment as the front door for MarvelUs, with fee credited to a monthly support or automation retainer",
+          "ideaName": "Paid AI Readiness Assessment as the front door for MarvelUs, with fee credited to a monthly support or automation retainer",
+          "category": "AI Services / Business Assessment",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "1 to 2 weeks to package, first sale within a month",
+          "tools": [
+            "MarvelUs Business Assessment (AI Readiness) offer page on marvelus.cc",
+            "Staff bottleneck survey (Tally or Google Forms) that forces a 30-minute booking at the end",
+            "AI note taker for interviews",
+            "Claude or Grok Bot to turn interviews into a ranked opportunity deck (hours and dollars)",
+            "Guarantee: free if we cannot find 10+ hours a week"
+          ],
+          "toolsNeeded": [
+            "MarvelUs Business Assessment (AI Readiness) offer page on marvelus.cc",
+            "Staff bottleneck survey (Tally or Google Forms) that forces a 30-minute booking at the end",
+            "AI note taker for interviews",
+            "Claude or Grok Bot to turn interviews into a ranked opportunity deck (hours and dollars)",
+            "Guarantee: free if we cannot find 10+ hours a week"
+          ],
+          "revenue": "Assessment A$990 to A$2,500 depending on headcount, credited toward a A$1,500 to A$5,000/mo retainer for Melbourne SMBs (scaled down from their US$10k to US$25k mid-market tiers)",
+          "revenueFigures": [
+            "Episode: roughly US$1,000 paid assessment converted to US$15,000/month",
+            "Tiers US$10k / US$15k / US$25k per month, top tier as anchor",
+            "Free if under 10 hours a week of savings found"
+          ],
+          "insight": "This is the exact Business Assessment pillar already locked as one of the three equal MarvelUs offers, now with a proven sales mechanic: low-risk paid assessment, survey then interviews, ranked roadmap, then a retainer scoped from the findings. Okeito angle: position the assessment as the smart entry for bigger accounts, and let the roadmap naturally surface digital support and SEO as the first builds.",
+          "notes": "Start with Melbourne trades and construction firms in the A$5M to A$30M range, where admin like quoting and follow-ups eats hours. Keep house language (digital support, never Maya). Make the guarantee about hours found, not revenue promised.",
+          "matchScore": 9
+        },
+        {
+          "idea": "Ask-for-advice text and LinkedIn outreach to warm contacts to open AI Readiness conversations",
+          "ideaName": "Ask-for-advice text and LinkedIn outreach to warm contacts to open AI Readiness conversations",
+          "category": "Client Acquisition / Warm Outreach",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Days",
+          "tools": [
+            "Personal phone contacts and LinkedIn first-degree network",
+            "Short ask-for-advice message (not a pitch)",
+            "Grok Bot to list contacts who own or run businesses",
+            "Link (LinkedIn partner bot) for drafts, draft-then-approve"
+          ],
+          "toolsNeeded": [
+            "Personal phone contacts and LinkedIn first-degree network",
+            "Short ask-for-advice message (not a pitch)",
+            "Grok Bot to list contacts who own or run businesses",
+            "Link (LinkedIn partner bot) for drafts, draft-then-approve"
+          ],
+          "revenue": "One reply that turns into a paid assessment can fund the month; zero ad spend",
+          "revenueFigures": [
+            "Episode: texting every contact for advice led to a $30M company and a $15,000/month retainer",
+            "Second channel after iMessage was LinkedIn"
+          ],
+          "insight": "O finds cold outreach hard and wants warm leads. Asking owners for advice on an AI assessment idea is warm by design and invites them to self-select as buyers. Okeito angle: pair with the online networking events plan and LinkedIn one-to-one chats, where the referral offer and assessment can be raised privately.",
+          "notes": "Write one sample message for O to approve, then roll out. Never publish the referral offer; keep it one-to-one. Melbourne contacts first.",
+          "matchScore": 8
+        },
+        {
+          "idea": "Working Claude plus MCP demo built on the prospect's own workflow (for example quote or proposal drafting) as the closing asset",
+          "ideaName": "Working Claude plus MCP demo built on the prospect's own workflow (for example quote or proposal drafting) as the closing asset",
+          "category": "AI Automation / Sales Demo",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "1 to 2 weeks per vertical demo",
+          "tools": [
+            "Claude with MCP connectors",
+            "Composio for app integrations",
+            "Railway for hosting small services",
+            "Cursor cloud agents to build the demo",
+            "Prospect's real sample documents (with permission)"
+          ],
+          "toolsNeeded": [
+            "Claude with MCP connectors",
+            "Composio for app integrations",
+            "Railway for hosting small services",
+            "Cursor cloud agents to build the demo",
+            "Prospect's real sample documents (with permission)"
+          ],
+          "revenue": "Demo shortens the sales cycle and justifies a retainer; reusable per vertical (trades quoting, clinic intake, product-seller enquiries)",
+          "revenueFigures": [
+            "Episode: proposal process cut from about one hour to about five minutes"
+          ],
+          "insight": "A live before and after on the owner's own paperwork beats any deck. Okeito angle: O's UX and product background plus Grok Bot agents make fast vertical demos realistic; one Melbourne trades quoting demo can be reused across many assessments.",
+          "notes": "Build one reusable demo per niche already in the dig routines. Show time saved in minutes and dollars, matching the assessment roadmap.",
+          "matchScore": 7
+        },
+        {
+          "idea": "Three-tier retainer menu with a deliberate top-tier anchor for MarvelUs packages",
+          "ideaName": "Three-tier retainer menu with a deliberate top-tier anchor for MarvelUs packages",
+          "category": "Pricing Strategy",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Same week",
+          "tools": [
+            "Pricing page or proposal template on marvelus.cc",
+            "Tiers by build pace (one, two, three workflows in parallel) plus training and a monthly ROI dashboard"
+          ],
+          "toolsNeeded": [
+            "Pricing page or proposal template on marvelus.cc",
+            "Tiers by build pace (one, two, three workflows in parallel) plus training and a monthly ROI dashboard"
+          ],
+          "revenue": "Anchoring lifts the middle tier take-up; frame tiers by how many builds run at once rather than a feature list",
+          "revenueFigures": [
+            "Episode: US$10k / US$15k / US$25k with the top tier as an anchor",
+            "Public site: ongoing engagement from US$10,000/month"
+          ],
+          "insight": "Certified AI Partners sells one relationship at three depths, scoped from the assessment, not a menu of one-off automations. Okeito angle: map to the existing Found plus Answered and Full stack bundles, adding a top anchor tier with monthly on-site or video sessions.",
+          "notes": "Australian SMB price points will be much lower; test the structure, not the US numbers.",
+          "matchScore": 6
+        }
+      ]
+    },
+    {
       "id": "aad0a231-6858-45ba-b2c9-4854d97a1d15",
       "guid": "aad0a231-6858-45ba-b2c9-4854d97a1d15",
       "title": "6 Ways to Make Money With AI Agents Starting From Zero - Ep. #343",
@@ -11421,18 +11562,17 @@
   ],
   "feed": {
     "title": "The Koerner Office",
-    "updatedAt": "2026-10-13T23:58:55.000Z",
-    "lastBuilt": "2026-10-13T23:58:55Z"
+    "updatedAt": "2026-10-18T23:48:24.000Z",
+    "lastBuilt": "2026-10-18T23:48:24Z"
   },
   "intelligenceMeta": {
-    "processedEpisodes": 2,
-    "note": "RSS+research batch 343 AI agents six plays (Muse/Grokbot/Instinct) and 342 Justin Hall The Hall ATL event venue",
+    "processedEpisodes": 1,
+    "note": "RSS+research batch 344 Certified AI Partners (AI assessment to $15K/mo retainer). Feed now redirects to anchor.fm; 337 and 338 reappeared under new guids and were skipped as already processed.",
     "lastBatch": [
-      343,
-      342
+      344
     ],
-    "lastRunAt": "2026-10-13T23:58:55.000Z",
-    "lastUpdated": "2026-10-13T23:58:55.000Z",
-    "latestEpisode": 343
+    "lastRunAt": "2026-10-18T23:48:24.000Z",
+    "lastUpdated": "2026-10-18T23:48:24.000Z",
+    "latestEpisode": 344
   }
 }
