@@ -1,6 +1,121 @@
 {
   "episodes": [
     {
+      "id": "cd879380-f294-4487-9f23-4c2e9a9113fc",
+      "guid": "cd879380-f294-4487-9f23-4c2e9a9113fc",
+      "title": "The Most Hands-Off $150K Side Hustle Nobody Talks About - Ep. #346",
+      "date": "2026-10-23",
+      "publishDate": "2026-10-23",
+      "publishedAt": "2026-10-23T10:00:01.000Z",
+      "episodeNumber": 346,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/127945421/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-23%2F434809074-44100-2-282d92101f9bf.mp3",
+      "descriptionExcerpt": "Chris Koerner interviews Frey Chu on building simple niche directory websites with Claude Code: his thrift store directory hit about 90,000 monthly visitors and up to US$3,000/mo (about US$150K lifetime), how he vets low competition niches, monetises with ads, leads and subscriptions, and buys backlinks with a five sentence cold email.",
+      "description": "Check out my newsletter at https://TKOPOD.com and join my community at https://TKOwners.com --- I sat down with Frey Chu to talk about how he's building simple directory websites with AI and why they're still a great business opportunity. Frey shared how his first directory grew to 90,000 monthly visitors and made up to $3,000/month with very little ongoing work. We broke down how to find low-competition niches , build these websites using Claude Code , and monetize them through ads, leads, and subscriptions . He also shared his backlink strategy and walked me through real examples of directories getting thousands of visitors, showing there's still plenty of opportunity to make money with these simple websites. Find Frey on YouTube: https://www.youtube.com/@FreyChu Follow Frey on X: https://x.com/freychu Enjoy! --- Watch this on YouTube instead here: tkopod.co/p-yt Ask me a question on or off the show here: http://tkopod.co/p-ask Learn more about me: http://tkopod.co/p-cjk Follow me on Twitter here: http://tkopod.co/p-x Free weekly business ideas newsletter: http://tkopod.co/p-nl Share this podcast: http://tkopod.co/p-all Scrape small business data: http://tkopod.co/p-os ---",
+      "source": "rss+research",
+      "duration": "00:48:14",
+      "durationSeconds": 2894,
+      "durationLabel": "48:14",
+      "tags": [
+        "Directories",
+        "SEO",
+        "Claude Code",
+        "Rank-and-Rent",
+        "Lead Gen",
+        "Backlinks"
+      ],
+      "transcript": null,
+      "intelligence": [
+        {
+          "idea": "Turn the AI agent specialist directory into a Frey Chu style SEO directory: one tight keyword, scraped listings, ads plus paid featured spots plus lead fees",
+          "ideaName": "Turn the AI agent specialist directory into a Frey Chu style SEO directory: one tight keyword, scraped listings, ads plus paid featured spots plus lead fees",
+          "category": "Directory / SEO",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "2 to 4 weeks to retarget the existing Replit build at one keyword cluster and publish 50 to 100 listings; traffic in 3 to 6 months",
+          "tools": [
+            "Existing directory at tac-agent-expert-dir.replit.app",
+            "Ahrefs or similar to find a weak competitor directory (low DR, high traffic)",
+            "Claude Code or Cursor for build and data import",
+            "Supabase or Airtable listing database",
+            "Backlink outreach emails"
+          ],
+          "toolsNeeded": [
+            "Existing directory at tac-agent-expert-dir.replit.app",
+            "Ahrefs or similar to find a weak competitor directory (low DR, high traffic)",
+            "Claude Code or Cursor for build and data import",
+            "Supabase or Airtable listing database",
+            "Backlink outreach emails"
+          ],
+          "revenue": "Display ads at scale, plus A$49 to A$199/mo featured listings for agencies, plus per-lead fees for hiring enquiries",
+          "revenueFigures": [
+            "Frey's thrift store directory peaked near 90,000 monthly organic visitors and up to US$3,000/mo, about US$150K lifetime",
+            "About a dozen directories built, roughly 30% failure rate, about 7 getting thousands of visits a month",
+            "Example shown: a 3 month old directory already at 42,000 monthly organic visitors",
+            "A Claude Code subscription is all you really need"
+          ],
+          "insight": "Frey's vetting rule: find an existing directory that ranks with low domain rating and high traffic, then build a better, narrower version aimed at one keyword. Okeito angle: O already has the AI agent specialist directory live, so this is a validation and focus play, not a new build. Pick one searcher phrase (for example hire an AI voice agent developer, or AI receptionist setup Australia), make every listing page answer it, and let MarvelUs sit at the top as a featured listing so the directory doubles as a lead engine.",
+          "notes": "Run Frey's competitor check before adding features: if no weak directory ranks for the target phrase, narrow further (Melbourne, voice agents, or one industry). Listings that need hiring enquiries can route to the Nolostsales style capture flow.",
+          "matchScore": 8
+        },
+        {
+          "idea": "Local service lead gen directories in Melbourne niches nobody has built well (porta loo hire, skip bins, sandwich board printing) that sell leads to operators, a rank-and-rent variant",
+          "ideaName": "Local service lead gen directories in Melbourne niches nobody has built well (porta loo hire, skip bins, sandwich board printing) that sell leads to operators, a rank-and-rent variant",
+          "category": "Rank-and-Rent / Lead Gen",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "1 to 2 weeks per directory build; first leads in 2 to 4 months once pages index",
+          "tools": [
+            "Google Maps scrape of Melbourne operators",
+            "Claude Code for a list site with suburb pages",
+            "Call tracking number or form routed to operators",
+            "Backlink outreach"
+          ],
+          "toolsNeeded": [
+            "Google Maps scrape of Melbourne operators",
+            "Claude Code for a list site with suburb pages",
+            "Call tracking number or form routed to operators",
+            "Backlink outreach"
+          ],
+          "revenue": "A$20 to A$150 per lead or A$300 to A$1,000/mo per operator to own a suburb slot; occasional large commercial leads",
+          "revenueFigures": [
+            "Episode: a porta potty lead gen directory landed a US$20,000 lead while the homepage still had Lorem Ipsum on it"
+          ],
+          "insight": "A directory is a rank-and-rent site with many tenants instead of one, which lowers the risk of a single renter walking away. Okeito angle: the event and construction hire niches in Melbourne are fragmented and the leads are high value, and the same suburb page template can be reused across niches. Sandwich board and signage hire could seed one directory and feed the board business in flight.",
+          "notes": "Start with niches where one lead is worth A$1,000 plus to the operator. Validate demand with keyword volume for hire plus suburb before building.",
+          "matchScore": 7
+        },
+        {
+          "idea": "Productised backlink outreach service for Australian small business sites, using Frey's five sentence cold email to buy link inserts",
+          "ideaName": "Productised backlink outreach service for Australian small business sites, using Frey's five sentence cold email to buy link inserts",
+          "category": "SEO Services",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "1 week to set up templates and a prospect list; results visible in 1 to 3 months",
+          "tools": [
+            "Ahrefs to list sites linking to competitors",
+            "AgentMail or Gmail sequences",
+            "Grok Bot agent to draft and track outreach",
+            "Simple spreadsheet of placements and prices"
+          ],
+          "toolsNeeded": [
+            "Ahrefs to list sites linking to competitors",
+            "AgentMail or Gmail sequences",
+            "Grok Bot agent to draft and track outreach",
+            "Simple spreadsheet of placements and prices"
+          ],
+          "revenue": "A$500 to A$1,500/mo add on to the MarvelUs SEO retainer, with link costs passed through",
+          "revenueFigures": [
+            "Frey pays about US$50 to US$100 per link insert and has secured DR60 links for US$50 to US$75",
+            "About a 7% response rate on the cold email",
+            "Frey built software called Autobius to automate the outreach"
+          ],
+          "insight": "Backlinks are the part of SEO small businesses cannot do themselves, and the process is repetitive enough for an agent. Okeito angle: bolt this onto MarvelUs SEO clients and the rank-and-rent sites, with a Grok Bot agent running the prospect list and drafts while O approves sends.",
+          "notes": "Keep it to relevant, real sites and disclose to clients that links are paid placements. Any outreach sends go through O's approval.",
+          "matchScore": 6
+        }
+      ]
+    },
+    {
       "id": "b01969c1-fcb9-4b58-aab8-5fa00c2e7490",
       "guid": "b01969c1-fcb9-4b58-aab8-5fa00c2e7490",
       "title": "11 Proven Businesses My Listeners Started + How to Copy Them - Ep. #345",
@@ -11761,17 +11876,17 @@
   ],
   "feed": {
     "title": "The Koerner Office",
-    "updatedAt": "2026-10-20T23:53:02.000Z",
-    "lastBuilt": "2026-10-20T23:53:02Z"
+    "updatedAt": "2026-10-25T23:55:00.000Z",
+    "lastBuilt": "2026-10-25T23:55:00Z"
   },
   "intelligenceMeta": {
     "processedEpisodes": 1,
-    "note": "RSS+research batch 345 (11 listener businesses, transcript via podcastrex). 337 and 338 still appear under new anchor.fm guids and were skipped as already processed.",
+    "note": "RSS+research batch 346 (Frey Chu directories, summary via podcastrex). 337 and 338 still appear under new anchor.fm guids and were skipped as already processed.",
     "lastBatch": [
-      345
+      346
     ],
-    "lastRunAt": "2026-10-20T23:53:02.000Z",
-    "lastUpdated": "2026-10-20T23:53:02.000Z",
-    "latestEpisode": 345
+    "lastRunAt": "2026-10-25T23:55:00.000Z",
+    "lastUpdated": "2026-10-25T23:55:00.000Z",
+    "latestEpisode": 346
   }
 }
