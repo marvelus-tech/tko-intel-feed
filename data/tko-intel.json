@@ -1,6 +1,117 @@
 {
   "episodes": [
     {
+      "id": "37a25df9-cd0d-4d07-8fbd-e75767a1ef2a",
+      "guid": "37a25df9-cd0d-4d07-8fbd-e75767a1ef2a",
+      "title": "He's 60, Not a Tech Guy, and Makes $30K/Month With AI - Ep. #347",
+      "date": "2026-10-27",
+      "publishDate": "2026-10-27",
+      "publishedAt": "2026-10-27T10:00:01.000Z",
+      "episodeNumber": 347,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/128166481/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-9-27%2F435098760-44100-2-1c646ea767215.mp3",
+      "descriptionExcerpt": "Chris Koerner interviews Bob, a 60 year old non technical founder whose GoHighLevel based AI concierge business (chatbots and voice assistants for small businesses) reached about US$25K to US$30K/mo recurring in about a year, using free 30 day trials, personalised AI demos and lead value pricing.",
+      "description": "Check out my newsletter at https://TKOPOD.com and join my community at https://TKOwners.com --- I sat down with Bob , a 60-year-old entrepreneur who built an AI concierge business generating $25,000 to $30,000 per month in recurring revenue in about a year. We talked about how he uses GoHighLevel to build AI chatbots and voice assistants that help small businesses capture more leads, including one client who generated 50 leads for $13,000 engines in just one month. Bob broke down his entire business model, from finding clients and offering free 30-day trials to pricing his services based on the value of leads generated. We also got into his strategy for creating personalized AI demos that help close deals, why certain industries work better than others, and how anyone can start offering these services, even while working a full-time job. You can check out Bob's businesses at https://leadgrab.ai/ and https://intrycs.com/ Enjoy! --- Watch this on YouTube instead here: tkopod.co/p-yt Ask me a question on or off the show here: http://tkopod.co/p-ask Learn more about me: http://tkopod.co/p-cjk Follow me on Twitter here: http://tkopod.co/p-x Free weekly business ideas newsletter: http://tkopod.co/p-nl Share this podcast: http://tkopod.co/p-all Scrape small business data: http://tkopod.co/p-os ---",
+      "source": "rss+research",
+      "duration": "00:47:08",
+      "durationSeconds": 2828,
+      "durationLabel": "47:08",
+      "tags": [
+        "AI Agency",
+        "GoHighLevel",
+        "Voice AI",
+        "Chatbots",
+        "Lead Gen",
+        "Free Trial"
+      ],
+      "transcript": null,
+      "intelligence": [
+        {
+          "idea": "Copy Bob's GoHighLevel AI concierge playbook for MarvelUs: chatbot plus voice assistant, free 30 day trial, priced on the value of leads it captures",
+          "ideaName": "Copy Bob's GoHighLevel AI concierge playbook for MarvelUs: chatbot plus voice assistant, free 30 day trial, priced on the value of leads it captures",
+          "category": "AI Agency / Voice AI",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "1 to 2 weeks to package a GHL snapshot and trial offer; first retainers within 30 to 60 days of outreach",
+          "tools": [
+            "GoHighLevel (already connected for MarvelUs and Nolostsales)",
+            "GHL Conversation AI and Voice AI",
+            "Lead value calculator per niche",
+            "Cold email and Facebook prospecting bots"
+          ],
+          "toolsNeeded": [
+            "GoHighLevel (already connected for MarvelUs and Nolostsales)",
+            "GHL Conversation AI and Voice AI",
+            "Lead value calculator per niche",
+            "Cold email and Facebook prospecting bots"
+          ],
+          "revenue": "Monthly retainer priced off lead value, for example A$300 to A$1,500/mo per client once the trial proves leads",
+          "revenueFigures": [
+            "Bob's AI concierge business reached about US$25K to US$30K/mo recurring revenue in about a year",
+            "One client generated 50 leads for US$13,000 engines in a single month",
+            "Sells with free 30 day trials and personalised AI demos; pricing tied to the value of leads generated"
+          ],
+          "insight": "Okeito angle: this is almost exactly the MarvelUs model already in flight (Skadr free 30 day chatbot trial, Certified AI Partners retainer research). Bob's proof point is that pricing on lead value, not features, is what gets to US$25K+/mo. Rebuild the MarvelUs offer sheet so every proposal opens with what one captured lead is worth to that business.",
+          "notes": "Validate by pulling the YouTube transcript for Bob's exact trial terms, demo script and best industries before rewriting the MarvelUs outreach script. Prefer high ticket per lead niches (engines, machinery, trades, car hire) in Melbourne first.",
+          "matchScore": 9
+        },
+        {
+          "idea": "Personalised AI demo before the first call: scrape a prospect's site, spin up a GHL bot trained on it, and send a recorded or live demo link",
+          "ideaName": "Personalised AI demo before the first call: scrape a prospect's site, spin up a GHL bot trained on it, and send a recorded or live demo link",
+          "category": "Sales Process / AI Demo",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "A few days to build a repeatable demo template; then about 15 to 30 minutes per prospect",
+          "tools": [
+            "GoHighLevel snapshot",
+            "Firecrawl or site scraper to load the prospect's FAQ and services",
+            "Loom or a demo phone number",
+            "Grok Bot agents to batch the demos"
+          ],
+          "toolsNeeded": [
+            "GoHighLevel snapshot",
+            "Firecrawl or site scraper to load the prospect's FAQ and services",
+            "Loom or a demo phone number",
+            "Grok Bot agents to batch the demos"
+          ],
+          "revenue": "Lifts close rate on the existing trial pipeline; no direct revenue on its own",
+          "revenueFigures": [
+            "Bob credits personalised AI demos with helping close deals (per episode description)"
+          ],
+          "insight": "Okeito angle: O's Email 1 rule keeps solution detail out of the cold email, so the personalised demo is the perfect second touch or call asset. Grok Bot agents can prebuild demos for the weekly chatbot trial prospect list so O shows up to a 10 minute chat with a working bot already trained on their business.",
+          "notes": "Start with the Thursday chatbot trial prospect batch: build 3 demos and track reply to call to trial conversion against the plain email.",
+          "matchScore": 8
+        },
+        {
+          "idea": "Productised AI concierge for one high ticket local vertical in Melbourne (machinery, engines, car hire, trades) sold as a lead capture front desk",
+          "ideaName": "Productised AI concierge for one high ticket local vertical in Melbourne (machinery, engines, car hire, trades) sold as a lead capture front desk",
+          "category": "Vertical SaaS / Lead Gen",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "2 to 4 weeks to build the vertical snapshot, scripts and case study; 1 to 3 months to land 5 clients",
+          "tools": [
+            "GoHighLevel",
+            "Voice AI number",
+            "Niche lead value benchmarks",
+            "Case study page on MarvelUs site"
+          ],
+          "toolsNeeded": [
+            "GoHighLevel",
+            "Voice AI number",
+            "Niche lead value benchmarks",
+            "Case study page on MarvelUs site"
+          ],
+          "revenue": "Per client retainer plus optional per lead bonus; one vertical case study can be resold across the whole niche",
+          "revenueFigures": [
+            "Example from the episode: 50 leads in one month for a business selling US$13,000 engines",
+            "Bob says certain industries work better than others (high value per lead)"
+          ],
+          "insight": "Okeito angle: picking one vertical lets MarvelUs reuse one snapshot, one demo and one case study, which is how a part time operator like Bob scaled. Car hire fits since O already has Melb-Car-Hire relationships via METASKER; the Hear Me Out voice line can share the same GHL voice stack.",
+          "notes": "Pick the vertical where one lead is worth A$1,000+ and calls go unanswered after hours; LeadGrab.ai's own vertical list (HVAC, plumbing, dental, auto repair, contractors, insurance, material handling) is a useful shortlist to localise.",
+          "matchScore": 7
+        }
+      ]
+    },
+    {
       "id": "cd879380-f294-4487-9f23-4c2e9a9113fc",
       "guid": "cd879380-f294-4487-9f23-4c2e9a9113fc",
       "title": "The Most Hands-Off $150K Side Hustle Nobody Talks About - Ep. #346",
@@ -11876,17 +11987,17 @@
   ],
   "feed": {
     "title": "The Koerner Office",
-    "updatedAt": "2026-10-25T23:55:00.000Z",
-    "lastBuilt": "2026-10-25T23:55:00Z"
+    "updatedAt": "2026-10-27T23:55:00.000Z",
+    "lastBuilt": "2026-10-27T23:55:00Z"
   },
   "intelligenceMeta": {
     "processedEpisodes": 1,
-    "note": "RSS+research batch 346 (Frey Chu directories, summary via podcastrex). 337 and 338 still appear under new anchor.fm guids and were skipped as already processed.",
+    "note": "RSS+research batch 347 (Bob, GoHighLevel AI concierge, leadgrab.ai). 337 and 338 still appear under new anchor.fm guids and were skipped as already processed.",
     "lastBatch": [
-      346
+      347
     ],
-    "lastRunAt": "2026-10-25T23:55:00.000Z",
-    "lastUpdated": "2026-10-25T23:55:00.000Z",
-    "latestEpisode": 346
+    "lastRunAt": "2026-10-27T23:55:00.000Z",
+    "lastUpdated": "2026-10-27T23:55:00.000Z",
+    "latestEpisode": 347
   }
 }
