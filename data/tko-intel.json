@@ -1,6 +1,182 @@
 {
   "episodes": [
     {
+      "id": "3ea76088-f0b8-4612-bab4-c38820edf2ae",
+      "guid": "3ea76088-f0b8-4612-bab4-c38820edf2ae",
+      "title": "$100K in the First 2 Months From a Business Anyone Can Start - Ep. #349",
+      "date": "2026-11-03",
+      "publishDate": "2026-11-03",
+      "publishedAt": "2026-11-03T11:00:01.000Z",
+      "episodeNumber": 349,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/128669699/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-10-3%2F435740544-44100-2-e59ffbb129f97.mp3",
+      "descriptionExcerpt": "Nico Moreno started a free online group (Skool) about 60 days ago. About 250 people joined, roughly a dozen bought, close to US$100K in sales with no ads and no sales calls. He shares the poll that finds ready buyers, the welcome message for new members and the DMs used to close US$15K deals. Cost to start: US$9.",
+      "description": "Nico Moreno started a free online group about 60 days ago. Around 250 people joined, only about a dozen have bought anything, and it's been close to $100K. He doesn't run ads, and he never gets on a sales call. He walks through the poll he uses to find who's ready to buy, the welcome message he sends every new member, and the exact DMs he uses to close $15K deals. Most of his clients sell fitness, mindset or whatever they already know. It cost him $9 to start.",
+      "source": "rss+research",
+      "duration": "00:39:36",
+      "durationSeconds": 2376,
+      "durationLabel": "39:36",
+      "tags": [
+        "Skool",
+        "Community",
+        "High Ticket",
+        "DM Sales",
+        "Coaching"
+      ],
+      "transcript": null,
+      "intelligence": [
+        {
+          "idea": "Run a free Skool group for Melbourne and Australian small business owners on getting customers with AI (chatbots, voice, local SEO), use a ready to buy poll and welcome DM flow, and sell a high ticket MarvelUs done for you package inside the DMs",
+          "ideaName": "Run a free Skool group for Melbourne and Australian small business owners on getting customers with AI (chatbots, voice, local SEO), use a ready to buy poll and welcome DM flow, and sell a high ticket MarvelUs done for you package inside the DMs",
+          "category": "Community / High Ticket Funnel",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Group live in 2 days (about US$9 to start); first DM conversations in 2 to 4 weeks; first deal in 30 to 60 days",
+          "tools": [
+            "Skool free group",
+            "Ready to buy poll",
+            "Welcome DM script",
+            "MarvelUs offer sheet and GoHighLevel snapshot",
+            "Existing Facebook and LinkedIn outreach bots to feed the group"
+          ],
+          "toolsNeeded": [
+            "Skool free group",
+            "Ready to buy poll",
+            "Welcome DM script",
+            "MarvelUs offer sheet and GoHighLevel snapshot",
+            "Existing Facebook and LinkedIn outreach bots to feed the group"
+          ],
+          "revenue": "One close at A$3K to A$15K per client (setup plus retainer); Nico's pattern is roughly 1 buyer per 20 members",
+          "revenueFigures": [
+            "About 250 members joined a free group in about 60 days",
+            "Roughly 12 buyers, close to US$100K total",
+            "No ads, no sales calls, DM closes of about US$15K each",
+            "Cost to start: US$9"
+          ],
+          "insight": "Okeito angle: the audience is the product. A free group titled around getting enquiries for Melbourne trades and shops gives MarvelUs and Nolostsales a warm pool to run the poll on, instead of cold emailing. Fits the soft share Facebook group work already built and uses the same chatbot trial offer as the close.",
+          "notes": "Validate by watching the YouTube version for the poll wording and DM script. Test Australian price points (A$3K to A$8K) before copying US$15K. Check Skool pricing and free tier limits before committing.",
+          "matchScore": 8
+        },
+        {
+          "idea": "Sell a Skool launch setup service for local experts (fitness, mindset, trades trainers) in Melbourne: build their free group, poll, welcome message and DM closing flow for a flat fee",
+          "ideaName": "Sell a Skool launch setup service for local experts (fitness, mindset, trades trainers) in Melbourne: build their free group, poll, welcome message and DM closing flow for a flat fee",
+          "category": "Productised Service / Community Setup",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "2 to 3 weeks to build a template, first client in 30 days",
+          "tools": [
+            "Skool",
+            "Group template and poll copy",
+            "Welcome message and DM scripts",
+            "Facebook group outreach"
+          ],
+          "toolsNeeded": [
+            "Skool",
+            "Group template and poll copy",
+            "Welcome message and DM scripts",
+            "Facebook group outreach"
+          ],
+          "revenue": "A$1,500 to A$3,000 setup plus A$300 to A$500/mo for management",
+          "revenueFigures": [
+            "Nico's clients sell what they already know, so any expert is a buyer",
+            "Group start cost about US$9"
+          ],
+          "insight": "Okeito angle: a lower risk way to ride the same model by selling the setup to experts rather than running the group yourself. Pairs with UX and branding skills.",
+          "notes": "Check whether the show says Nico himself sells this as a service. Local expert demand in Melbourne is unproven.",
+          "matchScore": 6
+        },
+        {
+          "idea": "Turn the ready to buy poll into a reusable lead qualifier on Nolostsales and MarvelUs sites: one question poll that routes warm leads to a DM close",
+          "ideaName": "Turn the ready to buy poll into a reusable lead qualifier on Nolostsales and MarvelUs sites: one question poll that routes warm leads to a DM close",
+          "category": "Lead Qualification",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "1 week",
+          "tools": "Typeform or GoHighLevel survey, Facebook group polls",
+          "toolsNeeded": "Typeform or GoHighLevel survey, Facebook group polls",
+          "revenue": "Indirect: lifts close rate on existing leads",
+          "revenueFigures": [
+            "Poll surfaces the dozen buyers out of about 250 members"
+          ],
+          "insight": "Okeito angle: cheap tweak for the rank and rent sites and the sandwich board QR landing pages, so you only chase the people who raise a hand.",
+          "notes": "Low standalone value, use as a sub tactic of the group play.",
+          "matchScore": 5
+        }
+      ]
+    },
+    {
+      "id": "bbff5ca4-831f-44ed-8099-05555877afba",
+      "guid": "bbff5ca4-831f-44ed-8099-05555877afba",
+      "title": "Anyone Can Start This $18K/Month Business With a Phone - Ep. #348",
+      "date": "2026-10-30",
+      "publishDate": "2026-10-30",
+      "publishedAt": "2026-10-30T10:00:01.000Z",
+      "episodeNumber": 348,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/128416213/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-10-2%2F435674405-44100-2-9e380294acf4c.mp3",
+      "descriptionExcerpt": "James quit his nonprofit job with no clients, and 16 months later about 60 local businesses pay him monthly. Last month he made US$18,000 from about five phone calls a day to leads found in local Facebook groups. He shares his opener, a 30 second research checklist, what he sells and charges, and the call math.",
+      "description": "James quit his nonprofit job with zero clients and zero revenue. Sixteen months later, almost 60 local businesses pay him every month, and last month he did $18,000, all from about five phone calls a day to leads he finds in local Facebook groups. He shares his exact opener, his 30 second research checklist, what he sells and charges, and the math on how five calls a day turns into a real business.",
+      "source": "rss+research",
+      "duration": "00:42:38",
+      "durationSeconds": 2558,
+      "durationLabel": "42:38",
+      "tags": [
+        "Cold Calling",
+        "Local Business",
+        "Facebook Groups",
+        "Recurring Revenue"
+      ],
+      "transcript": null,
+      "intelligence": [
+        {
+          "idea": "Run five calls a day to Melbourne small businesses found through local Facebook groups, using a 30 second research checklist and a short opener, and sell a monthly service (MarvelUs chatbot and voice, or Nolostsales)",
+          "ideaName": "Run five calls a day to Melbourne small businesses found through local Facebook groups, using a 30 second research checklist and a short opener, and sell a monthly service (MarvelUs chatbot and voice, or Nolostsales)",
+          "category": "Cold Calling / Local Services",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "1 week to script, first sales in 2 to 4 weeks, about 60 clients by month 16 at the pace James reached",
+          "tools": [
+            "Phone or Aircall",
+            "Facebook group scraping from existing bots",
+            "30 second research checklist",
+            "MarvelUs trial offer",
+            "GoHighLevel"
+          ],
+          "toolsNeeded": [
+            "Phone or Aircall",
+            "Facebook group scraping from existing bots",
+            "30 second research checklist",
+            "MarvelUs trial offer",
+            "GoHighLevel"
+          ],
+          "revenue": "US$18K in one month at about 60 paying local clients, so roughly US$300 average per client per month",
+          "revenueFigures": [
+            "About 60 local businesses paying monthly after 16 months",
+            "US$18,000 in the last month",
+            "About 5 calls a day, started with zero clients and zero revenue"
+          ],
+          "insight": "Okeito angle: your outreach has been email and Facebook; a short daily call block to warm leads already found by Riri and the Facebook watch routines adds a channel that most competitors skip. Calls to Melbourne shops fit the English handling and chatbot trial lists already being dug.",
+          "notes": "The blurb does not say what James sells; confirm from his YouTube channel (coolcalling) before copying the offer. Check Australian cold call rules (Do Not Call Register applies to consumers; B2B calls are generally allowed but confirm) before starting.",
+          "matchScore": 8
+        },
+        {
+          "idea": "Build a call ready lead sheet service: sell Melbourne agencies and tradies a weekly list of local businesses with a 30 second research note and opener for each",
+          "ideaName": "Build a call ready lead sheet service: sell Melbourne agencies and tradies a weekly list of local businesses with a 30 second research note and opener for each",
+          "category": "Lead List Service",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "2 weeks",
+          "tools": "Existing Riri dig pipeline, Google Sheets",
+          "toolsNeeded": "Existing Riri dig pipeline, Google Sheets",
+          "revenue": "A$200 to A$500/mo per subscriber",
+          "revenueFigures": [
+            "Five calls a day was enough for about 60 clients"
+          ],
+          "insight": "Okeito angle: Riri's digs already produce this data; packaging it with an opener per lead is a quick extra product.",
+          "notes": "Demand unproven; treat as a side product of the calling play.",
+          "matchScore": 6
+        }
+      ]
+    },
+    {
       "id": "37a25df9-cd0d-4d07-8fbd-e75767a1ef2a",
       "guid": "37a25df9-cd0d-4d07-8fbd-e75767a1ef2a",
       "title": "He's 60, Not a Tech Guy, and Makes $30K/Month With AI - Ep. #347",
@@ -11987,17 +12163,18 @@
   ],
   "feed": {
     "title": "The Koerner Office",
-    "updatedAt": "2026-10-27T23:55:00.000Z",
-    "lastBuilt": "2026-10-27T23:55:00Z"
+    "updatedAt": "2026-11-04T00:00:00Z",
+    "lastBuilt": "2026-11-04T00:00:00Z"
   },
   "intelligenceMeta": {
-    "processedEpisodes": 1,
-    "note": "RSS+research batch 347 (Bob, GoHighLevel AI concierge, leadgrab.ai). 337 and 338 still appear under new anchor.fm guids and were skipped as already processed.",
+    "processedEpisodes": 3,
+    "note": "RSS+research batch 349 (Nico Moreno, free Skool group, US$100K in 2 months) and 348 (James, local cold calling, US$18K/mo). Blurb based cards; validate against YouTube.",
     "lastBatch": [
-      347
+      349,
+      348
     ],
-    "lastRunAt": "2026-10-27T23:55:00.000Z",
-    "lastUpdated": "2026-10-27T23:55:00.000Z",
-    "latestEpisode": 347
+    "lastRunAt": "2026-11-04T00:00:00.000Z",
+    "lastUpdated": "2026-11-04T00:00:00.000Z",
+    "latestEpisode": 349
   }
 }
