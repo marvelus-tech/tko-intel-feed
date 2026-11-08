@@ -1,6 +1,125 @@
 {
   "episodes": [
     {
+      "id": "756d5f2f-fb89-40c6-9bcc-394ada47f0df",
+      "guid": "756d5f2f-fb89-40c6-9bcc-394ada47f0df",
+      "title": "AI Replaced My Ad Guy in 20 Minutes. You Can Sell It. - Ep. #350",
+      "date": "2026-11-06",
+      "publishDate": "2026-11-06",
+      "publishedAt": "2026-11-06T11:00:01.000Z",
+      "episodeNumber": 350,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/128903908/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-10-6%2F436035287-44100-2-a1e11262d30f1.mp3",
+      "descriptionExcerpt": "Chris stopped paying a person to run his newsletter Facebook ads and handed the account to an AI agent with a one sentence prompt. Within about two days it beat his ad guy: US$1.62 per subscriber and over 2,000 subscribers in two weeks, without him opening Ads Manager. It caught broken tracking that",
+      "description": "Chris stopped paying a person to run his newsletter Facebook ads and handed the account to an AI agent with a one sentence prompt. Within about two days it beat his ad guy: US$1.62 per subscriber and over 2,000 subscribers in two weeks, without him opening Ads Manager. It caught broken tracking that had been wasting money for months. He shares five ways to copy it for under US$100, how to sell it as a service to local companies, and US$71,600 in sales proving the cheap leads buy.",
+      "source": "rss+research",
+      "duration": "00:30:42",
+      "durationSeconds": 1842,
+      "durationLabel": "30:42",
+      "tags": [
+        "AI Agents",
+        "Facebook Ads",
+        "Newsletter",
+        "Local Business",
+        "Ads Agency"
+      ],
+      "transcript": null,
+      "intelligence": [
+        {
+          "idea": "Sell an AI run Facebook ads service to Melbourne local businesses: audit their Meta account, fix broken tracking and pixel attribution, relaunch their past best ads with an AI ad agent, and send a daily plain English report, priced as a flat monthly fee well under an agency retainer",
+          "ideaName": "Sell an AI run Facebook ads service to Melbourne local businesses: audit their Meta account, fix broken tracking and pixel attribution, relaunch their past best ads with an AI ad agent, and send a daily plain English report, priced as a flat monthly fee well under an agency retainer",
+          "category": "AI Ads Management Service",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Audit offer ready in 3 days; first 2 to 3 Melbourne clients in 2 to 4 weeks",
+          "tools": [
+            "AI agent connected to Meta Ads (Claude or similar via API or MCP)",
+            "Meta Ads Manager access from the client",
+            "Pixel and conversion API checker",
+            "Daily report template",
+            "MarvelUs offer sheet"
+          ],
+          "toolsNeeded": [
+            "AI agent connected to Meta Ads (Claude or similar via API or MCP)",
+            "Meta Ads Manager access from the client",
+            "Pixel and conversion API checker",
+            "Daily report template",
+            "MarvelUs offer sheet"
+          ],
+          "revenue": "A$500 to A$1,500 per client per month plus a A$300 to A$500 tracking fix audit; 10 clients is A$5K to A$15K MRR",
+          "revenueFigures": [
+            "US$1.62 per newsletter subscriber after the AI agent took over",
+            "Over 2,000 subscribers added in two weeks",
+            "Agency was charging US$200 to US$600 per booked call before",
+            "US$71,600 in sales traced to the cheap leads",
+            "Five copy methods for under US$100"
+          ],
+          "insight": "Strong fit for MarvelUs: same Melbourne local business buyers as the voice and SEO offers, and the tracking audit is a natural door opener. Bundle it with the AI voice receptionist so ad leads get answered instantly, which is the Nolostsales story end to end.",
+          "notes": "Strong fit for MarvelUs: same Melbourne local business buyers as the voice and SEO offers, and the tracking audit is a natural door opener. Bundle it with the AI voice receptionist so ad leads get answered instantly, which is the Nolostsales story end to end.",
+          "matchScore": 8
+        },
+        {
+          "idea": "Lead with a free Facebook ad tracking audit for Australian small businesses already spending on Meta: find broken pixels, double counted conversions and wasted spend, then upsell the AI managed ads plus MarvelUs AI voice follow up",
+          "ideaName": "Lead with a free Facebook ad tracking audit for Australian small businesses already spending on Meta: find broken pixels, double counted conversions and wasted spend, then upsell the AI managed ads plus MarvelUs AI voice follow up",
+          "category": "Audit Lead Magnet",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Audit checklist in 1 day; outreach through existing Riri and Mara prospect lists this week",
+          "tools": [
+            "Meta Ad Library to spot local advertisers",
+            "AI agent audit prompt",
+            "Loom or PDF audit report",
+            "Existing cold email structure (Email 1 pain hook)"
+          ],
+          "toolsNeeded": [
+            "Meta Ad Library to spot local advertisers",
+            "AI agent audit prompt",
+            "Loom or PDF audit report",
+            "Existing cold email structure (Email 1 pain hook)"
+          ],
+          "revenue": "Audit converts to A$500+/mo ads clients or MarvelUs voice and chatbot packages",
+          "revenueFigures": [
+            "US$1.62 per newsletter subscriber after the AI agent took over",
+            "Over 2,000 subscribers added in two weeks",
+            "Agency was charging US$200 to US$600 per booked call before",
+            "US$71,600 in sales traced to the cheap leads",
+            "Five copy methods for under US$100"
+          ],
+          "insight": "Chris's real problem was months of spend with no idea what it bought. That pain is easy to verify from the Meta Ad Library and fits O's Email 1 structure: verified compliment, concrete lost money, ask for a 10 minute chat.",
+          "notes": "Chris's real problem was months of spend with no idea what it bought. That pain is easy to verify from the Meta Ad Library and fits O's Email 1 structure: verified compliment, concrete lost money, ask for a 10 minute chat.",
+          "matchScore": 7
+        },
+        {
+          "idea": "Use an AI ad agent on a small budget to grow lists for O's own projects (Nolostsales, rank and rent sites, sandwich board hosts, Grok Bot agent offers) and test cost per lead before selling the service",
+          "ideaName": "Use an AI ad agent on a small budget to grow lists for O's own projects (Nolostsales, rank and rent sites, sandwich board hosts, Grok Bot agent offers) and test cost per lead before selling the service",
+          "category": "Internal Growth Test",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Test live in 2 days at A$20 to A$50 per day; read results in 1 to 2 weeks",
+          "tools": [
+            "AI agent connected to Meta Ads",
+            "Landing page on Replit",
+            "Lead form or newsletter signup"
+          ],
+          "toolsNeeded": [
+            "AI agent connected to Meta Ads",
+            "Landing page on Replit",
+            "Lead form or newsletter signup"
+          ],
+          "revenue": "Proof case study and cheap leads; budget under A$100 matches Chris's copy for under US$100 claim",
+          "revenueFigures": [
+            "US$1.62 per newsletter subscriber after the AI agent took over",
+            "Over 2,000 subscribers added in two weeks",
+            "Agency was charging US$200 to US$600 per booked call before",
+            "US$71,600 in sales traced to the cheap leads",
+            "Five copy methods for under US$100"
+          ],
+          "insight": "Running it on O's own offers first gives a real Australian cost per lead number to quote in outreach, instead of borrowing Chris's US figures.",
+          "notes": "Running it on O's own offers first gives a real Australian cost per lead number to quote in outreach, instead of borrowing Chris's US figures.",
+          "matchScore": 6
+        }
+      ]
+    },
+    {
       "id": "3ea76088-f0b8-4612-bab4-c38820edf2ae",
       "guid": "3ea76088-f0b8-4612-bab4-c38820edf2ae",
       "title": "$100K in the First 2 Months From a Business Anyone Can Start - Ep. #349",
