@@ -1,6 +1,93 @@
 {
   "episodes": [
     {
+      "id": "0ddf81b5-de23-496d-97df-3676e716ac0d",
+      "guid": "0ddf81b5-de23-496d-97df-3676e716ac0d",
+      "title": "He Copied My Episode With $70. Now He Does $15K/Month - Ep. #351",
+      "date": "2026-11-10",
+      "publishDate": "2026-11-10",
+      "publishedAt": "2026-11-10T11:00:01.000Z",
+      "episodeNumber": 351,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/129182115/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-10-10%2F436393322-44100-2-d83e5ef8ea5fa.mp3",
+      "descriptionExcerpt": "JV heard the Mindy episode, bid US$70 on 7 pallets of school books from a government surplus auction as a joke, and won. Three weeks later he quit his job. Four months into selling on TikTok Live he does about US$15K a month in sales from his parents' garage. He covers a 2 AM Facebook post that sold",
+      "description": "JV heard the Mindy episode, bid US$70 on 7 pallets of school books from a government surplus auction as a joke, and won. Three weeks later he quit his job. Four months into selling on TikTok Live he does about US$15K a month in sales from his parents' garage. He covers a 2 AM Facebook post that sold out the books, a garage sale ad trick that ranked number one in his city, and turning a US$2,000 grocery pallet into US$6,000 in a week. Sources: Public Surplus, GovDeals, B-Stock, Media Mail shipping.",
+      "source": "rss+research",
+      "duration": "01:09:20",
+      "durationSeconds": 4160,
+      "durationLabel": "69:20",
+      "tags": [
+        "Liquidation",
+        "Government Surplus",
+        "TikTok Live",
+        "Reselling",
+        "Facebook Marketplace"
+      ],
+      "transcript": null,
+      "intelligence": [
+        {
+          "idea": "Run a weekend liquidation flip from Melbourne: buy cheap lots on GraysOnline, Pickles and council or government disposal auctions, then sell through Facebook Marketplace posts and a weekly Footscray garage sale, testing TikTok Live once there is stock",
+          "ideaName": "Run a weekend liquidation flip from Melbourne: buy cheap lots on GraysOnline, Pickles and council or government disposal auctions, then sell through Facebook Marketplace posts and a weekly Footscray garage sale, testing TikTok Live once there is stock",
+          "category": "Liquidation Reselling",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "First lot within 1 week; first sell through in 2 to 3 weeks",
+          "tools": [
+            "GraysOnline and Pickles accounts",
+            "Council and state government disposal auction alerts",
+            "Facebook Marketplace",
+            "TikTok Live",
+            "Garage or storage space",
+            "Australia Post or Sendle for shipping"
+          ],
+          "toolsNeeded": [
+            "GraysOnline and Pickles accounts",
+            "Council and state government disposal auction alerts",
+            "Facebook Marketplace",
+            "TikTok Live",
+            "Garage or storage space",
+            "Australia Post or Sendle for shipping"
+          ],
+          "revenue": "Small test lots of A$100 to A$500; target 2x to 3x resale, so A$1K to A$3K a month part time before scaling",
+          "revenueFigures": [
+            "US$70 for 7 pallets of school books",
+            "About US$15K a month in sales after 4 months on TikTok Live",
+            "US$2,000 grocery pallet turned into US$6,000 in a week",
+            "Quit his job 3 weeks after the first win"
+          ],
+          "insight": "Real cash play but it is physical, storage and labour heavy, so it fits Bizzy more than Biz. Low cash risk if lots stay small. The garage sale ad trick and 2 AM Facebook post are the transferable lessons for any local offer O runs.",
+          "notes": "Real cash play but it is physical, storage and labour heavy, so it fits Bizzy more than Biz. Low cash risk if lots stay small. The garage sale ad trick and 2 AM Facebook post are the transferable lessons for any local offer O runs.",
+          "matchScore": 5
+        },
+        {
+          "idea": "Build a simple surplus auction alert agent: a Grok Bot routine that watches GraysOnline, Pickles and Australian government disposal listings for underpriced lots in chosen categories and sends a daily shortlist with estimated resale value",
+          "ideaName": "Build a simple surplus auction alert agent: a Grok Bot routine that watches GraysOnline, Pickles and Australian government disposal listings for underpriced lots in chosen categories and sends a daily shortlist with estimated resale value",
+          "category": "AI Sourcing Agent",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Prototype in 1 to 2 weeks",
+          "tools": [
+            "Grok Bot routine",
+            "Scraper or saved search alerts",
+            "eBay sold listings for price checks",
+            "Daily digest email"
+          ],
+          "toolsNeeded": [
+            "Grok Bot routine",
+            "Scraper or saved search alerts",
+            "eBay sold listings for price checks",
+            "Daily digest email"
+          ],
+          "revenue": "Internal edge first; later a A$15 to A$30 a month alert subscription for local resellers",
+          "revenueFigures": [
+            "Episode shows sourcing price is the whole margin: US$70 lot, US$15K a month sales"
+          ],
+          "insight": "Plays to O's agent stack rather than garage labour. Worth it only if O or Bizzy actually flips; otherwise a small niche SaaS test.",
+          "notes": "Plays to O's agent stack rather than garage labour. Worth it only if O or Bizzy actually flips; otherwise a small niche SaaS test.",
+          "matchScore": 4
+        }
+      ]
+    },
+    {
       "id": "756d5f2f-fb89-40c6-9bcc-394ada47f0df",
       "guid": "756d5f2f-fb89-40c6-9bcc-394ada47f0df",
       "title": "AI Replaced My Ad Guy in 20 Minutes. You Can Sell It. - Ep. #350",
@@ -1851,6 +1938,90 @@
       ]
     },
     {
+      "id": "af650508-a1b8-4c52-ab67-f2a671c74c7e",
+      "guid": "af650508-a1b8-4c52-ab67-f2a671c74c7e",
+      "title": "He Made $27K Last Month Connecting Contractors - Ep. #338",
+      "date": "2026-09-25",
+      "publishDate": "2026-09-25",
+      "publishedAt": "2026-09-25T10:00:00.000Z",
+      "episodeNumber": 338,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/126289481/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-8-25%2F432644730-44100-2-a93f80af03cbe.mp3",
+      "descriptionExcerpt": "Aaron Fooks, founder of Hytros, makes money connecting local businesses with each other: US$27K in a month. He went from charging US$150 per introduction to selling US$6,000 referral packages, finds opportunities with cold calls and texts, and argues relationships beat selling raw leads. Examples in",
+      "description": "Aaron Fooks, founder of Hytros, makes money connecting local businesses with each other: US$27K in a month. He went from charging US$150 per introduction to selling US$6,000 referral packages, finds opportunities with cold calls and texts, and argues relationships beat selling raw leads. Examples include painters, electricians and landscapers landing jobs through the connections.",
+      "source": "rss+research",
+      "duration": "00:36:17",
+      "durationSeconds": 2177,
+      "durationLabel": "36:17",
+      "tags": [
+        "Referral Business",
+        "Home Services",
+        "Cold Calling",
+        "Local Business",
+        "Lead Generation"
+      ],
+      "transcript": null,
+      "intelligence": [
+        {
+          "idea": "Start a Melbourne trades referral desk: cold call and text builders, real estate agents, property managers and strata managers to find jobs they need done, then introduce vetted painters, electricians and landscapers for a per intro fee, moving to paid monthly referral packages",
+          "ideaName": "Start a Melbourne trades referral desk: cold call and text builders, real estate agents, property managers and strata managers to find jobs they need done, then introduce vetted painters, electricians and landscapers for a per intro fee, moving to paid monthly referral packages",
+          "category": "Local Referral Brokerage",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "First intros in 1 to 2 weeks; first package sale in 4 to 6 weeks",
+          "tools": [
+            "Trade and agent contact list (scraped from Google Maps)",
+            "Cold call and SMS script",
+            "HighLevel pipeline (Nolostsales account)",
+            "Simple intro agreement",
+            "AI voice agent for follow ups"
+          ],
+          "toolsNeeded": [
+            "Trade and agent contact list (scraped from Google Maps)",
+            "Cold call and SMS script",
+            "HighLevel pipeline (Nolostsales account)",
+            "Simple intro agreement",
+            "AI voice agent for follow ups"
+          ],
+          "revenue": "A$150 to A$300 per qualified intro; A$1,500 to A$5,000 referral packages; 5 active trades on packages is roughly A$7.5K to A$25K",
+          "revenueFigures": [
+            "US$27K in one month",
+            "Went from US$150 per introduction to US$6,000 referral packages",
+            "Painters, electricians and landscapers are the core buyers"
+          ],
+          "insight": "Strong fit: same trade buyers as rank and rent and Nolostsales, and it can run on the HighLevel plus AI voice stack O already has. Doubles as a way to pre sell rank and rent leads in a city before ranking a site. Check Australian rules on referral fees for real estate agents before paying them.",
+          "notes": "Strong fit: same trade buyers as rank and rent and Nolostsales, and it can run on the HighLevel plus AI voice stack O already has. Doubles as a way to pre sell rank and rent leads in a city before ranking a site. Check Australian rules on referral fees for real estate agents before paying them.",
+          "matchScore": 7
+        },
+        {
+          "idea": "Offer rank and rent buyers a referral package instead of a site: once a MarvelUs R&R site starts producing calls, sell a fixed monthly package of warm introductions to one trade per suburb, with a relationship call each month",
+          "ideaName": "Offer rank and rent buyers a referral package instead of a site: once a MarvelUs R&R site starts producing calls, sell a fixed monthly package of warm introductions to one trade per suburb, with a relationship call each month",
+          "category": "Rank and Rent Upsell",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Add to the R&R offer now; test with the first renter",
+          "tools": [
+            "Existing R&R sites",
+            "Call tracking",
+            "HighLevel pipeline",
+            "Monthly report template"
+          ],
+          "toolsNeeded": [
+            "Existing R&R sites",
+            "Call tracking",
+            "HighLevel pipeline",
+            "Monthly report template"
+          ],
+          "revenue": "Lifts renter pricing by framing as relationships plus leads; A$500 to A$1,500 a month per trade",
+          "revenueFigures": [
+            "Packages priced up to US$6,000 in the episode"
+          ],
+          "insight": "Packaging idea that raises the ceiling on R&R deals and helps prove value with just a few leads a week.",
+          "notes": "Packaging idea that raises the ceiling on R&R deals and helps prove value with just a few leads a week.",
+          "matchScore": 6
+        }
+      ]
+    },
+    {
       "id": "0778df3b-e0d9-4e51-88f1-b6d64e01fb2f",
       "title": "How Anyone Can Borrow $500K at 0% Interest - Ep. #337",
       "date": "2026-09-22",
@@ -1992,6 +2163,58 @@
       "transcript": "",
       "altGuids": [
         "a25b1d38-031a-4edc-95b5-0cc1e61e9394"
+      ]
+    },
+    {
+      "id": "a25b1d38-031a-4edc-95b5-0cc1e61e9394",
+      "guid": "a25b1d38-031a-4edc-95b5-0cc1e61e9394",
+      "title": "How Anyone Can Borrow $500K at 0% Interest - Ep. #337",
+      "date": "2026-09-22",
+      "publishDate": "2026-09-22",
+      "publishedAt": "2026-09-22T10:00:00.000Z",
+      "episodeNumber": 337,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/126134869/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-8-22%2F432434018-44100-2-97710c6fe282e.mp3",
+      "descriptionExcerpt": "Brandon Elliott went from a US$30K a year busboy to holding an US$80,000 credit limit, and now uses 0% interest credit cards to fund real estate and business deals. He covers getting banks to approve, the call that turns a credit limit into cash, and why an existing card may be worth money to someon",
+      "description": "Brandon Elliott went from a US$30K a year busboy to holding an US$80,000 credit limit, and now uses 0% interest credit cards to fund real estate and business deals. He covers getting banks to approve, the call that turns a credit limit into cash, and why an existing card may be worth money to someone else. The host flags it as aggressive and says to talk to a CPA first.",
+      "source": "rss+research",
+      "duration": "00:41:56",
+      "durationSeconds": 2516,
+      "durationLabel": "41:56",
+      "tags": [
+        "Credit",
+        "Funding",
+        "0% APR",
+        "Real Estate",
+        "Business Finance"
+      ],
+      "transcript": null,
+      "intelligence": [
+        {
+          "idea": "Map Australian 0% and low rate funding options for MARVELUS INTEL LLC and O's AU projects (balance transfer cards, interest free periods, Mercury and US business card terms) as a short funding sheet to review with an accountant before any land or sandwich board spend",
+          "ideaName": "Map Australian 0% and low rate funding options for MARVELUS INTEL LLC and O's AU projects (balance transfer cards, interest free periods, Mercury and US business card terms) as a short funding sheet to review with an accountant before any land or sandwich board spend",
+          "category": "Business Funding Research",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "Research sheet in 1 to 2 days",
+          "tools": [
+            "Canstar or Finder card comparisons",
+            "Mercury card terms",
+            "Accountant review"
+          ],
+          "toolsNeeded": [
+            "Canstar or Finder card comparisons",
+            "Mercury card terms",
+            "Accountant review"
+          ],
+          "revenue": "Cost saving only; no direct revenue",
+          "revenueFigures": [
+            "Busboy on US$30K a year built an US$80,000 credit limit",
+            "Claims up to US$500K at 0% interest"
+          ],
+          "insight": "Low fit and high risk. US card stacking does not translate cleanly to Australia, where balance transfer cards usually cannot be used for cash or business purchases, and credit checks hit O's file. Note only; do not act without an accountant.",
+          "notes": "Low fit and high risk. US card stacking does not translate cleanly to Australia, where balance transfer cards usually cannot be used for cash or business purchases, and credit checks hit O's file. Note only; do not act without an accountant.",
+          "matchScore": 3
+        }
       ]
     },
     {
@@ -12282,18 +12505,19 @@
   ],
   "feed": {
     "title": "The Koerner Office",
-    "updatedAt": "2026-11-04T00:00:00Z",
-    "lastBuilt": "2026-11-04T00:00:00Z"
+    "updatedAt": "2026-11-11T00:00:00Z",
+    "lastBuilt": "2026-11-11T00:00:00Z"
   },
   "intelligenceMeta": {
     "processedEpisodes": 3,
-    "note": "RSS+research batch 349 (Nico Moreno, free Skool group, US$100K in 2 months) and 348 (James, local cold calling, US$18K/mo). Blurb based cards; validate against YouTube.",
+    "note": "RSS+research batch 351 (JV, US$70 surplus pallets to US$15K/mo TikTok Live), 338 (Aaron Fooks, Hytros local referral packages US$27K/mo), 337 (Brandon Elliott, 0% credit card funding). Blurb based cards; validate against YouTube.",
     "lastBatch": [
-      349,
-      348
+      351,
+      338,
+      337
     ],
-    "lastRunAt": "2026-11-04T00:00:00.000Z",
-    "lastUpdated": "2026-11-04T00:00:00.000Z",
-    "latestEpisode": 349
+    "lastRunAt": "2026-11-11T00:00:00.000Z",
+    "lastUpdated": "2026-11-11T00:00:00.000Z",
+    "latestEpisode": 351
   }
 }
