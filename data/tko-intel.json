@@ -1,6 +1,225 @@
 {
   "episodes": [
     {
+      "id": "c840110d-af2f-4906-b1c4-254958c10447",
+      "guid": "c840110d-af2f-4906-b1c4-254958c10447",
+      "title": "He Listened to This Podcast and Built an $8K/Month App for $20 - Ep. #353",
+      "date": "2026-11-17",
+      "publishDate": "2026-11-17",
+      "publishedAt": "2026-11-17T11:00:01.000Z",
+      "episodeNumber": 353,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/129613574/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-10-17%2F436979956-44100-2-2f4e46313512a8.mp3",
+      "descriptionExcerpt": "Gibb heard two TKO episodes. After the first he bought two restaurant fridges at a government auction for US$75 each. After the second he built ResalePal, an app that values any item from one photo, for about US$20. A few months later it does about US$8K a month and he quit his job. He covers an inf",
+      "description": "Gibb heard two TKO episodes. After the first he bought two restaurant fridges at a government auction for US$75 each. After the second he built ResalePal, an app that values any item from one photo, for about US$20. A few months later it does about US$8K a month and he quit his job. He covers an influencer video with hundreds of thousands of views that brought only 3 paying users, AI written emails that got him on KSL local news and grew the app 500% in two weeks, and a 7,000 follower creator he pays US$200 a month who brings in a quarter of his users.",
+      "source": "rss+research",
+      "duration": "01:01:50",
+      "durationSeconds": 3710,
+      "durationLabel": "61:50",
+      "tags": [
+        "AI App",
+        "Reselling",
+        "Micro Influencers",
+        "Local PR",
+        "Vibe Coding"
+      ],
+      "transcript": null,
+      "intelligence": [
+        {
+          "idea": "Build an Australian photo to price resale scanner: snap an item, get a likely Facebook Marketplace, Gumtree and eBay AU price in A$ plus a ready to post listing. Ship a web app first on Replit, then wrap for iOS and Android",
+          "ideaName": "Build an Australian photo to price resale scanner: snap an item, get a likely Facebook Marketplace, Gumtree and eBay AU price in A$ plus a ready to post listing. Ship a web app first on Replit, then wrap for iOS and Android",
+          "category": "AI Micro App",
+          "barrier": "Low to Medium",
+          "barrierLevel": "Low to Medium",
+          "timeline": "MVP in 1 to 2 weeks; first paid users in 4 to 6 weeks",
+          "tools": [
+            "Replit or Cursor",
+            "Vision capable AI API",
+            "eBay AU sold listings data",
+            "Stripe or app store billing",
+            "TikTok account"
+          ],
+          "toolsNeeded": [
+            "Replit or Cursor",
+            "Vision capable AI API",
+            "eBay AU sold listings data",
+            "Stripe or app store billing",
+            "TikTok account"
+          ],
+          "revenue": "Subscription around A$7 to A$10 a month; 500 subscribers is about A$4K to A$5K a month",
+          "revenueFigures": [
+            "US$20 build cost",
+            "About US$8K a month revenue a few months in",
+            "Quit his job"
+          ],
+          "insight": "Strong fit for O's UX/product and Grok Bot build stack, and ResalePal looks US focused so an A$ and Gumtree/Marketplace angle is open. Main risk is retention and app store work, not the build. Check ResalePal's AU availability before building.",
+          "notes": "Strong fit for O's UX/product and Grok Bot build stack, and ResalePal looks US focused so an A$ and Gumtree/Marketplace angle is open. Main risk is retention and app store work, not the build. Check ResalePal's AU availability before building.",
+          "matchScore": 6
+        },
+        {
+          "idea": "Pay 2 or 3 small Australian creators (5K to 20K followers) a flat A$200 to A$300 a month to post about one O offer (Marvelus AI voice receptionist, Nolostsales, or a new app) instead of one big influencer post",
+          "ideaName": "Pay 2 or 3 small Australian creators (5K to 20K followers) a flat A$200 to A$300 a month to post about one O offer (Marvelus AI voice receptionist, Nolostsales, or a new app) instead of one big influencer post",
+          "category": "Growth / Micro Influencers",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Recruit in 1 week; judge after 30 days",
+          "tools": [
+            "TikTok and Instagram creator search",
+            "Tracked links or promo codes",
+            "Simple monthly retainer agreement"
+          ],
+          "toolsNeeded": [
+            "TikTok and Instagram creator search",
+            "Tracked links or promo codes",
+            "Simple monthly retainer agreement"
+          ],
+          "revenue": "A$600 to A$900 a month test; keep only creators who bring in at least 3x their fee",
+          "revenueFigures": [
+            "Influencer video with hundreds of thousands of views brought 3 paying users",
+            "US$200 a month creator with 7,000 followers drives about a quarter of users"
+          ],
+          "insight": "The lesson is that a small, trusted niche creator beats reach. Cheap, measurable test for any O offer once there is a working funnel to send people to.",
+          "notes": "The lesson is that a small, trusted niche creator beats reach. Cheap, measurable test for any O offer once there is a working funnel to send people to.",
+          "matchScore": 5
+        },
+        {
+          "idea": "Use AI drafted pitch emails to land local news coverage for O's Melbourne offers: pitch Footscray and inner west outlets, Broadsheet and local radio with a founder story (AI receptionist for tradies, sandwich board ads for cafes)",
+          "ideaName": "Use AI drafted pitch emails to land local news coverage for O's Melbourne offers: pitch Footscray and inner west outlets, Broadsheet and local radio with a founder story (AI receptionist for tradies, sandwich board ads for cafes)",
+          "category": "Local PR",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Pitch list and drafts in 2 days; coverage within 2 to 6 weeks",
+          "tools": [
+            "Grok Bot drafting",
+            "Local media contact list",
+            "One clear founder story and photo"
+          ],
+          "toolsNeeded": [
+            "Grok Bot drafting",
+            "Local media contact list",
+            "One clear founder story and photo"
+          ],
+          "revenue": "Free; one segment can bring a spike in sign ups and backlinks that help Marvelus SEO and rank and rent sites",
+          "revenueFigures": [
+            "AI emails got him on KSL news",
+            "App grew 500% in two weeks after the segment"
+          ],
+          "insight": "Cheap, fast, Melbourne first. Pairs well with the sandwich board business since cafes and local media both love a local story. Any outreach would go to O for approval before sending.",
+          "notes": "Cheap, fast, Melbourne first. Pairs well with the sandwich board business since cafes and local media both love a local story. Any outreach would go to O for approval before sending.",
+          "matchScore": 6
+        }
+      ]
+    },
+    {
+      "id": "bca7a4e4-7ac9-4dff-8feb-4511c2ba5d1d",
+      "guid": "bca7a4e4-7ac9-4dff-8feb-4511c2ba5d1d",
+      "title": "She Writes Strangers’ Books With AI. They Pay Her $20K Each. - Ep. #352",
+      "date": "2026-11-13",
+      "publishDate": "2026-11-13",
+      "publishedAt": "2026-11-13T11:00:01.000Z",
+      "episodeNumber": 352,
+      "audioUrl": "https://anchor.fm/s/10796c924/podcast/play/129377950/https%3A%2F%2Fd3ctxlq1ktw2nl.cloudfront.net%2Fstaging%2F2026-10-17%2F436983196-44100-2-2a0697a7c5c238.mp3",
+      "descriptionExcerpt": "Jaimie writes books for people with a great idea who cannot write it themselves: retirees, business owners, even a mortgage broker with an alien conspiracy novel. She tells clients she uses AI, and they still pay her up to US$20K a book. She covers how she prices it, the roughly US$130 a year list t",
+      "description": "Jaimie writes books for people with a great idea who cannot write it themselves: retirees, business owners, even a mortgage broker with an alien conspiracy novel. She tells clients she uses AI, and they still pay her up to US$20K a book. She covers how she prices it, the roughly US$130 a year list that keeps sending her clients, why she teaches free classes at the library, the one thing AI still cannot write well, and the exact prompt she uses to win new clients.",
+      "source": "rss+research",
+      "duration": "00:47:52",
+      "durationSeconds": 2872,
+      "durationLabel": "47:52",
+      "tags": [
+        "AI Ghostwriting",
+        "Books",
+        "Service Business",
+        "Library Workshops",
+        "Authority Marketing"
+      ],
+      "transcript": null,
+      "intelligence": [
+        {
+          "idea": "Run free 'AI for your small business' sessions at Melbourne libraries (Footscray, Maribyrnong, Moonee Valley, City of Melbourne) and community hubs, teaching tradies and shop owners to stop missing calls and enquiries, then offer a Marvelus AI voice receptionist or Nolostsales trial at the end",
+          "ideaName": "Run free 'AI for your small business' sessions at Melbourne libraries (Footscray, Maribyrnong, Moonee Valley, City of Melbourne) and community hubs, teaching tradies and shop owners to stop missing calls and enquiries, then offer a Marvelus AI voice receptionist or Nolostsales trial at the end",
+          "category": "Workshop Lead Gen",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "Book first session in 2 to 4 weeks; run monthly",
+          "tools": [
+            "Library and council small business event bookings",
+            "Simple slide deck and live demo",
+            "Trial sign up form or QR code",
+            "Marvelus AI voice demo line"
+          ],
+          "toolsNeeded": [
+            "Library and council small business event bookings",
+            "Simple slide deck and live demo",
+            "Trial sign up form or QR code",
+            "Marvelus AI voice demo line"
+          ],
+          "revenue": "Free to run; if 20 attendees convert 2 to 3 trials and 1 becomes a paying client, each session is worth A$1K+ in recurring revenue",
+          "revenueFigures": [
+            "Jaimie teaches free library classes that feed her book clients",
+            "Clients pay up to US$20K a book"
+          ],
+          "insight": "Best fit this batch: Melbourne first, near zero cost, plays to O's UX and AI demo strengths, and libraries and councils actively run small business programs. Builds trust face to face, which suits AI services that local owners are wary of.",
+          "notes": "Best fit this batch: Melbourne first, near zero cost, plays to O's UX and AI demo strengths, and libraries and councils actively run small business programs. Builds trust face to face, which suits AI services that local owners are wary of.",
+          "matchScore": 7
+        },
+        {
+          "idea": "Offer AI assisted 'authority books' for Melbourne business owners (tradies, brokers, clinics): O interviews the owner, AI drafts, O edits, then the book feeds their website, SEO and lead magnets. Upsell Marvelus SEO and AI voice to every author",
+          "ideaName": "Offer AI assisted 'authority books' for Melbourne business owners (tradies, brokers, clinics): O interviews the owner, AI drafts, O edits, then the book feeds their website, SEO and lead magnets. Upsell Marvelus SEO and AI voice to every author",
+          "category": "AI Ghostwriting / Authority Marketing",
+          "barrier": "Medium",
+          "barrierLevel": "Medium",
+          "timeline": "First client in 4 to 8 weeks; 6 to 10 weeks per book",
+          "tools": [
+            "Interview recording and transcription",
+            "AI drafting with a style guide",
+            "Editor pass",
+            "Amazon KDP or IngramSpark",
+            "Cover designer"
+          ],
+          "toolsNeeded": [
+            "Interview recording and transcription",
+            "AI drafting with a style guide",
+            "Editor pass",
+            "Amazon KDP or IngramSpark",
+            "Cover designer"
+          ],
+          "revenue": "A$5K to A$15K per short business book in AU; plus recurring SEO or AI voice upsell",
+          "revenueFigures": [
+            "Up to US$20K per book",
+            "A roughly US$130 a year list keeps sending her clients",
+            "Clients pay even knowing she uses AI"
+          ],
+          "insight": "Real, high ticket, and AI makes the labour manageable, but it is a time heavy service and O would need strong editing or a contractor. Best framed as a premium add on for existing Marvelus clients rather than a standalone business.",
+          "notes": "Real, high ticket, and AI makes the labour manageable, but it is a time heavy service and O would need strong editing or a contractor. Best framed as a premium add on for existing Marvelus clients rather than a standalone business.",
+          "matchScore": 5
+        },
+        {
+          "idea": "Get listed on paid directories where buyers already look for help (for O: AI receptionist, web and SEO agency, and ghostwriting directories in Australia) instead of only cold outreach",
+          "ideaName": "Get listed on paid directories where buyers already look for help (for O: AI receptionist, web and SEO agency, and ghostwriting directories in Australia) instead of only cold outreach",
+          "category": "Directory Listings",
+          "barrier": "Low",
+          "barrierLevel": "Low",
+          "timeline": "List in 1 week; judge after 90 days",
+          "tools": [
+            "Directory accounts",
+            "Case study or demo",
+            "Clear pricing page"
+          ],
+          "toolsNeeded": [
+            "Directory accounts",
+            "Case study or demo",
+            "Clear pricing page"
+          ],
+          "revenue": "Low annual fees; one client per year pays for most listings",
+          "revenueFigures": [
+            "A roughly US$130 a year list keeps sending her clients"
+          ],
+          "insight": "Small but useful lesson: cheap paid listings can beat outreach for trust based services. Worth testing 2 or 3 for Marvelus.",
+          "notes": "Small but useful lesson: cheap paid listings can beat outreach for trust based services. Worth testing 2 or 3 for Marvelus.",
+          "matchScore": 4
+        }
+      ]
+    },
+    {
       "id": "0ddf81b5-de23-496d-97df-3676e716ac0d",
       "guid": "0ddf81b5-de23-496d-97df-3676e716ac0d",
       "title": "He Copied My Episode With $70. Now He Does $15K/Month - Ep. #351",
@@ -12505,19 +12724,18 @@
   ],
   "feed": {
     "title": "The Koerner Office",
-    "updatedAt": "2026-11-11T00:00:00Z",
-    "lastBuilt": "2026-11-11T00:00:00Z"
+    "updatedAt": "2026-11-18T00:15:00Z",
+    "lastBuilt": "2026-11-18T00:15:00Z"
   },
   "intelligenceMeta": {
-    "processedEpisodes": 3,
-    "note": "RSS+research batch 351 (JV, US$70 surplus pallets to US$15K/mo TikTok Live), 338 (Aaron Fooks, Hytros local referral packages US$27K/mo), 337 (Brandon Elliott, 0% credit card funding). Blurb based cards; validate against YouTube.",
+    "processedEpisodes": 2,
+    "note": "RSS+research batch 353 (Gibb, ResalePal photo resale app US$8K/mo) and 352 (Jaimie Engle, AI ghostwritten books up to US$20K). Blurb based cards; validate against YouTube.",
     "lastBatch": [
-      351,
-      338,
-      337
+      353,
+      352
     ],
-    "lastRunAt": "2026-11-11T00:00:00.000Z",
-    "lastUpdated": "2026-11-11T00:00:00.000Z",
-    "latestEpisode": 351
+    "lastRunAt": "2026-11-18T00:15:00.000Z",
+    "lastUpdated": "2026-11-18T00:15:00.000Z",
+    "latestEpisode": 353
   }
 }
